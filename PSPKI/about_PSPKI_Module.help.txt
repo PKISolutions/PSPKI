@@ -34,6 +34,6 @@ SUPPORT INFORMATION
 	Any comments and questions must be addressed in either Discussion or
 	Issue Tracker (for bug reports).
 
-ACKNOWLEDGES
+ACKNOWLEDGMENTS
 	Vic Heller (Microsoft)
 	Rashmi Jha (Microsoft)
