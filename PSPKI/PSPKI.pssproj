@@ -8,6 +8,12 @@
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>
     <Name>PSPKI</Name>
+    <Author>Vadims Podans</Author>
+    <CompanyName>Sysadmins LV</CompanyName>
+    <Copyright>All rights reserved</Copyright>
+    <Description />
+    <Version>3.2.5.0</Version>
+    <Guid>08a70230-ae58-48af-ae73-e4276b6ef1eb</Guid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
