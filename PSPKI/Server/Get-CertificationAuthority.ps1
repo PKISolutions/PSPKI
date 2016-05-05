@@ -11,7 +11,7 @@
 		[string]$Name = "*"
 	)
 	switch ($PsCmdlet.ParameterSetName) {
-		"__ComputerSet" {[PKI.CertificateServices.CertificateAuthority]::GetCA("Server",$ComputerName)}
-		"__NameSet" {[PKI.CertificateServices.CertificateAuthority]::GetCA("Name",$Name)}
+		"__ComputerSet" {[PKI.CertificateServices.CertificateAuthority]::EnumEnterpriseCAs("Server",$ComputerName)}
+		"__NameSet" {[PKI.CertificateServices.CertificateAuthority]::EnumEnterpriseCAs("Name",$Name)}
 	}
 }
