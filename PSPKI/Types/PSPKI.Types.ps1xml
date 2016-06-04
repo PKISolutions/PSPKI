@@ -123,4 +123,19 @@
 			</ScriptProperty>
 		</Members>
 	</Type>
+	<Type>
+		<Name>System.Security.Cryptography.X509Certificates.X509Certificate2</Name>
+		<Members>
+			<ScriptProperty>
+				<Name>ResolvedExtensions</Name>
+				<GetScriptBlock>
+					if ($this.Extensions -eq $null) {
+						$null
+						return
+					}
+					[PKI.Utils.CLRExtensions.X509Certificate2Extensions]::ResolveExtensions($this)
+				</GetScriptBlock>
+			</ScriptProperty>
+		</Members>
+	</Type>
 </Types>
