@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Client\Convert-PemToPfx.ps1" />
     <Compile Include="Client\Convert-PfxToPem.ps1" />
+    <Compile Include="Client\Get-CertificateContextProperty.ps1" />
     <Compile Include="Client\Get-CertificateRequest.ps1" />
     <Compile Include="Client\Get-CertificateRevocationList.ps1" />
     <Compile Include="Client\Get-CertificateTrustList.ps1" />
@@ -55,6 +56,7 @@
     <Compile Include="Client\Get-ErrorMessage.ps1" />
     <Compile Include="Client\Get-ObjectIdentifier.ps1" />
     <Compile Include="Client\Get-ObjectIdentifierEx.ps1" />
+    <Compile Include="Client\New-CertificateRequest.ps1" />
     <Compile Include="Client\New-SelfSignedCertificateEx.ps1" />
     <Compile Include="Client\Ping-ICertInterface.ps1" />
     <Compile Include="Client\Receive-Certificate.ps1" />
