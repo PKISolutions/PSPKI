@@ -2,6 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
+[OutputType('[System.Security.Cryptography.X509Certificates.X509Certificate2]')]
 [CmdletBinding(DefaultParameterSetName = '__store')]
 	param (
 		[Parameter(Mandatory = $true, Position = 0)]
@@ -236,4 +237,6 @@
 			Set-Content -Path $Path -Value ([Convert]::FromBase64String($PFXString)) -Encoding Byte
 		}
 	}
+	[Byte[]]$CertBytes = [Convert]::FromBase64String($endCert)
+	New-Object Security.Cryptography.X509Certificates.X509Certificate2 @(,$CertBytes)
 }
