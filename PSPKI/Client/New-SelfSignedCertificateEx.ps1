@@ -76,13 +76,11 @@
 	New-Variable -Name PFXExportChainNoRoot -Value 0x1 -Option Constant
 	New-Variable -Name PFXExportChainWithRoot -Value 0x2 -Option Constant
 #endregion
-	
-#region Subject processing
+
 	# http://msdn.microsoft.com/en-us/library/aa377051(VS.85).aspx
 	$SubjectDN = New-Object -ComObject X509Enrollment.CX500DistinguishedName
 	$SubjectDN.Encode($Subject, 0x0)
-#endregion
-
+	
 #region Extensions
 
 #region Enhanced Key Usages processing
@@ -127,22 +125,26 @@
 		$Names = New-Object -ComObject X509Enrollment.CAlternativeNames
 		foreach ($altname in $SubjectAlternativeName) {
 			$Name = New-Object -ComObject X509Enrollment.CAlternativeName
-			if ($altname.Contains("@")) {
-				$Name.InitializeFromString($RFC822Name,$altname)
-			} else {
-				try {
-					$Bytes = [Net.IPAddress]::Parse($altname).GetAddressBytes()
+			switch -Regex ($altname) {
+				"^dns:(.+)" {$Name.InitializeFromString($DNSName,$Matches[1])}
+				"^email:(.+)" {$Name.InitializeFromString($RFC822Name,$Matches[1])}
+				"^upn:(.+)" {$Name.InitializeFromString($UPN,$Matches[1])}
+				"^ip:(.+)" {
+					$Bytes = [Net.IPAddress]::Parse($Matches[1]).GetAddressBytes()
 					$Name.InitializeFromRawData($IPAddress,$Base64,[Convert]::ToBase64String($Bytes))
-				} catch {
-					try {
-						$Bytes = [Guid]::Parse($altname).ToByteArray()
-						$Name.InitializeFromRawData($Guid,$Base64,[Convert]::ToBase64String($Bytes))
-					} catch {
-						try {
-							$Bytes = ([Security.Cryptography.X509Certificates.X500DistinguishedName]$altname).RawData
-							$Name.InitializeFromRawData($DirectoryName,$Base64,[Convert]::ToBase64String($Bytes))
-						} catch {$Name.InitializeFromString($DNSName,$altname)}
-					}
+				}
+				"^dn:(.+)" {
+					$Bytes = ([Security.Cryptography.X509Certificates.X500DistinguishedName]$Matches[1]).RawData
+					$Name.InitializeFromRawData($DirectoryName,$Base64,[Convert]::ToBase64String($Bytes))
+				}
+				"^oid:(.+)" {$Name.InitializeFromString($RegisteredID,$Matches[1])}
+				"^url:(.+)" {$Name.InitializeFromString($URL,$Matches[1])}
+				"^guid:(.+)" {
+					$Bytes = [Guid]::Parse($Matches[1]).ToByteArray()
+					$Name.InitializeFromRawData($Guid,$Base64,[Convert]::ToBase64String($Bytes))
+				}
+				"other:(.+):(.+)" {
+					$Name.InitializeFromOtherName($matches[1],$base64,$Matches[2],$false)
 				}
 			}
 			$Names.Add($Name)
@@ -202,6 +204,9 @@
 	} else {
 		$Cert.InitializeFromPrivateKey($UserContext,$PrivateKey,"")
 	}
+#region Subject processing
+
+#endregion
 	$Cert.Subject = $SubjectDN
 	$Cert.Issuer = $Cert.Subject
 	$Cert.NotBefore = $NotBefore
