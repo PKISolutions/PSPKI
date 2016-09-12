@@ -13,7 +13,7 @@
 		[datetime]$NotAfter = $NotBefore.AddDays(365),
 		[string]$SerialNumber,
 		[Alias('CSP')]
-		[string]$ProviderName = "Microsoft Enhanced Cryptographic Provider v1.0",
+		[string]$ProviderName = "Microsoft Enhanced RSA and AES Cryptographic Provider",
 		[string]$AlgorithmName = "RSA",
 		[int]$KeyLength = 2048,
 		[validateSet("Exchange","Signature")]
@@ -28,7 +28,7 @@
 		[int]$PathLength = -1,
 		[Security.Cryptography.X509Certificates.X509ExtensionCollection]$CustomExtension,
 		[ValidateSet('MD5','SHA1','SHA256','SHA384','SHA512')]
-		[string]$SignatureAlgorithm = "SHA1",
+		[string]$SignatureAlgorithm = "SHA256",
 		[string]$FriendlyName,
 		[Parameter(ParameterSetName = '__store')]
 		[Security.Cryptography.X509Certificates.StoreLocation]$StoreLocation = "CurrentUser",
