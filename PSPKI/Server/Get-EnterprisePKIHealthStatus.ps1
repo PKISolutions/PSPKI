@@ -623,7 +623,8 @@ namespace PKI.EnterprisePKI {
 						Write-Warning "Only Enterprise CAs are supported by this parameterset."
 						return
 					}
-					Write-Host ("=" * 20) $CA.DisplayName ("=" * 20)
+					Write-Verbose ("=" * 20) $CA.DisplayName ("=" * 20)
+					Write-Debug ("=" * 20) $CA.DisplayName ("=" * 20)
 					Write-Debug "$($CA.DisplayName): retrieving CA Exchange certificate."
 					$xchg = $CA.GetCAExchangeCertificate()
 					__validateSinglePath $xchg
