@@ -17,8 +17,7 @@
 			$CertAdmin = New-Object -ComObject CertificateAuthority.Admin
 			if ($Extension[0] -is [Security.Cryptography.X509Certificates.X509ExtensionCollection] -and !$Remove) {
 				foreach ($ext in $Extension[0]) {
-					[Byte[]]$bytes = if ($ext.RawData % 2) {$ext.RawData + 0} else {$ext.RawData}
-					$derValue = [Text.Encoding]::Unicode.GetString($bytes)
+					$derValue = [PKI.Utils.CryptographyUtils]::EncodeDerString($ext.RawData)
 					try {
 						$CertAdmin.SetCertificateExtension($Req.ConfigString,$Req.RequestID,$ext.Oid.Value,0x3,$ext.Critical,$derValue)
 						if ([string]::IsNullOrEmpty($ext.Oid.FriendlyName)) {
