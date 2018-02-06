@@ -20,8 +20,8 @@
 			$xchg = $CA.GetCAExchangeCertificate()
 			if ($X509) {return $xchg}
 			switch ($Encoding) {
-				"Base64Header" {[PKI.ManagedAPI.Crypt32Managed]::CryptBinaryToString($cert.RawData,"CRYPT_STRING_BASE64HEADER",0)}
-				"Base64" {[PKI.ManagedAPI.Crypt32Managed]::CryptBinaryToString($cert.RawData,"CRYPT_STRING_BASE64",0)}
+				"Base64Header" {[PKI.ManagedAPI.Crypt32Managed]::CryptBinaryToString($xchg.RawData,"CRYPT_STRING_BASE64HEADER",0)}
+				"Base64" {[PKI.ManagedAPI.Crypt32Managed]::CryptBinaryToString($xchg.RawData,"CRYPT_STRING_BASE64",0)}
 				"Binary" {$xchg.RawData}
 				default {Write-Error "Specified encoding type is not supported."; return}
 			}
