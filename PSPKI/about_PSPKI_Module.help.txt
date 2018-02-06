@@ -30,7 +30,7 @@ BUILT-IN COMMANDS
 	Server package requires ADCS RSAT installation.	
 	
 SUPPORT INFORMATION
-	The official support page for the module is: https://pspki.codeplex.com/
+	The official support page for the module is: https://github.com/Crypt32/PSPKI
 	Any comments and questions must be addressed in either Discussion or
 	Issue Tracker (for bug reports).
 
