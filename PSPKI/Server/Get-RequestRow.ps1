@@ -28,16 +28,14 @@ function Get-RequestRow {
 	if ($Filter -ne $null) {
 		foreach ($line in $Filter) {
 			if ($line -notmatch "^(.+)\s(-eq|-lt|-le|-ge|-gt)\s(.+)$") {
-				Write-Warning "Malformed pattern: '$line'!"
 				[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CaView)
-				return
+				throw "Malformed filter: '$line'"
 			}
 			try {
 				$Rcolumn = $CaView.GetColumnIndex($false, $matches[1])
 			} catch {
-				Write-Warning "Specified column '$($matches[1])' does not exist."
 				[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CaView)
-				return
+				throw "Specified column '$($matches[1])' does not exist."
 			}
 			$Seek = switch ($matches[2]) {
 				"-eq" {1}
@@ -63,7 +61,7 @@ function Get-RequestRow {
 			} catch {
 				Write-Warning "Specified pattern '$line' is not valid."
 				[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CaView)
-				return
+				throw "Specified pattern '$line' is not valid."
 			}
 		}
 	}
@@ -124,5 +122,4 @@ function Get-RequestRow {
 	}
 	$CaView, $Row | ForEach-Object {[void][Runtime.InteropServices.Marshal]::ReleaseComObject($_)}
 	Remove-Variable CaView, Row
-	[GC]::Collect()
 }

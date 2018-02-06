@@ -22,8 +22,8 @@ certificate template requires key archival will fail.
 				$Status = $KRA.SetInfo($RestartCA)
 				if ($Status) {
 					if ($KRA.Certificate -eq $null) {Write-Warning $empty}
-					if (!$RestartCA) {Write-Warning ($RestartRequired -f "key recovery agent certificate list")}
-				} else {Write-Warning $NothingIsSet}
+					if (!$RestartCA) {Write-Verbose ($RestartRequired -f "key recovery agent certificate list")}
+				} else {Write-Verbose $NothingIsSet}
 				$KRA
 			} finally { }
 		}

@@ -18,8 +18,8 @@
 				$CertValidity.ValidityPeriod = $ValidityPeriod
 				$Status = $CertValidity.SetInfo($RestartCA)
 				if ($Status) {
-					if (!$RestartCA) {Write-Warning ($RestartRequired -f "certificate validity settings")}
-				} else {Write-Warning $NothingIsSet}
+					if (!$RestartCA) {Write-Verbose ($RestartRequired -f "certificate validity settings")}
+				} else {Write-Verbose $NothingIsSet}
 				$CertValidity
 			} finally { }
 		}

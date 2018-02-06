@@ -2,6 +2,7 @@ function Revoke-Certificate {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
+[OutputType('PKI.Utils.IServiceOperationResult')]
 [CmdletBinding()]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
@@ -25,9 +26,10 @@ function Revoke-Certificate {
 		if ($Request.SerialNumber.Length % 2) {$Request.Serialnumber = "0" + $Request.Serialnumber}
 		try {
 			$CertAdmin.RevokeCertificate($Request.ConfigString,$Request.SerialNumber,$Reasons[$Reason],$RevocationDate.ToUniversalTime())
-			Write-Host "Successfully revoked certificate with ID = $($Request.RequestID) and reason = '$Reason'"
+			New-Object PKI.Utils.ServiceOperationResult 0,
+				"Successfully revoked certificate with ID=$($Request.RequestID) and reason: '$Reason'"
 		} catch {
-			Write-Warning "Unable to revoke the certificate with serial number '$($Request.SerialNumber)'"; $_
+			New-Object PKI.Utils.ServiceOperationResult $_.Exception.HResult
 		} finally {
 			[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)
 		}

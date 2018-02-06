@@ -14,8 +14,8 @@
 			try {
 				$Status = $CDP.SetInfo($RestartCA)
 				if ($Status) {
-					if (!$RestartCA) {Write-Warning ($RestartRequired -f "CRL distribution URLs")}
-				} else {Write-Warning $NothingIsSet}
+					if (!$RestartCA) {Write-Verbose ($RestartRequired -f "CRL distribution URLs")}
+				} else {Write-Verbose $NothingIsSet}
 				$CDP
 			} finally { }
 		}

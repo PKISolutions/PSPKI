@@ -2,6 +2,7 @@ function Install-CertificationAuthority {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
+[OutputType('PKI.Utils.ServiceOperationResult')]
 [CmdletBinding(
 	DefaultParameterSetName = 'NewKeySet',
 	ConfirmImpact = 'High',
@@ -263,7 +264,7 @@ function ExistingKeySet ($Thumbprint) {
 		"NewKeySet" {NewKeySet $CAName $CADNSuffix $CAType $ParentCA $CSP $KeyLength $HashAlgorithm $ValidForYears $RequestFileName $AllowCSPInteraction}
 	}
 	try {
-		Write-Host "Installing Certification Authority role on $env:computername ..." -ForegroundColor Cyan
+		Write-Verbose "Installing Certification Authority role on $env:computername ..." -ForegroundColor Cyan
 		if ($Force -or $PSCmdlet.ShouldProcess($env:COMPUTERNAME, "Install Certification Authority")) {
 			$CASetup.Install()
 			$PostRequiredMsg = @"
@@ -282,8 +283,8 @@ and install issued certificate by running the following command: certutil -insta
 				}
 			} elseif ($CASetup.GetCASetupProperty(0) -eq 4) {
 				Write-Host $PostRequiredMsg -ForegroundColor Yellow -BackgroundColor Black
-			} else {Write-Host "Certification Authority role is successfully installed!" -ForegroundColor Green}
+			} else {New-Object PKI.Utils.ServiceOperationResult 0}
 		}
-	} catch {Write-Error $_ -ErrorAction Stop}
+	} catch {New-Object PKI.Utils.ServiceOperationResult _$_.Exception.HResult}
 	Remove-Module ServerManager -ErrorAction SilentlyContinue
 }

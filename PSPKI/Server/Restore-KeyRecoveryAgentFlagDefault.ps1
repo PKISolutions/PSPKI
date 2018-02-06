@@ -15,8 +15,8 @@
 				$KRAFlag.Restore()
 				$Status = $KRAFlag.SetInfo($RestartCA)
 				if ($Status) {
-					if (!$RestartCA) {Write-Warning ($RestartRequired -f "Certificate Revocation List settings")}
-				} else {Write-Warning $NothingIsSet}
+					if (!$RestartCA) {Write-Verbose ($RestartRequired -f "Certificate Revocation List settings")}
+				} else {Write-Verbose $NothingIsSet}
 				$KRAFlag
 			} finally { }
 		}

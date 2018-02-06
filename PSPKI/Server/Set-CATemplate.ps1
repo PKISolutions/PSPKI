@@ -12,7 +12,7 @@
 		foreach ($CATemplate in $InputObject) {
 			try {
 				$Status = $CATemplate.SetInfo()
-				if (!$Status) {Write-Warning $NothingIsSet}
+				if (!$Status) {Write-Verbose $NothingIsSet}
 				$CATemplate
 			} finally { }
 		}

@@ -31,8 +31,8 @@
 				if ($DeltaCRLOverlap) {$CRLValidity.DeltaCRLOverlap = $DeltaCRLOverlap}
 				$Status = $CRLValidity.SetInfo($RestartCA)
 				if ($Status) {
-					if (!$RestartCA) {Write-Warning ($RestartRequired -f "CRL validity settings")}
-				} else {Write-Warning $NothingIsSet}
+					if (!$RestartCA) {Write-Verbose ($RestartRequired -f "CRL validity settings")}
+				} else {Write-Verbose $NothingIsSet}
 				$CRLValidity
 			} finally { }
 		}
