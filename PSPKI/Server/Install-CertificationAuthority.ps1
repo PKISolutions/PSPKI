@@ -268,21 +268,21 @@ function ExistingKeySet ($Thumbprint) {
 		if ($Force -or $PSCmdlet.ShouldProcess($env:COMPUTERNAME, "Install Certification Authority")) {
 			$CASetup.Install()
 			$PostRequiredMsg = @"
-Certification Authority role was successfully installed, but not completed. To complete installation submit
-request file '$($CASetup.GetCASetupProperty(14))' to parent Certification Authority
+Certification Authority role was successfully installed, but not completed. To complete
+installation submit request file '$($CASetup.GetCASetupProperty(14))' to parent Certification Authority
 and install issued certificate by running the following command: certutil -installcert 'PathToACertFile'
 "@
 			if ($CASetup.GetCASetupProperty(0) -eq 1 -and $ParentCA -eq "") {
-				Write-Host $PostRequiredMsg -ForegroundColor Yellow -BackgroundColor Black
+				Write-Warning $PostRequiredMsg
 			} elseif ($CASetup.GetCASetupProperty(0) -eq 1 -and $PSCmdlet.ParameterSetName -eq "NewKeySet" -and $ParentCA -ne "") {
 				$CASName = (Get-ItemProperty HKLM:\System\CurrentControlSet\Services\CertSvc\Configuration).Active
 				$SetupStatus = (Get-ItemProperty HKLM:\System\CurrentControlSet\Services\CertSvc\Configuration\$CASName).SetupStatus
 				$RequestID = (Get-ItemProperty HKLM:\System\CurrentControlSet\Services\CertSvc\Configuration\$CASName).RequestID
 				if ($SetupStatus -ne 1) {
-					Write-Host $PostRequiredMsg -ForegroundColor Yellow -BackgroundColor Black
+					Write-Warning $PostRequiredMsg
 				}
 			} elseif ($CASetup.GetCASetupProperty(0) -eq 4) {
-				Write-Host $PostRequiredMsg -ForegroundColor Yellow -BackgroundColor Black
+				Write-Warning $PostRequiredMsg
 			} else {New-Object PKI.Utils.ServiceOperationResult 0}
 		}
 	} catch {New-Object PKI.Utils.ServiceOperationResult _$_.Exception.HResult}

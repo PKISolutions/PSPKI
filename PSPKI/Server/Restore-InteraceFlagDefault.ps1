@@ -15,8 +15,8 @@
 				$InterfaceFlag.Restore()
 				$Status = $InterfaceFlag.SetInfo($RestartCA)
 				if ($Status) {
-					if (!$RestartCA) {Write-Verbose ($RestartRequired -f "management interface settings")}
-				} else {Write-Verbose $NothingIsSet}
+					if (!$RestartCA) {Write-Warning ($RestartRequired -f "management interface settings")}
+				} else {Write-Warning $NothingIsSet}
 				$InterfaceFlag
 			} finally { }
 		}

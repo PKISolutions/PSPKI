@@ -15,8 +15,8 @@
 				$EditFlag.Restore()
 				$Status = $EditFlag.SetInfo($RestartCA)
 				if ($Status) {
-					if (!$RestartCA) {Write-Verbose ($RestartRequired -f "Policy Module settings")}
-				} else {Write-Verbose $NothingIsSet}
+					if (!$RestartCA) {Write-Warning ($RestartRequired -f "Policy Module settings")}
+				} else {Write-Warning $NothingIsSet}
 				$EditFlag
 			} finally { }
 		}

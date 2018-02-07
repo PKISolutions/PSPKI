@@ -14,8 +14,8 @@
 			try {
 				$Status = $ExtensionList.SetInfo($RestartCA)
 				if ($Status) {
-					if (!$RestartCA) {Write-Verbose ($RestartRequired -f "policy module extension lists")}
-				} else {Write-Verbose $NothingIsSet}
+					if (!$RestartCA) {Write-Warning ($RestartRequired -f "policy module extension lists")}
+				} else {Write-Warning $NothingIsSet}
 				$ExtensionList
 			} finally { }
 		}

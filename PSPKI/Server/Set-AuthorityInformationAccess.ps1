@@ -14,8 +14,8 @@
 			try {
 				$Status = $AIA.SetInfo($RestartCA)
 				if ($Status) {
-					if (!$RestartCA) {Write-Verbose ($RestartRequired -f "authrity information access URLs")}
-				} else {Write-Verbose $NothingIsSet}
+					if (!$RestartCA) {Write-Warning ($RestartRequired -f "authrity information access URLs")}
+				} else {Write-Warning $NothingIsSet}
 				$AIA
 			} finally { }
 		}
