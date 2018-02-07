@@ -46,6 +46,7 @@
 					$RowID | ForEach-Object {
 						$Filter += "$IdColumn -eq $_"
 						Get-RequestRow -CA $CA -Property $Property -Table $Table -Filter $Filter -Schema $Schema
+						$Filter = $Filter[0..($Filter.Length - 2)]
 					}
 				} else {
 					Get-RequestRow -CA $CA -Property $Property -Table $Table -Filter $Filter -Schema $Schema
