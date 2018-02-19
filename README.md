@@ -10,9 +10,11 @@ This module is intended for Certification Authority management. For local certif
 
 All documentation is available at my website: [PowerShell PKI Module](https://www.sysadmins.lv/projects/pspki/default.aspx)
 
-### Download installer
+### Download and install PowerShell PKI module from the PowerShellGallery using PowerShell
+```PowerShell
+Install-Module -Name PSPKI
+```
 
-Download the most recent PowerShell PKI Module installer from [CodePlex](https://pspki.codeplex.com/releases)
 
 ### Module Requirements
 
