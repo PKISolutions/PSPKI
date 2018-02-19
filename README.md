@@ -37,6 +37,7 @@ This module supports Enterprise or Standalone Certification Authority servers th
 * Windows Server 2008 R2 (including Server Core)
 * Windows Server 2012 (including Server Core)
 * Windows Server 2012 R2 (including Server Core)
+* Windows Server 2016 (including Server Core)
 
 ### Full Command List ###
 * [Add-AuthorityInformationAccess](https://www.sysadmins.lv/projects/pspki/Add-AuthorityInformationAccess.aspx) (Alias: **Add-AIA**)
