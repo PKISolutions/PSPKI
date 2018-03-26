@@ -22,7 +22,7 @@ Install-Module -Name PSPKI
 * .NET Framework 4.0 or higher
 
 This module can run on any of the specified operating system:
-* Windows Server 2008\*/2008 R2/2012/2012 R2
+* Windows Server 2008\*/2008 R2\*/2012\*/2012 R2\*/2016\*
 * Windows Vista/7/8/8.1/10
 
 \* — Server Core installation is not supported.
