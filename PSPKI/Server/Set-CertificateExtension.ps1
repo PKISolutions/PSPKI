@@ -2,6 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
+[OutputType('PKI.Utils.IServiceOperationResult')]
 [CmdletBinding()]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
@@ -20,11 +21,8 @@
 					$derValue = [PKI.Utils.CryptographyUtils]::EncodeDerString($ext.RawData)
 					try {
 						$CertAdmin.SetCertificateExtension($Req.ConfigString,$Req.RequestID,$ext.Oid.Value,0x3,$ext.Critical,$derValue)
-						if ([string]::IsNullOrEmpty($ext.Oid.FriendlyName)) {
-							Write-Verbose "Extension OID='$($ext.Oid.Value)' was addedd to request ID='$($Req.RequestID)'."
-						} else {
-							Write-Verbose "Extension '$($ext.Oid.FriendlyName)' was addedd to request ID='$($Req.RequestID)'."
-						}
+						New-Object PKI.Utils.ServiceOperationResult 0,
+							"Extension '$($ext.Oid.Format($true))' was addedd to request ID='$($Req.RequestID)'."
 					} catch {
 						throw $_
 					}
@@ -35,11 +33,8 @@
 					$derValue = [PKI.Utils.CryptographyUtils]::EncodeDerString($ext.RawData)
 					try {
 						$CertAdmin.SetCertificateExtension($Req.ConfigString,$Req.RequestID,$ext.Oid.Value,0x3,$ext.Critical,$derValue)
-						if ([string]::IsNullOrEmpty($ext.Oid.FriendlyName)) {
-							Write-Verbose "Extension OID='$($ext.Oid.Value)' was addedd to request ID='$($Req.RequestID)'."
-						} else {
-							Write-Verbose "Extension '$($ext.Oid.FriendlyName)' was addedd to request ID='$($Req.RequestID)'."
-						}
+						New-Object PKI.Utils.ServiceOperationResult 0,
+							"Extension '$($ext.Oid.Format($true))' was addedd to request ID='$($Req.RequestID)'."
 					} catch {
 						throw $_
 					}
@@ -50,16 +45,17 @@
 						$oid = New-Object Security.Cryptography.Oid $ext
 						[void][SysadminsLV.Asn1Parser.Asn1Utils]::EncodeObjectIdentifier($ext)
 						$CertAdmin.SetCertificateExtension($Req.ConfigString,$Req.RequestID,$oid.Value,0x1,0x2,0)
+						New-Object PKI.Utils.ServiceOperationResult 0,
+							"Extension '$($oid.Format($true))' was addedd to request ID='$($Req.RequestID)'."
 						Write-Verbose "Extension OID='$($oid.Value)' was removed from request ID='$($Req.RequestID)'."
 					} catch {
-						throw $_; return
+						throw $_
 					}
 				}
 			} else {
 				throw New-Object ArgumentException "The parameter is invalid."
 			}
 			[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)
-			$Req
 		}
 	}	
 }

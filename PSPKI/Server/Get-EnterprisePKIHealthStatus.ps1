@@ -620,8 +620,7 @@ namespace PKI.EnterprisePKI {
 					}
 					if (!$CA.Type.StartsWith("Enterprise")) {
 						Write-Debug "$($CA.DisplayName): not supported edition. Current: $($CA.Type)."
-						Write-Warning "Only Enterprise CAs are supported by this parameterset."
-						return
+						throw "Only Enterprise CAs are supported by this parameterset."
 					}
 					Write-Verbose ("=" * 20) $CA.DisplayName ("=" * 20)
 					Write-Debug ("=" * 20) $CA.DisplayName ("=" * 20)
