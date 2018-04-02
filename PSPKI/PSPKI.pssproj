@@ -56,7 +56,6 @@
     <Compile Include="Client\Get-ErrorMessage.ps1" />
     <Compile Include="Client\Get-ObjectIdentifier.ps1" />
     <Compile Include="Client\Get-ObjectIdentifierEx.ps1" />
-    <Compile Include="Client\New-CertificateRequest.ps1" />
     <Compile Include="Client\New-SelfSignedCertificateEx.ps1" />
     <Compile Include="Client\Ping-ICertInterface.ps1" />
     <Compile Include="Client\Receive-Certificate.ps1" />
