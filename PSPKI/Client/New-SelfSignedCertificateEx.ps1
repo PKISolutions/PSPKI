@@ -41,7 +41,7 @@
 		[switch]$Exportable
 	)
 	$ErrorActionPreference = "Stop"
-	if ([Environment]::OSVersion.Version.Major -lt 6) {
+	if ($OSVersion.Major -lt 6) {
 		$NotSupported = New-Object NotSupportedException -ArgumentList "Windows XP and Windows Server 2003 are not supported!"
 		throw $NotSupported
 	}

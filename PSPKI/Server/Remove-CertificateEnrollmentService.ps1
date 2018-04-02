@@ -12,7 +12,7 @@
 	)
 	if ($Host.Name -eq "ServerRemoteHost") {throw New-Object NotSupportedException}
 #region Check operating system
-	if ([Environment]::OSVersion.Version.Major -ne 6 -and [Environment]::OSVersion.Version.Minor -ne 1) {
+	if ($OSVersion.Major -ne 6 -and $OSVersion.Minor -ne 1) {
 		New-Object PKI.Utils.ServiceOperationResult 0x80070057, "Only Windows Server 2008 R2 operating system is supported."
 		return
 	}

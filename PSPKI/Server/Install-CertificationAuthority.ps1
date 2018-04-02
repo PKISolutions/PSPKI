@@ -44,7 +44,7 @@ function Install-CertificationAuthority {
 #region OS and existing CA checking
 	# check if script running on Windows Server 2008 or Windows Server 2008 R2
 	$OS = Get-WmiObject Win32_OperatingSystem -Property ProductType
-	if ([Environment]::OSVersion.Version.Major -lt 6) {
+	if ($OSVersion.Major -lt 6) {
 		Write-Error -Category NotImplemented -ErrorId "NotSupportedException" `
 		-Message "Windows XP, Windows Server 2003 and Windows Server 2003 R2 are not supported!"
 		return
@@ -66,7 +66,7 @@ function Install-CertificationAuthority {
 #endregion
 
 #region Binaries checking and installation if necessary
-	if ([Environment]::OSVersion.Version.Major -eq 6 -and [Environment]::OSVersion.Version.Minor -eq 0) {
+	if ($OSVersion.Major -eq 6 -and $OSVersion.Minor -eq 0) {
 		cmd /c "servermanagercmd -install AD-Certificate 2> null" | Out-Null
 	} else {
 		try {Import-Module ServerManager -ErrorAction Stop}
