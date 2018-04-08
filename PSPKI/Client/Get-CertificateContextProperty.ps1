@@ -2,7 +2,9 @@ function Get-CertificateContextProperty {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType()]
+[OutputType('System.Security.Cryptography.X509Certificates.X509CertificateContextProperty')]
+[OutputType('System.Security.Cryptography.X509Certificates.X509CertificateContextPropertyCollection')]
+[OutputType('System.Security.Cryptography.X509Certificates.X509CertificatePropertyType[]')]
 [CmdletBinding(DefaultParameterSetName = '__name')]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
@@ -17,13 +19,13 @@ function Get-CertificateContextProperty {
 			switch ($PSCmdlet.ParameterSetName) {
 				"__name" {
 					if ($PropertyName -eq "None") {
-						[PKI.Utils.CLRExtensions.X509Certificate2Extensions]::GetCertificateContextProperties($cert)
+						[SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::GetCertificateContextProperties($cert)
 					} else {
-						[PKI.Utils.CLRExtensions.X509Certificate2Extensions]::GetCertificateContextProperty($cert, $PropertyName)
+						[SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::GetCertificateContextProperty($cert, $PropertyName)
 					}
 				}
 				"__list" {
-					[PKI.Utils.CLRExtensions.X509Certificate2Extensions]::GetCertificateContextPropertyList($cert)
+					[SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::GetCertificateContextPropertyList($cert)
 				}
 			}
 		}

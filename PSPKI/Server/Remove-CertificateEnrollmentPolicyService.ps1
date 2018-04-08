@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.Utils.ServiceOperationResult')]
+[OutputType('SysadminsLV.PKI.Utils.ServiceOperationResult')]
 [CmdletBinding()]
 	param (
 		[switch]$Force
@@ -10,7 +10,7 @@
 	if ($Host.Name -eq "ServerRemoteHost") {throw New-Object NotSupportedException}
 #region Check operating system
 	if ($OSVersion.Major -ne 6 -and $OSVersion.Minor -ne 1) {
-		New-Object PKI.Utils.ServiceOperationResult 0x80070057, "Only Windows Server 2008 R2 operating system is supported."
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070057, "Only Windows Server 2008 R2 operating system is supported."
 		return
 	}
 #endregion
@@ -24,7 +24,7 @@
     	}
 	}
 	if (!$elevated) {
-		New-Object PKI.Utils.ServiceOperationResult 0x80070005, "You must be logged on with Enterprise Admins permissions."
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070005, "You must be logged on with Enterprise Admins permissions."
 		return
 	}
 #endregion
@@ -36,9 +36,9 @@ Remove packages : $(if ($Force) {"Yes"} else {"No"})
 "@
 	try {
 		$CEP.Uninstall()
-		New-Object PKI.Utils.ServiceOperationResult 0
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0
 	} catch {
-		New-Object PKI.Utils.ServiceOperationResult $_.Exception.HResult
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $_.Exception.HResult
 		return
 	}
 	if ($Force) {

@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.Utils.ServiceOperationResult')]
+[OutputType('SysadminsLV.PKI.Utils.ServiceOperationResult')]
 [CmdletBinding()]
 	param (
 		[string]$CAConfig,
@@ -13,7 +13,7 @@
 	if ($Host.Name -eq "ServerRemoteHost") {throw New-Object NotSupportedException}
 #region Check operating system
 	if ($OSVersion.Major -ne 6 -and $OSVersion.Minor -ne 1) {
-		New-Object PKI.Utils.ServiceOperationResult 0x80070057, "Only Windows Server 2008 R2 operating system is supported."
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070057, "Only Windows Server 2008 R2 operating system is supported."
 		return
 	}
 #endregion
@@ -27,7 +27,7 @@
     	}
 	}
 	if (!$elevated) {
-		New-Object PKI.Utils.ServiceOperationResult 0x80070005, "You must be logged on with Enterprise Admins permissions."
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070005, "You must be logged on with Enterprise Admins permissions."
 		return
 	}
 #endregion
@@ -38,7 +38,7 @@
 		try {
 			$bstr = $config.GetConfig(1)
 		} catch {
-			New-Object PKI.Utils.ServiceOperationResult 0x80070002,
+			New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070002,
 				"There is no available Enterprise Certification Authorities or user canceled operation."
 			return
 		}
@@ -57,9 +57,9 @@ Remove packages         : $(if ($Force) {"Yes"} else {"No"})
 "@
 	try {
 		$CES.Uninstall($bstr, $auth.$Authentication)
-		New-Object PKI.Utils.ServiceOperationResult 0
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0
 	} catch {
-		New-Object PKI.Utils.ServiceOperationResult $_.Exception.HResult
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $_.Exception.HResult
 		return
 	}
 	if ($Force) {

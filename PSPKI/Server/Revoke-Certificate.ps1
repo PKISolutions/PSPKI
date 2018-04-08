@@ -26,10 +26,10 @@ function Revoke-Certificate {
 		if ($Request.SerialNumber.Length % 2) {$Request.Serialnumber = "0" + $Request.Serialnumber}
 		try {
 			$CertAdmin.RevokeCertificate($Request.ConfigString,$Request.SerialNumber,$Reasons[$Reason],$RevocationDate.ToUniversalTime())
-			New-Object PKI.Utils.ServiceOperationResult 0,
+			New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
 				"Successfully revoked certificate with ID=$($Request.RequestID) and reason: '$Reason'"
 		} catch {
-			New-Object PKI.Utils.ServiceOperationResult $_.Exception.HResult
+			New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $_.Exception.HResult
 		} finally {
 			[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)
 		}

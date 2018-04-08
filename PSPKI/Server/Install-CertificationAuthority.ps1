@@ -2,7 +2,7 @@ function Install-CertificationAuthority {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.Utils.ServiceOperationResult')]
+[OutputType('SysadminsLV.PKI.Utils.ServiceOperationResult')]
 [CmdletBinding(
 	DefaultParameterSetName = 'NewKeySet',
 	ConfirmImpact = 'High',
@@ -283,8 +283,8 @@ and install issued certificate by running the following command: certutil -insta
 				}
 			} elseif ($CASetup.GetCASetupProperty(0) -eq 4) {
 				Write-Warning $PostRequiredMsg
-			} else {New-Object PKI.Utils.ServiceOperationResult 0}
+			} else {New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0}
 		}
-	} catch {New-Object PKI.Utils.ServiceOperationResult _$_.Exception.HResult}
+	} catch {New-Object SysadminsLV.PKI.Utils.ServiceOperationResult _$_.Exception.HResult}
 	Remove-Module ServerManager -ErrorAction SilentlyContinue
 }

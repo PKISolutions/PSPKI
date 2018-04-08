@@ -133,7 +133,7 @@
 						$null
 						return
 					}
-					[PKI.Utils.CLRExtensions.X509Certificate2Extensions]::ResolveExtensions($this)
+					[SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::ResolveExtensions($this)
 				</GetScriptBlock>
 			</ScriptProperty>
 		</Members>

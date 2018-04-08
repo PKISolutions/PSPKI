@@ -23,7 +23,7 @@
 	$CertConfig = New-Object -ComObject CertificateAuthority.Config
     try {$ExistingDetected = $CertConfig.GetConfig(3)}
     catch {
-		New-Object PKI.Utils.ServiceOperationResult 0x80070002,"Certificate Services are not installed on this computer."
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070002,"Certificate Services are not installed on this computer."
         return
     }
 
@@ -57,7 +57,7 @@
 	if ($AutoRestart) {
 		Restart-Computer -Force
 	} else {
-		New-Object PKI.Utils.ServiceOperationResult 0,
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
 			"Certification Authority role was removed successfully. You must restart this server to complete role removal."
 	}
 #endregion
