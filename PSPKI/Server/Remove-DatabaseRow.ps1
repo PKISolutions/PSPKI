@@ -2,7 +2,7 @@ function Remove-DatabaseRow {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('SysadminsLV.PKI.Utils.ServiceOperationResult')]
+[OutputType('SysadminsLV.PKI.Utils.IServiceOperationResult')]
 [CmdletBinding(DefaultParameterSetName = '__single')]
 	param(
 		[Parameter(

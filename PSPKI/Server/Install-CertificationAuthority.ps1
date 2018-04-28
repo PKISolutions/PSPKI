@@ -2,7 +2,7 @@ function Install-CertificationAuthority {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('SysadminsLV.PKI.Utils.ServiceOperationResult')]
+[OutputType('SysadminsLV.PKI.Utils.IServiceOperationResult')]
 [CmdletBinding(
 	DefaultParameterSetName = 'NewKeySet',
 	ConfirmImpact = 'High',

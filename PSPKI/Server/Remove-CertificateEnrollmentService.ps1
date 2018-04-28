@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('SysadminsLV.PKI.Utils.ServiceOperationResult')]
+[OutputType('SysadminsLV.PKI.Utils.IServiceOperationResult')]
 [CmdletBinding()]
 	param (
 		[string]$CAConfig,
