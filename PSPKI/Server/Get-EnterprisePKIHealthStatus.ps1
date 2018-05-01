@@ -630,8 +630,8 @@ namespace PKI.EnterprisePKI {
                         Write-Debug "$($CA.DisplayName): not supported edition. Current: $($CA.Type)."
                         throw "Only Enterprise CAs are supported by this parameterset."
                     }
-                    Write-Verbose ("=" * 20) $CA.DisplayName ("=" * 20)
-                    Write-Debug ("=" * 20) $CA.DisplayName ("=" * 20)
+                    Write-Verbose ("{0} {1} {0}" -f ('=' * 20), $CA.DisplayName)
+                    Write-Debug ("{0} {1} {0}" -f ('=' * 20), $CA.DisplayName)
                     Write-Debug "$($CA.DisplayName): retrieving CA Exchange certificate."
                     $xchg = $CA.GetCAExchangeCertificate()
                     __validateSinglePath $xchg
