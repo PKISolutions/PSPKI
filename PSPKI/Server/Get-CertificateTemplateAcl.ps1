@@ -30,7 +30,7 @@
 					}
 					if ($Permission) {
 						$NewACL += New-Object PKI.Security.AccessControlEntry2 -Property @{
-							IdentityReference = $User
+							IdentityReference = $User.Value
 							AccessType = $AccessType;
 							Permissions = $Permission
 						}

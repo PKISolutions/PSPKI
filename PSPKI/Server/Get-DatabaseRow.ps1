@@ -30,10 +30,27 @@
 				Write-Error $_
 				continue
 			}
-			if ($RowID -ne $null) {
-				$RowID | ForEach-Object {Get-RequestRow -CA $CA -Property $Property -Table $Table -Filter "$IdColumn -eq $_" -Schema $Schema}
+			if ($Table -eq "Request" -or $Table -eq "CRL") {
+				# 'Request' and 'CRL' tables return single row item per RowID. If RowID is specified, all
+				# other filters are ignored, because exact row is requested. This is by design.
+				if ($RowID -ne $null) {
+					$RowID | ForEach-Object {Get-RequestRow -CA $CA -Property $Property -Table $Table -Filter "$IdColumn -eq $_" -Schema $Schema}
+				} else {
+					Get-RequestRow -CA $CA -Property $Property -Table $Table -Filter $Filter -Schema $Schema
+				}
 			} else {
-				Get-RequestRow -CA $CA -Property $Property -Table $Table -Filter $Filter -Schema $Schema
+				# 'Extension' or 'Attribute' tables may return multiple objects for single RowID. Therefore,
+				# if one of these tables is used and RowID is specified, silently append RowID filter to
+				# existing filter list to allow 2nd level filtering.
+				if ($RowID -ne $null) {
+					$RowID | ForEach-Object {
+						$Filter += "$IdColumn -eq $_"
+						Get-RequestRow -CA $CA -Property $Property -Table $Table -Filter $Filter -Schema $Schema
+						$Filter = $Filter[0..($Filter.Length - 2)]
+					}
+				} else {
+					Get-RequestRow -CA $CA -Property $Property -Table $Table -Filter $Filter -Schema $Schema
+				}
 			}
 		}
 	}

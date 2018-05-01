@@ -2,15 +2,16 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
+[OutputType('SysadminsLV.PKI.Utils.IServiceOperationResult')]
 [CmdletBinding()]
 	param (
 		[switch]$Force
 	)
-
+	if ($Host.Name -eq "ServerRemoteHost") {throw New-Object NotSupportedException}
 #region Check operating system
-	$OS = (Get-WmiObject Win32_OperatingSystem).Caption
-	if ($OS -notlike "Microsoft Windows Server 2008 R2*") {
-		Write-Warning "Only Windows Server 2008 R2 operating system is supported!"; return
+	if ($OSVersion.Major -ne 6 -and $OSVersion.Minor -ne 1) {
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070057, "Only Windows Server 2008 R2 operating system is supported."
+		return
 	}
 #endregion
 
@@ -22,26 +23,26 @@
 	        $elevated = $true
     	}
 	}
-	if (!$elevated) {Write-Warning "You must be logged on with Enterprise Admins permissions!"; return}
+	if (!$elevated) {
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070005, "You must be logged on with Enterprise Admins permissions."
+		return
+	}
 #endregion
 
 	$CEP = New-Object -ComObject CERTOCM.CertificateEnrollmentPolicyServerSetup
-	Write-Host "Performing Certificate Enrollment Service removal with the fillowing settings:" -ForegroundColor Cyan
-	if ($Force) {Write-Host "Remove installation packages: Yes" -ForegroundColor Cyan}
-	else {write-Host "Remove installation packages: No" -ForegroundColor Cyan}
-	Write-Host ("-" * 50) `
-	`nRemoval results `
-	`n("-" * 50) -ForegroundColor Green
-	try {$CEP.Uninstall()}
-	catch {Write-Warning "CEP service removal failed!"; $Error[0].Exception; return}
-	Write-Host "CEP service successfully removed!" -ForegroundColor Green
+	Write-Verbose @"
+Performing Certificate Enrollment Service removal with the fillowing settings:
+Remove packages : $(if ($Force) {"Yes"} else {"No"})
+"@
+	try {
+		$CEP.Uninstall()
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0
+	} catch {
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $_.Exception.HResult
+		return
+	}
 	if ($Force) {
 		Import-Module ServerManager
-		$retn = Remove-WindowsFeature -Name ADCS-Enroll-Web-Pol
-		if (!$retn.Success) {
-			Write-Warning "CEP installation package removal failed due of the following error:"
-			Write-Warning $retn.ExitCode
-		}
-		else {Write-Host "CEP installation packages are successfully removed!" -ForegroundColor Green}
+		Remove-WindowsFeature -Name ADCS-Enroll-Web-Pol | Out-Null
 	}
 }

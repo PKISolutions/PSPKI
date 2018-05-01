@@ -2,6 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
+[OutputType('SysadminsLV.PKI.Utils.IServiceOperationResult')]
 [CmdletBinding()]
 	param (
 		[string]$CAConfig,
@@ -9,11 +10,11 @@
 		[string]$Authentication = "Kerberos",
 		[switch]$Force
 	)
-
+	if ($Host.Name -eq "ServerRemoteHost") {throw New-Object NotSupportedException}
 #region Check operating system
-	$OS = (Get-WmiObject Win32_OperatingSystem).Caption
-	if ($OS -notlike "Microsoft Windows Server 2008 R2*") {
-		Write-Warning "Only Windows Server 2008 R2 operating system is supported!"; return
+	if ($OSVersion.Major -ne 6 -and $OSVersion.Minor -ne 1) {
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070057, "Only Windows Server 2008 R2 operating system is supported."
+		return
 	}
 #endregion
 
@@ -25,7 +26,10 @@
 	        $elevated = $true
     	}
 	}
-	if (!$elevated) {Write-Warning "You must be logged on with Enterprise Admins permissions!"; return}
+	if (!$elevated) {
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070005, "You must be logged on with Enterprise Admins permissions."
+		return
+	}
 #endregion
 
 	$auth = @{"Kerberos" = 2; "UsrPwd" = 4; "Certificate" = 8}
@@ -33,31 +37,33 @@
 		$config = New-Object -ComObject CertificateAuthority.Config
 		try {
 			$bstr = $config.GetConfig(1)
-		} catch {Write-Warning "There is no available Enterprise Certification Authorities or user canceled operation."; return}
+		} catch {
+			New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070002,
+				"There is no available Enterprise Certification Authorities or user canceled operation."
+			return
+		}
+	} elseif ($CAConfig -ne "" -and !$Force) {
+		$bstr = $CAConfig
+	} else {
+		$bstr = $null
+		$auth.$Authentication = $null
 	}
-	elseif ($CAConfig -ne "" -and !$Force){$bstr = $CAConfig}
-	else {$bstr = $null; $auth.$Authentication = $null}
 	$CES = New-Object -ComObject CERTOCM.CertificateEnrollmentServerSetup
-	Write-Host "Performing Certificate Enrollment Service removal with the fillowing settings:" -ForegroundColor Cyan
-	if ($bstr -eq $null) {Write-Host "CA configuration string: Any" -ForegroundColor Cyan}
-	else {Write-Host "CA configuration string: $bstr" -ForegroundColor Cyan}
-	if ($auth.$Authentication -eq $null) {Write-Host "Authentication type: Any" -ForegroundColor Cyan}
-	else {Write-Host "Authentication type: $Authentication" -ForegroundColor Cyan}
-	if ($Force) {Write-Host "Remove installation packages: Yes" -ForegroundColor Cyan}
-	else {write-Host "Remove installation packages: No" -ForegroundColor Cyan}
-	Write-Host ("-" * 50) `
-	`nRemoval results `
-	`n("-" * 50) -ForegroundColor Green
-	try {$CES.Uninstall($bstr, $auth.$Authentication)}
-	catch {Write-Warning "CES service removal failed!"; $Error[0].Exception; return}
-	Write-Host "CES service successfully removed!" -ForegroundColor Green
+	Write-Verbose @"
+Performing Certificate Enrollment Service removal with the fillowing settings:
+CA configuration string : $(if ($bstr -eq $null) {"Any"} else {$bstr})
+Authentication          : $(if ($auth.$Authentication -eq $null) {"Any"} else {$Authentication})
+Remove packages         : $(if ($Force) {"Yes"} else {"No"})
+"@
+	try {
+		$CES.Uninstall($bstr, $auth.$Authentication)
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0
+	} catch {
+		New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $_.Exception.HResult
+		return
+	}
 	if ($Force) {
 		Import-Module ServerManager
-		$retn = Remove-WindowsFeature -Name ADCS-Enroll-Web-Svc
-		if (!$retn.Success) {
-			Write-Warning "CES installation package removal failed due of the following error:"
-			Write-Warning $retn.ExitCode
-		}
-		else {Write-Host "CES installation packages are successfully removed!" -ForegroundColor Green}
+		Remove-WindowsFeature -Name ADCS-Enroll-Web-Svc | Out-Null
 	}
 }

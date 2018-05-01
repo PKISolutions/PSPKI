@@ -2,6 +2,7 @@ function Install-CertificationAuthority {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
+[OutputType('SysadminsLV.PKI.Utils.IServiceOperationResult')]
 [CmdletBinding(
 	DefaultParameterSetName = 'NewKeySet',
 	ConfirmImpact = 'High',
@@ -43,7 +44,7 @@ function Install-CertificationAuthority {
 #region OS and existing CA checking
 	# check if script running on Windows Server 2008 or Windows Server 2008 R2
 	$OS = Get-WmiObject Win32_OperatingSystem -Property ProductType
-	if ([Environment]::OSVersion.Version.Major -lt 6) {
+	if ($OSVersion.Major -lt 6) {
 		Write-Error -Category NotImplemented -ErrorId "NotSupportedException" `
 		-Message "Windows XP, Windows Server 2003 and Windows Server 2003 R2 are not supported!"
 		return
@@ -65,7 +66,7 @@ function Install-CertificationAuthority {
 #endregion
 
 #region Binaries checking and installation if necessary
-	if ([Environment]::OSVersion.Version.Major -eq 6 -and [Environment]::OSVersion.Version.Minor -eq 0) {
+	if ($OSVersion.Major -eq 6 -and $OSVersion.Minor -eq 0) {
 		cmd /c "servermanagercmd -install AD-Certificate 2> null" | Out-Null
 	} else {
 		try {Import-Module ServerManager -ErrorAction Stop}
@@ -263,27 +264,27 @@ function ExistingKeySet ($Thumbprint) {
 		"NewKeySet" {NewKeySet $CAName $CADNSuffix $CAType $ParentCA $CSP $KeyLength $HashAlgorithm $ValidForYears $RequestFileName $AllowCSPInteraction}
 	}
 	try {
-		Write-Host "Installing Certification Authority role on $env:computername ..." -ForegroundColor Cyan
+		Write-Verbose "Installing Certification Authority role on $env:computername ..." -ForegroundColor Cyan
 		if ($Force -or $PSCmdlet.ShouldProcess($env:COMPUTERNAME, "Install Certification Authority")) {
 			$CASetup.Install()
 			$PostRequiredMsg = @"
-Certification Authority role was successfully installed, but not completed. To complete installation submit
-request file '$($CASetup.GetCASetupProperty(14))' to parent Certification Authority
+Certification Authority role was successfully installed, but not completed. To complete
+installation submit request file '$($CASetup.GetCASetupProperty(14))' to parent Certification Authority
 and install issued certificate by running the following command: certutil -installcert 'PathToACertFile'
 "@
 			if ($CASetup.GetCASetupProperty(0) -eq 1 -and $ParentCA -eq "") {
-				Write-Host $PostRequiredMsg -ForegroundColor Yellow -BackgroundColor Black
+				Write-Warning $PostRequiredMsg
 			} elseif ($CASetup.GetCASetupProperty(0) -eq 1 -and $PSCmdlet.ParameterSetName -eq "NewKeySet" -and $ParentCA -ne "") {
 				$CASName = (Get-ItemProperty HKLM:\System\CurrentControlSet\Services\CertSvc\Configuration).Active
 				$SetupStatus = (Get-ItemProperty HKLM:\System\CurrentControlSet\Services\CertSvc\Configuration\$CASName).SetupStatus
 				$RequestID = (Get-ItemProperty HKLM:\System\CurrentControlSet\Services\CertSvc\Configuration\$CASName).RequestID
 				if ($SetupStatus -ne 1) {
-					Write-Host $PostRequiredMsg -ForegroundColor Yellow -BackgroundColor Black
+					Write-Warning $PostRequiredMsg
 				}
 			} elseif ($CASetup.GetCASetupProperty(0) -eq 4) {
-				Write-Host $PostRequiredMsg -ForegroundColor Yellow -BackgroundColor Black
-			} else {Write-Host "Certification Authority role is successfully installed!" -ForegroundColor Green}
+				Write-Warning $PostRequiredMsg
+			} else {New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0}
 		}
-	} catch {Write-Error $_ -ErrorAction Stop}
+	} catch {New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $_.Exception.HResult}
 	Remove-Module ServerManager -ErrorAction SilentlyContinue
 }

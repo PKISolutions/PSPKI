@@ -15,7 +15,7 @@
 
 	$temps = @()
 	$vtemps = @()
-	$ldap = [ADSI]"LDAP://CN=Certificate Templates,$ConfigContext"
+	$ldap = [ADSI]"LDAP://CN=Certificate Templates,$PkiConfigContext"
 	$ldap.psbase.children | ForEach-Object {
 		$temps += New-Object psobject -Property @{
 			Name = $_.Properties["cn"].Value;

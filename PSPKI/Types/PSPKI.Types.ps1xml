@@ -1,141 +1,141 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Types>
-	<Type>
-		<Name>System.Security.Cryptography.Oid</Name>
- 		<Members>
-			<ScriptMethod>
-				<Name>Equal</Name>
-				<Script>
-					param(
-						[Parameter(Mandatory = $true)]
-						[Security.Cryptography.Oid]$OID
-					)
-					if ($OID.FriendlyName -ne $null) {
-						if ($this.FriendlyName -eq $OID.FriendlyName) {[bool]$true} else {[bool]$false}
-					} else {
-						if ($this.Value -eq $OID.Value) {[bool]$true} else {[bool]$false}
-					}
-				</Script>
-			</ScriptMethod>
-		</Members>
-	</Type>
-	<Type>
-		<Name>System.Security.Cryptography.Oid[]</Name>
-		<Members>
-			<ScriptMethod>
-				<Name>AddOid</Name>
-				<Script>
-					$OIDs = $args[0]
-					[System.Security.Cryptography.Oid[]]$Existing = $this
-					foreach ($OID in $OIDs) {
-						if ($OID.FriendlyName -ne $null) {
-							if (!($Existing | ?{$_.FriendlyName -eq $OID.FriendlyName})) {
-								$Existing += $OID
-							}
-						} else {
-							if (!($Existing | ?{$_.Value -eq $OID.Value})) {
-								$Existing += $OID
-							}
-						}
-					}
-					[System.Security.Cryptography.Oid[]]$Existing
-				</Script>
-			</ScriptMethod>
-			<ScriptMethod>
-				<Name>RemoveOid</Name>
-				<Script>
-					$OIDs = $args[0]
-					[System.Security.Cryptography.Oid[]]$Existing = $this
-					foreach ($OID in $OIDs) {
-						if ($OID.FriendlyName -ne $null) {
-							$Existing = $Existing | ?{$_.FriendlyName -ne $OID.FriendlyName}
-						} else {
-							$Existing = $Existing | ?{$_.Value -ne $OID.Value}
-						}
-					}
-					[System.Security.Cryptography.Oid[]]$Existing
-				</Script>
-			</ScriptMethod>
-		</Members>
-	</Type>
-	<Type>
-		<Name>System.Security.Cryptography.X509Certificates.X509ChainStatus</Name>
- 		<Members>
-			<ScriptMethod>
-				<Name>ToString</Name>
-				<Script>
-					$this.Status
-				</Script>
-			</ScriptMethod>
-		</Members>
-	</Type>
-	<Type>
-		<Name>System.Management.Automation.Signature</Name>
-		<Members>
-			<ScriptProperty>
-				<Name>SigningTime</Name>
-				<GetScriptBlock>
-					if ($this.SignerCertificate -ne $null) {
-						$CERT_QUERY_OBJECT_FILE = 0x1
-						$CERT_QUERY_CONTENT_FLAG_ALL = 16382
-						$CERT_QUERY_FORMAT_FLAG_ALL = 14
-						$pdwMsgAndCertEncodingType =  0
-						$pdwContentType =  0
-						$pdwFormatType =  0
-						[IntPtr]$phCertStore = [IntPtr]::Zero
-						[IntPtr]$phMsg = [IntPtr]::Zero
-						[IntPtr]$ppvContext = [IntPtr]::Zero
-						$return = [PKI.Crypt32]::CryptQueryObject(
-							$CERT_QUERY_OBJECT_FILE,
-							$_.Path,
-							$CERT_QUERY_CONTENT_FLAG_ALL,
-							$CERT_QUERY_FORMAT_FLAG_ALL,
-							$null,
-							[ref]$pdwMsgAndCertEncodingType,
-							[ref]$pdwContentType,
-							[ref]$pdwFormatType,
-							[ref]$phCertStore,
-							[ref]$phMsg,
-							[ref]$ppvContext
-						)
-						if (!$return) {return}
-						$pcbData = 0
-						$return = [PKI.Crypt32]::CryptMsgGetParam($phMsg,29,0,$null,[ref]$pcbData)
-						if (!$return) {return}
-						$pvData = New-Object byte[] -ArgumentList $pcbData
-						$return = [PKI.Crypt32]::CryptMsgGetParam($phMsg,29,0,$pvData,[ref]$pcbData)
-						$SignedCms = New-Object Security.Cryptography.Pkcs.SignedCms
-						$SignedCms.Decode($pvData)
-						foreach ($Infos in $SignedCms.SignerInfos) {
-							foreach ($CounterSignerInfos in $Infos.CounterSignerInfos) {
-								$CounterSignerInfos
-								$sTime = ($CounterSignerInfos.SignedAttributes | ?{$_.Oid.Value -eq "1.2.840.113549.1.9.5"}).Values | `
-								Where-Object {$_.SigningTime -ne $null}
-							}
-						}
-						$sTime.SigningTime
-						[void][PKI.Crypt32]::CryptMsgClose($phMsg)
-						[void][PKI.Crypt32]::CertCloseStore($phCertStore,0)
-					} else {
-						$null
-					}
-				</GetScriptBlock>
-			</ScriptProperty>
-		</Members>
-	</Type>
-	<Type>
-		<Name>System.Security.Cryptography.X509Certificates.X509Certificate2</Name>
-		<Members>
-			<ScriptProperty>
-				<Name>ResolvedExtensions</Name>
-				<GetScriptBlock>
-					if ($this.Extensions -eq $null) {
-						$null
-						return
-					}
-					[PKI.Utils.CLRExtensions.X509Certificate2Extensions]::ResolveExtensions($this)
-				</GetScriptBlock>
-			</ScriptProperty>
-		</Members>
-	</Type>
+  <Type>
+    <Name>System.Security.Cryptography.Oid</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Equal</Name>
+        <Script>
+          param(
+            [Parameter(Mandatory = $true)]
+            [Security.Cryptography.Oid]$OID
+          )
+          if ($OID.FriendlyName -ne $null) {
+            if ($this.FriendlyName -eq $OID.FriendlyName) {[bool]$true} else {[bool]$false}
+          } else {
+            if ($this.Value -eq $OID.Value) {[bool]$true} else {[bool]$false}
+          }
+        </Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+  <Type>
+    <Name>System.Security.Cryptography.Oid[]</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AddOid</Name>
+        <Script>
+          $OIDs = $args[0]
+          [System.Security.Cryptography.Oid[]]$Existing = $this
+          foreach ($OID in $OIDs) {
+            if ($OID.FriendlyName -ne $null) {
+              if (!($Existing | ?{$_.FriendlyName -eq $OID.FriendlyName})) {
+                $Existing += $OID
+              }
+            } else {
+              if (!($Existing | ?{$_.Value -eq $OID.Value})) {
+                $Existing += $OID
+              }
+            }
+          }
+          [System.Security.Cryptography.Oid[]]$Existing
+        </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RemoveOid</Name>
+        <Script>
+          $OIDs = $args[0]
+          [System.Security.Cryptography.Oid[]]$Existing = $this
+          foreach ($OID in $OIDs) {
+            if ($OID.FriendlyName -ne $null) {
+              $Existing = $Existing | ?{$_.FriendlyName -ne $OID.FriendlyName}
+            } else {
+              $Existing = $Existing | ?{$_.Value -ne $OID.Value}
+            }
+          }
+          [System.Security.Cryptography.Oid[]]$Existing
+        </Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+  <Type>
+    <Name>System.Security.Cryptography.X509Certificates.X509ChainStatus</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>ToString</Name>
+        <Script>
+          $this.Status
+        </Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+  <Type>
+    <Name>System.Management.Automation.Signature</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>SigningTime</Name>
+        <GetScriptBlock>
+          if ($this.SignerCertificate -ne $null) {
+            $CERT_QUERY_OBJECT_FILE = 0x1
+            $CERT_QUERY_CONTENT_FLAG_ALL = 16382
+            $CERT_QUERY_FORMAT_FLAG_ALL = 14
+            $pdwMsgAndCertEncodingType =  0
+            $pdwContentType =  0
+            $pdwFormatType =  0
+            [IntPtr]$phCertStore = [IntPtr]::Zero
+            [IntPtr]$phMsg = [IntPtr]::Zero
+            [IntPtr]$ppvContext = [IntPtr]::Zero
+            $return = [SysadminsLV.PKI.Win32.Crypt32]::CryptQueryObject(
+              $CERT_QUERY_OBJECT_FILE,
+              $_.Path,
+              $CERT_QUERY_CONTENT_FLAG_ALL,
+              $CERT_QUERY_FORMAT_FLAG_ALL,
+              $null,
+              [ref]$pdwMsgAndCertEncodingType,
+              [ref]$pdwContentType,
+              [ref]$pdwFormatType,
+              [ref]$phCertStore,
+              [ref]$phMsg,
+              [ref]$ppvContext
+            )
+            if (!$return) {return}
+            $pcbData = 0
+            $return = [SysadminsLV.PKI.Win32.Crypt32]::CryptMsgGetParam($phMsg,29,0,$null,[ref]$pcbData)
+            if (!$return) {return}
+            $pvData = New-Object byte[] -ArgumentList $pcbData
+            $return = [SysadminsLV.PKI.Win32.Crypt32]::CryptMsgGetParam($phMsg,29,0,$pvData,[ref]$pcbData)
+            $SignedCms = New-Object Security.Cryptography.Pkcs.SignedCms
+            $SignedCms.Decode($pvData)
+            foreach ($Infos in $SignedCms.SignerInfos) {
+              foreach ($CounterSignerInfos in $Infos.CounterSignerInfos) {
+                $CounterSignerInfos
+                $sTime = ($CounterSignerInfos.SignedAttributes | ?{$_.Oid.Value -eq "1.2.840.113549.1.9.5"}).Values | `
+                Where-Object {$_.SigningTime -ne $null}
+              }
+            }
+            $sTime.SigningTime
+            [void][SysadminsLV.PKI.Win32.Crypt32]::CryptMsgClose($phMsg)
+            [void][SysadminsLV.PKI.Win32.Crypt32]::CertCloseStore($phCertStore,0)
+          } else {
+            $null
+          }
+        </GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+  <Type>
+    <Name>System.Security.Cryptography.X509Certificates.X509Certificate2</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>ResolvedExtensions</Name>
+        <GetScriptBlock>
+          if ($this.Extensions -eq $null) {
+            $null
+            return
+          }
+          [SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::ResolveExtensions($this)
+        </GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
 </Types>

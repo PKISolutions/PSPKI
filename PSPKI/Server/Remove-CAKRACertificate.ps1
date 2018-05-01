@@ -37,7 +37,7 @@
 					$Thumbprint | ForEach-Object {$KRA.Remove($_)}
 				}
 				$KRA
-			} else {Write-Warning "Current list of assigned key recovery agent certificates is empty!"}
+			} else {Write-Verbose "Current list of assigned key recovery agent certificates is empty!"}
 		}
 	}
 }

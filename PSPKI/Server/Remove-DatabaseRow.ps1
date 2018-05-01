@@ -2,6 +2,7 @@ function Remove-DatabaseRow {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
+[OutputType('SysadminsLV.PKI.Utils.IServiceOperationResult')]
 [CmdletBinding(DefaultParameterSetName = '__single')]
 	param(
 		[Parameter(
@@ -49,11 +50,16 @@ function Remove-DatabaseRow {
 					$CertAdmin = New-Object -ComObject CertificateAuthority.Admin
 					$Return = $CertAdmin.DeleteRow($Req.ConfigString,$dwFlags,0,0,$Req.RowId)
 					if ($Return -eq 1) {
-						Write-Host "Deleted request row with ID = $($Req.RequestID)."
+						New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
+							"Deleted request row with ID=$($Req.RequestID).",
+							$Req.RequestID
 					} else {
+						New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0x80070002,
+							"Database row with ID = $($Req.RequestID) does not exist.",
+							$Req.RequestID
 						Write-Warning "Database row with ID = $($Req.RequestID) does not exist."
 					}
-					[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)
+					[PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
 				}
 			}
 			"__bulk" {
@@ -62,14 +68,16 @@ function Remove-DatabaseRow {
 					$Return = $CertAdmin.DeleteRow($CA.ConfigString,$dwFlags,$RemoveBefore.ToUniversalTime(),$Table,0)
 					if ($Return -gt 0) {
 						if ($Filter -eq "CRL") {
-							Write-Host "Deleted CRLs expired before '$RemoveBefore'."
+							New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
+								"Deleted CRLs expired before '$RemoveBefore'."
 						} else {
-							Write-Host "Deleted requests expired before '$RemoveBefore'."
+							New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
+								"Deleted requests expired before '$RemoveBefore'."
 						}
 					} else {
-						Write-Warning "No rows were deleted."
+						New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0, "No rows were deleted."
 					}
-					[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)
+					[PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
 				}
 			}
 		}		

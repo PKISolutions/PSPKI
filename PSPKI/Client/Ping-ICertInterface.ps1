@@ -21,14 +21,14 @@
 				$output.ICertAdmin = $true
 			} catch {
 				#
-			} finally {[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)}
+			} finally {[PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)}
 			try {
 				$CertRequest = New-Object -ComObject CertificateAuthority.Request
 				[Void]$CertRequest.GetCAProperty($CA.ConfigString,0x6,0,4,0)
 				$output.ICertRequest = $true
 			} catch {
 				#
-			} finally {[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertRequest)}
+			} finally {[PKI.Utils.CryptographyUtils]::ReleaseCom($CertRequest)}
 			$output
 		}
 	}

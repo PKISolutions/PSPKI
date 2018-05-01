@@ -30,8 +30,8 @@
 				}
 			}
 			$Base64 = [Convert]::ToBase64String($cert.RawData)
-			[Int64]$RowID = $CertAdmin.ImportCertificate($CA.ConfigString,$Base64,0x1)
+			[Int64]$RowID = $CertAdmin.ImportCertificate($CertificationAuthority.ConfigString,$Base64,0x1)
 			$RowID
 		} finally { }
-	} else {Write-ErrorMessage -Source ICertAdminUnavailable $CA.ComputerName}
+	} else {Write-ErrorMessage -Source ICertAdminUnavailable $CertificationAuthority.ComputerName}
 }

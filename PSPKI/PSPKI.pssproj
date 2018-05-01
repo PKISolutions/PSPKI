@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="about_PSPKI_Module.help.txt" />
+    <Content Include="about_ReleaseNotes.txt" />
     <Content Include="Client\PSPKI.Help.xml" />
     <Content Include="Library\Interop.CERTADMINLib.dll" />
     <Content Include="Library\Interop.CERTCLILib.dll" />
