@@ -21,7 +21,11 @@
                             "GenericAll",
                             $Entry.AccessType
                         )
-                        $adsi.ObjectSecurity.AddAccessRule($ACE)
+                        try {
+                            $adsi.ObjectSecurity.AddAccessRule($ACE)
+                        } catch {
+                            Write-Verbose $_.Exception.Message
+                        }
                         continue
                     }
                     "^Read$|^Write$" {
@@ -37,7 +41,11 @@
                             $Rights,
                             $Entry.AccessType
                         )
-                        $adsi.ObjectSecurity.AddAccessRule($ACE)
+                        try {
+                            $adsi.ObjectSecurity.AddAccessRule($ACE)
+                        } catch {
+                            Write-Verbose $_.Exception.Message
+                        }
                     }
                     "^Enroll$" {
                         $ACE = New-Object DirectoryServices.ActiveDirectoryAccessRule (
@@ -46,7 +54,11 @@
                             $Entry.AccessType,
                             [Guid]"0e10c968-78fb-11d2-90d4-00c04f79dc55"
                         )
-                        $adsi.ObjectSecurity.AddAccessRule($ACE)
+                        try {
+                            $adsi.ObjectSecurity.AddAccessRule($ACE)
+                        } catch {
+                            Write-Verbose $_.Exception.Message
+                        }
                     }
                     "^Autoenroll$" {
                         $ACE = New-Object DirectoryServices.ActiveDirectoryAccessRule (
@@ -55,7 +67,11 @@
                             $Entry.AccessType,
                             [Guid]"a05b8cc2-17bc-4802-a710-e7c15ab866a2"
                         )
-                        $adsi.ObjectSecurity.AddAccessRule($ACE)
+                        try {
+                            $adsi.ObjectSecurity.AddAccessRule($ACE)
+                        } catch {
+                            Write-Verbose $_.Exception.Message
+                        }
                     }
                 }
             }
