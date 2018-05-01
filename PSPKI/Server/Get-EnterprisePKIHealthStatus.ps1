@@ -218,7 +218,7 @@ namespace PKI.EnterprisePKI {
                 Write-Debug "URL error: $hresult"
                 $CertRequest = New-Object -ComObject CertificateAuthority.Request
                 $CertRequest.GetErrorMessageText($hresult,0)
-                [void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertRequest)
+                [PKI.Utils.CryptographyUtils]::ReleaseCom($CertRequest)
             }
         }
         # returns [X509CRL2] or [String] that contains error message
@@ -243,7 +243,7 @@ namespace PKI.EnterprisePKI {
                 Write-Debug "URL error: $hresult"
                 $CertRequest = New-Object -ComObject CertificateAuthority.Request
                 $CertRequest.GetErrorMessageText($hresult,0)
-                [void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertRequest)
+                [PKI.Utils.CryptographyUtils]::ReleaseCom($CertRequest)
             }
         }
         # returns PSObject -- UrlPack

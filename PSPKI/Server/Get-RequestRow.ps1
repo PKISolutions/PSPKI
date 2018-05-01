@@ -38,13 +38,13 @@ function __handleOidColumns($Row) {
     if ($Filter -ne $null) {
         foreach ($line in $Filter) {
             if ($line -notmatch "^(.+)\s(-eq|-lt|-le|-ge|-gt)\s(.+)$") {
-                [void][Runtime.InteropServices.Marshal]::ReleaseComObject($CaView)
+                [PKI.Utils.CryptographyUtils]::ReleaseCom($CaView)
                 throw "Malformed filter: '$line'"
             }
             try {
                 $Rcolumn = $CaView.GetColumnIndex($false, $matches[1])
             } catch {
-                [void][Runtime.InteropServices.Marshal]::ReleaseComObject($CaView)
+                [PKI.Utils.CryptographyUtils]::ReleaseCom($CaView)
                 throw "Specified column '$($matches[1])' does not exist."
             }
             $Seek = switch ($matches[2]) {
@@ -70,7 +70,7 @@ function __handleOidColumns($Row) {
                 $CaView.SetRestriction($RColumn,$Seek,0,$Value)
             } catch {
                 Write-Warning "Specified pattern '$line' is not valid."
-                [void][Runtime.InteropServices.Marshal]::ReleaseComObject($CaView)
+                [PKI.Utils.CryptographyUtils]::ReleaseCom($CaView)
                 throw "Specified pattern '$line' is not valid."
             }
         }
@@ -131,8 +131,8 @@ function __handleOidColumns($Row) {
         }
         __handleOidColumns $Row
         $Row
-        [void][Runtime.InteropServices.Marshal]::ReleaseComObject($DbColumn)
+        [PKI.Utils.CryptographyUtils]::ReleaseCom($DbColumn)
     }
-    $CaView, $DbRow | ForEach-Object {[void][Runtime.InteropServices.Marshal]::ReleaseComObject($_)}
-    Remove-Variable CaView, Row
+    $CaView, $DbRow | ForEach-Object {[PKI.Utils.CryptographyUtils]::ReleaseCom($_)}
+    Remove-Variable CaView, Row -ErrorAction SilentlyContinue
 }

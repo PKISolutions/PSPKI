@@ -55,7 +55,7 @@
 			} else {
 				throw New-Object ArgumentException "The parameter is invalid."
 			}
-			[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)
+			[PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
 		}
 	}	
 }

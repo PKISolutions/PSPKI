@@ -31,7 +31,7 @@ function Revoke-Certificate {
 		} catch {
 			New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $_.Exception.HResult
 		} finally {
-			[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)
+			[PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
 		}
 		
 	}

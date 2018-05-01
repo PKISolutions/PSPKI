@@ -59,7 +59,7 @@ function Remove-DatabaseRow {
 							$Req.RequestID
 						Write-Warning "Database row with ID = $($Req.RequestID) does not exist."
 					}
-					[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)
+					[PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
 				}
 			}
 			"__bulk" {
@@ -77,7 +77,7 @@ function Remove-DatabaseRow {
 					} else {
 						New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0, "No rows were deleted."
 					}
-					[void][Runtime.InteropServices.Marshal]::ReleaseComObject($CertAdmin)
+					[PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
 				}
 			}
 		}		
