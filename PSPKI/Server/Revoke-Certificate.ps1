@@ -15,8 +15,19 @@ function Revoke-Certificate {
         [datetime]$RevocationDate = [datetime]::Now
     )
     begin {
-        $Reasons = @{"Unspecified"=0;"KeyCompromise"=1;"CACompromise"=2;"AffiliationChanged"=3;"Superseded"=4;
-            "CeaseOfOperation"=5;"Hold"=6;"ReleaseFromCRL"=8;"Unrevoke"=-1}
+        $Reasons = @{
+            "Unspecified"        = 0;
+            "KeyCompromise"      = 1;
+            "CACompromise"       = 2;
+            "AffiliationChanged" = 3;
+            "Superseded"         = 4;
+            "CeaseOfOperation"   = 5;
+            "Hold"               = 6;
+            "ReleaseFromCRL"     = 8;
+            "Unrevoke"           = -1
+        }
+        $ConfigString = ""
+        $CertAdmin = New-Object -ComObject CertificateAuthority.Admin
     }
     process {
         if ([string]::IsNullOrEmpty($Request.SerialNumber)) {
@@ -24,7 +35,14 @@ function Revoke-Certificate {
                 InnerObject = $Request.RequestID
             }
         }
-        $CertAdmin = New-Object -ComObject CertificateAuthority.Admin
+        # if this is first item in pipeline, then $ConfigString is null.
+        # cache new config string and instantiate ICertAdmin.
+        # do the same if config string doesn't match cached one.
+        if (!$ConfigString -or ($ConfigString -ne $Request.ConfigString)) {
+            $ConfigString = $Request.ConfigString
+            [PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
+            $CertAdmin = New-Object -ComObject CertificateAuthority.Admin
+        }
         if ($Request.SerialNumber.Length % 2) {$Request.Serialnumber = "0" + $Request.Serialnumber}
         try {
             $CertAdmin.RevokeCertificate($Request.ConfigString,$Request.SerialNumber,$Reasons[$Reason],$RevocationDate.ToUniversalTime())
@@ -32,9 +50,9 @@ function Revoke-Certificate {
                 "Successfully revoked certificate with ID=$($Request.RequestID) and reason: '$Reason'"
         } catch {
             New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $_.Exception.HResult
-        } finally {
-            [PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
         }
-        
+    }
+    end {
+        [PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
     }
 }
