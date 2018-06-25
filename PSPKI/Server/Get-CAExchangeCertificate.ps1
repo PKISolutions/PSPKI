@@ -20,8 +20,8 @@
 			$xchg = $CA.GetCAExchangeCertificate()
 			if ($X509) {return $xchg}
 			switch ($Encoding) {
-				"Base64Header" {[SysadminsLV.Asn1Parser]::BinaryToString($xchg.RawData,"Base64Header")}
-				"Base64" {[SysadminsLV.Asn1Parser]::BinaryToString($xchg.RawData,"Base64")}
+				"Base64Header" {[SysadminsLV.Asn1Parser.AsnFormatter]::BinaryToString($xchg.RawData,"Base64Header")}
+				"Base64" {[SysadminsLV.Asn1Parser.AsnFormatter]::BinaryToString($xchg.RawData,"Base64")}
 				"Binary" {$xchg.RawData}
 				default {Write-Error "Specified encoding type is not supported."; return}
 			}
