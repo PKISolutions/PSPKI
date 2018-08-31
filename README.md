@@ -6,11 +6,15 @@ This module is intended to simplify various PKI and Active Directory Certificate
 
 This module is intended for Certification Authority management. For local certificate store management you should consider to use [Quest AD PKI cmdlets](http://www.quest.com/powershell/activeroles-server.aspx).
 
+#### Relationships between Microsoft PKI and PSPKI modules
+
+Starting with Windows 8/Windows Server 2012, a **PKI** module is installed along with AD CS Remote Server Administration Tools. This module is maintained by Microsoft. **PSPKI** is open-source community module and uses completely different codebase.
+
 ### Documentation
 
 All documentation is available at my website: [PowerShell PKI Module](https://www.sysadmins.lv/projects/pspki/default.aspx)
 
-### Download and install PowerShell PKI module from the PowerShellGallery using PowerShell
+### Download and install PowerShell PKI module from the PowerShell Gallery using PowerShell
 ```PowerShell
 Install-Module -Name PSPKI
 ```
