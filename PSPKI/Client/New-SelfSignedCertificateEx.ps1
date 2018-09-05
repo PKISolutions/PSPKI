@@ -3,7 +3,7 @@
 .ExternalHelp PSPKI.Help.xml
 #>
 [OutputType('[System.Security.Cryptography.X509Certificates.X509Certificate2]')]
-[CmdletBinding(DefaultParameterSetName = '__store')]
+[CmdletBinding(DefaultParameterSetName = '__runtime')]
     param (
         [Parameter(Mandatory = $true, Position = 0)]
         [string]$Subject,
