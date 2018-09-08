@@ -106,7 +106,7 @@
     <Compile Include="Server\Get-CertificationAuthority.ps1" />
     <Compile Include="Server\Get-CRLDistributionPoint.ps1" />
     <Compile Include="Server\Get-CRLValidityPeriod.ps1" />
-    <Compile Include="Server\Get-DatabaseRow.ps1" />
+    <Compile Include="Server\Get-AdcsDatabaseRow.ps1" />
     <Compile Include="Server\Get-EnterprisePKIHealthStatus.ps1" />
     <Compile Include="Server\Get-ExtensionList.ps1" />
     <Compile Include="Server\Get-FailedRequest.ps1" />

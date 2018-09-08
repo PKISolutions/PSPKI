@@ -16,6 +16,6 @@ function Get-FailedRequest {
         [String[]]$Filter
     )
     process {
-        Get-DatabaseRow -CA $CA -Table "Failed" -RowId $RequestID -Property $Property -Filter $Filter
+        Get-AdcsDatabaseRow -CA $CA -Table "Failed" -RowId $RequestID -Property $Property -Filter $Filter
     }
 }

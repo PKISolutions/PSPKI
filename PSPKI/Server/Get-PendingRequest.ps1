@@ -15,5 +15,5 @@
         [String[]]$Property,
         [String[]]$Filter
     )
-    Get-DatabaseRow -CA $CA -Table "Pending" -RowId $RequestID -Property $Property -Filter $Filter
+    Get-AdcsDatabaseRow -CA $CA -Table "Pending" -RowId $RequestID -Property $Property -Filter $Filter
 }

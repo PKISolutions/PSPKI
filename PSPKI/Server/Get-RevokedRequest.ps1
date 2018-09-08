@@ -15,5 +15,5 @@
         [String[]]$Property,
         [String[]]$Filter
     )
-    Get-DatabaseRow -CA $CA -Table "Revoked" -RowId $RequestID -Property $Property -Filter $Filter
+    Get-AdcsDatabaseRow -CA $CA -Table "Revoked" -RowId $RequestID -Property $Property -Filter $Filter
 }
