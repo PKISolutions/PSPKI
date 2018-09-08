@@ -15,31 +15,7 @@ function Get-FailedRequest {
         [String[]]$Property,
         [String[]]$Filter
     )
-    begin {
-        $Table = "Failed"
-    }
     process {
-        foreach ($CA in $CertificationAuthority) {
-            try {
-                $Reader = $CA.GetDbReader($Table)
-                $Schema = $Reader.GetTableSchema()
-            } catch {                
-                Write-Error $_
-                continue
-            } finally {
-                if ($Reader -ne $null) {
-                    $Reader.Dispose()
-                }
-            }
-            if ($RequestID -ne $null) {
-                $RequestID | ForEach-Object {
-                    $Reader = $CA.GetDbReader($Table)
-                    Get-RequestRow -Reader $Reader -Property $Property -Filter "RequestID -eq $_" -Schema $Schema
-                }
-            } else {
-                $Reader = $CA.GetDbReader($Table)
-                Get-RequestRow -Reader $Reader -Property $Property -Filter $Filter -Schema $Schema
-            }
-        }
+        Get-DatabaseRow -CA $CA -Table "Failed" -RowId $RequestID -Property $Property -Filter $Filter
     }
 }

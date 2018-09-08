@@ -62,7 +62,7 @@
                         $Reader = $CA.GetDbReader($Table)
                         $Filter += "$IdColumn -eq $_"
                         Get-RequestRow -Reader $Reader -Property $Property -Filter $Filter -Schema $Schema
-                        $Filter = $Filter[0..($Filter.Length - 2)]
+                        #$Filter = $Filter[0..($Filter.Length - 2)]
                     }
                 } else {
                     $Reader = $CA.GetDbReader($Table)
