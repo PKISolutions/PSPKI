@@ -2,6 +2,8 @@ function Get-RequestRow {
 [CmdletBinding()]
     param(
         [SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbReader]$Reader,
+        [int]$Page,
+        [int]$PageSize = [int]::MaxValue,
         [String[]]$Property,
         [String[]]$Filter,
         [SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbColumnSchema[]]$Schema
@@ -46,7 +48,8 @@ function Get-RequestRow {
         [void]$Reader.AddColumnToView($_)
     }
     try {
-        $Reader.GetView() | ForEach-Object {
+        $skip = ($Page - 1) * $PageSize
+        $Reader.GetView($skip, $PageSize) | ForEach-Object {
             foreach ($key in $_.Properties.Keys) {
                 $_ | Add-Member -MemberType NoteProperty $key -Value $_.Properties[$key] -Force
             }

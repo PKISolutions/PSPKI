@@ -11,6 +11,9 @@
         [SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbViewTableName]$Table = "Request",
         [Alias('ID')]
         [int[]]$RowID,
+        [ValidateRange(1,2147483647)]
+        [int]$Page = 1,
+        [int]$PageSize = [int]::MaxValue,
         [Alias("Properties", "IncludeProperty", "IncludeProperties", "IncludedProperty", "IncludedProperties")]
         [String[]]$Property,
         [String[]]$Filter
@@ -47,11 +50,23 @@
                 if ($RowID -ne $null) {
                     $RowID | ForEach-Object {
                         $Reader = $CA.GetDbReader($Table)
-                        Get-RequestRow -Reader $Reader -Property $Property -Filter "$IdColumn -eq $_" -Schema $Schema
+                        Get-RequestRow `
+                            -Reader $Reader `
+                            -Property $Property `
+                            -Filter "$IdColumn -eq $_" `
+                            -Schema $Schema `
+                            -Page $Page `
+                            -PageSize $PageSize
                     }
                 } else {
                     $Reader = $CA.GetDbReader($Table)
-                    Get-RequestRow -Reader $Reader -Property $Property -Filter $Filter -Schema $Schema
+                    Get-RequestRow `
+                        -Reader $Reader `
+                        -Property $Property `
+                        -Filter $Filter `
+                        -Schema $Schema `
+                        -Page $Page `
+                        -PageSize $PageSize
                 }
             } else {
                 # 'Extension' or 'Attribute' tables may return multiple objects for single RowID. Therefore,
@@ -61,12 +76,24 @@
                     $RowID | ForEach-Object {
                         $Reader = $CA.GetDbReader($Table)
                         $Filter += "$IdColumn -eq $_"
-                        Get-RequestRow -Reader $Reader -Property $Property -Filter $Filter -Schema $Schema
+                        Get-RequestRow `
+                            -Reader $Reader `
+                            -Property $Property `
+                            -Filter $Filter `
+                            -Schema $Schema `
+                            -Page $Page `
+                            -PageSize $PageSize
                         #$Filter = $Filter[0..($Filter.Length - 2)]
                     }
                 } else {
                     $Reader = $CA.GetDbReader($Table)
-                    Get-RequestRow -Reader $Reader -Property $Property -Filter $Filter -Schema $Schema
+                    Get-RequestRow `
+                        -Reader $Reader `
+                        -Property $Property `
+                        -Filter $Filter `
+                        -Schema $Schema `
+                        -Page $Page `
+                        -PageSize $PageSize
                 }
             }
         }

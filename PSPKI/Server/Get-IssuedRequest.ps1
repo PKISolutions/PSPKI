@@ -11,9 +11,19 @@
         [ValidateRange(2,2147483647)]
         [Alias('ID')]
         [int[]]$RequestID,
+        [ValidateRange(1,2147483647)]
+        [int]$Page = 1,
+        [int]$PageSize = [int]::MaxValue,
         [Alias("Properties", "IncludeProperty", "IncludeProperties", "IncludedProperty", "IncludedProperties")]
         [String[]]$Property,
         [String[]]$Filter
     )
-    Get-AdcsDatabaseRow -CA $CA -Table "Issued" -RowId $RequestID -Property $Property -Filter $Filter
+    Get-AdcsDatabaseRow `
+        -CA $CA `
+        -Table "Issued" `
+        -RowId $RequestID `
+        -Page $Page `
+        -PageSize $PageSize `
+        -Property $Property `
+        -Filter $Filter
 }
