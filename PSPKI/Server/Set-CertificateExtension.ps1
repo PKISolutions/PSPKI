@@ -7,7 +7,7 @@
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
 		[ValidateScript({
-			if ($_.GetType().FullName -eq "PKI.CertificateServices.DB.RequestRow") {$true} else {$false}
+			if ($_.GetType().FullName -eq "SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow") {$true} else {$false}
 		})]$Request,
 		[Parameter(Mandatory = $true)]
 		[Object[]]$Extension,
