@@ -46,8 +46,11 @@
     <Content Include="Types\PSPKI.Types.ps1xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client\Add-AdCertificate.ps1" />
+    <Compile Include="Client\Add-AdCertificateRevocationList.ps1" />
     <Compile Include="Client\Convert-PemToPfx.ps1" />
     <Compile Include="Client\Convert-PfxToPem.ps1" />
+    <Compile Include="Client\Get-AdPkiContainer.ps1" />
     <Compile Include="Client\Get-CertificateContextProperty.ps1" />
     <Compile Include="Client\Get-CertificateRequest.ps1" />
     <Compile Include="Client\Get-CertificateRevocationList.ps1" />
@@ -61,6 +64,8 @@
     <Compile Include="Client\Ping-ICertInterface.ps1" />
     <Compile Include="Client\Receive-Certificate.ps1" />
     <Compile Include="Client\Register-ObjectIdentifier.ps1" />
+    <Compile Include="Client\Remove-AdCertificate.ps1" />
+    <Compile Include="Client\Remove-AdCertificateRevocationList.ps1" />
     <Compile Include="Client\Show-Certificate.ps1" />
     <Compile Include="Client\Show-CertificateRevocationList.ps1" />
     <Compile Include="Client\Show-CertificateTrustList.ps1" />
