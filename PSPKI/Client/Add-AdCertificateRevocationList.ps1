@@ -2,7 +2,7 @@ function Add-AdCertificateRevocationList {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('[SysadminsLV.PKI.Management.ActiveDirectory.DsPkiContainer]')]
+[OutputType('[SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer]')]
 [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]

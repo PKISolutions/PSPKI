@@ -2,17 +2,18 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.CertificateServices.DB.Schema[]')]
+[OutputType('SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbColumnSchema[]')]
 [CmdletBinding()]
-	param(
-		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
-		[Alias('CA')]
-		[PKI.CertificateServices.CertificateAuthority[]]$CertificationAuthority,
-		[PKI.CertificateServices.DB.TableList]$Table = [PKI.CertificateServices.DB.TableList]::Request
-	)
-	process {
-		foreach ($CA in $CertificationAuthority) {
-			$CA.GetSchema($Table)
-		}
-	}
+    param(
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
+        [Alias('CA')]
+        [PKI.CertificateServices.CertificateAuthority[]]$CertificationAuthority,
+        [SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbViewTableName]$Table = [SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbViewTableName]::Request
+    )
+    process {
+        foreach ($CA in $CertificationAuthority) {
+            $Reader = $CA.GetDbReader($Table)
+            $Reader.GetTableSchema()
+        }
+    }
 }

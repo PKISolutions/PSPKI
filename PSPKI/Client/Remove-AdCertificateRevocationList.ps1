@@ -2,7 +2,7 @@ function Remove-AdCertificateRevocationList {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('[SysadminsLV.PKI.Management.ActiveDirectory.DsPkiContainer]')]
+[OutputType('[SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer]')]
 [CmdletBinding(DefaultParameterSetName = '__crl')]
     param(
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
