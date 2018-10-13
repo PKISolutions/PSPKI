@@ -13,7 +13,7 @@ LONG DESCRIPTION
     The module relies on a PKI.Core.dll (as well as on Interop assemblies
     library which contains underlying API extensions via .NET class framework
     and is compiled under .NET Framework 4.0 .NET class framework documentation
-    can be found at http://pkix2.sysadmins.lv/library/
+    can be found at https://www.sysadmins.lv/library/pkix.net/
 BUILT-IN COMMANDS
     The module splits commands depending on installation type. During module
     package installation you are prompted to select components to install:
