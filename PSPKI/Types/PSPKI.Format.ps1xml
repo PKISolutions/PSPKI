@@ -599,7 +599,7 @@
     <View>
       <Name>Schema</Name>
       <ViewSelectedBy>
-        <TypeName>PKI.CertificateServices.DB.Schema</TypeName>
+        <TypeName>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbColumnSchema</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
