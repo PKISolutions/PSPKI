@@ -19,7 +19,7 @@ function Get-FailedRequest {
         [String[]]$Filter
     )
     Get-AdcsDatabaseRow `
-        -CA $CA `
+        -CA $CertificationAuthority `
         -Table "Failed" `
         -RowId $RequestID `
         -Page $Page `

@@ -19,7 +19,7 @@
         [String[]]$Filter
     )
     Get-AdcsDatabaseRow `
-        -CA $CA `
+        -CA $CertificationAuthority `
         -Table "Pending" `
         -RowId $RequestID `
         -Page $Page `
