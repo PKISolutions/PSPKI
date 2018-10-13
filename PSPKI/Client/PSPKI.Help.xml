@@ -464,7 +464,7 @@ PS C:\&gt; Convert-PemToPfx -InputPath C:\test\ssl.pem -KeyPath c:\test\ssl.key 
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.IO.FileInfo</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.io.fileinfo.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.io.fileinfo.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -476,7 +476,7 @@ PS C:\&gt; Convert-PemToPfx -InputPath C:\test\ssl.pem -KeyPath c:\test\ssl.key 
 				<maml:name>
 System.Security.Cryptography.X509Certificates.X509Certificate2</maml:name>
 				<maml:uri>
-http://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2.aspx</maml:uri>
+https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -653,7 +653,7 @@ This command supports both, PKCS#10 and PKCS#7/CMC certificate reuqests.</maml:p
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.String</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -665,7 +665,7 @@ This command supports both, PKCS#10 and PKCS#7/CMC certificate reuqests.</maml:p
 				<maml:name>
 System.Byte[]</maml:name>
 				<maml:uri>
-http://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
+https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -677,7 +677,7 @@ http://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509CertificateRequests.X509CertificateRequest</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509CertificateRequests_X509CertificateRequest.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509CertificateRequests_X509CertificateRequest.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -818,7 +818,7 @@ PS C:\&gt; Get-CertificateRequest -RawRequest $Raw</dev:code>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.String</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -830,7 +830,7 @@ PS C:\&gt; Get-CertificateRequest -RawRequest $Raw</dev:code>
 				<maml:name>
 System.Byte[]</maml:name>
 				<maml:uri>
-http://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
+https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -842,7 +842,7 @@ http://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CRL2</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509Certificates_X509CRL2.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CRL2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -983,7 +983,7 @@ PS C:\&gt; Get-CRL -RawCRL $Raw</dev:code>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.String</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -995,7 +995,7 @@ PS C:\&gt; Get-CRL -RawCRL $Raw</dev:code>
 				<maml:name>
 System.Byte[]</maml:name>
 				<maml:uri>
-http://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
+https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1007,7 +1007,7 @@ http://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CTL</maml:name>
-				<maml:uri></maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CTL.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1137,7 +1137,7 @@ Get-CertificateTrustList -RawCTL $Raw</dev:code>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Cryptography.CspProviderInfoCollection</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_SysadminsLV_PKI_Cryptography_CspProviderInfoCollection.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Cryptography_CspProviderInfoCollection.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1244,7 +1244,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>PKI.Enrollment.Policy.PolicyServerClient[]</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_PKI_Enrollment_Policy_PolicyServerClient.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_PKI_Enrollment_Policy_PolicyServerClient.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1343,7 +1343,7 @@ Long notation as integer: -2147024891</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.Int32</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/System.Int32.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/System.Int32.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1355,7 +1355,7 @@ Long notation as integer: -2147024891</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.String</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1500,7 +1500,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.Oid[]</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/System.Security.Cryptography.Oid.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/System.Security.Cryptography.Oid.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1685,7 +1685,7 @@ CertificateTemplate -- represents certificate template group.</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.String</maml:name>
-				<maml:uri></maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1697,7 +1697,7 @@ CertificateTemplate -- represents certificate template group.</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.Oid2</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1780,7 +1780,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<command:details>
 		<command:name>New-SelfSignedCertificateEx</command:name>
 		<maml:description>
-			<maml:para>This cmdlet generates a self-signed certificate.</maml:para>
+			<maml:para>This cmdlet generates a self-signed or CA-signed certificate</maml:para>
 		</maml:description>
 		<maml:copyright>
 			<maml:para />
@@ -1790,7 +1790,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<dev:version />
 	</command:details>
 	<maml:description>
-		<maml:para>This cmdlet generates a self-signed certificate with various options.</maml:para>
+		<maml:para>This cmdlet generates a self-signed or CA-signed certificate with various options.</maml:para>
 		<maml:para>Note: self-signed certificates (non-CA) should not be used in a production environment, they are generally intended for testing purposes only.</maml:para>
 	</maml:description>
 	<command:syntax>
@@ -1888,12 +1888,16 @@ you can combine key usages values by using bitwise OR operation. When combining 
 			<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="false" position="named">
 				<maml:name>SubjectAlternativeName</maml:name>
 				<maml:description>
-					<maml:para>Specifies alternative names for the subject. Unlike Subject field, this extension allows to specify more than one name. Also, multiple types of alternative names are supported. This cmdlet supports the following SAN types:
--- RFC822 Name
--- IP address (both, IPv4 and IPv6)
--- Guid
--- Directory name
--- DNS name</maml:para>
+					<maml:para>Specifies alternative names for the subject. Unlike Subject field, this extension allows to specify more than one name. Also, multiple types of alternative names are supported.</maml:para>
+					<maml:para>The following syntax is used to specify alternative names (curve braces denote alternative name value):
+-- DNS name: &quot;dns:{dns_name}&quot;. Example: &quot;dns:www.example.com&quot;
+-- RFC822 Name: &quot;email:{email_address}&quot;. Example: &quot;email:someone@example.com&quot;
+-- IP address: &quot;ip:{ipv4_or_ipv6}&quot;. Example: &quot;ip:192.168.0.1&quot;, &quot;ip:fd00:0:0:4::41&quot;
+-- User Principal Name (UPN): &quot;upn:{user_principal_name}&quot;. Example: &quot;upn:someone@example.com&quot;
+-- Directory name: &quot;dn:{X.500_name}&quot;. Example: &quot;dn:CN=Someone, OU=OrgUnit, O=Example Inc., C=US&quot;
+-- Object Identifier (OID): &quot;oid:{IANA_assigned_oid}&quot;. Example: &quot;oid:1.2.3.4.5.6.99999&quot;
+-- URL: &quot;url:{URL}&quot;. Example: &quot;url:https://host.example.com/resource.html&quot;
+-- GUID: &quot;guid:{GUID}&quot;. Example: &quot;guid:42105db6-313e-41be-96ae-52fc4633507f&quot;</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
 			</command:parameter>
@@ -1924,6 +1928,200 @@ you can combine key usages values by using bitwise OR operation. When combining 
 					<maml:para>Specifies signature algorithm used to sign the certificate. By default &#39;SHA1&#39; algorithm is used.</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>AlternateSignatureFormat</maml:name>
+				<maml:description>
+					<maml:para>Specifies if PKCS#1 v2.1 signature format is used. When specified, RSA signature will be set to RSASSA-PSS and ECDSA will be set to EcdsaSpecified.</maml:para>
+					<maml:para>Note: this parameter may not be compatible with all cryptographic libraries.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Issuer</maml:name>
+				<maml:description>
+					<maml:para>Specifies the signer certificate to sign generated certificate. When specified, generated certificate will be CA-signed, not self-signed. Generated certificate will include issuer name in Issuer field and includes AuthorityKeyIdenditier extension with issuer&#39;s public key SHA1 hash.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">X509Certificate2</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>FriendlyName</maml:name>
+				<maml:description>
+					<maml:para>Specifies friendly name for the certificate.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Runtime</maml:name>
+				<maml:description>
+					<maml:para>Specifies whether the certificate is generated in memory without installing it in Windows Certificate Store. By default, generated certificate is installed in Windows Certificate Store. Use this switch parameter to avoid interaction with Windows Certificate Store. Object returned by this command will be the only reference to the certificate and caller must interact with returned object only.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>AllowSMIME</maml:name>
+				<maml:description>
+					<maml:para>Enables Secure/Multipurpose Internet Mail Extensions for the certificate.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Exportable</maml:name>
+				<maml:description>
+					<maml:para>Marks private key as exportable. Smart card providers usually do not allow exportable keys.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+		</command:syntaxItem>
+		<command:syntaxItem>
+			<maml:name>New-SelfSignedCertificateEx</maml:name>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0">
+				<maml:name>Subject</maml:name>
+				<maml:description>
+					<maml:para>Specifies the certificate subject in a X500 distinguished name format.
+Example: CN=Test Cert, OU=Sandbox</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1">
+				<maml:name>NotBefore</maml:name>
+				<maml:description>
+					<maml:para>Specifies the date and time when the certificate become valid. By default previous day date is used.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">DateTime</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2">
+				<maml:name>NotAfter</maml:name>
+				<maml:description>
+					<maml:para>Specifies the date and time when the certificate expires. By default, the certificate is valid for 1 year.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">DateTime</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>SerialNumber</maml:name>
+				<maml:description>
+					<maml:para>Specifies the desired serial number in a hex format.
+Example: 01a4ff2</maml:para>
+					<maml:para>If not specified, serial number is generated automatically.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>ProviderName</maml:name>
+				<maml:description>
+					<maml:para>Specifies the Cryptography Service Provider (CSP) name. You can use either legacy CSP and Key Storage Providers (KSP). By default &quot;Microsoft Enhanced Cryptographic Provider v1.0&quot; CSP is used.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>AlgorithmName</maml:name>
+				<maml:description>
+					<maml:para>Specifies the public key algorithm. By default RSA algorithm is used. RSA is the only algorithm supported by legacy CSPs. With key storage providers (KSP) you can use CNG algorithms, like ECDH. For CNG algorithms you must use full name:
+ECDH_P256
+ECDH_P384
+ECDH_P521</maml:para>
+					<maml:para>In addition, KeyLength parameter must be specified explicitly when non-RSA algorithm is used.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>KeyLength</maml:name>
+				<maml:description>
+					<maml:para>Specifies the key length to generate. By default an RSA 2048-bit key is generated.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>KeySpec</maml:name>
+				<maml:description>
+					<maml:para>Specifies the public key operations type. The possible values are: Exchange and Signature. Default value is Exchange.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="false" position="named">
+				<maml:name>EnhancedKeyUsage</maml:name>
+				<maml:description>
+					<maml:para>Specifies the intended uses of the public key contained in a certificate. You can specify either, EKU&#39;s friendly name (for example &#39;Server Authentication&#39;) or object identifier (OID) value (for example &#39;1.3.6.1.5.5.7.3.1&#39;).</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="true">Oid[]</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>KeyUsage</maml:name>
+				<maml:description>
+					<maml:para>Specifies restrictions on the operations that can be performed by the public key contained in the certificate. Possible values (and their respective integer values to make bitwise operations) are:
+-- EncipherOnly
+-- CrlSign
+-- KeyCertSign
+-- KeyAgreement
+-- DataEncipherment
+-- KeyEncipherment
+-- NonRepudiation
+-- DigitalSignature
+-- DecipherOnly
+ 
+you can combine key usages values by using bitwise OR operation. When combining multiple flags, they must be enclosed in quotes and separated by a comma character. For example, to combine KeyEncipherment and DigitalSignature flags you should type: &quot;KeyEncipherment, DigitalSignature&quot;.</maml:para>
+					<maml:para>If the certificate is CA certificate (see IsCA parameter), key usages extension is generated  automatically with the following key usages: Certificate Signing, Off-line CRL Signing, CRL Signing.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">X509KeyUsageFlags</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="false" position="named">
+				<maml:name>SubjectAlternativeName</maml:name>
+				<maml:description>
+					<maml:para>Specifies alternative names for the subject. Unlike Subject field, this extension allows to specify more than one name. Also, multiple types of alternative names are supported.</maml:para>
+					<maml:para>The following syntax is used to specify alternative names (curve braces denote alternative name value):
+-- DNS name: &quot;dns:{dns_name}&quot;. Example: &quot;dns:www.example.com&quot;
+-- RFC822 Name: &quot;email:{email_address}&quot;. Example: &quot;email:someone@example.com&quot;
+-- IP address: &quot;ip:{ipv4_or_ipv6}&quot;. Example: &quot;ip:192.168.0.1&quot;, &quot;ip:fd00:0:0:4::41&quot;
+-- User Principal Name (UPN): &quot;upn:{user_principal_name}&quot;. Example: &quot;upn:someone@example.com&quot;
+-- Directory name: &quot;dn:{X.500_name}&quot;. Example: &quot;dn:CN=Someone, OU=OrgUnit, O=Example Inc., C=US&quot;
+-- Object Identifier (OID): &quot;oid:{IANA_assigned_oid}&quot;. Example: &quot;oid:1.2.3.4.5.6.99999&quot;
+-- URL: &quot;url:{URL}&quot;. Example: &quot;url:https://host.example.com/resource.html&quot;
+-- GUID: &quot;guid:{GUID}&quot;. Example: &quot;guid:42105db6-313e-41be-96ae-52fc4633507f&quot;</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>IsCA</maml:name>
+				<maml:description>
+					<maml:para>Specifies whether the certificate is Certification Authority (IsCA = $true) or end entity (IsCA = $false) certificate. If this parameter is set to $false, PathLength parameter is ignored. Basic Constraints extension is marked as critical.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">Boolean</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>PathLength</maml:name>
+				<maml:description>
+					<maml:para>Specifies the number of additional CA certificates in the chain under this certificate. If this parameter is set to zero, then no additional (subordinate) CA certificates are permitted under this CA.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>CustomExtension</maml:name>
+				<maml:description>
+					<maml:para>Specifies the custom extension to include to a self-signed certificate. This parameter must not be used to specify the extension that is supported via other parameters. In order to use this parameter, the extension must be formed in a collection of initialized System.Security.Cryptography.X509Certificates.X509Extension objects.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">X509ExtensionCollection</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>SignatureAlgorithm</maml:name>
+				<maml:description>
+					<maml:para>Specifies signature algorithm used to sign the certificate. By default &#39;SHA1&#39; algorithm is used.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>AlternateSignatureFormat</maml:name>
+				<maml:description>
+					<maml:para>Specifies if PKCS#1 v2.1 signature format is used. When specified, RSA signature will be set to RSASSA-PSS and ECDSA will be set to EcdsaSpecified.</maml:para>
+					<maml:para>Note: this parameter may not be compatible with all cryptographic libraries.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Issuer</maml:name>
+				<maml:description>
+					<maml:para>Specifies the signer certificate to sign generated certificate. When specified, generated certificate will be CA-signed, not self-signed. Generated certificate will include issuer name in Issuer field and includes AuthorityKeyIdenditier extension with issuer&#39;s public key SHA1 hash.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">X509Certificate2</command:parameterValue>
 			</command:parameter>
 			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>FriendlyName</maml:name>
@@ -2048,12 +2246,16 @@ you can combine key usages values by using bitwise OR operation. When combining 
 			<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="false" position="named">
 				<maml:name>SubjectAlternativeName</maml:name>
 				<maml:description>
-					<maml:para>Specifies alternative names for the subject. Unlike Subject field, this extension allows to specify more than one name. Also, multiple types of alternative names are supported. This cmdlet supports the following SAN types:
--- RFC822 Name
--- IP address (both, IPv4 and IPv6)
--- Guid
--- Directory name
--- DNS name</maml:para>
+					<maml:para>Specifies alternative names for the subject. Unlike Subject field, this extension allows to specify more than one name. Also, multiple types of alternative names are supported.</maml:para>
+					<maml:para>The following syntax is used to specify alternative names (curve braces denote alternative name value):
+-- DNS name: &quot;dns:{dns_name}&quot;. Example: &quot;dns:www.example.com&quot;
+-- RFC822 Name: &quot;email:{email_address}&quot;. Example: &quot;email:someone@example.com&quot;
+-- IP address: &quot;ip:{ipv4_or_ipv6}&quot;. Example: &quot;ip:192.168.0.1&quot;, &quot;ip:fd00:0:0:4::41&quot;
+-- User Principal Name (UPN): &quot;upn:{user_principal_name}&quot;. Example: &quot;upn:someone@example.com&quot;
+-- Directory name: &quot;dn:{X.500_name}&quot;. Example: &quot;dn:CN=Someone, OU=OrgUnit, O=Example Inc., C=US&quot;
+-- Object Identifier (OID): &quot;oid:{IANA_assigned_oid}&quot;. Example: &quot;oid:1.2.3.4.5.6.99999&quot;
+-- URL: &quot;url:{URL}&quot;. Example: &quot;url:https://host.example.com/resource.html&quot;
+-- GUID: &quot;guid:{GUID}&quot;. Example: &quot;guid:42105db6-313e-41be-96ae-52fc4633507f&quot;</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
 			</command:parameter>
@@ -2084,6 +2286,21 @@ you can combine key usages values by using bitwise OR operation. When combining 
 					<maml:para>Specifies signature algorithm used to sign the certificate. By default &#39;SHA1&#39; algorithm is used.</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>AlternateSignatureFormat</maml:name>
+				<maml:description>
+					<maml:para>Specifies if PKCS#1 v2.1 signature format is used. When specified, RSA signature will be set to RSASSA-PSS and ECDSA will be set to EcdsaSpecified.</maml:para>
+					<maml:para>Note: this parameter may not be compatible with all cryptographic libraries.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Issuer</maml:name>
+				<maml:description>
+					<maml:para>Specifies the signer certificate to sign generated certificate. When specified, generated certificate will be CA-signed, not self-signed. Generated certificate will include issuer name in Issuer field and includes AuthorityKeyIdenditier extension with issuer&#39;s public key SHA1 hash.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">X509Certificate2</command:parameterValue>
 			</command:parameter>
 			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>FriendlyName</maml:name>
@@ -2265,12 +2482,16 @@ you can combine key usages values by using bitwise OR operation. When combining 
 		<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="false" position="named">
 			<maml:name>SubjectAlternativeName</maml:name>
 			<maml:description>
-				<maml:para>Specifies alternative names for the subject. Unlike Subject field, this extension allows to specify more than one name. Also, multiple types of alternative names are supported. This cmdlet supports the following SAN types:
--- RFC822 Name
--- IP address (both, IPv4 and IPv6)
--- Guid
--- Directory name
--- DNS name</maml:para>
+				<maml:para>Specifies alternative names for the subject. Unlike Subject field, this extension allows to specify more than one name. Also, multiple types of alternative names are supported.</maml:para>
+				<maml:para>The following syntax is used to specify alternative names (curve braces denote alternative name value):
+-- DNS name: &quot;dns:{dns_name}&quot;. Example: &quot;dns:www.example.com&quot;
+-- RFC822 Name: &quot;email:{email_address}&quot;. Example: &quot;email:someone@example.com&quot;
+-- IP address: &quot;ip:{ipv4_or_ipv6}&quot;. Example: &quot;ip:192.168.0.1&quot;, &quot;ip:fd00:0:0:4::41&quot;
+-- User Principal Name (UPN): &quot;upn:{user_principal_name}&quot;. Example: &quot;upn:someone@example.com&quot;
+-- Directory name: &quot;dn:{X.500_name}&quot;. Example: &quot;dn:CN=Someone, OU=OrgUnit, O=Example Inc., C=US&quot;
+-- Object Identifier (OID): &quot;oid:{IANA_assigned_oid}&quot;. Example: &quot;oid:1.2.3.4.5.6.99999&quot;
+-- URL: &quot;url:{URL}&quot;. Example: &quot;url:https://host.example.com/resource.html&quot;
+-- GUID: &quot;guid:{GUID}&quot;. Example: &quot;guid:42105db6-313e-41be-96ae-52fc4633507f&quot;</maml:para>
 			</maml:description>
 			<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
 			<dev:type>
@@ -2399,6 +2620,43 @@ you can combine key usages values by using bitwise OR operation. When combining 
 			</dev:type>
 			<dev:defaultValue></dev:defaultValue>
 		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>AlternateSignatureFormat</maml:name>
+			<maml:description>
+				<maml:para>Specifies if PKCS#1 v2.1 signature format is used. When specified, RSA signature will be set to RSASSA-PSS and ECDSA will be set to EcdsaSpecified.</maml:para>
+				<maml:para>Note: this parameter may not be compatible with all cryptographic libraries.</maml:para>
+			</maml:description>
+			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			<dev:type>
+				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Issuer</maml:name>
+			<maml:description>
+				<maml:para>Specifies the signer certificate to sign generated certificate. When specified, generated certificate will be CA-signed, not self-signed. Generated certificate will include issuer name in Issuer field and includes AuthorityKeyIdenditier extension with issuer&#39;s public key SHA1 hash.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="false">X509Certificate2</command:parameterValue>
+			<dev:type>
+				<maml:name>X509Certificate2</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Runtime</maml:name>
+			<maml:description>
+				<maml:para>Specifies whether the certificate is generated in memory without installing it in Windows Certificate Store. By default, generated certificate is installed in Windows Certificate Store. Use this switch parameter to avoid interaction with Windows Certificate Store. Object returned by this command will be the only reference to the certificate and caller must interact with returned object only.</maml:para>
+			</maml:description>
+			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			<dev:type>
+				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
 	</command:parameters>
 	<command:inputTypes>
 		<command:inputType>
@@ -2415,8 +2673,8 @@ you can combine key usages values by using bitwise OR operation. When combining 
 	<command:returnValues>
 		<command:returnValue>
 			<dev:type>
-				<maml:name>None.</maml:name>
-				<maml:uri></maml:uri>
+				<maml:name>System.Security.Cryptography.X509Certificates.X509Certificate2</maml:name>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -2461,7 +2719,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 				<maml:paragraph>PS C:\&gt;</maml:paragraph>
 			</maml:introduction>
 			<dev:code>PS C:\&gt; New-SelfsignedCertificateEx -Subject &quot;CN=www.domain.com&quot; -EKU &quot;Server Authentication&quot;, &quot;Client authentication&quot; `
- -KeyUsage &quot;KeyEcipherment, DigitalSignature&quot; -SAN &quot;sub.domain.com&quot;,&quot;www.domain.com&quot;,&quot;192.168.1.1&quot; `
+ -KeyUsage &quot;KeyEcipherment, DigitalSignature&quot; -SAN &quot;dns:sub.domain.com&quot;,&quot;dns:www.domain.com&quot;,&quot;ip:192.168.1.1&quot; `
  -AllowSMIME -Path C:\test\ssl.pfx -Password (ConvertTo-SecureString &quot;P@ssw0rd&quot; -AsPlainText -Force) -Exportable `
  -StoreLocation &quot;LocalMachine&quot;</dev:code>
 			<dev:remarks>
@@ -2484,7 +2742,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 				<maml:paragraph>PS C:\&gt;</maml:paragraph>
 			</maml:introduction>
 			<dev:code>PS C:\&gt; New-SelfsignedCertificateEx -Subject &quot;CN=www.domain.com&quot; -EKU &quot;Server Authentication&quot;, &quot;Client authentication&quot; `
- -KeyUsage &quot;KeyEcipherment, DigitalSignature&quot; -SAN &quot;sub.domain.com&quot;,&quot;www.domain.com&quot;,&quot;192.168.1.1&quot; `
+ -KeyUsage &quot;KeyEcipherment, DigitalSignature&quot; -SAN &quot;dns:sub.domain.com&quot;,&quot;dns:www.domain.com&quot;,&quot;ip:192.168.1.1&quot; `
  -StoreLocation &quot;LocalMachine&quot; -ProviderName &quot;Microsoft Software Key Storage Provider&quot; -AlgorithmName ecdsa_p256 `
  -KeyLength 256 -SignatureAlgorithm sha256</dev:code>
 			<dev:remarks>
@@ -2577,7 +2835,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>PKI.CertificateServices.CertificateAuthority[]</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -2794,8 +3052,8 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<command:inputTypes>
 		<command:inputType>
 			<dev:type>
-				<maml:name>PKI.CertificateServices.DB.RequestRow</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_PKI_CertificateServices_DB_RequestRow.htm</maml:uri>
+				<maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -2807,7 +3065,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509Certificate2</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -2887,8 +3145,8 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<maml:para>Registers new object identifier (OID) either on a local machine, or in Active Directory. The command supports OID registration in the following OID groups: ApplicationPolicy (as known as Enhanced Key Usage) or IssuancePolicy (as known as Certificate Policy).</maml:para>
 		<maml:para>It is possible to register the same OID within both OID groups on the local machine. In an Active Directory, multiple OID group registrations are not allowed. Therefore a particular OID value can be registered only within a single OID group.</maml:para>
 		<maml:para>Before registering an OID, a company should acquire a delegated OID tree, which is called to OID arc. There are two OID registrars:
-1) IANA — http://pen.iana.org/pen/PenApplication.page
-2) ISO — http://www.iso.org</maml:para>
+1) IANA — https://pen.iana.org/pen/PenApplication.page
+2) ISO — https://www.iso.org</maml:para>
 		<maml:para>In order the command to succeed the caller must be granted with:
 1) local administrator permissions — if an OID is registered locally.
 2) Enterprise Admins permissions, or delegated Write permissions on OID container in Active Directory, if &#39;UseActiveDirectory&#39; switch is enabled.</maml:para>
@@ -3076,7 +3334,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.String</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -3088,7 +3346,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.Oid2</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -3252,7 +3510,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509Certificate2[]</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -3381,7 +3639,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CRL2</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509Certificates_X509CRL2.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CRL2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -3490,7 +3748,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CTL</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509Certificates_X509CTL.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CTL.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -3891,7 +4149,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.String</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.string.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4211,7 +4469,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.IO.FileInfo[]</maml:name>
-				<maml:uri>http://msdn.microsoft.com/en-us/library/system.io.fileinfo.aspx</maml:uri>
+				<maml:uri>https://msdn.microsoft.com/en-us/library/system.io.fileinfo.aspx</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4222,8 +4480,8 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<command:returnValues>
 		<command:returnValue>
 			<dev:type>
-				<maml:name>None.</maml:name>
-				<maml:uri></maml:uri>
+				<maml:name>PKI.Enrollment.CertRequestStatus</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_PKI_Enrollment_CertRequestStatus.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4388,7 +4646,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>PKI.Web.WebSSL</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_PKI_Web_WebSSL.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_PKI_Web_WebSSL.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4581,7 +4839,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.Oid2</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4686,8 +4944,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<dev:version />
 	</command:details>
 	<maml:description>
-		<maml:para>Gets the certificate context property from Windows Certificate Store or serialized store (SST). When the certificate is installed in the certificate store it is possible to attach some certificate properties which are not the part of the certificate. There are number of certificate context properties, like Friendly Name, Description, Private Key Information, enrollment information, Extended Validation (EV) policies, etc. The full list of supported properties can be found at:
-http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509Certificates_X509CertificatePropertyType.htm
+		<maml:para>Gets the certificate context property from Windows Certificate Store or serialized store (SST). When the certificate is installed in the certificate store it is possible to attach some certificate properties which are not the part of the certificate. There are number of certificate context properties, like Friendly Name, Description, Private Key Information, enrollment information, Extended Validation (EV) policies, etc. The full list of supported properties is defined in X509CertificatePropertyType enumeration.
 </maml:para>
 	</maml:description>
 	<command:syntax>
@@ -4782,7 +5039,7 @@ http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509Certif
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CertificateContextProperty</maml:name>
-				<maml:uri>http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509Certificates_X509CertificateContextProperty.htm</maml:uri>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CertificateContextProperty.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4794,7 +5051,7 @@ http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509Certif
 				<maml:name>
 System.Security.Cryptography.X509Certificates.X509CertificateContextPropertyCollection</maml:name>
 				<maml:uri>
-http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509Certificates_X509CertificateContextPropertyCollection.htm</maml:uri>
+https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CertificateContextPropertyCollection.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4807,7 +5064,7 @@ A collection of all attached context properties</maml:para>
 				<maml:name>
 System.Security.Cryptography.X509Certificates.X509CertificatePropertyType</maml:name>
 				<maml:uri>
-http://pkix2.sysadmins.lv/library/html/T_System_Security_Cryptography_X509Certificates_X509CertificatePropertyType.htm</maml:uri>
+https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CertificatePropertyType.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4898,6 +5155,998 @@ Blog: https://www.sysadmins.lv</maml:para>
 		</command:example>
 	</command:examples>
 	<maml:relatedLinks>
+	</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+<!--Generated by PS Cmdlet Help Editor-->
+	<command:details>
+		<command:name>Add-AdCertificate</command:name>
+		<maml:description>
+			<maml:para>Adds certificate to a specified AD-based certificate PKI container.</maml:para>
+		</maml:description>
+		<maml:copyright>
+			<maml:para />
+		</maml:copyright>
+		<command:verb>Add</command:verb>
+		<command:noun>AdCertificate</command:noun>
+		<dev:version />
+	</command:details>
+	<maml:description>
+		<maml:para>Adds certificate to a specified AD-based certificate PKI container.</maml:para>
+		<maml:para>AD PKI container managements require Enterprise Admins permissions or explicitly delegated permissions to Public Key Services container in Active Directory.</maml:para>
+	</maml:description>
+	<command:syntax>
+		<command:syntaxItem>
+			<maml:name>Add-AdCertificate</maml:name>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+				<maml:name>AdContainer</maml:name>
+				<maml:description>
+					<maml:para>Specifies the AD-based PKI certificate container the certificate is added to. Input object is retrieved by calling a Get-AdPkiContainer cmdlet with NTAuth, AIA, RootCA or KRA container type.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">DsPkiCertContainer</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="1">
+				<maml:name>Certificate</maml:name>
+				<maml:description>
+					<maml:para>Specifies a collection of certificates to add to AD certificate store.</maml:para>
+					<maml:para>If input AD container is of DsKraContainer type, a certificate is expected to be a key recovery agent (KRA) certificate and must be valid for key recovery operation (OID=1.3.6.1.4.1.311.21.6). In other cases, the certificate is expected to be a CA certificate.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="true">X509Certificate2[]</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>CrossCA</maml:name>
+				<maml:description>
+					<maml:para>Specifies whether the certificate is published as cross-certificate. This switch parameter makes sense only when input AD container is of DsAiaContainer type. For other containers, this parameter is ignored.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Dispose</maml:name>
+				<maml:description>
+					<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+		</command:syntaxItem>
+	</command:syntax>
+	<command:parameters>
+		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+			<maml:name>AdContainer</maml:name>
+			<maml:description>
+				<maml:para>Specifies the AD-based PKI certificate container the certificate is added to. Input object is retrieved by calling a Get-AdPkiContainer cmdlet with NTAuth, AIA, RootCA or KRA container type.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="false">DsPkiCertContainer</command:parameterValue>
+			<dev:type>
+				<maml:name>DsPkiCertContainer</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="1">
+			<maml:name>Certificate</maml:name>
+			<maml:description>
+				<maml:para>Specifies a collection of certificates to add to AD certificate store.</maml:para>
+				<maml:para>If input AD container is of DsKraContainer type, a certificate is expected to be a key recovery agent (KRA) certificate and must be valid for key recovery operation (OID=1.3.6.1.4.1.311.21.6). In other cases, the certificate is expected to be a CA certificate.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="true">X509Certificate2[]</command:parameterValue>
+			<dev:type>
+				<maml:name>X509Certificate2[]</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>CrossCA</maml:name>
+			<maml:description>
+				<maml:para>Specifies whether the certificate is published as cross-certificate. This switch parameter makes sense only when input AD container is of DsAiaContainer type. For other containers, this parameter is ignored.</maml:para>
+			</maml:description>
+			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			<dev:type>
+				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Dispose</maml:name>
+			<maml:description>
+				<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+			</maml:description>
+			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			<dev:type>
+				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+	</command:parameters>
+	<command:inputTypes>
+		<command:inputType>
+			<dev:type>
+				<maml:name></maml:name>
+				<maml:uri></maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:inputType>
+	</command:inputTypes>
+	<command:returnValues>
+		<command:returnValue>
+			<dev:type>
+				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsPkiContainer</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiContainer.htm</maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:returnValue>
+	</command:returnValues>
+	<command:terminatingErrors></command:terminatingErrors>
+	<command:nonTerminatingErrors></command:nonTerminatingErrors>
+	<maml:alertSet>
+		<maml:title></maml:title>
+		<maml:alert>
+			<maml:para>Author: Vadims Podans
+Blog: https://www.sysadmins.lv</maml:para>
+		</maml:alert>
+	</maml:alertSet>
+	<command:examples>
+		<command:example>
+			<maml:title>--------------------------  Example 1  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 &quot;c:\pki\root_cacert.crt&quot;
+PS C:\&gt; Get-AdPkiContainer -ContainerType RootCA | Add-AdCertificate -Certificate $cert -Dispose</dev:code>
+			<dev:remarks>
+				<maml:para>This example gets certificate from a file, retrieves RootCA (trusted root CAs) AD container and publishes certificate to RootCA container. After operation completion, input object (RootCA container) is disposed. After autoenrollment trigger, domain members will get new trusted root CA.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 2  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 &quot;c:\pki\cross.cer&quot;
+PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Add-AdCertificate -Certificate $cert -CrossCertificate -Dispose</dev:code>
+			<dev:remarks>
+				<maml:para>This example gets certificate from a file, retrieves AIA (intermediate CA) AD container and publishes certificate to AIA container as cross-certificate. After operation completion, input object (AIA container) is disposed. After autoenrollment trigger, domain members will get new certificate in Intermediate CAs local store.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+	</command:examples>
+	<maml:relatedLinks>
+		<maml:navigationLink>
+			<maml:linkText>Online version:</maml:linkText>
+			<maml:uri>https://www.sysadmins.lv/projects/pspki/add-adcertificate.aspx</maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Get-AdPkiContainer</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Remove-AdCertificate</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Add-AdCertificateRevocationList</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Remove-AdCertificateRevocationList</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+	</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+<!--Generated by PS Cmdlet Help Editor-->
+	<command:details>
+		<command:name>Add-AdCertificateRevocationList</command:name>
+		<maml:description>
+			<maml:para>Adds certificate revocation list (CRL) to Active Directory.</maml:para>
+		</maml:description>
+		<maml:copyright>
+			<maml:para />
+		</maml:copyright>
+		<command:verb>Add</command:verb>
+		<command:noun>AdCertificateRevocationList</command:noun>
+		<dev:version />
+	</command:details>
+	<maml:description>
+		<maml:para>Adds certificate revocation list (CRL) to Active Directory. CRLs are stored in Active Directory under &#39;CN=CDP, CN=Public Key Services, CN=Services, {ConfigurationNamingContext}&#39;. A subcontainer is created for each CA under CDP container. Subcontainer, usually, is short or NetBIOS name of CA server. Custom names are supported. Subcontainer stores CRL entries for each CA private key. Unlike other AD PKI containers, contents of CDP container is not propagated to clients and are used only when explicit URL is specified in the certificate&#39;s CDP (CRL Distribution Points) extension.</maml:para>
+	</maml:description>
+	<command:syntax>
+		<command:syntaxItem>
+			<maml:name>Add-AdCertificateRevocationList</maml:name>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+				<maml:name>CdpContainer</maml:name>
+				<maml:description>
+					<maml:para>Specifies the CDP container object to add the CRL to.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">DsCDPContainer</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1">
+				<maml:name>CertificateRevocationList</maml:name>
+				<maml:description>
+					<maml:para>Specifies the certificate revocation list object to add.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">X509CRL2</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2">
+				<maml:name>HostName</maml:name>
+				<maml:description>
+					<maml:para>Specifies the subcontainer name which is usually a short or NetBIOS name of CA computer. This parameter can be omitted when CRL includes &#39;Published CRL Locations&#39; CRL extension, which includes exact path in Active Directory to publish to. If CRL doesn&#39;t include &#39;Published CRL Locations&#39; CRL extension, this parameter is required, otherwise, an error will be thrown.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Dispose</maml:name>
+				<maml:description>
+					<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+		</command:syntaxItem>
+	</command:syntax>
+	<command:parameters>
+		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+			<maml:name>CdpContainer</maml:name>
+			<maml:description>
+				<maml:para>Specifies the CDP container object to add the CRL to.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="false">DsCDPContainer</command:parameterValue>
+			<dev:type>
+				<maml:name>DsCDPContainer</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1">
+			<maml:name>CertificateRevocationList</maml:name>
+			<maml:description>
+				<maml:para>Specifies the certificate revocation list object to add.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="false">X509CRL2</command:parameterValue>
+			<dev:type>
+				<maml:name>X509CRL2</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2">
+			<maml:name>HostName</maml:name>
+			<maml:description>
+				<maml:para>Specifies the subcontainer name which is usually a short or NetBIOS name of CA computer. This parameter can be omitted when CRL includes &#39;Published CRL Locations&#39; CRL extension, which includes exact path in Active Directory to publish to. If CRL doesn&#39;t include &#39;Published CRL Locations&#39; CRL extension, this parameter is required, otherwise, an error will be thrown.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			<dev:type>
+				<maml:name>String</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Dispose</maml:name>
+			<maml:description>
+				<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+			</maml:description>
+			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			<dev:type>
+				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+	</command:parameters>
+	<command:inputTypes>
+		<command:inputType>
+			<dev:type>
+				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:inputType>
+	</command:inputTypes>
+	<command:returnValues>
+		<command:returnValue>
+			<dev:type>
+				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:returnValue>
+	</command:returnValues>
+	<command:terminatingErrors></command:terminatingErrors>
+	<command:nonTerminatingErrors></command:nonTerminatingErrors>
+	<maml:alertSet>
+		<maml:title></maml:title>
+		<maml:alert>
+			<maml:para>Author: Vadims Podans
+Blog: https://www.sysadmins.lv</maml:para>
+		</maml:alert>
+	</maml:alertSet>
+	<command:examples>
+		<command:example>
+			<maml:title>--------------------------  Example 1  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$crl = Get-CRL -Path &quot;c:\pki\contoso subca.crl&quot;
+PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Add-AdCertificateRevocationList -CRL $crl -HostName &quot;subca01&quot; -Dispose</dev:code>
+			<dev:remarks>
+				<maml:para>This command reads CRL object from file, retrieves CDP container from Active Directory and writes CRL to CDP object. During object creation, a dedicated subcontainer with name &#39;subca01&#39; under CDP container is created. After operation completion, input object (CDP container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+	</command:examples>
+	<maml:relatedLinks>
+		<maml:navigationLink>
+			<maml:linkText>Online version:</maml:linkText>
+			<maml:uri>https://www.sysadmins.lv/projects/pspki/add-adcertificaterevocationlist.aspx</maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Get-AdPkiContainer</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Remove-AdCertificateRevocationList</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Add-AdCertificate</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Remove-AdCertificate</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+	</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+<!--Generated by PS Cmdlet Help Editor-->
+	<command:details>
+		<command:name>Get-AdPkiContainer</command:name>
+		<maml:description>
+			<maml:para>Retrieves named PKI container from Active Directory.</maml:para>
+		</maml:description>
+		<maml:copyright>
+			<maml:para />
+		</maml:copyright>
+		<command:verb>Get</command:verb>
+		<command:noun>AdPkiContainer</command:noun>
+		<dev:version />
+	</command:details>
+	<maml:description>
+		<maml:para>Retrieves named PKI container from Active Directory. AD PKI containers are used to hold information about enterprise PKI. Such information includes:</maml:para>
+		<maml:para>- intermediate CA certificates
+- trusted root CA certificates
+- certitificate revocation lists
+- Enterprise CA registration information
+- enterprise object identifiers (OID)
+- key recoverty agent (KRA) certificates
+- enterprise certificate templates</maml:para>
+	</maml:description>
+	<command:syntax>
+		<command:syntaxItem>
+			<maml:name>Get-AdPkiContainer</maml:name>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0">
+				<maml:name>ContainerType</maml:name>
+				<maml:description>
+					<maml:para>Specifies the container type. The value can be one of the following:
+- NTAuth — Contains certificates of CAs that are allowed to issue client authentication certificates and perform client private key archival. These certificates are downloaded and cached on Active Directory forest clients.
+- AIA — Contains CA certificates and cross-certificates that are used by certificate clients to build certificate chains. These certificates are downloaded and cached on Active Directory forest clients.
+- CDP — Contains certificate revocation lists published to Active Directory. These CRLs are not automatically downloaded by clients. They are accessed only when explicit request to specific CRL is created.
+- RootCA — Contains certificates of trusted root CAs approved by Active Directory administrators. These certificates are downloaded and cached on Active Directory forest clients.
+- EnrollmentServices — Contains enrollment service objects (typically Enterprise CAs) which are used by clients that implement [MS-WCCE] communication protocol to manually, or automatically request certificates.
+- KRA — Contains a collection of key recovery agent (KRA) certificates published to Active Directory. Certification Authorities use this container to locate KRA certificates when key archival is configured.
+- OID — Contains a collection of mapping objects between object identifier (OID) and their friendly names.
+- CertificateTemplates — Contains a collection of certificate templates.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">DsContainerType</command:parameterValue>
+			</command:parameter>
+		</command:syntaxItem>
+	</command:syntax>
+	<command:parameters>
+		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0">
+			<maml:name>ContainerType</maml:name>
+			<maml:description>
+				<maml:para>Specifies the container type. The value can be one of the following:
+- NTAuth — Contains certificates of CAs that are allowed to issue client authentication certificates and perform client private key archival. These certificates are downloaded and cached on Active Directory forest clients.
+- AIA — Contains CA certificates and cross-certificates that are used by certificate clients to build certificate chains. These certificates are downloaded and cached on Active Directory forest clients.
+- CDP — Contains certificate revocation lists published to Active Directory. These CRLs are not automatically downloaded by clients. They are accessed only when explicit request to specific CRL is created.
+- RootCA — Contains certificates of trusted root CAs approved by Active Directory administrators. These certificates are downloaded and cached on Active Directory forest clients.
+- EnrollmentServices — Contains enrollment service objects (typically Enterprise CAs) which are used by clients that implement [MS-WCCE] communication protocol to manually, or automatically request certificates.
+- KRA — Contains a collection of key recovery agent (KRA) certificates published to Active Directory. Certification Authorities use this container to locate KRA certificates when key archival is configured.
+- OID — Contains a collection of mapping objects between object identifier (OID) and their friendly names.
+- CertificateTemplates — Contains a collection of certificate templates.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="false">DsContainerType</command:parameterValue>
+			<dev:type>
+				<maml:name>DsContainerType</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+	</command:parameters>
+	<command:inputTypes>
+		<command:inputType>
+			<dev:type>
+				<maml:name></maml:name>
+				<maml:uri></maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:inputType>
+	</command:inputTypes>
+	<command:returnValues>
+		<command:returnValue>
+			<dev:type>
+				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsPkiContainer</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiContainer.htm</maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:returnValue>
+	</command:returnValues>
+	<command:terminatingErrors></command:terminatingErrors>
+	<command:nonTerminatingErrors></command:nonTerminatingErrors>
+	<maml:alertSet>
+		<maml:title></maml:title>
+		<maml:alert>
+			<maml:para>Author: Vadims Podans
+Blog: https://www.sysadmins.lv</maml:para>
+		</maml:alert>
+	</maml:alertSet>
+	<command:examples>
+	</command:examples>
+	<maml:relatedLinks>
+		<maml:navigationLink>
+			<maml:linkText>Online version:</maml:linkText>
+			<maml:uri>https://www.sysadmins.lv/projects/pspki/Get-AdPkiContainer.aspx</maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Add-AdCertificate</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Add-AdCertificateRevocationList</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Remove-AdCertificate</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Remove-AdCertificateRevocationList</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+	</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+<!--Generated by PS Cmdlet Help Editor-->
+	<command:details>
+		<command:name>Remove-AdCertificate</command:name>
+		<maml:description>
+			<maml:para>Removes certificate from AD PKI container.</maml:para>
+		</maml:description>
+		<maml:copyright>
+			<maml:para />
+		</maml:copyright>
+		<command:verb>Remove</command:verb>
+		<command:noun>AdCertificate</command:noun>
+		<dev:version />
+	</command:details>
+	<maml:description>
+		<maml:para>Removes certificate from AD PKI container. Single container may contain multiple CA certificate objects. Exact object to remove is determined by AD certificate entry.</maml:para>
+	</maml:description>
+	<command:syntax>
+		<command:syntaxItem>
+			<maml:name>Remove-AdCertificate</maml:name>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+				<maml:name>AdContainer</maml:name>
+				<maml:description>
+					<maml:para>AD PKI certificate container where the object is searched and removed when found.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">DsPkiCertContainer</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Certificate</maml:name>
+				<maml:description>
+					<maml:para>Specifies one or more certificate objects to remove. Certificate objects can be retrieved from Certificates property of input DsPkiCertContainer container.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="true">DsCertificateEntry[]</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>ForceDelete</maml:name>
+				<maml:description>
+					<maml:para>Deletes associated Active Directory entry when all certificate objects are removed from container. This operation keeps Active Directory in cleaner state by removing empty objects.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Dispose</maml:name>
+				<maml:description>
+					<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+		</command:syntaxItem>
+		<command:syntaxItem>
+			<maml:name>Remove-AdCertificate</maml:name>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+				<maml:name>AdContainer</maml:name>
+				<maml:description>
+					<maml:para>AD PKI certificate container where the object is searched and removed when found.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">DsPkiCertContainer</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Thumbprint</maml:name>
+				<maml:description>
+					<maml:para>Specifies an array of strings that represents certificate thumbprint to remove. All certificates with matching thumbprint will be deleted from Active Directory PKI certificate container.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>ForceDelete</maml:name>
+				<maml:description>
+					<maml:para>Deletes associated Active Directory entry when all certificate objects are removed from container. This operation keeps Active Directory in cleaner state by removing empty objects.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Dispose</maml:name>
+				<maml:description>
+					<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+		</command:syntaxItem>
+	</command:syntax>
+	<command:parameters>
+		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+			<maml:name>AdContainer</maml:name>
+			<maml:description>
+				<maml:para>AD PKI certificate container where the object is searched and removed when found.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="false">DsPkiCertContainer</command:parameterValue>
+			<dev:type>
+				<maml:name>DsPkiCertContainer</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Certificate</maml:name>
+			<maml:description>
+				<maml:para>Specifies one or more certificate objects to remove. Certificate objects can be retrieved from Certificates property of input DsPkiCertContainer container.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="true">DsCertificateEntry[]</command:parameterValue>
+			<dev:type>
+				<maml:name>DsCertificateEntry[]</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>ForceDelete</maml:name>
+			<maml:description>
+				<maml:para>Deletes associated Active Directory entry when all certificate objects are removed from container. This operation keeps Active Directory in cleaner state by removing empty objects.</maml:para>
+			</maml:description>
+			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			<dev:type>
+				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Dispose</maml:name>
+			<maml:description>
+				<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+			</maml:description>
+			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			<dev:type>
+				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Thumbprint</maml:name>
+			<maml:description>
+				<maml:para>Specifies an array of strings that represents certificate thumbprint to remove. All certificates with matching thumbprint will be deleted from Active Directory PKI certificate container.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
+			<dev:type>
+				<maml:name>String[]</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+	</command:parameters>
+	<command:inputTypes>
+		<command:inputType>
+			<dev:type>
+				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsPkiCertContainer</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiCertContainer.htm</maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:inputType>
+	</command:inputTypes>
+	<command:returnValues>
+		<command:returnValue>
+			<dev:type>
+				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsPkiContainer</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiContainer.htm</maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:returnValue>
+	</command:returnValues>
+	<command:terminatingErrors></command:terminatingErrors>
+	<command:nonTerminatingErrors></command:nonTerminatingErrors>
+	<maml:alertSet>
+		<maml:title></maml:title>
+		<maml:alert>
+			<maml:para>Author: Vadims Podans
+Blog: https://www.sysadmins.lv</maml:para>
+		</maml:alert>
+	</maml:alertSet>
+	<command:examples>
+		<command:example>
+			<maml:title>--------------------------  Example 1  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>Get-AdPkiContainer -ContainerType NTAuth | Remove-AdCertificate -Thumbprint &quot;EC9385E533782453D5C285B2A67311447FB57A6F&quot;, &quot;3E778F108E7DC983939732AFAC3EE89383478973&quot; -Dispose</dev:code>
+			<dev:remarks>
+				<maml:para>This command retrieves NTAuth container from Active Directory and removes all certificate occurences with specified certificate thumbprints. After operation completion, input object (NTAuth container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 2  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$aia = Get-AdPkiContainer -ContainerType AIA
+PS C:\&gt; $entries = $aia.Certificates | Where-Object {$_.Name -eq &quot;Contoso CA&quot;}
+PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Remove-AdCertificate -Certificate $entries -Dispose -ForceDelete</dev:code>
+			<dev:remarks>
+				<maml:para>First line retrieves AIA (SubCA) container from Active Directory. Second line selects all certificate enries for &quot;Contoso CA&quot; in specified container. Third line removes selected entries from AIA container and deletes empty CA entry from Active Directory. After operation completion, input object (AIA container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+	</command:examples>
+	<maml:relatedLinks>
+		<maml:navigationLink>
+			<maml:linkText>Online version:</maml:linkText>
+			<maml:uri>https://www.sysadmins.lv/projects/pspki/remove-adcertificate.aspx</maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Get-AdPkiContainer</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Add-AdCertificate</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Add-AdCertificateRevocationList</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Remove-AdCertificateRevocationList</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+	</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+<!--Generated by PS Cmdlet Help Editor-->
+	<command:details>
+		<command:name>Remove-AdCertificateRevocationList</command:name>
+		<maml:description>
+			<maml:para>Removes certificate revocation list (CRL) from Active Directory.</maml:para>
+		</maml:description>
+		<maml:copyright>
+			<maml:para />
+		</maml:copyright>
+		<command:verb>Remove</command:verb>
+		<command:noun>AdCertificateRevocationList</command:noun>
+		<dev:version />
+	</command:details>
+	<maml:description>
+		<maml:para>Removes certificate revocation list (CRL) from Active Directory.</maml:para>
+	</maml:description>
+	<command:syntax>
+		<command:syntaxItem>
+			<maml:name>Remove-AdCertificateRevocationList</maml:name>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+				<maml:name>CdpContainer</maml:name>
+				<maml:description>
+					<maml:para>Specifies the CDP container object to remove CRL from.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">DsCDPContainer</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="named">
+				<maml:name>CertificateRevocationList</maml:name>
+				<maml:description>
+					<maml:para>Specifies one or more CRL entries to remove. Parameter objects are part of &#39;RevocationLists&#39; property of CDP container.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="true">DsCrlEntry[]</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>ForceDelete</maml:name>
+				<maml:description>
+					<maml:para>Deletes associated Active Directory entry when all CRL objects are removed from container. This operation keeps Active Directory in cleaner state by removing empty objects. This parameter only deletes empty CRL entries and does not delete empty containers.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Dispose</maml:name>
+				<maml:description>
+					<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+		</command:syntaxItem>
+		<command:syntaxItem>
+			<maml:name>Remove-AdCertificateRevocationList</maml:name>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+				<maml:name>CdpContainer</maml:name>
+				<maml:description>
+					<maml:para>Specifies the CDP container object to remove CRL from.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="false">DsCDPContainer</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Thumbprint</maml:name>
+				<maml:description>
+					<maml:para>Specifies an array of strings that represents CRL thumbprint to remove. All CRLs with matching thumbprint will be deleted from Active Directory CDP container.</maml:para>
+				</maml:description>
+				<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>ForceDelete</maml:name>
+				<maml:description>
+					<maml:para>Deletes associated Active Directory entry when all CRL objects are removed from container. This operation keeps Active Directory in cleaner state by removing empty objects. This parameter only deletes empty CRL entries and does not delete empty containers.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+				<maml:name>Dispose</maml:name>
+				<maml:description>
+					<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+				</maml:description>
+				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			</command:parameter>
+		</command:syntaxItem>
+	</command:syntax>
+	<command:parameters>
+		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+			<maml:name>CdpContainer</maml:name>
+			<maml:description>
+				<maml:para>Specifies the CDP container object to remove CRL from.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="false">DsCDPContainer</command:parameterValue>
+			<dev:type>
+				<maml:name>DsCDPContainer</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="named">
+			<maml:name>CertificateRevocationList</maml:name>
+			<maml:description>
+				<maml:para>Specifies one or more CRL entries to remove. Parameter objects are part of &#39;RevocationLists&#39; property of CDP container.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="true">DsCrlEntry[]</command:parameterValue>
+			<dev:type>
+				<maml:name>DsCrlEntry[]</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>ForceDelete</maml:name>
+			<maml:description>
+				<maml:para>Deletes associated Active Directory entry when all CRL objects are removed from container. This operation keeps Active Directory in cleaner state by removing empty objects. This parameter only deletes empty CRL entries and does not delete empty containers.</maml:para>
+			</maml:description>
+			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			<dev:type>
+				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Dispose</maml:name>
+			<maml:description>
+				<maml:para>Disposes input AD container object. AD container object contains active reference to LDAP object and it is recommended to release object when it is no longer necessary to avoid memory leaks.</maml:para>
+			</maml:description>
+			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+			<dev:type>
+				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Thumbprint</maml:name>
+			<maml:description>
+				<maml:para>Specifies an array of strings that represents CRL thumbprint to remove. All CRLs with matching thumbprint will be deleted from Active Directory CDP container.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
+			<dev:type>
+				<maml:name>String[]</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+	</command:parameters>
+	<command:inputTypes>
+		<command:inputType>
+			<dev:type>
+				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:inputType>
+	</command:inputTypes>
+	<command:returnValues>
+		<command:returnValue>
+			<dev:type>
+				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer</maml:name>
+				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
+				<maml:description/>
+			</dev:type>
+			<maml:description>
+<maml:para />
+			</maml:description>
+		</command:returnValue>
+	</command:returnValues>
+	<command:terminatingErrors></command:terminatingErrors>
+	<command:nonTerminatingErrors></command:nonTerminatingErrors>
+	<maml:alertSet>
+		<maml:title></maml:title>
+		<maml:alert>
+			<maml:para>Author: Vadims Podans
+Blog: https://www.sysadmins.lv</maml:para>
+		</maml:alert>
+	</maml:alertSet>
+	<command:examples>
+		<command:example>
+			<maml:title>--------------------------  Example 1  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Remove-AdCertificateRevocationList -Thumbprint &quot;1C4BF393320A6C70D5C506AF9F422950B0C11EAB6273132C9B326438AB1C0929&quot;, &quot;17FCB3E67512017E4611FBA9052164031F1D873F800E613A96AC09F77D269349&quot; -Dispose -ForceDelete</dev:code>
+			<dev:remarks>
+				<maml:para>This command retrieves CDP container from Active Directory and removes all CRLs with specified certificate thumbprints. If particular CDP entry in Active Directory is empty, it is deleted. After operation completion, input object (CDP container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 2  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$cdp = Get-AdPkiContainer -ContainerType CDP
+PS C:\&gt; $entries = $cdp.RevocationLists | Where-Object {$_.HostName -eq &quot;subca01&quot;}
+PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Remove-AdCertificateRevocationList -CRL $entries -Dispose -ForceDelete</dev:code>
+			<dev:remarks>
+				<maml:para>First line retrieves CDP container from Active Directory. Second line selects all CRL entries for &quot;subca01&quot; host name in specified container. Third line removes selected entries from CDP container and deletes empty CDP entries from Active Directory. After operation completion, input object (CDP container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+	</command:examples>
+	<maml:relatedLinks>
+		<maml:navigationLink>
+			<maml:linkText>Online version:</maml:linkText>
+			<maml:uri>https://www.sysadmins.lv/projects/pspki/remove-adcertificaterevocationlist.aspx</maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Get-AdPkiContainer</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Add-AdCertificateRevocationList</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Add-AdCertificate</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
+		<maml:navigationLink>
+			<maml:linkText>Remove-AdCertificate</maml:linkText>
+			<maml:uri></maml:uri>
+		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
 </helpItems>
