@@ -1,4 +1,4 @@
-function Remove-DatabaseRow {
+function Remove-AdcsDatabaseRow {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
