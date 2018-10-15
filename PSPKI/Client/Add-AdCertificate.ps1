@@ -14,7 +14,7 @@ function Add-AdCertificate {
     )
     if ($Certificate.Length -gt 0) {
         $Certificate | ForEach-Object {
-            if ($Adcontainer -is [SysadminsLV.PKI.Management.ActiveDirectory.DsPkiCertContainerDsAiaContainer]) {
+            if ($Adcontainer -is [SysadminsLV.PKI.Management.ActiveDirectory.DsAiaContainer]) {
                 $type = if ($CrossCA) {"CrossCertificate"} else {"CACertificate"}
                 [void]$AdContainer.AddCertificate($_, $type)
             } else {
