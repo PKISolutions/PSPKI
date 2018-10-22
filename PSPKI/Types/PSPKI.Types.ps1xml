@@ -141,12 +141,12 @@
   <Type>
     <Name>System.Security.Cryptography.X509Certificates.X509Certificate2</Name>
     <Members>
-      <ScriptProperty>
+      <ScriptMethod>
         <Name>DeletePrivateKey</Name>
-        <GetScriptBlock>
+        <Script>
           [SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::DeletePrivateKey($this)
-        </GetScriptBlock>
-      </ScriptProperty>
+        </Script>
+      </ScriptMethod>
     </Members>
   </Type>
 </Types>
