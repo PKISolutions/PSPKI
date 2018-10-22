@@ -352,7 +352,7 @@ namespace PKI.EnterprisePKI {
             $e = $crl.Extensions["1.3.6.1.4.1.311.21.4"]
             if (!$e) {return}
             $dt = try {
-                    [SysadminsLV.Asn1Parser.Asn1Utils]::DecodeUTCTime($e.RawData)
+                    (New-Object SysadminsLV.Asn1Parser.Universal.Asn1UtcTime -ArgumentList @(,($e.RawData))).Value
                 } catch {
                     [SysadminsLV.Asn1Parser.Asn1Utils]::DecodeGeneralizedTime($e.RawData)
                 }
