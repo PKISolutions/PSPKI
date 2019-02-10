@@ -80,11 +80,11 @@
                 if ($RowID -ne $null) {
                     $RowID | ForEach-Object {
                         $Reader = $CA.GetDbReader($Table)
-                        $Filter += "$IdColumn -eq $_"
+                        $LocalFilter = $Filter + "$IdColumn -eq $_"
                         Get-RequestRow `
                             -Reader $Reader `
                             -Property $Property `
-                            -Filter $Filter `
+                            -Filter $LocalFilter `
                             -Schema $Schema `
                             -Page $Page `
                             -PageSize $PageSize
