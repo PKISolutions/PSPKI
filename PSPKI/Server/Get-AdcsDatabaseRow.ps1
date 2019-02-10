@@ -19,6 +19,11 @@
         [String[]]$Filter
     )
     begin {
+        $NativeTable = if ("Revoked", "Issued", "Pending", "Failed" -contains $Table) {
+            "Request"
+        } else {
+            $Table
+        }
         $IdColumn = switch ($Table) {
             {($_ -eq "Request") `
                 -or ($_ -eq "Revoked") `
@@ -44,7 +49,7 @@
                     $Reader.Dispose()
                 }
             }
-            if ($Table -eq "Request" -or $Table -eq "CRL") {
+            if ($NativeTable -eq "Request" -or $NativeTable -eq "CRL") {
                 # 'Request' and 'CRL' tables return single row item per RowID. If RowID is specified, all
                 # other filters are ignored, because exact row is requested. This is by design.
                 if ($RowID -ne $null) {
