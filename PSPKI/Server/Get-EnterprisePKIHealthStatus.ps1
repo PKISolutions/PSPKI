@@ -287,7 +287,6 @@ namespace PKI.EnterprisePKI {
                     Write-Debug "Missing 'Authority Information Access' extension."
                 }
                 $URLs
-                return
             } else {
                 Write-Debug "Fetching 'Freshest CRL' extension..."
                 $crl = New-Object Security.Cryptography.X509Certificates.X509CRL2 @(,$rawData)
@@ -299,6 +298,7 @@ namespace PKI.EnterprisePKI {
                 } else {
                     Write-Debug "Missing 'Freshest CRL' extension."
                 }
+                $URLs
             }
         }
         # returns UrlElement
