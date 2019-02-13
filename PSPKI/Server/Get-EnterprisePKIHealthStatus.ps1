@@ -581,7 +581,9 @@ namespace PKI.EnterprisePKI {
                         $deltas = @()
                         for ($m = 0; $m -lt $urlPack2.FreshestCRL.Length; $m++) {
                             # skip duplicate
-                            if ($deltas -contains $urlPack2.FreshestCRL[$m]) {return}
+                            if ($deltas | Where-Object {$_.Url -eq $urlPack2.FreshestCRL[$m]}) {
+                                return
+                            }
                             $urlElement2 = New-Object PKI.EnterprisePKI.UrlElement -Property @{
                                 Name = "DeltaCRL Location #$($m + 1)";
                                 Url = $urlPack2.FreshestCRL[$m];
