@@ -175,8 +175,6 @@ namespace PKI.EnterprisePKI {
         #endregion
 
         #region script internal config
-        $Host.PrivateData.VerboseForegroundColor = "Yellow"
-        $Host.PrivateData.DebugForegroundColor = "Cyan"
         if ($PSBoundParameters.Verbose) {$VerbosePreference = "continue"}
         if ($PSBoundParameters.Debug) {$DebugPreference = "continue"}
         $timeout = $DownloadTimeout * 1000
