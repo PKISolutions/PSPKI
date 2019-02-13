@@ -584,7 +584,7 @@ namespace PKI.EnterprisePKI {
                             if ($deltas -contains $urlPack2.FreshestCRL[$m]) {return}
                             $urlElement2 = New-Object PKI.EnterprisePKI.UrlElement -Property @{
                                 Name = "DeltaCRL Location #$($m + 1)";
-                                Url = $urlPack2.FreshestCRL[$n];
+                                Url = $urlPack2.FreshestCRL[$m];
                                 UrlType = [PKI.EnterprisePKI.UrlType]::Crl;
                             }
                             $obj2 = __downloadCrl $urlElement2.Url
