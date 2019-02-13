@@ -406,7 +406,7 @@ namespace PKI.EnterprisePKI {
             } elseif ($DeltaCRL -and ($bcrlNumber -lt $indicator)) {
                 Write-Debug "Base CRL number has lower version than version required by 'Delta CRL Indicator' extension."
                 $s_error -bor [PKI.EnterprisePKI.UrlStatus]::InvalidBase
-            } elseif ($DeltaCRL -and ($dcrlNumber -le $bcrlNumber)) {
+            } elseif ($DeltaCRL -and ($dcrlNumber -lt $bcrlNumber)) {
                 Write-Debug "Delta CRL is outdated. A new version of Base CRL is available that overlaps current Delta CRL."
                 $s_warning -bor [PKI.EnterprisePKI.UrlStatus]::StaleDelta
             } else {

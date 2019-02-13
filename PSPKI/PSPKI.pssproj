@@ -14,6 +14,9 @@
     <Description />
     <Version>3.2.5.0</Version>
     <Guid>08a70230-ae58-48af-ae73-e4276b6ef1eb</Guid>
+    <PackageEntryPoint>Client\Add-AdCertificate.ps1</PackageEntryPoint>
+    <DotNetVersion>v4.7.1</DotNetVersion>
+    <PackageType>Console</PackageType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
