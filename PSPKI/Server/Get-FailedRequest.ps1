@@ -18,12 +18,16 @@ function Get-FailedRequest {
         [String[]]$Property,
         [String[]]$Filter
     )
-    Get-AdcsDatabaseRow `
-        -CA $CertificationAuthority `
-        -Table "Failed" `
-        -RowId $RequestID `
-        -Page $Page `
-        -PageSize $PageSize `
-        -Property $Property `
-        -Filter $Filter
+    process {
+        foreach ($CA in $CertificationAuthority) {
+            Get-AdcsDatabaseRow `
+            -CA $CA `
+            -Table "Failed" `
+            -RowId $RequestID `
+            -Page $Page `
+            -PageSize $PageSize `
+            -Property $Property `
+            -Filter $Filter
+        }        
+    }
 }
