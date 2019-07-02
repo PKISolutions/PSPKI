@@ -10,10 +10,10 @@ LONG DESCRIPTION
     (modification is not supported by Microsoft) certificate templates,
     register or unregister object identifiers (OID) in Active Directory.
     
-    The module relies on a PKI.Core.dll (as well as on Interop assemblies
+    The module relies on a SysadminsLV.PKI.dll (as well as on Interop assemblies
     library which contains underlying API extensions via .NET class framework
     and is compiled under .NET Framework 4.0 .NET class framework documentation
-    can be found at https://www.sysadmins.lv/library/pkix.net/
+    is located at https://pkisolutions.com/apidocs/pkix.net/
 BUILT-IN COMMANDS
     The module splits commands depending on installation type. During module
     package installation you are prompted to select components to install:
@@ -32,7 +32,7 @@ DOCUMENTATION
     Documentation for PSPKI module and its commands are available at project home
     page: https://www.sysadmins.lv/projects/pspki/default.aspx
 SUPPORT INFORMATION
-    The official support page for the module is: https://github.com/Crypt32/PSPKI
+    The official support page for the module: https://github.com/PKISolutions/PSPKI
     Any comments and questions must be addressed under Issues tab.
 
 ACKNOWLEDGMENTS
