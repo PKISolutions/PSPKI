@@ -86,6 +86,16 @@
       <ScriptProperty>
         <Name>SigningTime</Name>
         <GetScriptBlock>
+          function __getSigTime ($SignedCms) {
+            foreach ($SignerInfo in $SignedCms.SignerInfos) {
+              $sTime = ($SignerInfo.SignedAttributes | ?{$_.Oid.Value -eq "1.2.840.113549.1.9.5"}).Values | `
+                Where-Object {$_.Oid.Value -eq "1.2.840.113549.1.9.5"}
+              if ($sTime -ne $null) {
+                break
+              }
+            }
+            $sTime.SigningTime
+          }
           if ($this.SignerCertificate -ne $null) {
             $CERT_QUERY_OBJECT_FILE = 0x1
             $CERT_QUERY_CONTENT_FLAG_ALL = 16382
@@ -98,7 +108,7 @@
             [IntPtr]$ppvContext = [IntPtr]::Zero
             $return = [SysadminsLV.PKI.Win32.Crypt32]::CryptQueryObject(
               $CERT_QUERY_OBJECT_FILE,
-              $_.Path,
+              $this.Path,
               $CERT_QUERY_CONTENT_FLAG_ALL,
               $CERT_QUERY_FORMAT_FLAG_ALL,
               $null,
@@ -117,11 +127,27 @@
             $return = [SysadminsLV.PKI.Win32.Crypt32]::CryptMsgGetParam($phMsg,29,0,$pvData,[ref]$pcbData)
             $SignedCms = New-Object Security.Cryptography.Pkcs.SignedCms
             $SignedCms.Decode($pvData)
-            foreach ($Infos in $SignedCms.SignerInfos) {
-              foreach ($CounterSignerInfos in $Infos.CounterSignerInfos) {
-                $CounterSignerInfos
-                $sTime = ($CounterSignerInfos.SignedAttributes | ?{$_.Oid.Value -eq "1.2.840.113549.1.9.5"}).Values | `
-                Where-Object {$_.SigningTime -ne $null}
+            $v = [System.Environment]::OSVersion.Version.Major
+            $RFC3161_counterSign = "1.3.6.1.4.1.311.3.3.1"
+            if ($v -eq 10) {
+              :outer foreach ($Infos in $SignedCms.SignerInfos) {
+                $counterSignature = $Infos.UnsignedAttributes | Where-Object {$_.Oid.Value -eq $RFC3161_counterSign}
+                if ($counterSignature) {
+                  $counterCms = New-Object Security.Cryptography.Pkcs.SignedCms
+                  $counterCms.Decode($counterSignature.Values[0].RawData)
+                  $sTime = __getSigTime $counterCms
+                  break outer
+                }
+              }
+            } else {
+              :outer foreach ($Infos in $SignedCms.SignerInfos) {
+                foreach ($CounterSignerInfos in $Infos.CounterSignerInfos) {
+                  $sTime = ($CounterSignerInfos.SignedAttributes | ?{$_.Oid.Value -eq "1.2.840.113549.1.9.5"}).Values | `
+                  Where-Object {$_.SigningTime -ne $null}
+                  if ($sTime -ne $null) {
+                    break outer
+                  }
+                }
               }
             }
             $sTime.SigningTime
