@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Security.Cryptography.Oid</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>ToString</Name>
+        <Script>
+          [SysadminsLV.PKI.Utils.CLRExtensions.OidExtensions]::Format($this,$true)
+        </Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>
