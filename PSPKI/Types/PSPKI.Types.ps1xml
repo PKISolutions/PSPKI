@@ -140,9 +140,9 @@
               if ($nested) {
                 $counterCms = New-Object Security.Cryptography.Pkcs.SignedCms
                 $counterCms.Decode($nested.Values[0].RawData)
-                $attr = $counterCmsSignedAttributes | Where-Object {$_.Oid.Value -eq $SigningTime} | select -first 1
+                $attr = $counterCms.SignerInfos.SignedAttributes | Where-Object {$_.Oid.Value -eq $SigningTime} | select -first 1
                 if ($attr) {
-                  $sTime = $attr.SigningTime.ToLocalTime()
+                  $sTime = $attr.Values[0].SigningTime.ToLocalTime()
                 }
               }
             }
