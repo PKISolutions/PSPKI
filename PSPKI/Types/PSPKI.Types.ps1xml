@@ -128,7 +128,7 @@
             if ($counter) {
               $nested = New-Object SysadminsLV.PKI.Cryptography.Pkcs.PkcsSignerInfo (,$counter.Values[0].RawData)
               if ($nested) {
-                $attr = $nested.SignedAttributes | Where-Object {$_.Oid.Value -eq $SigningTime} | select -first 1
+                $attr = $nested.AuthenticatedAttributes | Where-Object {$_.Oid.Value -eq $SigningTime} | select -first 1
                 if ($attr) {
                   $pkcs9sig_attr = New-Object System.Security.Cryptography.Pkcs.Pkcs9SigningTime (,$attr.RawData)
                   $sTime = $pkcs9sig_attr.SigningTime.ToLocalTime()
