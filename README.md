@@ -12,7 +12,7 @@ Starting with Windows 8/Windows Server 2012, a **PKI** module is installed along
 
 ### Documentation
 
-All documentation is available at my website: [PowerShell PKI Module](https://www.sysadmins.lv/projects/pspki/default.aspx)
+All documentation is available at PKI Solutions: [PowerShell PKI Module](https://www.pkisolutions.com/tools/pspki/)
 
 ### Download and install PowerShell PKI module from the PowerShell Gallery using PowerShell
 ```PowerShell
