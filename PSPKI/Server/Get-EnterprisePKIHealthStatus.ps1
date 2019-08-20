@@ -565,6 +565,7 @@ namespace PKI.EnterprisePKI {
                 $CAObject = __processCerts $CAObject $projectedChain
                 # process and validate CDP extensions
                 for ($n = 0; $n -lt $urlPack.CDP.Length; $n++) {
+                    $deltas = @()
                     $urlElement = New-Object PKI.EnterprisePKI.UrlElement -Property @{
                         Name = "CDP Location #$($n + 1)";
                         Url = $urlPack.CDP[$n];
@@ -576,7 +577,6 @@ namespace PKI.EnterprisePKI {
                         $urlElement = __verifyCDP $urlElement $projectedChain[$i + 1]
                         $urlPack2 = __getUrl ($urlElement.GetObject()).RawData $false
                         # process and validate FreshestCRL extension if exist
-                        $deltas = @()
                         for ($m = 0; $m -lt $urlPack2.FreshestCRL.Length; $m++) {
                             # skip duplicate
                             if ($deltas | Where-Object {$_.Url -eq $urlPack2.FreshestCRL[$m]}) {
