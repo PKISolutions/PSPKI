@@ -30,7 +30,7 @@ BUILT-IN COMMANDS
     Server package requires ADCS RSAT installation.
 DOCUMENTATION
     Documentation for PSPKI module and its commands are available at project home
-    page: https://www.sysadmins.lv/projects/pspki/default.aspx
+    page: https://www.pkisolutions.com/tools/pspki/
 SUPPORT INFORMATION
     The official support page for the module: https://github.com/PKISolutions/PSPKI
     Any comments and questions must be addressed under Issues tab.
