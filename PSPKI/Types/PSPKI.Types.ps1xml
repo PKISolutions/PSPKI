@@ -75,6 +75,7 @@
       <ScriptProperty>
         <Name>SigningTime</Name>
         <GetScriptBlock>
+          $sTime = $null
           if ($this.SignerCertificate -ne $null) {
             $CERT_QUERY_OBJECT_FILE = 0x1
             $CERT_QUERY_CONTENT_FLAG_ALL = 16382
@@ -87,7 +88,7 @@
             [IntPtr]$ppvContext = [IntPtr]::Zero
             $return = [SysadminsLV.PKI.Win32.Crypt32]::CryptQueryObject(
               $CERT_QUERY_OBJECT_FILE,
-              $_.Path,
+              $this.Path,
               $CERT_QUERY_CONTENT_FLAG_ALL,
               $CERT_QUERY_FORMAT_FLAG_ALL,
               $null,
@@ -99,23 +100,53 @@
               [ref]$ppvContext
             )
             if (!$return) {return}
+            
+            # extract pkcs#7 signature
             $pcbData = 0
             $return = [SysadminsLV.PKI.Win32.Crypt32]::CryptMsgGetParam($phMsg,29,0,$null,[ref]$pcbData)
             if (!$return) {return}
             $pvData = New-Object byte[] -ArgumentList $pcbData
             $return = [SysadminsLV.PKI.Win32.Crypt32]::CryptMsgGetParam($phMsg,29,0,$pvData,[ref]$pcbData)
-            $SignedCms = New-Object Security.Cryptography.Pkcs.SignedCms
-            $SignedCms.Decode($pvData)
-            foreach ($Infos in $SignedCms.SignerInfos) {
-              foreach ($CounterSignerInfos in $Infos.CounterSignerInfos) {
-                $CounterSignerInfos
-                $sTime = ($CounterSignerInfos.SignedAttributes | ?{$_.Oid.Value -eq "1.2.840.113549.1.9.5"}).Values | `
-                Where-Object {$_.SigningTime -ne $null}
-              }
-            }
-            $sTime.SigningTime
+            
+            # release unmanaged handles returned by CryptQueryObject
             [void][SysadminsLV.PKI.Win32.Crypt32]::CryptMsgClose($phMsg)
             [void][SysadminsLV.PKI.Win32.Crypt32]::CertCloseStore($phCertStore,0)
+            
+            # get managed mkcs#7 signature
+            $SignedCms = New-Object Security.Cryptography.Pkcs.SignedCms
+            $SignedCms.Decode($pvData)
+
+            # it appears there are two types of counter signing: PKCS#9 or RFC3161.
+            # -- in PKCS#9, timestamp is stored in signed attribute with OID = 1.2.840.113549.1.9.6
+            # -- in RFC3161, timestamp is stored in embedded PKCS#9 object which is stored in unsigned attribute 
+            $Pkcs9_counterSign = "1.2.840.113549.1.9.6"
+            $RFC3161_counterSign = "1.3.6.1.4.1.311.3.3.1"
+            $SigningTime = "1.2.840.113549.1.9.5"
+
+            # attempt to read PKCS#9
+            $counter = $SignedCms.SignerInfos.UnsignedAttributes | Where-Object {$_.Oid.Value -eq $Pkcs9_counterSign} | select -First 1
+            if ($counter) {
+              $nested = New-Object SysadminsLV.PKI.Cryptography.Pkcs.PkcsSignerInfo (,$counter.Values[0].RawData)
+              if ($nested) {
+                $attr = $nested.AuthenticatedAttributes | Where-Object {$_.Oid.Value -eq $SigningTime} | select -first 1
+                if ($attr) {
+                  $pkcs9sig_attr = New-Object System.Security.Cryptography.Pkcs.Pkcs9SigningTime (,$attr.RawData)
+                  $sTime = $pkcs9sig_attr.SigningTime.ToLocalTime()
+                }
+              }
+            } else {
+              # attempt to read RFC3161
+              $nested = $SignedCms.SignerInfos.UnsignedAttributes | Where-Object {$_.Oid.Value -eq $RFC3161_counterSign} | select -First 1
+              if ($nested) {
+                $counterCms = New-Object Security.Cryptography.Pkcs.SignedCms
+                $counterCms.Decode($nested.Values[0].RawData)
+                $attr = $counterCms.SignerInfos.SignedAttributes | Where-Object {$_.Oid.Value -eq $SigningTime} | select -first 1
+                if ($attr) {
+                  $sTime = $attr.Values[0].SigningTime.ToLocalTime()
+                }
+              }
+            }
+            $sTime
           } else {
             $null
           }

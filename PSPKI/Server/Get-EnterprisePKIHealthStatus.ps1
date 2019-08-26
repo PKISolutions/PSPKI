@@ -175,8 +175,6 @@ namespace PKI.EnterprisePKI {
         #endregion
 
         #region script internal config
-        $Host.PrivateData.VerboseForegroundColor = "Yellow"
-        $Host.PrivateData.DebugForegroundColor = "Cyan"
         if ($PSBoundParameters.Verbose) {$VerbosePreference = "continue"}
         if ($PSBoundParameters.Debug) {$DebugPreference = "continue"}
         $timeout = $DownloadTimeout * 1000
@@ -287,7 +285,6 @@ namespace PKI.EnterprisePKI {
                     Write-Debug "Missing 'Authority Information Access' extension."
                 }
                 $URLs
-                return
             } else {
                 Write-Debug "Fetching 'Freshest CRL' extension..."
                 $crl = New-Object Security.Cryptography.X509Certificates.X509CRL2 @(,$rawData)
@@ -299,6 +296,7 @@ namespace PKI.EnterprisePKI {
                 } else {
                     Write-Debug "Missing 'Freshest CRL' extension."
                 }
+                $URLs
             }
         }
         # returns UrlElement
@@ -406,7 +404,7 @@ namespace PKI.EnterprisePKI {
             } elseif ($DeltaCRL -and ($bcrlNumber -lt $indicator)) {
                 Write-Debug "Base CRL number has lower version than version required by 'Delta CRL Indicator' extension."
                 $s_error -bor [PKI.EnterprisePKI.UrlStatus]::InvalidBase
-            } elseif ($DeltaCRL -and ($dcrlNumber -le $bcrlNumber)) {
+            } elseif ($DeltaCRL -and ($dcrlNumber -lt $bcrlNumber)) {
                 Write-Debug "Delta CRL is outdated. A new version of Base CRL is available that overlaps current Delta CRL."
                 $s_warning -bor [PKI.EnterprisePKI.UrlStatus]::StaleDelta
             } else {
@@ -567,6 +565,7 @@ namespace PKI.EnterprisePKI {
                 $CAObject = __processCerts $CAObject $projectedChain
                 # process and validate CDP extensions
                 for ($n = 0; $n -lt $urlPack.CDP.Length; $n++) {
+                    $deltas = @()
                     $urlElement = New-Object PKI.EnterprisePKI.UrlElement -Property @{
                         Name = "CDP Location #$($n + 1)";
                         Url = $urlPack.CDP[$n];
@@ -578,13 +577,14 @@ namespace PKI.EnterprisePKI {
                         $urlElement = __verifyCDP $urlElement $projectedChain[$i + 1]
                         $urlPack2 = __getUrl ($urlElement.GetObject()).RawData $false
                         # process and validate FreshestCRL extension if exist
-                        $deltas = @()
                         for ($m = 0; $m -lt $urlPack2.FreshestCRL.Length; $m++) {
                             # skip duplicate
-                            if ($deltas -contains $urlPack2.FreshestCRL[$m]) {return}
+                            if ($deltas | Where-Object {$_.Url -eq $urlPack2.FreshestCRL[$m]}) {
+                                return
+                            }
                             $urlElement2 = New-Object PKI.EnterprisePKI.UrlElement -Property @{
                                 Name = "DeltaCRL Location #$($m + 1)";
-                                Url = $urlPack2.FreshestCRL[$n];
+                                Url = $urlPack2.FreshestCRL[$m];
                                 UrlType = [PKI.EnterprisePKI.UrlType]::Crl;
                             }
                             $obj2 = __downloadCrl $urlElement2.Url

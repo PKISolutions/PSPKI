@@ -101,7 +101,12 @@
 #endregion
 
 #region Key Usages processing
-    $KU = New-Object Security.Cryptography.X509Certificates.X509KeyUsageExtension $KeyUsage, $true
+    $LocalKeyUsage = $KeyUsage
+    if ($PSBoundParameters.Keys.Contains("IsCA") -and $IsCA) {
+        $LocalKeyUsage = $LocalKeyUsage -bor [Security.Cryptography.X509Certificates.X509KeyUsageFlags]::CrlSign
+        $LocalKeyUsage = $LocalKeyUsage -bor [Security.Cryptography.X509Certificates.X509KeyUsageFlags]::KeyCertSign
+    }
+    $KU = New-Object Security.Cryptography.X509Certificates.X509KeyUsageExtension $LocalKeyUsage, $true
     [void]$builder.Extensions.Add($KU)
 #endregion
 

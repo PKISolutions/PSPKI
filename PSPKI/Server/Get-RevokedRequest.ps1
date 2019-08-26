@@ -18,12 +18,16 @@
         [String[]]$Property,
         [String[]]$Filter
     )
-    Get-AdcsDatabaseRow `
-        -CA $CertificationAuthority `
-        -Table "Revoked" `
-        -RowId $RequestID `
-        -Page $Page `
-        -PageSize $PageSize `
-        -Property $Property `
-        -Filter $Filter
+    process {
+        foreach ($CA in $CertificationAuthority) {
+            Get-AdcsDatabaseRow `
+            -CA $CA `
+            -Table "Revoked" `
+            -RowId $RequestID `
+            -Page $Page `
+            -PageSize $PageSize `
+            -Property $Property `
+            -Filter $Filter
+        }        
+    }
 }
