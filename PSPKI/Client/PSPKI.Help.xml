@@ -218,8 +218,7 @@
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -289,7 +288,7 @@ PS C:\&gt; Convert-PemToPfx -InputPath C:\test\ssl.pem -KeyPath c:\test\ssl.key 
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/convert-pemtopfx.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/convert-pemtopfx</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Convert-PfxToPem</maml:linkText>
@@ -501,8 +500,7 @@ https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certif
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -573,7 +571,7 @@ PS C:\&gt; Convert-PfxToPem -Certificate $cert -OutputPath c:\test\ssl.pem -Incl
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/convert-pfxtopem.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/convert-pfxtopem</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Convert-PemToPfx</maml:linkText>
@@ -617,7 +615,7 @@ This command supports both, PKCS#10 and PKCS#7/CMC certificate reuqests.</maml:p
 			<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="0">
 				<maml:name>RawRequest</maml:name>
 				<maml:description>
-					<maml:para>Specifies a DER-encoded byte array that containg certificate request information.</maml:para>
+					<maml:para>Specifies a DER-encoded byte array that contains certificate request information.</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="true">Byte[]</command:parameterValue>
 			</command:parameter>
@@ -639,7 +637,7 @@ This command supports both, PKCS#10 and PKCS#7/CMC certificate reuqests.</maml:p
 		<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="0">
 			<maml:name>RawRequest</maml:name>
 			<maml:description>
-				<maml:para>Specifies a DER-encoded byte array that containg certificate request information.</maml:para>
+				<maml:para>Specifies a DER-encoded byte array that contains certificate request information.</maml:para>
 			</maml:description>
 			<command:parameterValue required="true" variableLength="true">Byte[]</command:parameterValue>
 			<dev:type>
@@ -677,7 +675,7 @@ https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509CertificateRequests.X509CertificateRequest</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509CertificateRequests_X509CertificateRequest.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509CertificateRequests_X509CertificateRequest.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -690,8 +688,7 @@ https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -740,7 +737,7 @@ PS C:\&gt; Get-CertificateRequest -RawRequest $Raw</dev:code>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/get-certificaterequest.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/get-certificaterequest</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Submit-CertificateRequest</maml:linkText>
@@ -842,7 +839,7 @@ https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CRL2</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CRL2.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CRL2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -855,8 +852,7 @@ https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -905,7 +901,7 @@ PS C:\&gt; Get-CRL -RawCRL $Raw</dev:code>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/get-certificaterevocationlist.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/get-certificaterevocationlist</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Show-CertificateRevocationList</maml:linkText>
@@ -1007,7 +1003,7 @@ https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CTL</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CTL.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CTL.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1020,8 +1016,7 @@ https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -1070,7 +1065,7 @@ Get-CertificateTrustList -RawCTL $Raw</dev:code>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/get-certificatetrustlist.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/get-certificatetrustlist</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Show-CertificateTrustList</maml:linkText>
@@ -1137,7 +1132,7 @@ Get-CertificateTrustList -RawCTL $Raw</dev:code>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Cryptography.CspProviderInfoCollection</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Cryptography_CspProviderInfoCollection.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Cryptography_CspProviderInfoCollection.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1150,8 +1145,7 @@ Get-CertificateTrustList -RawCTL $Raw</dev:code>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -1179,7 +1173,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/get-cryptographicserviceprovider.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/get-cryptographicserviceprovider</maml:uri>
 		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
@@ -1244,7 +1238,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>PKI.Enrollment.Policy.PolicyServerClient[]</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_PKI_Enrollment_Policy_PolicyServerClient.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_PKI_Enrollment_Policy_PolicyServerClient.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1257,8 +1251,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -1286,7 +1279,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/get-enrollmentpolicyserverclient.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/get-enrollmentpolicyserverclient</maml:uri>
 		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
@@ -1368,8 +1361,7 @@ Long notation as integer: -2147024891</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -1437,7 +1429,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/get-errormessage.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/get-errormessage</maml:uri>
 		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
@@ -1513,8 +1505,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -1562,7 +1553,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/get-objectidentifier.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/get-objectidentifier</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-ObjectIdentifierEx</maml:linkText>
@@ -1697,7 +1688,7 @@ CertificateTemplate -- represents certificate template group.</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.Oid2</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -1710,8 +1701,7 @@ CertificateTemplate -- represents certificate template group.</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -1759,7 +1749,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/get-objectidentifierex.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/get-objectidentifierex</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-ObjectIdentifier</maml:linkText>
@@ -1830,7 +1820,7 @@ Example: 01a4ff2</maml:para>
 			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>ProviderName</maml:name>
 				<maml:description>
-					<maml:para>Specifies the Cryptography Service Provider (CSP) name. You can use either legacy CSP and Key Storage Providers (KSP). By default &quot;Microsoft Enhanced Cryptographic Provider v1.0&quot; CSP is used.</maml:para>
+					<maml:para>Specifies the Cryptography Service Provider (CSP) name. You can use either legacy CSP and Key Storage Providers (KSP). By default &quot;Microsoft Enhanced RSA and AES Cryptographic Provider&quot; CSP is used.</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
 			</command:parameter>
@@ -2009,7 +1999,7 @@ Example: 01a4ff2</maml:para>
 			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>ProviderName</maml:name>
 				<maml:description>
-					<maml:para>Specifies the Cryptography Service Provider (CSP) name. You can use either legacy CSP and Key Storage Providers (KSP). By default &quot;Microsoft Enhanced Cryptographic Provider v1.0&quot; CSP is used.</maml:para>
+					<maml:para>Specifies the Cryptography Service Provider (CSP) name. You can use either legacy CSP and Key Storage Providers (KSP). By default &quot;Microsoft Enhanced RSA and AES Cryptographic Provider&quot; CSP is used.</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
 			</command:parameter>
@@ -2133,7 +2123,7 @@ you can combine key usages values by using bitwise OR operation. When combining 
 			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>StoreLocation</maml:name>
 				<maml:description>
-					<maml:para>Specifies the store location to store self-signed certificate. Possible values are: &#39;CurrentUser&#39; and &#39;LocalMachine&#39;. &#39;CurrentUser&#39; store is intended for user certificates and computer (as well as CA) certificates must be stored in the &#39;LocalMachine&#39; store.</maml:para>
+					<maml:para>Specifies the store location to store self-signed certificate. Possible values are: &#39;CurrentUser&#39; and &#39;LocalMachine&#39;. &#39;CurrentUser&#39; store is intended for user certificates and computer (as well as CA) certificates must be stored in the &#39;LocalMachine&#39; store. If not specified, certificate is generated in memory and is not installed (persisted) in certificate store.</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="false">StoreLocation</command:parameterValue>
 			</command:parameter>
@@ -2188,7 +2178,7 @@ Example: 01a4ff2</maml:para>
 			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>ProviderName</maml:name>
 				<maml:description>
-					<maml:para>Specifies the Cryptography Service Provider (CSP) name. You can use either legacy CSP and Key Storage Providers (KSP). By default &quot;Microsoft Enhanced Cryptographic Provider v1.0&quot; CSP is used.</maml:para>
+					<maml:para>Specifies the Cryptography Service Provider (CSP) name. You can use either legacy CSP and Key Storage Providers (KSP). By default &quot;Microsoft Enhanced RSA and AES Cryptographic Provider&quot; CSP is used.</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
 			</command:parameter>
@@ -2394,14 +2384,14 @@ Example: 01a4ff2</maml:para>
 		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
 			<maml:name>ProviderName</maml:name>
 			<maml:description>
-				<maml:para>Specifies the Cryptography Service Provider (CSP) name. You can use either legacy CSP and Key Storage Providers (KSP). By default &quot;Microsoft Enhanced Cryptographic Provider v1.0&quot; CSP is used.</maml:para>
+				<maml:para>Specifies the Cryptography Service Provider (CSP) name. You can use either legacy CSP and Key Storage Providers (KSP). By default &quot;Microsoft Enhanced RSA and AES Cryptographic Provider&quot; CSP is used.</maml:para>
 			</maml:description>
 			<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
 			<dev:type>
 				<maml:name>String</maml:name>
 				<maml:uri/>
 			</dev:type>
-			<dev:defaultValue>Microsoft Enhanced Cryptographic Provider v1.0</dev:defaultValue>
+			<dev:defaultValue>Microsoft Enhanced RSA and AES Cryptographic Provider</dev:defaultValue>
 		</command:parameter>
 		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
 			<maml:name>AlgorithmName</maml:name>
@@ -2563,7 +2553,7 @@ you can combine key usages values by using bitwise OR operation. When combining 
 		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named">
 			<maml:name>StoreLocation</maml:name>
 			<maml:description>
-				<maml:para>Specifies the store location to store self-signed certificate. Possible values are: &#39;CurrentUser&#39; and &#39;LocalMachine&#39;. &#39;CurrentUser&#39; store is intended for user certificates and computer (as well as CA) certificates must be stored in the &#39;LocalMachine&#39; store.</maml:para>
+				<maml:para>Specifies the store location to store self-signed certificate. Possible values are: &#39;CurrentUser&#39; and &#39;LocalMachine&#39;. &#39;CurrentUser&#39; store is intended for user certificates and computer (as well as CA) certificates must be stored in the &#39;LocalMachine&#39; store. If not specified, certificate is generated in memory and is not installed (persisted) in certificate store.</maml:para>
 			</maml:description>
 			<command:parameterValue required="true" variableLength="false">StoreLocation</command:parameterValue>
 			<dev:type>
@@ -2687,8 +2677,7 @@ you can combine key usages values by using bitwise OR operation. When combining 
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -2697,7 +2686,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 			<maml:introduction>
 				<maml:paragraph>PS C:\&gt;</maml:paragraph>
 			</maml:introduction>
-			<dev:code>PS C:\&gt; New-SelfsignedCertificateEx -Subject &quot;CN=Test Code Signing&quot; -EKU &quot;Code Signing&quot; -KeySpec &quot;Signature&quot; `
+			<dev:code>New-SelfsignedCertificateEx -Subject &quot;CN=Test Code Signing&quot; -EKU &quot;Code Signing&quot; -KeySpec &quot;Signature&quot; `
  -KeyUsage &quot;DigitalSignature&quot; -FriendlyName &quot;Test code signing&quot; -NotAfter $((Get-Date).AddYears(5))</dev:code>
 			<dev:remarks>
 				<maml:para>Creates a self-signed certificate intended for code signing and which is valid for 5 years. Certificate is saved in the Personal store of the current user account.</maml:para>
@@ -2718,8 +2707,8 @@ Blog: https://www.sysadmins.lv</maml:para>
 			<maml:introduction>
 				<maml:paragraph>PS C:\&gt;</maml:paragraph>
 			</maml:introduction>
-			<dev:code>PS C:\&gt; New-SelfsignedCertificateEx -Subject &quot;CN=www.domain.com&quot; -EKU &quot;Server Authentication&quot;, &quot;Client authentication&quot; `
- -KeyUsage &quot;KeyEcipherment, DigitalSignature&quot; -SAN &quot;dns:sub.domain.com&quot;,&quot;dns:www.domain.com&quot;,&quot;ip:192.168.1.1&quot; `
+			<dev:code>New-SelfsignedCertificateEx -Subject &quot;CN=www.domain.com&quot; -EKU &quot;Server Authentication&quot;, &quot;Client authentication&quot; `
+ -KeyUsage &quot;KeyEncipherment, DigitalSignature&quot; -SAN &quot;dns:sub.domain.com&quot;,&quot;dns:www.domain.com&quot;,&quot;ip:192.168.1.1&quot; `
  -AllowSMIME -Path C:\test\ssl.pfx -Password (ConvertTo-SecureString &quot;P@ssw0rd&quot; -AsPlainText -Force) -Exportable `
  -StoreLocation &quot;LocalMachine&quot;</dev:code>
 			<dev:remarks>
@@ -2741,12 +2730,12 @@ Blog: https://www.sysadmins.lv</maml:para>
 			<maml:introduction>
 				<maml:paragraph>PS C:\&gt;</maml:paragraph>
 			</maml:introduction>
-			<dev:code>PS C:\&gt; New-SelfsignedCertificateEx -Subject &quot;CN=www.domain.com&quot; -EKU &quot;Server Authentication&quot;, &quot;Client authentication&quot; `
- -KeyUsage &quot;KeyEcipherment, DigitalSignature&quot; -SAN &quot;dns:sub.domain.com&quot;,&quot;dns:www.domain.com&quot;,&quot;ip:192.168.1.1&quot; `
+			<dev:code>New-SelfsignedCertificateEx -Subject &quot;CN=www.domain.com&quot; -EKU &quot;Server Authentication&quot;, &quot;Client authentication&quot; `
+ -KeyUsage &quot;KeyEncipherment, DigitalSignature&quot; -SAN &quot;dns:sub.domain.com&quot;,&quot;dns:www.domain.com&quot;,&quot;ip:192.168.1.1&quot; `
  -StoreLocation &quot;LocalMachine&quot; -ProviderName &quot;Microsoft Software Key Storage Provider&quot; -AlgorithmName ecdsa_p256 `
  -KeyLength 256 -SignatureAlgorithm sha256</dev:code>
 			<dev:remarks>
-				<maml:para>Creates a self-signed SSL certificate with multiple subject names and saves it to a file. Additionally, the certificate is saved in the Personal store of the Local Machine store. Private key is marked as exportable, so you can export the certificate with a associated private key to a file at any time. Certificate uses Ellyptic Curve Cryptography (ECC) key algorithm ECDSA with 256-bit key. The certificate is signed by using SHA256ECDSA algorithm.</maml:para>
+				<maml:para>Creates a self-signed SSL certificate with multiple subject names and saves it to a file. Additionally, the certificate is saved in the Personal store of the Local Machine store. Private key is marked as exportable, so you can export the certificate with a associated private key to a file at any time. Certificate uses Elliptic Curve Cryptography (ECC) key algorithm ECDSA with 256-bit key. The certificate is signed by using SHA256ECDSA algorithm.</maml:para>
 				<maml:para />
 				<maml:para />
 				<maml:para></maml:para>
@@ -2764,10 +2753,32 @@ Blog: https://www.sysadmins.lv</maml:para>
 			<maml:introduction>
 				<maml:paragraph>PS C:\&gt;</maml:paragraph>
 			</maml:introduction>
-			<dev:code>PS C:\&gt; New-SelfsignedCertificateEx -Subject &quot;CN=Test Root CA, OU=Sandbox&quot; -IsCA $true -ProviderName `
+			<dev:code>New-SelfsignedCertificateEx -Subject &quot;CN=Test Root CA, OU=Sandbox&quot; -IsCA $true -ProviderName `
  &quot;Microsoft Software Key Storage Provider&quot; -Exportable</dev:code>
 			<dev:remarks>
 				<maml:para>Creates self-signed root CA certificate.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 5  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$signingCert = Get-Item cert:\CurrentUser\My\E160F8D2E4DBE18908F9C4D3C8DA8BB57118FCC8
+PS C:\&gt; $issuedCert = New-SelfsignedCertificateEx -Subject &quot;CN=CA Signed Certificate, OU=Sandbox&quot; -ProviderName `
+ &quot;Microsoft Software Key Storage Provider&quot; -KeyUsage &quot;KeyEncipherment&quot; -Issuer $signingCert -Exportable</dev:code>
+			<dev:remarks>
+				<maml:para>Creates a CA-signed certificate with exportable private key. Signer certificate is retrieved from Personal certificate store. Certificate thumbprint (or SHA1 hash) is used to select desired certificate. Issuer information is populated in issued certificate to indicate proper issuer. Certificate is generated in memory and not installed in certificate store.</maml:para>
 				<maml:para />
 				<maml:para />
 				<maml:para></maml:para>
@@ -2784,7 +2795,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/new-selfsignedcertificateex.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/new-selfsignedcertificateex</maml:uri>
 		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
@@ -2835,7 +2846,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>PKI.CertificateServices.CertificateAuthority[]</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -2860,8 +2871,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -2889,7 +2899,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/ping-icertinterface.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/ping-icertinterface</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-CertificationAuthority</maml:linkText>
@@ -3053,7 +3063,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -3078,8 +3088,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -3107,7 +3116,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/receive-certificate.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/receive-certificate</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-CertificationAuthority</maml:linkText>
@@ -3346,7 +3355,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.Oid2</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -3359,8 +3368,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -3428,7 +3436,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/register-objectidentifier.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/register-objectidentifier</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-ObjectIdentifier</maml:linkText>
@@ -3535,8 +3543,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -3584,7 +3591,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/show-certificate.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/show-certificate</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Show-CertificateRevocationList</maml:linkText>
@@ -3639,7 +3646,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CRL2</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CRL2.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CRL2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -3664,8 +3671,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -3693,7 +3699,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/show-certificaterevocationlist.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/show-certificaterevocationlist</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-CertificateRevocationList</maml:linkText>
@@ -3748,7 +3754,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CTL</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CTL.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CTL.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -3773,8 +3779,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -3802,7 +3807,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/show-certificatetrustlist.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/show-certificatetrustlist</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-CertificateTrustList</maml:linkText>
@@ -4174,8 +4179,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -4303,7 +4307,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/start-psfciv.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/start-psfciv</maml:uri>
 		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
@@ -4481,7 +4485,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>PKI.Enrollment.CertRequestStatus</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_PKI_Enrollment_CertRequestStatus.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_PKI_Enrollment_CertRequestStatus.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4494,16 +4498,57 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
+		<command:example>
+			<maml:title>--------------------------  Examlple 1  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$ca = Connect-CA ca01*
+PS C:\&gt; $status = Submit-CertificateRequest -Path c:\test\certreq.csr -CA $ca -Attribute &quot;CertificateTemplate:WebServer&quot;</dev:code>
+			<dev:remarks>
+				<maml:para>First command retrieves CA object the request is submitted to. Second line submits certificate request (CSR) to CA server selected in first command and returns certificate request submission status (issued, pending, denied, failed). If CSR doesn&#39;t contain template information required by Enterprise Certification Authority, it must be specified in &quot;-Attrbiute&quot; parameter. If certificate is immediately issued, it is stored in return value. Request is submitted via RPC/DCOM transport.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 2  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$cred = Get-Credential
+PS C:\&gt; $status = Submit-CertificateRequest -Path c:\test\certreq.csr -CA $ca -Attribute &quot;CertificateTemplate:WebServer&quot; -CEP &quot;https://cep.fabrikam.com/fabrikam%20Root%20CA1_CES_UsernamePassword/service.svc/CES&quot; -Credential $cred</dev:code>
+			<dev:remarks>
+				<maml:para>First line requests user credentials to authenticate on certificate enrollment policy server (when user name and password authentication scheme is used). Second line submits certificate request to CA via certificate enrollment web services and returns submission status. If CSR doesn&#39;t contain template information required by Enterprise Certification Authority, it must be specified in &quot;-Attrbiute&quot; parameter. If certificate is immediately issued, it is stored in return value</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
 	</command:examples>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/submit-certificaterequest.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/submit-certificaterequest</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Receive-Certificate</maml:linkText>
@@ -4646,7 +4691,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>PKI.Web.WebSSL</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_PKI_Web_WebSSL.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_PKI_Web_WebSSL.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4659,8 +4704,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -4708,7 +4752,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/Test-WebServerSSL.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/Test-WebServerSSL</maml:uri>
 		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
@@ -4839,7 +4883,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.Oid2</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_Oid2.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -4864,8 +4908,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -4913,7 +4956,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/unregister-objectidentifier.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/unregister-objectidentifier</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-ObjectIdentifier</maml:linkText>
@@ -5039,7 +5082,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>System.Security.Cryptography.X509Certificates.X509CertificateContextProperty</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CertificateContextProperty.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CertificateContextProperty.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -5051,7 +5094,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 				<maml:name>
 System.Security.Cryptography.X509Certificates.X509CertificateContextPropertyCollection</maml:name>
 				<maml:uri>
-https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CertificateContextPropertyCollection.htm</maml:uri>
+https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CertificateContextPropertyCollection.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -5064,7 +5107,7 @@ A collection of all attached context properties</maml:para>
 				<maml:name>
 System.Security.Cryptography.X509Certificates.X509CertificatePropertyType</maml:name>
 				<maml:uri>
-https://www.sysadmins.lv/library/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CertificatePropertyType.htm</maml:uri>
+https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CertificatePropertyType.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -5088,8 +5131,7 @@ A collection of X509CertificatePropertyType enum values</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -5155,6 +5197,10 @@ Blog: https://www.sysadmins.lv</maml:para>
 		</command:example>
 	</command:examples>
 	<maml:relatedLinks>
+		<maml:navigationLink>
+			<maml:linkText>Online version:</maml:linkText>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/get-certificatecontextproperty</maml:uri>
+		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
 <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
@@ -5276,7 +5322,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsPkiContainer</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiContainer.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiContainer.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -5289,8 +5335,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -5340,7 +5385,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Add-AdCertificate -Certificat
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/add-adcertificate.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/add-adcertificate</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-AdPkiContainer</maml:linkText>
@@ -5464,7 +5509,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Add-AdCertificate -Certificat
 		<command:inputType>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -5476,7 +5521,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Add-AdCertificate -Certificat
 		<command:returnValue>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -5489,8 +5534,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Add-AdCertificate -Certificat
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -5519,7 +5563,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Add-AdCertificateRevocationLi
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/add-adcertificaterevocationlist.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/add-adcertificaterevocationlist</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-AdPkiContainer</maml:linkText>
@@ -5621,7 +5665,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Add-AdCertificateRevocationLi
 		<command:returnValue>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsPkiContainer</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiContainer.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiContainer.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -5634,16 +5678,162 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Add-AdCertificateRevocationLi
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
+		<command:example>
+			<maml:title>--------------------------  Example 1  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 &quot;c:\pki\root_cacert.crt&quot;
+PS C:\&gt; Get-AdPkiContainer -ContainerType RootCA | Add-AdCertificate -Certificate $cert -Dispose</dev:code>
+			<dev:remarks>
+				<maml:para>This example gets certificate from a file, retrieves RootCA (trusted root CAs) AD container and publishes certificate to RootCA container. After operation completion, input object (RootCA container) is disposed. After autoenrollment trigger, domain members will get new trusted root CA.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 2  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 &quot;c:\pki\cross.cer&quot;
+PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Add-AdCertificate -Certificate $cert -CrossCertificate -Dispose</dev:code>
+			<dev:remarks>
+				<maml:para>This example gets certificate from a file, retrieves AIA (intermediate CA) AD container and publishes certificate to AIA container as cross-certificate. After operation completion, input object (AIA container) is disposed. After autoenrollment trigger, domain members will get new certificate in Intermediate CAs local store.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 3  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$crl = Get-CRL -Path &quot;c:\pki\contoso subca.crl&quot;
+PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Add-AdCertificateRevocationList -CRL $crl -HostName &quot;subca01&quot; -Dispose</dev:code>
+			<dev:remarks>
+				<maml:para>This command reads CRL object from file, retrieves CDP container from Active Directory and writes CRL to CDP object. During object creation, a dedicated subcontainer with name &#39;subca01&#39; under CDP container is created. After operation completion, input object (CDP container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 4  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>Get-AdPkiContainer -ContainerType NTAuth | Remove-AdCertificate -Thumbprint &quot;EC9385E533782453D5C285B2A67311447FB57A6F&quot;, &quot;3E778F108E7DC983939732AFAC3EE89383478973&quot; -Dispose</dev:code>
+			<dev:remarks>
+				<maml:para>This command retrieves NTAuth container from Active Directory and removes all certificate occurences with specified certificate thumbprints. After operation completion, input object (NTAuth container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 5  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$aia = Get-AdPkiContainer -ContainerType AIA
+PS C:\&gt; $entries = $aia.Certificates | Where-Object {$_.Name -eq &quot;Contoso CA&quot;}
+PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Remove-AdCertificate -Certificate $entries -Dispose -ForceDelete</dev:code>
+			<dev:remarks>
+				<maml:para>First line retrieves AIA (SubCA) container from Active Directory. Second line selects all certificate enries for &quot;Contoso CA&quot; in specified container. Third line removes selected entries from AIA container and deletes empty CA entry from Active Directory. After operation completion, input object (AIA container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 6  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Remove-AdCertificateRevocationList -Thumbprint &quot;1C4BF393320A6C70D5C506AF9F422950B0C11EAB6273132C9B326438AB1C0929&quot;, &quot;17FCB3E67512017E4611FBA9052164031F1D873F800E613A96AC09F77D269349&quot; -Dispose -ForceDelete</dev:code>
+			<dev:remarks>
+				<maml:para>This command retrieves CDP container from Active Directory and removes all CRLs with specified certificate thumbprints. If particular CDP entry in Active Directory is empty, it is deleted. After operation completion, input object (CDP container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
+		<command:example>
+			<maml:title>--------------------------  Example 7  --------------------------</maml:title>
+			<maml:introduction>
+				<maml:paragraph>PS C:\&gt;</maml:paragraph>
+			</maml:introduction>
+			<dev:code>$cdp = Get-AdPkiContainer -ContainerType CDP
+PS C:\&gt; $entries = $cdp.RevocationLists | Where-Object {$_.HostName -eq &quot;subca01&quot;}
+PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Remove-AdCertificateRevocationList -CRL $entries -Dispose -ForceDelete</dev:code>
+			<dev:remarks>
+				<maml:para>First line retrieves CDP container from Active Directory. Second line selects all CRL entries for &quot;subca01&quot; host name in specified container. Third line removes selected entries from CDP container and deletes empty CDP entries from Active Directory. After operation completion, input object (CDP container) is disposed.</maml:para>
+				<maml:para />
+				<maml:para />
+				<maml:para></maml:para>
+			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+						<maml:para />
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
 	</command:examples>
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/Get-AdPkiContainer.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/Get-AdPkiContainer</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Add-AdCertificate</maml:linkText>
@@ -5810,7 +6000,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:inputType>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsPkiCertContainer</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiCertContainer.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiCertContainer.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -5822,7 +6012,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 		<command:returnValue>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsPkiContainer</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiContainer.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsPkiContainer.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -5835,8 +6025,7 @@ Blog: https://www.sysadmins.lv</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -5886,7 +6075,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Remove-AdCertificate -Certifi
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/remove-adcertificate.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/remove-adcertificate</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-AdPkiContainer</maml:linkText>
@@ -6053,7 +6242,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Remove-AdCertificate -Certifi
 		<command:inputType>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -6065,7 +6254,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Remove-AdCertificate -Certifi
 		<command:returnValue>
 			<dev:type>
 				<maml:name>SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer</maml:name>
-				<maml:uri>https://www.sysadmins.lv/library/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Management_ActiveDirectory_DsCDPContainer.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -6078,8 +6267,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType AIA | Remove-AdCertificate -Certifi
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>Author: Vadims Podans
-Blog: https://www.sysadmins.lv</maml:para>
+			<maml:para />
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -6129,7 +6317,7 @@ PS C:\&gt; Get-AdPkiContainer -ContainerType CDP | Remove-AdCertificateRevocatio
 	<maml:relatedLinks>
 		<maml:navigationLink>
 			<maml:linkText>Online version:</maml:linkText>
-			<maml:uri>https://www.sysadmins.lv/projects/pspki/remove-adcertificaterevocationlist.aspx</maml:uri>
+			<maml:uri>https://www.pkisolutions.com/tools/pspki/remove-adcertificaterevocationlist</maml:uri>
 		</maml:navigationLink>
 		<maml:navigationLink>
 			<maml:linkText>Get-AdPkiContainer</maml:linkText>
