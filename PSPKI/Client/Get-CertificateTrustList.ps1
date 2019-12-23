@@ -12,7 +12,7 @@
 	)
 	process {
 		switch ($PsCmdlet.ParameterSetName) {
-			"FileName" {
+			"__FileName" {
 				if ($(Get-Item $Path -ErrorAction Stop).PSProvider.Name -ne "FileSystem") {
 					throw {"File either does not exist or is not a file object"}
 				}
@@ -21,7 +21,7 @@
 				}
 				New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateTrustList -ArgumentList $Path
 			}
-			"RawData" {New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateTrustList -ArgumentList @(,$RawCTL)}
+			"__RawData" {New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateTrustList -ArgumentList @(,$RawCTL)}
 		}
 	}
 }

@@ -1002,8 +1002,8 @@ https://msdn.microsoft.com/en-us/library/system.byte.aspx</maml:uri>
 	<command:returnValues>
 		<command:returnValue>
 			<dev:type>
-				<maml:name>System.Security.Cryptography.X509Certificates.X509CTL</maml:name>
-				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CTL.htm</maml:uri>
+				<maml:name>SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateTrustList</maml:name>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Cryptography_X509Certificates_X509CertificateTrustList.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
@@ -2709,10 +2709,9 @@ you can combine key usages values by using bitwise OR operation. When combining 
 			</maml:introduction>
 			<dev:code>New-SelfsignedCertificateEx -Subject &quot;CN=www.domain.com&quot; -EKU &quot;Server Authentication&quot;, &quot;Client authentication&quot; `
  -KeyUsage &quot;KeyEncipherment, DigitalSignature&quot; -SAN &quot;dns:sub.domain.com&quot;,&quot;dns:www.domain.com&quot;,&quot;ip:192.168.1.1&quot; `
- -AllowSMIME -Path C:\test\ssl.pfx -Password (ConvertTo-SecureString &quot;P@ssw0rd&quot; -AsPlainText -Force) -Exportable `
- -StoreLocation &quot;LocalMachine&quot;</dev:code>
+ -AllowSMIME -Path C:\test\ssl.pfx -Password (ConvertTo-SecureString &quot;P@ssw0rd&quot; -AsPlainText -Force) -Exportable</dev:code>
 			<dev:remarks>
-				<maml:para>Creates a self-signed SSL certificate with multiple subject names and saves it to a file. Additionally, the certificate is saved in the Personal store of the Local Machine store. Private key is marked as exportable, so you can export the certificate with a associated private key to a file at any time. The certificate includes SMIME capabilities.</maml:para>
+				<maml:para>Creates a self-signed SSL certificate with multiple subject names and saves it to a file. Private key is marked as exportable, so you can export the certificate with a associated private key to a file at any time. The certificate includes SMIME capabilities.</maml:para>
 				<maml:para />
 				<maml:para />
 				<maml:para></maml:para>
@@ -3732,7 +3731,7 @@ PS C:\&gt; $issuedCert = New-SelfsignedCertificateEx -Subject &quot;CN=CA Signed
 				<maml:description>
 					<maml:para>An X509CTL object to display. An X509CTL object can be retrieved by using Get-CertificateTrustList (or Get-CTL) command.</maml:para>
 				</maml:description>
-				<command:parameterValue required="true" variableLength="false">X509CTL</command:parameterValue>
+				<command:parameterValue required="true" variableLength="false">X509CertificateTrustList</command:parameterValue>
 			</command:parameter>
 		</command:syntaxItem>
 	</command:syntax>
@@ -3742,9 +3741,9 @@ PS C:\&gt; $issuedCert = New-SelfsignedCertificateEx -Subject &quot;CN=CA Signed
 			<maml:description>
 				<maml:para>An X509CTL object to display. An X509CTL object can be retrieved by using Get-CertificateTrustList (or Get-CTL) command.</maml:para>
 			</maml:description>
-			<command:parameterValue required="true" variableLength="false">X509CTL</command:parameterValue>
+			<command:parameterValue required="true" variableLength="false">X509CertificateTrustList</command:parameterValue>
 			<dev:type>
-				<maml:name>X509CTL</maml:name>
+				<maml:name>X509CertificateTrustList</maml:name>
 				<maml:uri/>
 			</dev:type>
 			<dev:defaultValue></dev:defaultValue>
@@ -3753,8 +3752,8 @@ PS C:\&gt; $issuedCert = New-SelfsignedCertificateEx -Subject &quot;CN=CA Signed
 	<command:inputTypes>
 		<command:inputType>
 			<dev:type>
-				<maml:name>System.Security.Cryptography.X509Certificates.X509CTL</maml:name>
-				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_System_Security_Cryptography_X509Certificates_X509CTL.htm</maml:uri>
+				<maml:name>SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateTrustList</maml:name>
+				<maml:uri>https://www.pkisolutions.com/apidocs/pkix.net/html/T_SysadminsLV_PKI_Cryptography_X509Certificates_X509CertificateTrustList.htm</maml:uri>
 				<maml:description/>
 			</dev:type>
 			<maml:description>
