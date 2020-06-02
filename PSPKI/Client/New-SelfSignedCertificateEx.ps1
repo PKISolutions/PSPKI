@@ -181,7 +181,11 @@ if ($CustomExtension) {
         }
         '__file' {
             $pfxBytes = $Cert.Export("Pkcs12", $Password)
-            Set-Content -Path $Path -Value $pfxBytes -Encoding Byte
+            if ($PsIsCore) {
+                Set-Content -Path $Path -Value $pfxBytes -AsByteStream
+            } else {
+                Set-Content -Path $Path -Value $pfxBytes -Encoding Byte
+            }
         }
     }
     $Cert
