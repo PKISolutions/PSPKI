@@ -38,7 +38,7 @@
         [Security.Cryptography.X509Certificates.StoreLocation]$StoreLocation,
         [Parameter(Mandatory = $true, ParameterSetName = '__file')]
         [Alias('OutFile','OutPath','Out')]
-        [IO.FileInfo]$Path,
+        [string]$Path,
         [Parameter(Mandatory = $true, ParameterSetName = '__file')]
         [Security.SecureString]$Password,
         [switch]$AllowSMIME,

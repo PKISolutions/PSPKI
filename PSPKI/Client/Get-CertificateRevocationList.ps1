@@ -17,10 +17,7 @@
 			if ($(Get-Item $Path -ErrorAction Stop).PSProvider.Name -ne "FileSystem") {
 				throw {"File either does not exist or not a file object"}
 			}
-			if ($(Get-Item $Path -ErrorAction Stop).Extension -ne ".crl") {
-				throw {"File is not valid CRL file"}
-			}
-			New-Object Security.Cryptography.X509Certificates.X509CRL2 -ArgumentList $Path
+			New-Object Security.Cryptography.X509Certificates.X509CRL2 -ArgumentList (Resolve-Path $Path).Path
 		}
 		"RawData" {New-Object Security.Cryptography.X509Certificates.X509CRL2 -ArgumentList @(,$RawCRL)}
 	}
