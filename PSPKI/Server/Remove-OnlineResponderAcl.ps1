@@ -6,14 +6,15 @@ function Remove-OnlineResponderAcl {
 [CmdletBinding()]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
-		[Alias('ACL')]
+		[Alias('AclObject','Acl')]
 		[SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor[]]$InputObject,
-		[Security.Principal.NTAccount[]]$User
+		[Security.Principal.NTAccount[]]$User,
+		[Security.AccessControl.AccessControlType]$AccessType = "Allow"
 	)
 	process {
 		foreach($ACL in $InputObject) {
 			$User | ForEach-Object {
-				$ACL.PurgeAccessRules($_)
+				[void]$ACL.PurgeAccessRules($_, $AccessType)
 			}
 			$ACL
 		}

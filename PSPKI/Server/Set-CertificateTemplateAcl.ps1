@@ -2,83 +2,17 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.Security.SecurityDescriptor2[]')]
+[OutputType('SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor[]')]
 [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelinebyPropertyName = $true)]
         [Alias('AclObject','Acl')]
-        [PKI.Security.SecurityDescriptor2[]]$InputObject
+        [SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor[]]$InputObject
     )
+
     process {
-        foreach ($Acl in $InputObject) {
-            $adsi = [ADSI]("LDAP://" + $Acl.Path)
-            $adsi.ObjectSecurity.Access | ForEach-Object {$adsi.ObjectSecurity.PurgeAccessRules($_.IdentityReference)}
-            foreach ($Entry in $Acl.Access) {
-                switch -regex ($Entry.Permissions) {
-                    "^FullControl&" {
-                        $ACE = New-Object DirectoryServices.ActiveDirectoryAccessRule (
-                            $Entry.IdentityReference,
-                            "GenericAll",
-                            $Entry.AccessType
-                        )
-                        try {
-                            $adsi.ObjectSecurity.AddAccessRule($ACE)
-                        } catch {
-                            Write-Verbose $_.Exception.Message
-                        }
-                        continue
-                    }
-                    "^Read$|^Write$" {
-                        $Rights = if ($Entry.Permissions -contains "Read" -and $Entry.Permissions -contains "Write") {
-                            "CreateChild","DeleteChild","Self","WriteProperty","DeleteTree","Delete","GenericRead","WriteDacl","WriteOwner"
-                        } elseif ($Entry.Permissions -contains "Read") {
-                            "GenericRead"
-                        } elseif ($Entry.Permissions -contains "Write") {
-                            "WriteProperty","WriteDacl","WriteOwner"
-                        }
-                        $ACE = New-Object DirectoryServices.ActiveDirectoryAccessRule (
-                            $Entry.IdentityReference,
-                            $Rights,
-                            $Entry.AccessType
-                        )
-                        try {
-                            $adsi.ObjectSecurity.AddAccessRule($ACE)
-                        } catch {
-                            Write-Verbose $_.Exception.Message
-                        }
-                    }
-                    "^Enroll$" {
-                        $ACE = New-Object DirectoryServices.ActiveDirectoryAccessRule (
-                            $Entry.IdentityReference,
-                            "ExtendedRight",
-                            $Entry.AccessType,
-                            [Guid]"0e10c968-78fb-11d2-90d4-00c04f79dc55"
-                        )
-                        try {
-                            $adsi.ObjectSecurity.AddAccessRule($ACE)
-                        } catch {
-                            Write-Verbose $_.Exception.Message
-                        }
-                    }
-                    "^Autoenroll$" {
-                        $ACE = New-Object DirectoryServices.ActiveDirectoryAccessRule (
-                            $Entry.IdentityReference,
-                            "ExtendedRight",
-                            $Entry.AccessType,
-                            [Guid]"a05b8cc2-17bc-4802-a710-e7c15ab866a2"
-                        )
-                        try {
-                            $adsi.ObjectSecurity.AddAccessRule($ACE)
-                        } catch {
-                            Write-Verbose $_.Exception.Message
-                        }
-                    }
-                }
-            }
-            try {
-                $adsi.CommitChanges()
-            } catch {Write-Error $_; return}
-            $Acl
+        foreach($ACL in $InputObject) {
+            $ACL.SetObjectSecurity()
         }
     }
 }

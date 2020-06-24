@@ -81,7 +81,7 @@
     <Compile Include="PSPKI.psm1" />
     <Compile Include="PSPKI.tests.ps1" />
     <Compile Include="Server\Add-AuthorityInformationAccess.ps1" />
-    <Compile Include="Server\Add-CAAccessControlEntry.ps1" />
+    <Compile Include="Server\Add-CertificationAuthorityAcl.ps1" />
     <Compile Include="Server\Add-CAKRACertificate.ps1" />
     <Compile Include="Server\Add-CATemplate.ps1" />
     <Compile Include="Server\Add-CertificateEnrollmentPolicyService.ps1" />
@@ -111,7 +111,7 @@
     <Compile Include="Server\Get-CAExchangeCertificate.ps1" />
     <Compile Include="Server\Get-CAKRACertificate.ps1" />
     <Compile Include="Server\Get-CASchema.ps1" />
-    <Compile Include="Server\Get-CASecurityDescriptor.ps1" />
+    <Compile Include="Server\Get-CertificationAuthorityAcl.ps1" />
     <Compile Include="Server\Get-CATemplate.ps1" />
     <Compile Include="Server\Get-CertificateRevocationListFlag.ps1" />
     <Compile Include="Server\Get-CertificateTemplate.ps1" />
@@ -137,7 +137,7 @@
     <Compile Include="Server\Publish-CRL.ps1" />
     <Compile Include="Server\Remove-AdcsDatabaseRow.ps1" />
     <Compile Include="Server\Remove-AuthorityInformationAccess.ps1" />
-    <Compile Include="Server\Remove-CAAccessControlEntry.ps1" />
+    <Compile Include="Server\Remove-CertificationAuthorityAcl.ps1" />
     <Compile Include="Server\Remove-CAKRACertificate.ps1" />
     <Compile Include="Server\Remove-CATemplate.ps1" />
     <Compile Include="Server\Remove-CertificateEnrollmentPolicyService.ps1" />
@@ -160,7 +160,7 @@
     <Compile Include="Server\Set-AuthorityInformationAccess.ps1" />
     <Compile Include="Server\Set-CACryptographyConfig.ps1" />
     <Compile Include="Server\Set-CAKRACertificate.ps1" />
-    <Compile Include="Server\Set-CASecurityDescriptor.ps1" />
+    <Compile Include="Server\Set-CertificationAuthorityAcl.ps1" />
     <Compile Include="Server\Set-CATemplate.ps1" />
     <Compile Include="Server\Set-CertificateExtension.ps1" />
     <Compile Include="Server\Set-CertificateTemplateAcl.ps1" />

@@ -9,6 +9,7 @@ function Add-OnlineResponderAcl {
         [Alias('AclObject','Acl')]
         [SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor[]]$InputObject,
         [Parameter(Mandatory = $true, ParameterSetName = '__ace')]
+        [Alias('ACE')]
         [SysadminsLV.PKI.Security.AccessControl.OcspResponderAccessRule[]]$AcessRule,
         [Parameter(Mandatory = $true, ParameterSetName = '__manual')]
         [Security.Principal.NTAccount[]]$User,
@@ -18,13 +19,13 @@ function Add-OnlineResponderAcl {
         [SysadminsLV.PKI.Security.AccessControl.OcspResponderRights]$AccessMask
     )
     begin {
-        if ($PSBoundParameters.Verbose) {$VerbosePreference = "Contine"}
+        if ($PSBoundParameters.Verbose) {$VerbosePreference = "Continue"}
         if ($PSBoundParameters.Debug) {$DebugPreference = "Continue"}
     }
     process {
         foreach ($Acl in $InputObject) {
             switch ($PSCmdlet.ParameterSetName) {
-                '__ace' {$AcessRule | ForEach-Object {[void]$Acl.AddAccessRule()}}
+                '__ace' {$AcessRule | ForEach-Object {[void]$Acl.AddAccessRule($_)}}
                 '__manual' {
                     foreach ($u in $User) {
                         Write-Verbose "processing user: '$u'"
@@ -33,12 +34,14 @@ function Add-OnlineResponderAcl {
                         $u = ((New-Object Security.Principal.SecurityIdentifier $SID).Translate([Security.Principal.NTAccount])).Value
                         Write-Debug "User's '$u' account SID '$SID'"
                         Write-Debug "Creating new ACE for the user '$u', access type '$AccessType', access mask `'$($AccessMask -join ',')`'"
-                        $ace = New-Object SysadminsLV.PKI.Security.AccessControl -ArgumentList $u, $AccessMask, $AccessType
+                        # underlying API take care of ACL consistency. It won't duplicate ACEs and update existing, by adding new access mask
+                        # to existing ACE when necessary.
+                        $ace = New-Object SysadminsLV.PKI.Security.AccessControl.OcspResponderAccessRule -ArgumentList $u, $AccessMask, $AccessType
                         $status = $Acl.AddAccessRule($ace)
                         Write-Verbose "Insert succeeded: $status"
                         Write-Debug "Insert succeeded: $status"
                     }
-                }            
+                }
             }
             $Acl
         }
