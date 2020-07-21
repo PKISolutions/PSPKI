@@ -43,7 +43,6 @@
         $FinalList = $FinalList | Where-Object {$_.ComputerName -in $tempList}
     }
     $FinalList | ForEach-Object {
-        Write-Host $_.ComputerName
         [PKI.CertificateServices.CertificateAuthority]::Connect($_.ComputerName)
     }
 }
