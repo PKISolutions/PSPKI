@@ -44,6 +44,6 @@
     }
     $FinalList | ForEach-Object {
         Write-Host $_.ComputerName
-        [PKI.CertificateServices.CertificateAuthority]::Connect($_)
+        [PKI.CertificateServices.CertificateAuthority]::Connect($_.ComputerName)
     }
 }
