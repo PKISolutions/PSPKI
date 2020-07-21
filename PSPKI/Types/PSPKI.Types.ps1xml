@@ -114,13 +114,13 @@
           $null
         }
         </GetScriptBlock>
-        <ScriptProperty>
-          <Name>EncodedSignature</Name>
-          <GetScriptBlock>
-            if ($this.SignerCertificate -eq $null) {return}
-            [SysadminsLV.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
-          </GetScriptBlock>
-        </ScriptProperty>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>EncodedSignature</Name>
+        <GetScriptBlock>
+          if ($this.SignerCertificate -eq $null) {return}
+          [SysadminsLV.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
+        </GetScriptBlock>
       </ScriptProperty>
     </Members>
   </Type>

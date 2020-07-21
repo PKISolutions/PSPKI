@@ -17,6 +17,13 @@
     <PackageEntryPoint>Client\Add-AdCertificate.ps1</PackageEntryPoint>
     <DotNetVersion>v4.7.1</DotNetVersion>
     <PackageType>Console</PackageType>
+    <PostBuildScript>$exclude = "bin", "obj", "PSPKI.pssproj", "PSPKI.tests.ps1"
+$source = '$(SolutionDir)' + "PSPKI"
+$target = "C:\Users\vPodans\Documents\WindowsPowerShell\Modules\PSPKI"
+del $target -Recurse -ea 0
+md $target -force
+$folders = dir -Path $source -directory | ?{$exclude -notcontains $_.Name} | %{copy $source\$_ -Destination $target\$_ -rec -Force}
+dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</PostBuildScript>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
