@@ -1096,7 +1096,7 @@ Get-CertificateTrustList -RawCTL $Raw</dev:code>
 			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0">
 				<maml:name>Name</maml:name>
 				<maml:description>
-					<maml:para />
+					<maml:para>Specifies Cryptographic Service Provider (CSP) or Key Storage Provider (KSP) name to retrieve.</maml:para>
 				</maml:description>
 				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
 			</command:parameter>
@@ -1106,7 +1106,7 @@ Get-CertificateTrustList -RawCTL $Raw</dev:code>
 		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0">
 			<maml:name>Name</maml:name>
 			<maml:description>
-				<maml:para />
+				<maml:para>Specifies Cryptographic Service Provider (CSP) or Key Storage Provider (KSP) name to retrieve.</maml:para>
 			</maml:description>
 			<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
 			<dev:type>
@@ -2302,9 +2302,9 @@ you can combine key usages values by using bitwise OR operation. When combining 
 			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>Path</maml:name>
 				<maml:description>
-					<maml:para>Specifies the path to a PFX file to export a self-signed certificate.</maml:para>
+					<maml:para />
 				</maml:description>
-				<command:parameterValue required="true" variableLength="false">FileInfo</command:parameterValue>
+				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
 			</command:parameter>
 			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>Password</maml:name>
@@ -2587,18 +2587,6 @@ you can combine key usages values by using bitwise OR operation. When combining 
 			<dev:defaultValue></dev:defaultValue>
 		</command:parameter>
 		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named">
-			<maml:name>Path</maml:name>
-			<maml:description>
-				<maml:para>Specifies the path to a PFX file to export a self-signed certificate.</maml:para>
-			</maml:description>
-			<command:parameterValue required="true" variableLength="false">FileInfo</command:parameterValue>
-			<dev:type>
-				<maml:name>FileInfo</maml:name>
-				<maml:uri/>
-			</dev:type>
-			<dev:defaultValue></dev:defaultValue>
-		</command:parameter>
-		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named">
 			<maml:name>Password</maml:name>
 			<maml:description>
 				<maml:para>Specifies the password for PFX file.</maml:para>
@@ -2643,6 +2631,18 @@ you can combine key usages values by using bitwise OR operation. When combining 
 			<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
 			<dev:type>
 				<maml:name>SwitchParameter</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named">
+			<maml:name>Path</maml:name>
+			<maml:description>
+				<maml:para />
+			</maml:description>
+			<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+			<dev:type>
+				<maml:name>String</maml:name>
 				<maml:uri/>
 			</dev:type>
 			<dev:defaultValue></dev:defaultValue>
@@ -4335,7 +4335,7 @@ PS C:\&gt; $issuedCert = New-SelfsignedCertificateEx -Subject &quot;CN=CA Signed
 				<maml:description>
 					<maml:para>Specifies the path to a request file.</maml:para>
 				</maml:description>
-				<command:parameterValue required="true" variableLength="true">FileInfo[]</command:parameterValue>
+				<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
 			</command:parameter>
 			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>CertificationAuthority</maml:name>
@@ -4371,7 +4371,7 @@ PS C:\&gt; $issuedCert = New-SelfsignedCertificateEx -Subject &quot;CN=CA Signed
 				<maml:description>
 					<maml:para>Specifies the path to a request file.</maml:para>
 				</maml:description>
-				<command:parameterValue required="true" variableLength="true">FileInfo[]</command:parameterValue>
+				<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
 			</command:parameter>
 			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named">
 				<maml:name>EnrollmentPolicyServer</maml:name>
@@ -4402,18 +4402,6 @@ PS C:\&gt; $issuedCert = New-SelfsignedCertificateEx -Subject &quot;CN=CA Signed
 		</command:syntaxItem>
 	</command:syntax>
 	<command:parameters>
-		<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true (ByValue)" position="0">
-			<maml:name>Path</maml:name>
-			<maml:description>
-				<maml:para>Specifies the path to a request file.</maml:para>
-			</maml:description>
-			<command:parameterValue required="true" variableLength="true">FileInfo[]</command:parameterValue>
-			<dev:type>
-				<maml:name>FileInfo[]</maml:name>
-				<maml:uri/>
-			</dev:type>
-			<dev:defaultValue></dev:defaultValue>
-		</command:parameter>
 		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="named">
 			<maml:name>CertificationAuthority</maml:name>
 			<maml:description>
@@ -4463,6 +4451,18 @@ PS C:\&gt; $issuedCert = New-SelfsignedCertificateEx -Subject &quot;CN=CA Signed
 			<command:parameterValue required="true" variableLength="false">PolicyServerClient</command:parameterValue>
 			<dev:type>
 				<maml:name>PolicyServerClient</maml:name>
+				<maml:uri/>
+			</dev:type>
+			<dev:defaultValue></dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="true" variableLength="true" globbing="false" pipelineInput="true (ByValue)" position="0">
+			<maml:name>Path</maml:name>
+			<maml:description>
+				<maml:para>Specifies the path to a request file.</maml:para>
+			</maml:description>
+			<command:parameterValue required="true" variableLength="true">String[]</command:parameterValue>
+			<dev:type>
+				<maml:name>String[]</maml:name>
 				<maml:uri/>
 			</dev:type>
 			<dev:defaultValue></dev:defaultValue>
