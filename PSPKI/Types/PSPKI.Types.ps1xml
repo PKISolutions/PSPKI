@@ -110,9 +110,6 @@
             }
           }
           $sTime
-        } else {
-          $null
-        }
         </GetScriptBlock>
       </ScriptProperty>
       <ScriptProperty>
