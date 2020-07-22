@@ -1,4 +1,4 @@
-﻿function Get-CASchema {
+﻿function Get-CertificationAuthorityDbSchema {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
