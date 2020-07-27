@@ -117,7 +117,7 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Server\Get-CACryptographyConfig.ps1" />
     <Compile Include="Server\Get-CAExchangeCertificate.ps1" />
     <Compile Include="Server\Get-CAKRACertificate.ps1" />
-    <Compile Include="Server\Get-CASchema.ps1" />
+    <Compile Include="Server\Get-CertificationAuthorityDbSchema.ps1" />
     <Compile Include="Server\Get-CertificationAuthorityAcl.ps1" />
     <Compile Include="Server\Get-CATemplate.ps1" />
     <Compile Include="Server\Get-CertificateRevocationListFlag.ps1" />

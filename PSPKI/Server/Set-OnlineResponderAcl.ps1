@@ -6,13 +6,12 @@ function Set-OnlineResponderAcl {
 [CmdletBinding()]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
-		[Alias('ACL')]
-		[SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor[]]$InputObject,
-		[switch]$RestartCA
+		[Alias('AclObject','Acl')]
+		[SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor[]]$InputObject
 	)
 	process {
 		foreach($ACL in $InputObject) {
-			$ACL.SetObjectSecurity($RestartCA)
+			$ACL.SetObjectSecurity()
 		}
 	}
 }
