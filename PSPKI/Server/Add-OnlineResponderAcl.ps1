@@ -30,9 +30,8 @@ function Add-OnlineResponderAcl {
                     foreach ($u in $User) {
                         Write-Verbose "processing user: '$u'"
                         Write-Verbose "Check whether the user account is valid"
-                        $SID = ((New-Object Security.Principal.NTAccount $u).Translate([Security.Principal.SecurityIdentifier])).Value
-                        $u = ((New-Object Security.Principal.SecurityIdentifier $SID).Translate([Security.Principal.NTAccount])).Value
-                        Write-Debug "User's '$u' account SID '$SID'"
+                        $id = $u.Translate([Security.Principal.SecurityIdentifier])
+                        Write-Debug "User's '$u' account SID '$id'"
                         Write-Debug "Creating new ACE for the user '$u', access type '$AccessType', access mask `'$($AccessMask -join ',')`'"
                         # underlying API take care of ACL consistency. It won't duplicate ACEs and update existing, by adding new access mask
                         # to existing ACE when necessary.
