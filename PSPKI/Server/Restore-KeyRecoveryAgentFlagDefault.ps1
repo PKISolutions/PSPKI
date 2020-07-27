@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.CertificateServices.Flags.KRAFlag[]')]
+[OutputType('PKI.CertificateServices.Flags.KRAFlag')]
 [CmdletBinding()]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]

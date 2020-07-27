@@ -2,7 +2,7 @@ function Get-FailedRequest {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow[]')]
+[OutputType('SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow')]
 [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]

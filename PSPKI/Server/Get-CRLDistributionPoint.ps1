@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.CertificateServices.CRLDistributionPoint[]')]
+[OutputType('PKI.CertificateServices.CRLDistributionPoint')]
 [CmdletBinding()]
 	param (
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true)]

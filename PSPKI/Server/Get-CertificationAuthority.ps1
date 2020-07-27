@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.CertificateServices.CertificateAuthority[]')]
+[OutputType('PKI.CertificateServices.CertificateAuthority')]
 [CmdletBinding(DefaultParameterSetName = '__computer')]
     param(
         [Parameter(ParameterSetName = "__computer", Position = 0)]

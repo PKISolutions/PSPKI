@@ -2,7 +2,7 @@ function Remove-OnlineResponderAcl {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor[]')]
+[OutputType('SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor')]
 [CmdletBinding(DefaultParameterSetName = '__identity')]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]

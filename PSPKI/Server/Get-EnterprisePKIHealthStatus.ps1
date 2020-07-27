@@ -2,7 +2,7 @@ function Get-EnterprisePKIHealthStatus {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.EnterprisePKI.X509HealthPath[]')]
+[OutputType('PKI.EnterprisePKI.X509HealthPath')]
 [CmdletBinding(DefaultParameterSetName = '__CA')]
     param(
         [Parameter(

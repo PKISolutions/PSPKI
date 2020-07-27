@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.CertificateServices.CATemplate[]')]
+[OutputType('PKI.CertificateServices.CATemplate')]
 [CmdletBinding(DefaultParameterSetName = "__DisplayName")]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelinebyPropertyName = $true)]

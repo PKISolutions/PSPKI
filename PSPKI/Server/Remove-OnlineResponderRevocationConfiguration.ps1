@@ -2,7 +2,7 @@ function Remove-OnlineResponderRevocationConfiguration {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration[]')]
+[OutputType('SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration')]
 [CmdletBinding(DefaultParameterSetName = '__config')]
 	param (
 		[Parameter(Mandatory = $true, ParameterSetName = '__config', ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]

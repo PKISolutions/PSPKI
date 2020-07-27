@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbColumnSchema[]')]
+[OutputType('SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbColumnSchema')]
 [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]

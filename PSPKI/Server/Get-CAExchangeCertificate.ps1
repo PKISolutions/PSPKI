@@ -5,7 +5,7 @@
 [OutputType(
 	'System.String[]',
 	'System.Byte[]',
-	'System.Security.Cryptography.X509Certificates.X509Certificate2[]'
+	'System.Security.Cryptography.X509Certificates.X509Certificate2'
 )]
 [CmdletBinding()]
 	param(
