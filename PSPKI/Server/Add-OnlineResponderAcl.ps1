@@ -12,7 +12,7 @@ function Add-OnlineResponderAcl {
         [Alias('ACE')]
         [SysadminsLV.PKI.Security.AccessControl.OcspResponderAccessRule[]]$AcessRule,
         [Parameter(Mandatory = $true, ParameterSetName = '__manual')]
-        [Security.Principal.NTAccount[]]$User,
+        [Security.Principal.NTAccount[]]$Identity,
         [Parameter(Mandatory = $true, ParameterSetName = '__manual')]
         [Security.AccessControl.AccessControlType]$AccessType,
         [Parameter(Mandatory = $true, ParameterSetName = '__manual')]
@@ -27,12 +27,12 @@ function Add-OnlineResponderAcl {
             switch ($PSCmdlet.ParameterSetName) {
                 '__ace' {$AcessRule | ForEach-Object {[void]$Acl.AddAccessRule($_)}}
                 '__manual' {
-                    foreach ($u in $User) {
-                        Write-Verbose "processing user: '$u'"
-                        Write-Verbose "Check whether the user account is valid"
+                    foreach ($u in $Identity) {
+                        Write-Verbose "processing identity: '$u'"
+                        Write-Verbose "Check whether the principal is valid"
                         $id = $u.Translate([Security.Principal.SecurityIdentifier])
-                        Write-Debug "User's '$u' account SID '$id'"
-                        Write-Debug "Creating new ACE for the user '$u', access type '$AccessType', access mask `'$($AccessMask -join ',')`'"
+                        Write-Debug "Identity's '$u' account SID '$id'"
+                        Write-Debug "Creating new ACE for the identity '$u', access type '$AccessType', access mask `'$($AccessMask -join ',')`'"
                         # underlying API take care of ACL consistency. It won't duplicate ACEs and update existing, by adding new access mask
                         # to existing ACE when necessary.
                         $ace = New-Object SysadminsLV.PKI.Security.AccessControl.OcspResponderAccessRule -ArgumentList $u, $AccessMask, $AccessType

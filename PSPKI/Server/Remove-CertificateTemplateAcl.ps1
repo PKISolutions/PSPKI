@@ -9,7 +9,7 @@
 		[Alias('AclObject','Acl')]
 		[SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor[]]$InputObject,
 		[Parameter(Mandatory = $true, ParameterSetName = '__identity')]
-		[Security.Principal.NTAccount[]]$User,
+		[Security.Principal.NTAccount[]]$Identity,
 		[Parameter(Mandatory = $true, ParameterSetName = '__identity')]
 		[Security.AccessControl.AccessControlType]$AccessType = "Allow",
 		[Parameter(Mandatory = $true, ParameterSetName = '__purge')]
@@ -28,7 +28,7 @@
 					}
 				}
 				'__identity' {
-					$User | ForEach-Object {
+					$Identity | ForEach-Object {
 						[void]$ACL.RemoveAccessRule($_, $AccessType)
 					}
 				}

@@ -9,7 +9,7 @@ function Remove-OnlineResponderAcl {
 		[Alias('AclObject','Acl')]
 		[SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor[]]$InputObject,
 		[Parameter(Mandatory = $true, ParameterSetName = '__identity')]
-		[Security.Principal.NTAccount[]]$User,
+		[Security.Principal.NTAccount[]]$Identity,
 		[Parameter(Mandatory = $true, ParameterSetName = '__identity')]
 		[Security.AccessControl.AccessControlType]$AccessType = "Allow",
 		[Parameter(Mandatory = $true, ParameterSetName = '__purge')]
@@ -27,7 +27,7 @@ function Remove-OnlineResponderAcl {
 					}
 				}
 				'__identity' {
-					$User | ForEach-Object {
+					$Identity | ForEach-Object {
 						[void]$ACL.RemoveAccessRule($_, $AccessType)
 					}
 				}
