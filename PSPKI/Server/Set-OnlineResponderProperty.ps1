@@ -7,8 +7,8 @@ function Set-OnlineResponderProperty {
 	param (
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
 		[SysadminsLV.PKI.Management.CertificateServices.OcspResponder[]]$OnlineResponder,
-		[int]$MaxRequestEntries,
-		[int]$MaxCacheEntries,
+		[int]$MaxRequestEntryCount,
+		[int]$MaxCacheEntryCount,
 		[int]$ThreadCount,
 		[int]$MaxRequestSize,
 		[SysadminsLV.PKI.Management.CertificateServices.OcspResponderRequestFlag]$RequestFlag,
@@ -33,6 +33,8 @@ function Set-OnlineResponderProperty {
 					"MakeArrayController" {if ($MakeArrayController)  {$Responder.MakeArrayController()}}
 				}
 			}
+
+			$Responder
 		}
 	}
 }
