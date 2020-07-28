@@ -10,7 +10,7 @@ function Set-OnlineResponderRevocationConfiguration {
 		[System.Security.Cryptography.X509Certificates.X509Certificate2]$SigningCertificate,
 		[string]$SigningCertTemplate,
 		[System.Security.Cryptography.Oid2]$HashAlgorithm,
-		[SysadminsLV.PKI.Management.CertificateServices]$SigningFlag,
+		[SysadminsLV.PKI.Management.CertificateServices.OcspSigningFlag]$SigningFlag,
 		[int]$ReminderDuration,
 		[string[]]$BaseCrlUrl,
 		[string[]]$DelatCrlUrl,
