@@ -157,6 +157,7 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Server\Remove-OnlineResponderArrayMember.ps1" />
     <Compile Include="Server\Remove-OnlineResponderLocalCrlEntry.ps1" />
     <Compile Include="Server\Restart-CertificationAuthority.ps1" />
+    <Compile Include="Server\Restart-OnlineResponder.ps1" />
     <Compile Include="Server\Restore-CertificateRevocationListFlagDefault.ps1" />
     <Compile Include="Server\Restore-InteraceFlagDefault.ps1" />
     <Compile Include="Server\Restore-KeyRecoveryAgentFlagDefault.ps1" />
@@ -179,7 +180,9 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Server\Set-OnlineResponderProperty.ps1" />
     <Compile Include="Server\Set-OnlineResponderRevocationConfiguration.ps1" />
     <Compile Include="Server\Start-CertificationAuthority.ps1" />
+    <Compile Include="Server\Start-OnlineResponder.ps1" />
     <Compile Include="Server\Stop-CertificationAuthority.ps1" />
+    <Compile Include="Server\Stop-OnlineResponder.ps1" />
     <Compile Include="Server\Uninstall-CertificationAuthority.ps1" />
   </ItemGroup>
   <ItemGroup>
