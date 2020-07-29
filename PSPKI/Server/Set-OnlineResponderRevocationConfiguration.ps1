@@ -13,7 +13,7 @@ function Set-OnlineResponderRevocationConfiguration {
 		[SysadminsLV.PKI.Management.CertificateServices.OcspSigningFlag]$SigningFlag,
 		[int]$ReminderDuration,
 		[string[]]$BaseCrlUrl,
-		[string[]]$DelatCrlUrl,
+		[string[]]$DeltaCrlUrl,
 		[string[]]$SerialNumbersDirectory,
 		[int]$CrlUrlTimeout,
 		[int]$RefreshTimeout
@@ -26,10 +26,10 @@ function Set-OnlineResponderRevocationConfiguration {
 					"SigningCertificate"     {$RevConfig.SigningCertificate = $SigningCertificate}
 					"SigningCertTemplate"    {$RevConfig.SigningCertificateTemplate = $SigningCertTemplate}
 					"HashAlgorithm"          {$RevConfig.HashAlgorithm = $HashAlgorithm}
-					"SigningFlag"            {$RevConfig.OcspSigningFlag = $SigningFlag}
+					"SigningFlag"            {$RevConfig.SigningFlags = $SigningFlag}
 					"ReminderDuration"       {$RevConfig.ReminderDuration = $ReminderDuration}
 					"BaseCrlUrl"             {$RevConfig.BaseCrlUrls = $BaseCrlUrl}
-					"DelatCrlUrl"            {$RevConfig.DeltaCrlUrls = $DelatCrlUrl}
+					"DeltaCrlUrl"            {$RevConfig.DeltaCrlUrls = $DeltaCrlUrl}
 					"SerialNumbersDirectory" {$RevConfig.IssuedSerialNumbersDirectories = $SerialNumbersDirectory}
 					"CrlUrlTimeout"          {$RevConfig.CrlUrlTimeout = $CrlUrlTimeout}
 					"RefreshTimeout"         {$RevConfig.RefreshTimeout = $RefreshTimeout}
