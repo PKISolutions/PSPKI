@@ -6,7 +6,7 @@ function Set-OnlineResponderRevocationConfiguration {
 [CmdletBinding()]
 	param (
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
-		[SysadminsLV.PKI.Management.CertificateServices.OcspResponder[]]$RevocationConfiguration,
+		[SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration[]]$RevocationConfiguration,
 		[System.Security.Cryptography.X509Certificates.X509Certificate2]$SigningCertificate,
 		[string]$SigningCertTemplate,
 		[System.Security.Cryptography.Oid2]$HashAlgorithm,
