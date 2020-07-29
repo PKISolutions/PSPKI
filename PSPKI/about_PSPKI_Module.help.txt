@@ -12,8 +12,13 @@ LONG DESCRIPTION
     
     The module relies on a SysadminsLV.PKI.dll (as well as on Interop assemblies
     library which contains underlying API extensions via .NET class framework
-    and is compiled under .NET Framework 4.0 .NET class framework documentation
-    is located at https://pkisolutions.com/apidocs/pkix.net/
+    and is compiled under .NET Framework 4.0.
+    
+    SysadminsLV.PKI.dll class library documentation is located at
+    https://pkisolutions.com/apidocs/pkix.net/
+
+    SysadminsLV.Asn1Parser.dll class library documentation is located at
+    https://www.pkisolutions.com/apidocs/asn1parser/
 BUILT-IN COMMANDS
     The module splits commands depending on installation type. During module
     package installation you are prompted to select components to install:
