@@ -12,6 +12,7 @@ function Set-OnlineResponderAcl {
 	process {
 		foreach($ACL in $InputObject) {
 			$ACL.SetObjectSecurity()
+			$ACL
 		}
 	}
 }
