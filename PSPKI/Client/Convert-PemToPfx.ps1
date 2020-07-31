@@ -59,7 +59,7 @@
         $PrivateKey
     }
     # returns RSACryptoServiceProvider for dispose purposes
-    function __attachPrivateKey($Cert, [Byte[]]$PrivateKey) {
+    function __attachPrivateKey([Byte[]]$PrivateKey) {
         $cspParams = New-Object Security.Cryptography.CspParameters -Property @{
             ProviderName = $ProviderName
             KeyContainerName = "pspki-" + [Guid]::NewGuid().ToString()
@@ -70,7 +70,13 @@
         }
         $rsa = New-Object Security.Cryptography.RSACryptoServiceProvider $cspParams
         $rsa.ImportCspBlob($PrivateKey)
-        $Cert.PrivateKey = $rsa
+        if ($PSVersionTable.PSEdition -eq "Core") {
+            Add-Type -AssemblyName "System.Security.Cryptography.X509Certificates"
+            $script:Cert = [Security.Cryptography.X509Certificates.RSACertificateExtensions]::CopyWithPrivateKey($_Cert.RawData, $rsa)
+
+        } else {
+            $scriptCert.PrivateKey = $rsa
+        }
         $rsa
     }
     # returns Asn1Reader
@@ -154,7 +160,7 @@
     $PrivateKey = __composePRIVATEKEYBLOB $modulus $PublicExponent $PrivateExponent $Prime1 $Prime2 $Exponent1 $Exponent2 $Coefficient
     #region key attachment and export
     try {
-        $rsaKey = __attachPrivateKey $Cert $PrivateKey
+        $rsaKey = __attachPrivateKey $PrivateKey
         if (![string]::IsNullOrEmpty($OutputPath)) {
             if (!$Password) {
                 $Password = Read-Host -Prompt "Enter PFX password" -AsSecureString
