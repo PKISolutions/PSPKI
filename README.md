@@ -42,6 +42,7 @@ This module supports Enterprise or Standalone Certification Authority servers th
 * Windows Server 2012 (including Server Core)
 * Windows Server 2012 R2 (including Server Core)
 * Windows Server 2016 (including Server Core)
+* Windows Server 2019 (including Server Core)
 
 ### Full Command List ###
 * [Add-AdCertificate](https://www.pkisolutions.com/tools/pspki/Add-AdCertificate)
