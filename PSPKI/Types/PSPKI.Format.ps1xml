@@ -653,7 +653,7 @@
       </TableControl>
     </View>
     <View>
-      <Name>Schema</Name>
+      <Name>ServiceOperationResult</Name>
       <ViewSelectedBy>
         <TypeName>SysadminsLV.PKI.Utils.ServiceOperationResult</TypeName>
       </ViewSelectedBy>
@@ -677,6 +677,86 @@
               </TableColumnItem>
               <TableColumnItem>
                 <PropertyName>StatusMessage</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>OcspResponder</Name>
+      <ViewSelectedBy>
+        <TypeName>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ComputerName</Label>
+            <Width>25</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>IsRunning</Label>
+            <Width>12</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ArrayMembers</Label>
+            <Width>35</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ComputerName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>IsRunning</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ArrayMembers</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>OcspResponderRevocationConfiguration</Name>
+      <ViewSelectedBy>
+        <TypeName>SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ComputerName</Label>
+            <Width>25</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+            <Width>12</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ArrayMembers</Label>
+            <Width>35</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ComputerName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>IsRunning</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ArrayMembers</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
