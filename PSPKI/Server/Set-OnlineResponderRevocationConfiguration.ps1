@@ -7,7 +7,10 @@ function Set-OnlineResponderRevocationConfiguration {
 	param (
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
 		[SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration[]]$RevocationConfiguration,
+		[Parameter(Mandatory = $true, ParameterSetName = '__dsEnroll')]
+		[PKI.CertificateServices.CertificateAuthority]$SigningServer,
 		[System.Security.Cryptography.X509Certificates.X509Certificate2]$SigningCertificate,
+		[Parameter(Mandatory = $true, ParameterSetName = '__dsEnroll')]
 		[string]$SigningCertTemplate,
 		[System.Security.Cryptography.Oid2]$HashAlgorithm,
 		[SysadminsLV.PKI.Management.CertificateServices.OcspSigningFlag]$SigningFlag,
@@ -23,6 +26,12 @@ function Set-OnlineResponderRevocationConfiguration {
 		foreach ($RevConfig in $RevocationConfiguration) {
 			$PSBoundParameters.Keys | ForEach-Object {
 				switch ($_) {
+					"SigningServer"          {
+						if (!$SigningServer.IsEnterprise) {
+							throw new ArgumentException("Signing Server must be a valid Enterprise Certification Authority.")
+						}
+						$RevConfig.ConfigString = $SigningServer.ConfigString
+					}
 					"SigningCertificate"     {$RevConfig.SigningCertificate = $SigningCertificate}
 					"SigningCertTemplate"    {$RevConfig.SigningCertificateTemplate = $SigningCertTemplate}
 					"HashAlgorithm"          {$RevConfig.HashAlgorithm = $HashAlgorithm}
