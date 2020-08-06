@@ -33,7 +33,7 @@ function Add-OnlineResponderLocalCrlEntry {
 						$CRLEntry = New-Object System.Security.Cryptography.X509Certificates.X509CRLEntry -ArgumentList $_, $null, $Reason
 						$entries.Add($CRLEntry)
 					}
-					$RevConfig.X509CRLEntryCollection = $entries
+					$RevConfig.LocalRevocationInformation = $entries
 				}
 			}
 			$RevConfig.Commit()

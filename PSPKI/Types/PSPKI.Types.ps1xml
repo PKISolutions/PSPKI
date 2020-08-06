@@ -78,36 +78,36 @@
           $sTime = $null
           if ($this.SignerCertificate -eq $null) {return}
 
-          $SignedCms = [SysadminsLV.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
+          $SignedCms = [SysadminsLV.PKI.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
           if ($SignedCms -eq $null) {return}
 
           # it appears there are two types of counter signing: PKCS#9 or RFC3161.
           # -- in PKCS#9, timestamp is stored in signed attribute with OID = 1.2.840.113549.1.9.6
-          # -- in RFC3161, timestamp is stored in embedded PKCS#9 object which is stored in unsigned attribute 
+          # -- in RFC3161, timestamp is stored in embedded PKCS#9 object which is stored in unsigned attribute
           $Pkcs9_counterSign = "1.2.840.113549.1.9.6"
           $RFC3161_counterSign = "1.3.6.1.4.1.311.3.3.1"
           $SigningTime = "1.2.840.113549.1.9.5"
 
           # attempt to read PKCS#9
-          $counter = $SignedCms.SignerInfos.UnsignedAttributes[$Pkcs9_counterSign] | select -First 1
-          
+          $counter = $SignedCms.SignerInfos | ForEach-Object {$_.UnauthenticatedAttributes[$Pkcs9_counterSign]} | select -First 1
+
           if ($counter) {
-            $attr = $nested.AuthenticatedAttributes[$SigningTime] | select -first 1
-            if ($attr) {
-              $pkcs9sig_attr = New-Object System.Security.Cryptography.Pkcs.Pkcs9SigningTime (,$attr.RawData)
-              $sTime = $pkcs9sig_attr.SigningTime.ToLocalTime()
-            }
-          } else {
-            # attempt to read RFC3161
-            $nested = $SignedCms.SignerInfos.UnsignedAttributes[$RFC3161_counterSign] | select -First 1
-            if ($nested) {
-              $counterCms = New-Object SysadminsLV.PKI.Cryptography.Pkcs.DefaultSignedPkcs7 (,$nested.Values[0].RawData)
-              $attr = $counterCms.SignerInfos.SignedAttributes[$SigningTime] | select -first 1
+              $attr = $counter.AuthenticatedAttributes[$SigningTime] | select -first 1
               if ($attr) {
-                $timeAttr = New-Object System.Security.Cryptography.Pkcs.Pkcs9SigningTime (,$attr.RawData)
-                $sTime = $attr.Values[0].SigningTime.ToLocalTime()
+                  $pkcs9sig_attr = New-Object System.Security.Cryptography.Pkcs.Pkcs9SigningTime (,$attr.RawData)
+                  $sTime = $pkcs9sig_attr.SigningTime.ToLocalTime()
               }
-            }
+          } else {
+              # attempt to read RFC3161
+              $nested = $SignedCms.SignerInfos | ForEach-Object {$_.UnauthenticatedAttributes[$RFC3161_counterSign]} | select -First 1
+              if ($nested) {
+                  $counterCms = New-Object SysadminsLV.PKI.Cryptography.Pkcs.DefaultSignedPkcs7 (,$nested.RawData)
+                  $attr = $counterCms.SignerInfos | ForEach-Object {$_.AuthenticatedAttributes[$SigningTime]} | select -first 1
+                  if ($attr) {
+                      $timeAttr = New-Object System.Security.Cryptography.Pkcs.Pkcs9SigningTime (,$attr.RawData)
+                      $sTime = $timeAttr.SigningTime.ToLocalTime()
+                  }
+              }
           }
           $sTime
         </GetScriptBlock>
@@ -116,7 +116,7 @@
         <Name>EncodedSignature</Name>
         <GetScriptBlock>
           if ($this.SignerCertificate -eq $null) {return}
-          [SysadminsLV.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
+          [SysadminsLV.PKI.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
         </GetScriptBlock>
       </ScriptProperty>
     </Members>

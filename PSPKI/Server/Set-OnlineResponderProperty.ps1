@@ -22,15 +22,15 @@ function Set-OnlineResponderProperty {
 		foreach ($Responder in $OnlineResponder) {
 			$PSBoundParameters.Keys | ForEach-Object {
 				switch ($_) {
-					"MaxRequestEntries"   {$Responder.MaxNumOfRequestEntries = $MaxRequestEntries}
-					"MaxCacheEntries"     {$Responder.MaxNumOfCacheEntries = $MaxCacheEntries}
-					"ThreadCount"         {$Responder.NumOfThreads = $ThreadCount}
-					"MaxRequestSize"      {$Responder.MaxRequestSize = $MaxRequestSize}
-					"RequestFlags"        {$Responder.RequestFlags = $RequestFlags}
-					"AuditFlags"          {$Responder.AuditFilter = $AuditFlags}
-					"LogLevel"            {$Responder.LogLevel = $LogLevel}
-					"TraceDebug"          {$Responder.TraceDebugEnabled = $TraceDebug}
-					"MakeArrayController" {if ($MakeArrayController)  {$Responder.MakeArrayController()}}
+					"MaxRequestEntryCount" {$Responder.MaxNumOfRequestEntries = $MaxRequestEntryCount}
+					"MaxCacheEntryCount"   {$Responder.MaxNumOfCacheEntries = $MaxCacheEntryCount}
+					"ThreadCount"          {$Responder.NumOfThreads = $ThreadCount}
+					"MaxRequestSize"       {$Responder.MaxRequestSize = $MaxRequestSize}
+					"RequestFlag"          {$Responder.RequestFlags = $RequestFlag}
+					"AuditFlag"            {$Responder.AuditFilter = $AuditFlag}
+					"LogLevel"             {$Responder.LogLevel = $LogLevel}
+					"TraceDebug"           {$Responder.TraceDebugEnabled = $TraceDebug}
+					"MakeArrayController"  {if ($MakeArrayController)  {$Responder.MakeArrayController()}}
 				}
 			}
 

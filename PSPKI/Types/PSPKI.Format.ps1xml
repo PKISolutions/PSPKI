@@ -737,12 +737,12 @@
           </TableColumnHeader>
           <TableColumnHeader>
             <Label>Name</Label>
-            <Width>12</Width>
+            <Width>60</Width>
             <Alignment>left</Alignment>
           </TableColumnHeader>
           <TableColumnHeader>
-            <Label>ArrayMembers</Label>
-            <Width>35</Width>
+            <Label>Status</Label>
+            <Width>12</Width>
             <Alignment>left</Alignment>
           </TableColumnHeader>
         </TableHeaders>
@@ -753,10 +753,10 @@
                 <PropertyName>ComputerName</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>IsRunning</PropertyName>
+                <PropertyName>Name</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>ArrayMembers</PropertyName>
+                <PropertyName>ConfigurationStatusCode</PropertyName>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
