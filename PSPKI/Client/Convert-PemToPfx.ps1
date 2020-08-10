@@ -75,7 +75,7 @@
             $script:Cert = [Security.Cryptography.X509Certificates.RSACertificateExtensions]::CopyWithPrivateKey($_Cert.RawData, $rsa)
 
         } else {
-            $scriptCert.PrivateKey = $rsa
+            $script:Cert.PrivateKey = $rsa
         }
         $rsa
     }
