@@ -16,7 +16,7 @@
 				if ($(Get-Item $Path -ErrorAction Stop).PSProvider.Name -ne "FileSystem") {
 					throw {"File either does not exist or is not a file object"}
 				}
-				New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateTrustList -ArgumentList (Resolve-Path $Path).Path
+				New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateTrustList -ArgumentList (Resolve-Path $Path).ProviderPath
 			}
 			"__RawData" {New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateTrustList -ArgumentList @(,$RawCTL)}
 		}
