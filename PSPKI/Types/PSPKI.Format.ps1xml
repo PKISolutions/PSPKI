@@ -697,7 +697,12 @@
           </TableColumnHeader>
           <TableColumnHeader>
             <Label>IsRunning</Label>
-            <Width>12</Width>
+            <Width>11</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>IsArrayController</Label>
+            <Width>19</Width>
             <Alignment>left</Alignment>
           </TableColumnHeader>
           <TableColumnHeader>
@@ -714,6 +719,9 @@
               </TableColumnItem>
               <TableColumnItem>
                 <PropertyName>IsRunning</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>IsArrayController</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
                 <PropertyName>ArrayMembers</PropertyName>
