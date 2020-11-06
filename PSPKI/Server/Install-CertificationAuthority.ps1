@@ -220,7 +220,7 @@ information is correct (you must specify existing CA) and is supplied in a 'CACo
 function PFXKeySet ($CACertFile, $Password) {
 	$FilePath = Resolve-Path $CACertFile -ErrorAction Stop
 	try {[void]$CASetup.CAImportPFX(
-		$FilePath.Path,
+		$FilePath.ProviderPath,
 		[Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($Password)),
 		$true)
 	} catch {Write-Error $_ -ErrorAction Stop}

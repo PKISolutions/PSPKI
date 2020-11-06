@@ -78,7 +78,7 @@
           $sTime = $null
           if ($this.SignerCertificate -eq $null) {return}
 
-          $SignedCms = [SysadminsLV.PKI.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
+          $SignedCms = [SysadminsLV.PKI.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.ProviderPath)
           if ($SignedCms -eq $null) {return}
 
           # it appears there are two types of counter signing: PKCS#9 or RFC3161.
@@ -116,7 +116,7 @@
         <Name>EncodedSignature</Name>
         <GetScriptBlock>
           if ($this.SignerCertificate -eq $null) {return}
-          [SysadminsLV.PKI.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
+          [SysadminsLV.PKI.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.ProviderPath)
         </GetScriptBlock>
       </ScriptProperty>
     </Members>
