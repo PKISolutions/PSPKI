@@ -10,7 +10,7 @@ function Add-OnlineResponderAcl {
         [SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor[]]$InputObject,
         [Parameter(Mandatory = $true, ParameterSetName = '__ace')]
         [Alias('ACE')]
-        [SysadminsLV.PKI.Security.AccessControl.OcspResponderAccessRule[]]$AcessRule,
+        [SysadminsLV.PKI.Security.AccessControl.OcspResponderAccessRule[]]$AccessRule,
         [Parameter(Mandatory = $true, ParameterSetName = '__manual')]
         [Security.Principal.NTAccount[]]$Identity,
         [Parameter(Mandatory = $true, ParameterSetName = '__manual')]
@@ -25,7 +25,7 @@ function Add-OnlineResponderAcl {
     process {
         foreach ($Acl in $InputObject) {
             switch ($PSCmdlet.ParameterSetName) {
-                '__ace' {$AcessRule | ForEach-Object {[void]$Acl.AddAccessRule($_)}}
+                '__ace' {$AccessRule | ForEach-Object {[void]$Acl.AddAccessRule($_)}}
                 '__manual' {
                     foreach ($u in $Identity) {
                         Write-Verbose "processing identity: '$u'"
