@@ -35,10 +35,21 @@ This module can run on any of the specified operating system:
 
 ### Certificate services support
 
-This module supports Enterprise or Standalone Certification Authority servers that are running one the following operating systems:
+This module supports Enterprise or Standalone Certification Authority (CA) servers that are running one the following operating systems:
 * Windows Server 2003/2003 R2
 * Windows Server 2008 (including Server Core)
 * Windows Server 2008 R2 (including Server Core)
+* Windows Server 2012 (including Server Core)
+* Windows Server 2012 R2 (including Server Core)
+* Windows Server 2016 (including Server Core)
+* Windows Server 2019 (including Server Core)
+
+### Online Responder support
+
+This module supports Online Certificate Status Protocol (OCSP) servers that are running one the following operating systems:
+* Windows Server 2003/2003 R2
+* Windows Server 2008 Enterprise (Full Installation)
+* Windows Server 2008 R2 Enterprise (Full Installation)
 * Windows Server 2012 (including Server Core)
 * Windows Server 2012 R2 (including Server Core)
 * Windows Server 2016 (including Server Core)
