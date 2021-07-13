@@ -19,6 +19,11 @@
     } elseif ($Enterprise -and !$Standalone) {
         # at this point we are in workgroup and only enterprise CAs were requested. There is nothing to return.
         return
+    } else {
+        # at this point we are in workgroup and enterprise-only CAs are not requested. Attempt to connect to local CA
+        # if possible
+        [PKI.CertificateServices.CertificateAuthority]::Connect($env:COMPUTERNAME)
+        return
     }
 
     $CertConfig = New-Object SysadminsLV.PKI.Dcom.Implementations.CertConfigD
