@@ -1,4 +1,4 @@
-﻿function Convert-PemToPfx {
+function Convert-PemToPfx {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
@@ -72,7 +72,7 @@
         $rsa.ImportCspBlob($PrivateKey)
         if ($PSVersionTable.PSEdition -eq "Core") {
             Add-Type -AssemblyName "System.Security.Cryptography.X509Certificates"
-            $script:Cert = [Security.Cryptography.X509Certificates.RSACertificateExtensions]::CopyWithPrivateKey($_Cert.RawData, $rsa)
+            $script:Cert = [Security.Cryptography.X509Certificates.RSACertificateExtensions]::CopyWithPrivateKey($Cert.RawData, $rsa)
 
         } else {
             $script:Cert.PrivateKey = $rsa
@@ -166,7 +166,7 @@
                 $Password = Read-Host -Prompt "Enter PFX password" -AsSecureString
             }
             $pfxBytes = $Cert.Export("pfx", $Password)
-            if ($PsIsCore) {
+            if ($PSVersionTable.PSEdition -eq "Core") {
                 Set-Content -Path $OutputPath -Value $pfxBytes -AsByteStream
             } else {
                 Set-Content -Path $OutputPath -Value $pfxBytes -Encoding Byte
