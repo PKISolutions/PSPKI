@@ -6,14 +6,29 @@
 [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true, Position = 0)]
-        [string]$InputPath,
-        [string]$KeyPath,
-        [string]$OutputPath,
-        [Security.Cryptography.X509Certificates.X509KeySpecFlags]$KeySpec = "AT_KEYEXCHANGE",
-        [Security.SecureString]$Password,
-        [string]$ProviderName = "Microsoft Enhanced RSA and AES Cryptographic Provider",
-        [Security.Cryptography.X509Certificates.StoreLocation]$StoreLocation = "CurrentUser",
-        [switch]$Install
+        [string]
+        $InputPath,
+        [Parameter()]
+        [string]
+        $KeyPath,
+        [Parameter()]
+        [string]
+        $OutputPath,
+        [Parameter()]
+        [Security.Cryptography.X509Certificates.X509KeySpecFlags]
+        $KeySpec = "AT_KEYEXCHANGE",
+        [Parameter()]
+        [Security.SecureString]
+        $Password,
+        [Parameter()]
+        [string]
+        $ProviderName = "Microsoft Enhanced RSA and AES Cryptographic Provider",
+        [Parameter()]
+        [Security.Cryptography.X509Certificates.StoreLocation]
+        $StoreLocation = "CurrentUser",
+        [Parameter()]
+        [switch]
+        $Install
     )
     if ($PSBoundParameters.Verbose) {$VerbosePreference = "continue"}
     if ($PSBoundParameters.Debug) {
