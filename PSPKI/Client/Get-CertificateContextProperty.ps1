@@ -2,15 +2,15 @@ function Get-CertificateContextProperty {
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('System.Security.Cryptography.X509Certificates.X509CertificateContextProperty')]
-[OutputType('System.Security.Cryptography.X509Certificates.X509CertificateContextPropertyCollection')]
-[OutputType('System.Security.Cryptography.X509Certificates.X509CertificatePropertyType[]')]
+[OutputType('SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateContextProperty')]
+[OutputType('SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateContextPropertyCollection')]
+[OutputType('SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificatePropertyType[]')]
 [CmdletBinding(DefaultParameterSetName = '__name')]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
 		[Security.Cryptography.X509Certificates.X509Certificate2]$Certificate,
 		[Parameter(ParameterSetName = '__name')]
-		[Security.Cryptography.X509Certificates.X509CertificatePropertyType]$PropertyName = "None",
+		[SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificatePropertyType]$PropertyName = "None",
 		[Parameter(ParameterSetName = '__list')]
 		[switch]$NameList
 	)

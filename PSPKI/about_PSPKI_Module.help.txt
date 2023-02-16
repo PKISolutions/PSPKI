@@ -12,7 +12,7 @@ LONG DESCRIPTION
     
     The module relies on a SysadminsLV.PKI.dll (as well as on Interop assemblies
     library which contains underlying API extensions via .NET class framework
-    and is compiled under .NET Framework 4.0.
+    and is compiled under .NET Framework 4.7.2.
     
     SysadminsLV.PKI.dll class library documentation is located at
     https://pkisolutions.com/apidocs/pkix.net/

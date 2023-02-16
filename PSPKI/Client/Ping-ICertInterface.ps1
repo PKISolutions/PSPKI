@@ -10,26 +10,11 @@
 	)
 	process {
 		foreach ($CA in $CertificationAuthority) {
-			$output = New-Object psobject -Property @{
+			New-Object psobject -Property @{
 				ConfigString = $CA.ConfigString
-				ICertAdmin = $false
-				ICertRequest = $false
+				ICertAdmin = $CA.PingAdmin()
+				ICertRequest = $CA.PingRequest()
 			}
-			try {
-				$CertAdmin = New-Object -ComObject CertificateAuthority.Admin
-				[Void]$CertAdmin.GetCAProperty($CA.ConfigString,0x6,0,4,0)
-				$output.ICertAdmin = $true
-			} catch {
-				#
-			} finally {[PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)}
-			try {
-				$CertRequest = New-Object -ComObject CertificateAuthority.Request
-				[Void]$CertRequest.GetCAProperty($CA.ConfigString,0x6,0,4,0)
-				$output.ICertRequest = $true
-			} catch {
-				#
-			} finally {[PKI.Utils.CryptographyUtils]::ReleaseCom($CertRequest)}
-			$output
 		}
 	}
 }

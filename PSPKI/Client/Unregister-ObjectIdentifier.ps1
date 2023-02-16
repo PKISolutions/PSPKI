@@ -8,7 +8,7 @@
 )]
 	param(
 		[Parameter(Mandatory = $true, ValueFrompipeline = $true, ValueFromPipelineByPropertyName = $true)]
-		[Security.Cryptography.Oid2]$Value,
+		[SysadminsLV.PKI.Cryptography.Oid2]$Value,
 		[switch]$UseActiveDirectory,
 		[switch]$Force
 	)
@@ -16,7 +16,9 @@
 		$Env:COMPUTERNAME,
 		"Unregister object identifier with name: '$($Value.FriendlyName)' and value: '$($Value.Value)'"
 	)) {
-		$retValue = [Security.Cryptography.Oid2]::Unregister($Value.Value,$Value.OidGroup,$UseActiveDirectory)
-		if (!$retValue) {Write-Error "An error occured while attempting to unregister specified object identifier"}
+		$retValue = [SysadminsLV.PKI.Cryptography.Oid2]::Unregister($Value.Value,$Value.OidGroup,$UseActiveDirectory)
+		if (!$retValue) {
+			Write-Error "An error occured while attempting to unregister specified object identifier"
+		}
 	}
 }

@@ -105,9 +105,9 @@
       </TableControl>
     </View>
     <View>
-      <Name>CESUri</Name>
+      <Name>PolicyEnrollEndpointUri</Name>
       <ViewSelectedBy>
-        <TypeName>PKI.CertificateServices.CESUri</TypeName>
+        <TypeName>SysadminsLV.PKI.Management.CertificateServices.PolicyEnrollEndpointUri</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>
@@ -534,7 +534,7 @@
       </TableControl>
     </View>
     <View>
-      <Name>ProviderAlgorithm</Name>
+      <Name>CspProviderAlgorithmInfo</Name>
       <ViewSelectedBy>
         <TypeName>SysadminsLV.PKI.Cryptography.CspProviderAlgorithmInfo</TypeName>
       </ViewSelectedBy>
@@ -597,7 +597,7 @@
       </TableControl>
     </View>
     <View>
-      <Name>Schema</Name>
+      <Name>AdcsDbColumnSchema</Name>
       <ViewSelectedBy>
         <TypeName>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbColumnSchema</TypeName>
       </ViewSelectedBy>

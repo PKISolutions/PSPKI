@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('System.Security.Cryptography.X509CertificateRequests.X509CertificateRequest')]
+[OutputType('SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateRequest')]
 [CmdletBinding(DefaultParameterSetName='__fileName')]
 	param(
 		[Parameter(ParameterSetName = "__fileName", Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
@@ -17,9 +17,9 @@
 			if ($(Get-Item $Path -ErrorAction Stop).PSProvider.Name -ne "FileSystem") {
 				throw {"File either does not exist or not a file object"}
 			}
-			New-Object Security.Cryptography.X509CertificateRequests.X509CertificateRequest -ArgumentList (Resolve-Path $Path).ProviderPath
+			New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateRequest -ArgumentList (Resolve-Path $Path).ProviderPath
 		}
-		"__rawData" {New-Object Security.Cryptography.X509CertificateRequests.X509CertificateRequest -ArgumentList @(,$RawRequest)}
+		"__rawData" {New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateRequest -ArgumentList @(,$RawRequest)}
 	}
 #endregion
 }

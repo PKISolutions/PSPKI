@@ -8,11 +8,11 @@ function Add-OnlineResponderLocalCrlEntry {
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
 		[SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration[]]$InputObject,
 		[Parameter(Mandatory = $true, ParameterSetName = '__crlentry')]
-		[System.Security.Cryptography.X509Certificates.X509CRLEntryCollection]$Entry,
+		[SysadminsLV.PKI.Cryptography.X509Certificates.X509CRLEntryCollection]$Entry,
 		[Parameter(Mandatory = $true, ParameterSetName = '__serial')]
 		[string[]]$SerialNumber,
 		[Parameter(ParameterSetName = '__serial')]
-		[System.Security.Cryptography.X509Certificates.X509RevocationReasons]$Reason = "Unspecified",
+		[SysadminsLV.PKI.Cryptography.X509Certificates.X509RevocationReasons]$Reason = "Unspecified",
 		[switch]$Force
 	)
 
@@ -28,9 +28,9 @@ function Add-OnlineResponderLocalCrlEntry {
 					}
 				}
 				'__serial' {
-					$entries = New-Object System.Security.Cryptography.X509Certificates.X509CRLEntryCollection
+					$entries = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CRLEntryCollection
 					$SerialNumber | ForEach-Object {
-						$CRLEntry = New-Object System.Security.Cryptography.X509Certificates.X509CRLEntry -ArgumentList $_, $null, $Reason
+						$CRLEntry = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CRLEntry -ArgumentList $_, $null, $Reason
 						$entries.Add($CRLEntry)
 					}
 					$RevConfig.LocalRevocationInformation = $entries
