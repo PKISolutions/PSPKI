@@ -25,14 +25,15 @@
 						if ($Name -contains "*") {
 							$CATemplate.Clear()
 						} else {
-							$CATemplate.RemoveRange($Name)
+							$Templates = $Name | ForEach-Object {[PKI.CertificateTemplates.CertificateTemplate]::FromCommonName($_)}
+							$CATemplate.RemoveRange($Templates)
 						}
 					}
 					"__DisplayName" {
 						if ($DisplayName -contains "*") {
 							$CATemplate.Clear()
 						} else {
-							$Templates = $DisplayName | ForEach-Object {New-Object PKI.CertificateTemplates.CertificateTemplate "DisplayName", $_}
+							$Templates = $DisplayName | ForEach-Object {[PKI.CertificateTemplates.CertificateTemplate]::FromDisplayName($_)}
 							$CATemplate.RemoveRange($Templates)
 						}
 					}

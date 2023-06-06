@@ -64,5 +64,5 @@
 			}
 		}
 	}
-	$vtemps | Where-Object {$_} | ForEach-Object {New-Object PKI.CertificateTemplates.CertificateTemplate $_.Name}
+	$vtemps | Where-Object {$_} | ForEach-Object {[PKI.CertificateTemplates.CertificateTemplate]::FromCommonName($_.Name)}
 }

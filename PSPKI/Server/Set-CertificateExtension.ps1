@@ -18,7 +18,7 @@
 			$CertAdmin = New-Object -ComObject CertificateAuthority.Admin
 			if ($Extension[0] -is [Security.Cryptography.X509Certificates.X509ExtensionCollection] -and !$Remove) {
 				foreach ($ext in $Extension[0]) {
-					$derValue = [PKI.Utils.CryptographyUtils]::EncodeDerString($ext.RawData)
+					$derValue = [SysadminsLV.PKI.Utils.CryptographyUtils]::EncodeDerString($ext.RawData)
 					try {
 						$CertAdmin.SetCertificateExtension($Req.ConfigString,$Req.RequestID,$ext.Oid.Value,0x3,$ext.Critical,$derValue)
 						New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
@@ -30,7 +30,7 @@
 			} elseif ($Extension[0] -is  [Security.Cryptography.X509Certificates.X509Extension] -and !$Remove) {
 				foreach ($ext in $Extension) {
 					$ext = [Security.Cryptography.X509Certificates.X509Extension]$ext
-					$derValue = [PKI.Utils.CryptographyUtils]::EncodeDerString($ext.RawData)
+					$derValue = [SysadminsLV.PKI.Utils.CryptographyUtils]::EncodeDerString($ext.RawData)
 					try {
 						$CertAdmin.SetCertificateExtension($Req.ConfigString,$Req.RequestID,$ext.Oid.Value,0x3,$ext.Critical,$derValue)
 						New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
@@ -55,7 +55,7 @@
 			} else {
 				throw New-Object ArgumentException "The parameter is invalid."
 			}
-			[PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
+			[SysadminsLV.PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
 		}
 	}	
 }

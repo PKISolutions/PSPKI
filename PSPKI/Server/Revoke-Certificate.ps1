@@ -40,7 +40,7 @@ function Revoke-Certificate {
         # do the same if config string doesn't match cached one.
         if (!$ConfigString -or ($ConfigString -ne $Request.ConfigString)) {
             $ConfigString = $Request.ConfigString
-            [PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
+            [SysadminsLV.PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
             $CertAdmin = New-Object -ComObject CertificateAuthority.Admin
         }
         if ($Request.SerialNumber.Length % 2) {$Request.Serialnumber = "0" + $Request.Serialnumber}
@@ -53,6 +53,6 @@ function Revoke-Certificate {
         }
     }
     end {
-        [PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
+        [SysadminsLV.PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
     }
 }
