@@ -49,7 +49,7 @@ function Revoke-Certificate {
             New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
                 "Successfully revoked certificate with ID=$($Request.RequestID) and reason: '$Reason'"
         } catch {
-            New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $_.Exception.HResult
+            New-Object SysadminsLV.PKI.Utils.ServiceOperationResult $($_.Exception.InnerException.InnerException.HResult)
         }
     }
     end {
