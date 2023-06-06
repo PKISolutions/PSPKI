@@ -18,23 +18,23 @@
 			$CertAdmin = New-Object -ComObject CertificateAuthority.Admin
 			if ($Extension[0] -is [Security.Cryptography.X509Certificates.X509ExtensionCollection] -and !$Remove) {
 				foreach ($ext in $Extension[0]) {
-					$derValue = [SysadminsLV.PKI.Utils.CryptographyUtils]::EncodeDerString($ext.RawData)
+					$CertReqAdm = New-Object SysadminsLV.PKI.Dcom.Implementations.CertRequestAdminD $Req.ConfigString
 					try {
-						$CertAdmin.SetCertificateExtension($Req.ConfigString,$Req.RequestID,$ext.Oid.Value,0x3,$ext.Critical,$derValue)
+						$CertReqAdm.SetCertificateExtension($Req.RequestID, $ext)
 						New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
-							"Extension '$([SysadminsLV.PKI.Utils.CLRExtensions.OidExtensions]::Format($ext.Oid, $true))' was addedd to request ID='$($Req.RequestID)'."
+							"Extension '$([SysadminsLV.PKI.Cryptography.OidExtensions]::Format($ext.Oid, $true))' was addedd to request ID='$($Req.RequestID)'."
 					} catch {
 						throw $_
 					}
 				}
-			} elseif ($Extension[0] -is  [Security.Cryptography.X509Certificates.X509Extension] -and !$Remove) {
+			} elseif ($Extension[0] -is [Security.Cryptography.X509Certificates.X509Extension] -and !$Remove) {
 				foreach ($ext in $Extension) {
 					$ext = [Security.Cryptography.X509Certificates.X509Extension]$ext
-					$derValue = [SysadminsLV.PKI.Utils.CryptographyUtils]::EncodeDerString($ext.RawData)
+					$CertReqAdm = New-Object SysadminsLV.PKI.Dcom.Implementations.CertRequestAdminD $Req.ConfigString
 					try {
-						$CertAdmin.SetCertificateExtension($Req.ConfigString,$Req.RequestID,$ext.Oid.Value,0x3,$ext.Critical,$derValue)
+						$CertReqAdm.SetCertificateExtension($Req.RequestID, $ext)
 						New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
-							"Extension '$([SysadminsLV.PKI.Utils.CLRExtensions.OidExtensions]::Format($ext.Oid, $true))' was addedd to request ID='$($Req.RequestID)'."
+							"Extension '$([SysadminsLV.PKI.Cryptography.OidExtensions]::Format($ext.Oid, $true))' was addedd to request ID='$($Req.RequestID)'."
 					} catch {
 						throw $_
 					}
@@ -46,7 +46,7 @@
 						[void][SysadminsLV.Asn1Parser.Asn1Utils]::EncodeObjectIdentifier($ext)
 						$CertAdmin.SetCertificateExtension($Req.ConfigString,$Req.RequestID,$oid.Value,0x1,0x2,0)
 						New-Object SysadminsLV.PKI.Utils.ServiceOperationResult 0,
-							"Extension '$([SysadminsLV.PKI.Utils.CLRExtensions.OidExtensions]::Format($oid, $true))' was addedd to request ID='$($Req.RequestID)'."
+							"Extension '$([SysadminsLV.PKI.Cryptography.OidExtensions]::Format($oid, $true))' was addedd to request ID='$($Req.RequestID)'."
 						Write-Verbose "Extension OID='$($oid.Value)' was removed from request ID='$($Req.RequestID)'."
 					} catch {
 						throw $_
