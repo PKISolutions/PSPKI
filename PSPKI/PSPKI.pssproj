@@ -50,7 +50,13 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Content Include="Library\Interop.CERTCLILib.dll" />
     <Content Include="Library\Interop.CERTENROLLLib.dll" />
     <Content Include="Library\SysadminsLV.Asn1Parser.dll" />
+    <Content Include="Library\SysadminsLV.Asn1Parser.pdb" />
     <Content Include="Library\SysadminsLV.PKI.dll" />
+    <Content Include="Library\SysadminsLV.PKI.OcspClient.dll" />
+    <Content Include="Library\SysadminsLV.PKI.OcspClient.pdb" />
+    <Content Include="Library\SysadminsLV.PKI.Win.dll" />
+    <Content Include="Library\SysadminsLV.PKI.Win.pdb" />
+    <Content Include="Library\System.Security.Cryptography.Pkcs.dll" />
     <Content Include="Server\PSPKI.Help.xml" />
     <Content Include="Types\PSPKI.Format.ps1xml" />
     <Content Include="Types\PSPKI.PS5Types.ps1xml" />
