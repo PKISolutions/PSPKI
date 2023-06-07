@@ -533,7 +533,7 @@ namespace PKI.EnterprisePKI {
             Write-Verbose "Entering certification path validation routine..."
             Write-Debug "Entering certification path validation routine..."
             if ([IntPtr]::Zero.Equals($cert.Handle)) {
-                throw New-Object PKI.Exceptions.UninitializedObjectException "The certificate is not initialized."
+                throw New-Object SysadminsLV.PKI.Exceptions.UninitializedObjectException "The certificate is not initialized."
                 return
             }
             $projectedChain = __getChain $cert
