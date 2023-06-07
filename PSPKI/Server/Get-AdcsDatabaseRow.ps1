@@ -31,9 +31,9 @@
                 -or ($_ -eq "Pending") `
                 -or ($_ -eq "Failed")}
                         {"RequestID"}
-            "Extension"	{"ExtensionRequestId"}
-            "Attribute"	{"AttributeRequestId"}
-            "CRL"		{"CRLRowId"}
+            "Extension" {"ExtensionRequestId"}
+            "Attribute" {"AttributeRequestId"}
+            "CRL"       {"CRLRowId"}
         }
     }
     process {

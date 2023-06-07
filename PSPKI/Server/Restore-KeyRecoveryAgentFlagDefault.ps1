@@ -4,21 +4,21 @@
 #>
 [OutputType('PKI.CertificateServices.Flags.KRAFlag')]
 [CmdletBinding()]
-	param(
-		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
-		[PKI.CertificateServices.Flags.KRAFlag[]]$InputObject,
-		[switch]$RestartCA
-	)
-	process {
-		foreach ($KRAFlag in $InputObject) {
-			try {
-				$KRAFlag.Restore()
-				$Status = $KRAFlag.SetInfo($RestartCA)
-				if ($Status) {
-					if (!$RestartCA) {Write-Warning ($RestartRequired -f "Certificate Revocation List settings")}
-				} else {Write-Warning $NothingIsSet}
-				$KRAFlag
-			} finally { }
-		}
-	}
+    param(
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
+        [PKI.CertificateServices.Flags.KRAFlag[]]$InputObject,
+        [switch]$RestartCA
+    )
+    process {
+        foreach ($KRAFlag in $InputObject) {
+            try {
+                $KRAFlag.Restore()
+                $Status = $KRAFlag.SetInfo($RestartCA)
+                if ($Status) {
+                    if (!$RestartCA) {Write-Warning ($RestartRequired -f "Certificate Revocation List settings")}
+                } else {Write-Warning $NothingIsSet}
+                $KRAFlag
+            } finally { }
+        }
+    }
 }

@@ -27,7 +27,7 @@ function Remove-AdcsDatabaseRow {
         [Parameter(Mandatory = $true, ParameterSetName = '__bulk')]
         [datetime]$RemoveBefore
     )
-    begin {		
+    begin {
         $dwFlags = switch ($Filter) {
             "ExpiredCerts" {1}
             "ExpiredFailedPending" {2}
@@ -86,7 +86,7 @@ function Remove-AdcsDatabaseRow {
                     }
                 }
             }
-        }		
+        }
     }
     end {
         [SysadminsLV.PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)

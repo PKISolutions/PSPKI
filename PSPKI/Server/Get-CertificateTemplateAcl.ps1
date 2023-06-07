@@ -4,13 +4,13 @@
 #>
 [OutputType('SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor')]
 [CmdletBinding()]
-	param(
-		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelinebyPropertyName = $true)]
-		[PKI.CertificateTemplates.CertificateTemplate[]]$Template
-	)
-	process {
-		foreach ($t in $Template) {
-			$t.GetSecurityDescriptor()
-		}
-	}
+    param(
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelinebyPropertyName = $true)]
+        [PKI.CertificateTemplates.CertificateTemplate[]]$Template
+    )
+    process {
+        foreach ($t in $Template) {
+            $t.GetSecurityDescriptor()
+        }
+    }
 }

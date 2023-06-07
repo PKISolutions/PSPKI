@@ -4,14 +4,14 @@ function Get-CertificateValidityPeriod {
 #>
 [OutputType('PKI.CertificateServices.CertValiditySetting')]
 [CmdletBinding()]
-	param (
-		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
-		[Alias('CA')]
-		[PKI.CertificateServices.CertificateAuthority[]]$CertificationAuthority
-	)
-	process {
-		foreach ($CA in $CertificationAuthority) {
-			New-Object PKI.CertificateServices.CertValiditySetting -ArgumentList $CA
-		}
-	}
+    param (
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
+        [Alias('CA')]
+        [PKI.CertificateServices.CertificateAuthority[]]$CertificationAuthority
+    )
+    process {
+        foreach ($CA in $CertificationAuthority) {
+            New-Object PKI.CertificateServices.CertValiditySetting -ArgumentList $CA
+        }
+    }
 }
