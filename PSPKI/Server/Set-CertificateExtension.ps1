@@ -2,7 +2,7 @@
 <#
 .ExternalHelp PSPKI.Help.xml
 #>
-[OutputType('PKI.Utils.IServiceOperationResult')]
+[OutputType('SysadminsLV.PKI.Utils.IServiceOperationResult')]
 [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]

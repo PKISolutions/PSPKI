@@ -12,7 +12,7 @@
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
         [Alias('CA')]
         [PKI.CertificateServices.CertificateAuthority[]]$CertificationAuthority,
-        [Security.Cryptography.X509Certificates.X509EncodingType]$Encoding = "Base64Header",
+        [SysadminsLV.Asn1Parser.EncodingType]$Encoding = "Base64Header",
         [switch]$X509
     )
     process {

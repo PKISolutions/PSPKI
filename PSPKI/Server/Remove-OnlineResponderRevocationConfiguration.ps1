@@ -22,7 +22,6 @@ function Remove-OnlineResponderRevocationConfiguration {
             }
             "__name" {
                 foreach ($ocsp in $OnlineResponder) {
-
                     $Name | ForEach-Object {
                         $ocsp.RemoveRevocationConfiguration($_)
                     }

@@ -11,7 +11,7 @@ function Set-OnlineResponderProperty {
         [int]$MaxCacheEntryCount,
         [int]$ThreadCount,
         [int]$MaxRequestSize,
-        [SysadminsLV.PKI.Management.CertificateServices.OcspResponderRequestFlag]$RequestFlag,
+        [SysadminsLV.PKI.Management.CertificateServices.OcspResponderRequestFlags]$RequestFlag,
         [SysadminsLV.PKI.Management.CertificateServices.OcspResponderAuditFilter]$AuditFlag,
         [SysadminsLV.PKI.Management.CertificateServices.OcspResponderLogLevel]$LogLevel,
         [switch]$TraceDebug,
