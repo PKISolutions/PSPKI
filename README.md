@@ -29,7 +29,7 @@ This module can run on any of the specified operating system:
 * Windows Server 2008 R2/2012/2012 R2/2016/2019/2022
 * Windows 7/8/8.1/10/11
 
-**Module installation requires installed RSAT (Remote System Administration Tools)**
+**Module installation requires installed AD CS RSAT (Remote System Administration Tools for Active Directory Certificate Services)**
 
 ### Certificate services support
 
