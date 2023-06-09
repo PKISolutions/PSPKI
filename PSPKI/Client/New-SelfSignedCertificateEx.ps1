@@ -45,11 +45,6 @@
         [switch]$Exportable
     )
     $ErrorActionPreference = "Stop"
-    if ($OSVersion.Major -lt 6) {
-        $NotSupported = New-Object NotSupportedException -ArgumentList "Windows XP and Windows Server 2003 are not supported!"
-        throw $NotSupported
-    }
-
     $builder = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateBuilder
 
 #region Fields
@@ -122,40 +117,40 @@
 
 #region SAN processing
     if ($SubjectAlternativeName) {
-        $Names = New-Object Security.Cryptography.X509Certificates.X509AlternativeNameCollection
+        $Names = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeNameCollection
         foreach ($altname in $SubjectAlternativeName) {
             $Name = switch -Regex ($altname) {
                 "^dns:(.+)" {
-                    New-Object Security.Cryptography.X509Certificates.X509AlternativeName "DnsName", $Matches[1]
+                    New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeName "DnsName", $Matches[1]
                 }
                 "^email:(.+)" {
-                    New-Object Security.Cryptography.X509Certificates.X509AlternativeName "Rfc822Name", $Matches[1]
+                    New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeName "Rfc822Name", $Matches[1]
                 }
                 "^upn:(.+)" {
-                    New-Object Security.Cryptography.X509Certificates.X509AlternativeName "UserPrincipalName", $Matches[1]
+                    New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeName "UserPrincipalName", $Matches[1]
                 }
                 "^ip:(.+)" {
-                    New-Object Security.Cryptography.X509Certificates.X509AlternativeName "IpAddress", $Matches[1]
+                    New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeName "IpAddress", $Matches[1]
                 }
                 "^dn:(.+)" {
-                    New-Object Security.Cryptography.X509Certificates.X509AlternativeName "DirectoryName", $Matches[1]
+                    New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeName "DirectoryName", $Matches[1]
                 }
                 "^oid:(.+)" {
-                    New-Object Security.Cryptography.X509Certificates.X509AlternativeName "RegisteredId", $Matches[1]
+                    New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeName "RegisteredId", $Matches[1]
                 }
                 "^url:(.+)" {
-                    New-Object Security.Cryptography.X509Certificates.X509AlternativeName "URL", $Matches[1]
+                    New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeName "URL", $Matches[1]
                 }
                 "^guid:(.+)" {
-                    New-Object Security.Cryptography.X509Certificates.X509AlternativeName "Guid", $Matches[1]
+                    New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeName "Guid", $Matches[1]
                 }
                 "other:(.+):(.+)" {
-                    New-Object Security.Cryptography.X509Certificates.X509AlternativeName "OtherName", $Matches[2], $Matches[1]
+                    New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AlternativeName "OtherName", $Matches[2], $Matches[1]
                 }
             }
             $Names.Add($Name)
         }
-        $SAN = New-Object Security.Cryptography.X509Certificates.X509SubjectAlternativeNamesExtension $Names, $false
+        $SAN = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509SubjectAlternativeNamesExtension $Names, $false
         [void]$builder.Extensions.Add($SAN)
     }
 #endregion

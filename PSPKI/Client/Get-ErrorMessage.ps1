@@ -4,9 +4,9 @@
 #>
 [OutputType('System.String')]
 [CmdletBinding()]
-	param(
-		[Parameter(Mandatory = $true)]
-		[int]$ErrorCode
-	)
-	[PKI.Utils.Error]::GetMessage($ErrorCode)
+    param(
+        [Parameter(Mandatory = $true)]
+        [int]$ErrorCode
+    )
+    [SysadminsLV.PKI.Utils.ErrorHelper]::GetMessage($ErrorCode)
 }

@@ -115,7 +115,9 @@
       <ScriptProperty>
         <Name>EncodedSignature</Name>
         <GetScriptBlock>
-          if ($this.SignerCertificate -eq $null) {return}
+          if ($this.SignerCertificate -eq $null) {
+            return
+          }
           [SysadminsLV.PKI.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.ProviderPath)
         </GetScriptBlock>
       </ScriptProperty>
@@ -127,11 +129,10 @@
       <ScriptProperty>
         <Name>ResolvedExtensions</Name>
         <GetScriptBlock>
-          if ($this.Extensions -eq $null) {
-            $null
+            if ($this.Extensions -eq $null) {
             return
-          }
-          [SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::ResolveExtensions($this)
+            }
+            [SysadminsLV.PKI.Cryptography.X509Certificates.X509Certificate2Extensions]::ResolveExtensions($this)
         </GetScriptBlock>
       </ScriptProperty>
     </Members>

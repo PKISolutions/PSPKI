@@ -216,7 +216,7 @@ namespace PKI.EnterprisePKI {
                 Write-Debug "URL error: $hresult"
                 $CertRequest = New-Object -ComObject CertificateAuthority.Request
                 $CertRequest.GetErrorMessageText($hresult,0)
-                [PKI.Utils.CryptographyUtils]::ReleaseCom($CertRequest)
+                [SysadminsLV.PKI.Utils.CryptographyUtils]::ReleaseCom($CertRequest)
             }
         }
         # returns [X509CRL2] or [String] that contains error message
@@ -241,7 +241,7 @@ namespace PKI.EnterprisePKI {
                 Write-Debug "URL error: $hresult"
                 $CertRequest = New-Object -ComObject CertificateAuthority.Request
                 $CertRequest.GetErrorMessageText($hresult,0)
-                [PKI.Utils.CryptographyUtils]::ReleaseCom($CertRequest)
+                [SysadminsLV.PKI.Utils.CryptographyUtils]::ReleaseCom($CertRequest)
             }
         }
         # returns PSObject -- UrlPack
@@ -533,7 +533,7 @@ namespace PKI.EnterprisePKI {
             Write-Verbose "Entering certification path validation routine..."
             Write-Debug "Entering certification path validation routine..."
             if ([IntPtr]::Zero.Equals($cert.Handle)) {
-                throw New-Object PKI.Exceptions.UninitializedObjectException "The certificate is not initialized."
+                throw New-Object SysadminsLV.PKI.Exceptions.UninitializedObjectException "The certificate is not initialized."
                 return
             }
             $projectedChain = __getChain $cert

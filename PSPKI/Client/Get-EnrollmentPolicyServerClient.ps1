@@ -4,8 +4,8 @@
 #>
 [OutputType('PKI.Enrollment.Policy.PolicyServerClient[]')]
 [CmdletBinding()]
-	param(
-		[switch]$UserContext
-	)
-	[PKI.Enrollment.Autoenrollment]::GetPolicyServers($UserContext)
+    param(
+        [switch]$UserContext
+    )
+    [PKI.Enrollment.Autoenrollment]::GetPolicyServers($UserContext)
 }

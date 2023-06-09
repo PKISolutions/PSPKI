@@ -9,7 +9,7 @@
         [string]$InputPath,
         [string]$KeyPath,
         [string]$OutputPath,
-        [Security.Cryptography.X509Certificates.X509KeySpecFlags]$KeySpec = "AT_KEYEXCHANGE",
+        [SysadminsLV.PKI.Cryptography.X509Certificates.X509KeySpecFlags]$KeySpec = "AT_KEYEXCHANGE",
         [Security.SecureString]$Password,
         [string]$ProviderName = "Microsoft Enhanced RSA and AES Cryptographic Provider",
         [Security.Cryptography.X509Certificates.StoreLocation]$StoreLocation = "CurrentUser",

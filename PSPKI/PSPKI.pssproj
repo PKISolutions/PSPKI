@@ -51,6 +51,11 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Content Include="Library\Interop.CERTENROLLLib.dll" />
     <Content Include="Library\SysadminsLV.Asn1Parser.dll" />
     <Content Include="Library\SysadminsLV.PKI.dll" />
+    <Content Include="Library\SysadminsLV.PKI.OcspClient.dll" />
+    <Content Include="Library\SysadminsLV.PKI.OcspClient.pdb" />
+    <Content Include="Library\SysadminsLV.PKI.Win.dll" />
+    <Content Include="Library\SysadminsLV.PKI.Win.pdb" />
+    <Content Include="Library\System.Security.Cryptography.Pkcs.dll" />
     <Content Include="Server\PSPKI.Help.xml" />
     <Content Include="Types\PSPKI.Format.ps1xml" />
     <Content Include="Types\PSPKI.PS5Types.ps1xml" />
@@ -80,7 +85,6 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Client\Show-Certificate.ps1" />
     <Compile Include="Client\Show-CertificateRevocationList.ps1" />
     <Compile Include="Client\Show-CertificateTrustList.ps1" />
-    <Compile Include="Client\Start-PsFCIV.ps1" />
     <Compile Include="Client\Submit-CertificateRequest.ps1" />
     <Compile Include="Client\Test-WebServerSSL.ps1" />
     <Compile Include="Client\Unregister-ObjectIdentifier.ps1" />
@@ -91,8 +95,6 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Server\Add-CertificationAuthorityAcl.ps1" />
     <Compile Include="Server\Add-CAKRACertificate.ps1" />
     <Compile Include="Server\Add-CATemplate.ps1" />
-    <Compile Include="Server\Add-CertificateEnrollmentPolicyService.ps1" />
-    <Compile Include="Server\Add-CertificateEnrollmentService.ps1" />
     <Compile Include="Server\Add-CertificateTemplateAcl.ps1" />
     <Compile Include="Server\Add-CRLDistributionPoint.ps1" />
     <Compile Include="Server\Add-ExtensionList.ps1" />
@@ -140,15 +142,12 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Server\Get-RequestRow.ps1" />
     <Compile Include="Server\Get-RevokedRequest.ps1" />
     <Compile Include="Server\Import-LostCertificate.ps1" />
-    <Compile Include="Server\Install-CertificationAuthority.ps1" />
     <Compile Include="Server\Publish-CRL.ps1" />
     <Compile Include="Server\Remove-AdcsDatabaseRow.ps1" />
     <Compile Include="Server\Remove-AuthorityInformationAccess.ps1" />
     <Compile Include="Server\Remove-CertificationAuthorityAcl.ps1" />
     <Compile Include="Server\Remove-CAKRACertificate.ps1" />
     <Compile Include="Server\Remove-CATemplate.ps1" />
-    <Compile Include="Server\Remove-CertificateEnrollmentPolicyService.ps1" />
-    <Compile Include="Server\Remove-CertificateEnrollmentService.ps1" />
     <Compile Include="Server\Remove-CertificateTemplate.ps1" />
     <Compile Include="Server\Remove-CertificateTemplateAcl.ps1" />
     <Compile Include="Server\Remove-CRLDistributionPoint.ps1" />
@@ -183,7 +182,6 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Server\Start-OnlineResponder.ps1" />
     <Compile Include="Server\Stop-CertificationAuthority.ps1" />
     <Compile Include="Server\Stop-OnlineResponder.ps1" />
-    <Compile Include="Server\Uninstall-CertificationAuthority.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Client\" />

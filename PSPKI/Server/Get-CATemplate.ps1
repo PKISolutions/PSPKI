@@ -4,14 +4,14 @@
 #>
 [OutputType('PKI.CertificateServices.CATemplate')]
 [CmdletBinding()]
-	param(
-		[Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelinebyPropertyName = $true)]
-		[Alias('CA')]
-		[PKI.CertificateServices.CertificateAuthority[]]$CertificationAuthority
-	)
-	process {
-		foreach ($CA in $CertificationAuthority) {
-			New-Object PKI.CertificateServices.CATemplate -ArgumentList $CA
-		}
-	}
+    param(
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelinebyPropertyName = $true)]
+        [Alias('CA')]
+        [PKI.CertificateServices.CertificateAuthority[]]$CertificationAuthority
+    )
+    process {
+        foreach ($CA in $CertificationAuthority) {
+            New-Object PKI.CertificateServices.CATemplate -ArgumentList $CA
+        }
+    }
 }

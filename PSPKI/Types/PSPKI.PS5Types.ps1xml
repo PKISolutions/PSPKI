@@ -6,7 +6,7 @@
       <ScriptMethod>
         <Name>ToString</Name>
         <Script>
-          [SysadminsLV.PKI.Utils.CLRExtensions.OidExtensions]::Format($this,$true)
+          [SysadminsLV.PKI.Cryptography.OidExtensions]::Format($this,$true)
         </Script>
       </ScriptMethod>
     </Members>

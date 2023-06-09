@@ -15,7 +15,7 @@
         [Parameter(Position = 3)]
         [ValidateSet("Pkcs1","Pkcs8")]
         [string]$OutputType = "Pkcs8",
-		[switch]$IncludeChain
+        [switch]$IncludeChain
     )
 $signature = @"
 [DllImport("crypt32.dll", CharSet=CharSet.Auto, SetLastError=true)]
@@ -97,18 +97,18 @@ public struct PUBKEYBLOBHEADERS {
             }
             # just check whether input file is valid PKCS#12/PFX file.
             if ([PKI.PfxTools]::PFXIsPFXBlob($pfx)) {
-				$certs = New-Object Security.Cryptography.X509Certificates.X509Certificate2Collection
-				try {
-					$certs.Import(
-						$bytes,
-						[Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($Password)),
-						"Exportable"
-					)
-					$Certificate = ($certs | Where-Object {$_.HasPrivateKey})[0]
-				} catch {
-					throw $_
-					return
-				} finally {
+                $certs = New-Object Security.Cryptography.X509Certificates.X509Certificate2Collection
+                try {
+                    $certs.Import(
+                        $bytes,
+                        [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($Password)),
+                        "Exportable"
+                    )
+                    $Certificate = ($certs | Where-Object {$_.HasPrivateKey})[0]
+                } catch {
+                    throw $_
+                    return
+                } finally {
                     [Runtime.InteropServices.Marshal]::FreeHGlobal($ptr)
                     Remove-Variable bytes, ptr, pfx -Force
                 }
@@ -127,9 +127,9 @@ public struct PUBKEYBLOBHEADERS {
 #endregion
 
 #region constants
-	$CRYPT_ACQUIRE_SILENT_FLAG = 0x40
-	$PRIVATEKEYBLOB = 0x7
-	$CRYPT_OAEP = 0x40
+    $CRYPT_ACQUIRE_SILENT_FLAG = 0x40
+    $PRIVATEKEYBLOB            = 0x7
+    $CRYPT_OAEP                = 0x40
 #endregion
 
 #region private key export routine
@@ -138,25 +138,25 @@ public struct PUBKEYBLOBHEADERS {
     $pfCallerFreeProv = $false
     # attempt to acquire private key container
     if (![PKI.PfxTools]::CryptAcquireCertificatePrivateKey($Certificate.Handle,$CRYPT_ACQUIRE_SILENT_FLAG,0,[ref]$phCryptProv,[ref]$pdwKeySpec,[ref]$pfCallerFreeProv)) {
-		throw New-Object ComponentModel.Win32Exception ([Runtime.InteropServices.Marshal]::GetLastWin32Error())
-		return
-	}
-	$phUserKey = [IntPtr]::Zero
-	# attempt to acquire private key handle
-	if (![PKI.PfxTools]::CryptGetUserKey($phCryptProv,$pdwKeySpec,[ref]$phUserKey)) {
-		throw New-Object ComponentModel.Win32Exception ([Runtime.InteropServices.Marshal]::GetLastWin32Error())
-		return
-	}
-	$pdwDataLen = 0
-	# attempt to export private key. This method fails if certificate has non-exportable private key.
-	if (![PKI.PfxTools]::CryptExportKey($phUserKey,0,$PRIVATEKEYBLOB,$CRYPT_OAEP,$null,[ref]$pdwDataLen)) {
-		throw New-Object ComponentModel.Win32Exception ([Runtime.InteropServices.Marshal]::GetLastWin32Error())
-		return
-	}
-	$pbytes = New-Object byte[] -ArgumentList $pdwDataLen
-	[void][PKI.PfxTools]::CryptExportKey($phUserKey,0,$PRIVATEKEYBLOB,$CRYPT_OAEP,$pbytes,[ref]$pdwDataLen)
-	# release private key handle
-	[void][PKI.PfxTools]::CryptDestroyKey($phUserKey)
+        throw New-Object ComponentModel.Win32Exception ([Runtime.InteropServices.Marshal]::GetLastWin32Error())
+        return
+    }
+    $phUserKey = [IntPtr]::Zero
+    # attempt to acquire private key handle
+    if (![PKI.PfxTools]::CryptGetUserKey($phCryptProv,$pdwKeySpec,[ref]$phUserKey)) {
+        throw New-Object ComponentModel.Win32Exception ([Runtime.InteropServices.Marshal]::GetLastWin32Error())
+        return
+    }
+    $pdwDataLen = 0
+    # attempt to export private key. This method fails if certificate has non-exportable private key.
+    if (![PKI.PfxTools]::CryptExportKey($phUserKey,0,$PRIVATEKEYBLOB,$CRYPT_OAEP,$null,[ref]$pdwDataLen)) {
+        throw New-Object ComponentModel.Win32Exception ([Runtime.InteropServices.Marshal]::GetLastWin32Error())
+        return
+    }
+    $pbytes = New-Object byte[] -ArgumentList $pdwDataLen
+    [void][PKI.PfxTools]::CryptExportKey($phUserKey,0,$PRIVATEKEYBLOB,$CRYPT_OAEP,$pbytes,[ref]$pdwDataLen)
+    # release private key handle
+    [void][PKI.PfxTools]::CryptDestroyKey($phUserKey)
 #endregion
 
 #region private key blob splitter
@@ -203,39 +203,39 @@ public struct PUBKEYBLOBHEADERS {
     $asnblob = [SysadminsLV.Asn1Parser.Asn1Utils]::Encode($asnblob, 48)
     # $out variable just holds output file. The file will contain private key and public certificate
     # each will be enclosed with header and footer.
-	$out = New-Object Text.StringBuilder
+    $out = New-Object Text.StringBuilder
     if ($OutputType -eq "Pkcs8") {
         $asnblob = [SysadminsLV.Asn1Parser.Asn1Utils]::Encode($asnblob, 4)
         $algid = [Security.Cryptography.CryptoConfig]::EncodeOID("1.2.840.113549.1.1.1") + 5,0
         $algid = [SysadminsLV.Asn1Parser.Asn1Utils]::Encode($algid, 48)
         $asnblob = 2,1,0 + $algid + $asnblob
         $asnblob = [SysadminsLV.Asn1Parser.Asn1Utils]::Encode($asnblob, 48)
-		$base64 = [SysadminsLV.Asn1Parser.AsnFormatter]::BinaryToString($asnblob,"Base64").Trim()
-		[void]$out.AppendFormat("{0}{1}", "-----BEGIN PRIVATE KEY-----", [Environment]::NewLine)
-		[void]$out.AppendFormat("{0}{1}", $base64, [Environment]::NewLine)
-		[void]$out.AppendFormat("{0}{1}", "-----END PRIVATE KEY-----", [Environment]::NewLine)
+        $base64 = [SysadminsLV.Asn1Parser.AsnFormatter]::BinaryToString($asnblob,"Base64").Trim()
+        [void]$out.AppendFormat("{0}{1}", "-----BEGIN PRIVATE KEY-----", [Environment]::NewLine)
+        [void]$out.AppendFormat("{0}{1}", $base64, [Environment]::NewLine)
+        [void]$out.AppendFormat("{0}{1}", "-----END PRIVATE KEY-----", [Environment]::NewLine)
     } else {
         # PKCS#1 requires RSA identifier in the header.
         # PKCS#1 is an inner structure of PKCS#8 message, therefore no additional encodings are required.
-		$base64 = [SysadminsLV.Asn1Parser.AsnFormatter]::BinaryToString($asnblob,"Base64").Trim()
-		[void]$out.AppendFormat("{0}{1}", "-----BEGIN RSA PRIVATE KEY-----", [Environment]::NewLine)
-		[void]$out.AppendFormat("{0}{1}", $base64, [Environment]::NewLine)
-		[void]$out.AppendFormat("{0}{1}", "-----END RSA PRIVATE KEY-----", [Environment]::NewLine)
+        $base64 = [SysadminsLV.Asn1Parser.AsnFormatter]::BinaryToString($asnblob,"Base64").Trim()
+        [void]$out.AppendFormat("{0}{1}", "-----BEGIN RSA PRIVATE KEY-----", [Environment]::NewLine)
+        [void]$out.AppendFormat("{0}{1}", $base64, [Environment]::NewLine)
+        [void]$out.AppendFormat("{0}{1}", "-----END RSA PRIVATE KEY-----", [Environment]::NewLine)
     }
     $base64 = [SysadminsLV.Asn1Parser.AsnFormatter]::BinaryToString($Certificate.RawData,"Base64Header")
-	$out.Append($base64)
-	if ($IncludeChain) {
-		$chain = New-Object Security.Cryptography.X509Certificates.X509Chain
-		$chain.ChainPolicy.RevocationMode = "NoCheck"
-		if ($certs) {
-			$chain.ChainPolicy.ExtraStore.AddRange($certs)
-		}
-		[void]$chain.Build($Certificate)
-		for ($n = 1; $n -lt $chain.ChainElements.Count; $n++) {
-			$base64 = [SysadminsLV.Asn1Parser.AsnFormatter]::BinaryToString($chain.ChainElements[$n].Certificate.RawData,"Base64Header")
-			$out.Append($base64)
-		}
-	}
+    $out.Append($base64)
+    if ($IncludeChain) {
+        $chain = New-Object Security.Cryptography.X509Certificates.X509Chain
+        $chain.ChainPolicy.RevocationMode = "NoCheck"
+        if ($certs) {
+            $chain.ChainPolicy.ExtraStore.AddRange($certs)
+        }
+        [void]$chain.Build($Certificate)
+        for ($n = 1; $n -lt $chain.ChainElements.Count; $n++) {
+            $base64 = [SysadminsLV.Asn1Parser.AsnFormatter]::BinaryToString($chain.ChainElements[$n].Certificate.RawData,"Base64Header")
+            $out.Append($base64)
+        }
+    }
     [IO.File]::WriteAllLines($OutputFile,$out.ToString())
 #endregion
 }

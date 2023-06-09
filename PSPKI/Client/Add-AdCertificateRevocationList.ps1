@@ -9,7 +9,7 @@ function Add-AdCertificateRevocationList {
         [SysadminsLV.PKI.Management.ActiveDirectory.DsCDPContainer]$CdpContainer,
         [Parameter(Mandatory = $true)]
         [Alias('CRL')]
-        [Security.Cryptography.X509Certificates.X509CRL2]$CertificateRevocationList,
+        [SysadminsLV.PKI.Cryptography.X509Certificates.X509CRL2]$CertificateRevocationList,
         [string]$HostName,        
         [switch]$Dispose
     )
