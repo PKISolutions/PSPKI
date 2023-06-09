@@ -14,11 +14,9 @@ LONG DESCRIPTION
     library which contains underlying API extensions via .NET class framework
     and is compiled under .NET Framework 4.7.2.
     
-    SysadminsLV.PKI.dll class library documentation is located at
-    https://pkisolutions.com/apidocs/pkix.net/
-
-    SysadminsLV.Asn1Parser.dll class library documentation is located at
-    https://www.pkisolutions.com/apidocs/asn1parser/
+    SysadminsLV.Asn1Parser.dll, SysadminsLV.PKI.dll, SysadminsLV.PKI.OcspClient.dll,
+    and SysadminsLV.PKI.Win.dll class library documentation is located at
+    https://pkisolutions.com/apidocs/pki/
 BUILT-IN COMMANDS
     The module splits commands depending on installation type. During module
     package installation you are prompted to select components to install:
