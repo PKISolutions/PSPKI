@@ -23,13 +23,11 @@ Install-Module -Name PSPKI
 ### Module Requirements
 
 * Windows PowerShell 3.0 or higher
-* .NET Framework 4.0 or higher
+* .NET Framework 4.7.2 or higher
 
 This module can run on any of the specified operating system:
-* Windows Server 2008 R2\*/2012\*/2012 R2\*/2016\*
-* Windows 7/8/8.1/10
-
-\* — Server Core installation is not supported.
+* Windows Server 2008 R2/2012/2012 R2/2016/2019/2022
+* Windows 7/8/8.1/10/11
 
 **Module installation requires installed RSAT (Remote System Administration Tools)**
 
@@ -43,28 +41,27 @@ This module supports Enterprise or Standalone Certification Authority (CA) serve
 * Windows Server 2012 R2 (including Server Core)
 * Windows Server 2016 (including Server Core)
 * Windows Server 2019 (including Server Core)
+* Windows Server 2022 (including Server Core)
 
 ### Online Responder support
 
 This module supports Online Certificate Status Protocol (OCSP) servers that are running one the following operating systems:
-* Windows Server 2003/2003 R2
 * Windows Server 2008 Enterprise (Full Installation)
 * Windows Server 2008 R2 Enterprise (Full Installation)
 * Windows Server 2012 (including Server Core)
 * Windows Server 2012 R2 (including Server Core)
 * Windows Server 2016 (including Server Core)
 * Windows Server 2019 (including Server Core)
+* Windows Server 2022 (including Server Core)
 
 ### Full Command List ###
 * [Add-AdCertificate](https://www.pkisolutions.com/tools/pspki/Add-AdCertificate)
-* [Add-AdCertificateRevocationList](https://www.pkisolutions.com/tools/pspki/Add-AdCertificateRevocationList) (Alias: **Remove-AdCrl**)
+* [Add-AdCertificateRevocationList](https://www.pkisolutions.com/tools/pspki/Add-AdCertificateRevocationList)
 * [Add-AuthorityInformationAccess](https://www.pkisolutions.com/tools/pspki/Add-AuthorityInformationAccess) (Alias: **Add-AIA**)
 * [Add-CAKRACertificate](https://www.pkisolutions.com/tools/pspki/Add-CAKRACertificate)
 * [Add-CATemplate](https://www.pkisolutions.com/tools/pspki/Add-CATemplate)
-* [Add-CertificateEnrollmentPolicyService](https://www.pkisolutions.com/tools/pspki/Add-CertificateEnrollmentPolicyService) (Alias: **Add-CEP**)
-* [Add-CertificateEnrollmentService](https://www.pkisolutions.com/tools/pspki/Add-CertificateEnrollmentService) (Alias: **Add-CES**)
 * [Add-CertificateTemplateAcl](https://www.pkisolutions.com/tools/pspki/Add-CertificateTemplateAcl)
-* [Add-CertificationAuthorityAcl](https://www.pkisolutions.com/tools/pspki/Add-CertificationAuthorityAcl) (Alias: **Add-CAACL**)
+* [Add-CertificationAuthorityAcl](https://www.pkisolutions.com/tools/pspki/Add-CertificationAuthorityAcl) (Alias: **Add-CAAccessControlEntry Add-CAACL**)
 * [Add-CRLDistributionPoint](https://www.pkisolutions.com/tools/pspki/Add-CRLDistributionPoint) (Alias: **Add-CDP**)
 * [Add-ExtensionList](https://www.pkisolutions.com/tools/pspki/Add-ExtensionList)
 * [Add-OnlineResponderAcl](https://www.pkisolutions.com/tools/pspki/Add-OnlineResponderAcl) (Alias: **Add-OCSPACL**)
@@ -79,13 +76,13 @@ This module supports Online Certificate Status Protocol (OCSP) servers that are 
 * [Deny-CertificateRequest](https://www.pkisolutions.com/tools/pspki/Deny-CertificateRequest)
 * [Disable-CertificateRevocationListFlag](https://www.pkisolutions.com/tools/pspki/Disable-CertificateRevocationListFlag) (Alias: **Disable-CRLFlag**)
 * [Disable-InterfaceFlag](https://www.pkisolutions.com/tools/pspki/Disable-InterfaceFlag)
-* [Disable-KeyRecoveryAgentFlag](https://www.pkisolutions.com/tools/pspki/Disable-KeyRecoveryAgentFlag) (Alias: **Disable-KRAFlag**)
+* [Disable-KeyRecoveryAgentFlag](https://www.pkisolutions.com/tools/pspki/Disable-KeyRecoveryAgentFlag)
 * [Disable-PolicyModuleFlag](https://www.pkisolutions.com/tools/pspki/Disable-PolicyModuleFlag)
 * [Enable-CertificateRevocationListFlag](https://www.pkisolutions.com/tools/pspki/Enable-CertificateRevocationListFlag) (Alias: **Enable-CRLFlag**)
 * [Enable-InterfaceFlag](https://www.pkisolutions.com/tools/pspki/Enable-InterfaceFlag)
-* [Enable-KeyRecoveryAgentFlag](https://www.pkisolutions.com/tools/pspki/Enable-KeyRecoveryAgentFlag) (Alias: **Enable-KRAFlag**)
+* [Enable-KeyRecoveryAgentFlag](https://www.pkisolutions.com/tools/pspki/Enable-KeyRecoveryAgentFlag)
 * [Enable-PolicyModuleFlag](https://www.pkisolutions.com/tools/pspki/Enable-PolicyModuleFlag)
-* [Get-AdcsDatabaseRow](https://www.pkisolutions.com/tools/pspki/Get-AdcsDatabaseRow) (Alias: **Get-DatabaseRow**)
+* [Get-AdcsDatabaseRow](https://www.pkisolutions.com/tools/pspki/Get-AdcsDatabaseRow)
 * [Get-ADKRACertificate](https://www.pkisolutions.com/tools/pspki/Get-ADKRACertificate)
 * [Get-AdPkiContainer](https://www.pkisolutions.com/tools/pspki/Get-AdPkiContainer)
 * [Get-AuthorityInformationAccess](https://www.pkisolutions.com/tools/pspki/Get-AuthorityInformationAccess) (Alias: **Get-AIA**)
@@ -101,8 +98,8 @@ This module supports Online Certificate Status Protocol (OCSP) servers that are 
 * [Get-CertificateTemplateAcl](https://www.pkisolutions.com/tools/pspki/Get-CertificateTemplateAcl)
 * [Get-CertificateTrustList](https://www.pkisolutions.com/tools/pspki/Get-CertificateTrustList) (Alias: **Get-CTL**)
 * [Get-CertificateValidityPeriod](https://www.pkisolutions.com/tools/pspki/Get-CertificateValidityPeriod)
-* [Get-CertificationAuthority](https://www.pkisolutions.com/tools/pspki/Get-CertificationAuthority) (Alias: **Get-CA**)
-* [Get-CertificationAuthorityAcl](https://www.pkisolutions.com/tools/pspki/Get-CertificationAuthorityAcl) (Alias: **Get-CAACL**)
+* [Get-CertificationAuthority](https://www.pkisolutions.com/tools/pspki/Get-CertificationAuthority)
+* [Get-CertificationAuthorityAcl](https://www.pkisolutions.com/tools/pspki/Get-CertificationAuthorityAcl) (Alias: **Get-CAACL Get-CASecurityDescriptor**)
 * [Get-CertificationAuthorityDbSchema](https://www.pkisolutions.com/tools/pspki/Get-CertificationAuthorityDbSchema)
 * [Get-CryptographicServiceProvider](https://www.pkisolutions.com/tools/pspki/Get-CryptographicServiceProvider) (Alias: **Get-Csp**)
 * [Get-CRLDistributionPoint](https://www.pkisolutions.com/tools/pspki/Get-CRLDistributionPoint) (Alias: **Get-CDP**)
@@ -114,7 +111,7 @@ This module supports Online Certificate Status Protocol (OCSP) servers that are 
 * [Get-FailedRequest](https://www.pkisolutions.com/tools/pspki/Get-FailedRequest)
 * [Get-InterfaceFlag](https://www.pkisolutions.com/tools/pspki/Get-InterfaceFlag)
 * [Get-IssuedRequest](https://www.pkisolutions.com/tools/pspki/Get-IssuedRequest)
-* [Get-KeyRecoveryAgentFlag](https://www.pkisolutions.com/tools/pspki/Get-KeyRecoveryAgentFlag) (Alias: **Get-KRAFlag**)
+* [Get-KeyRecoveryAgentFlag](https://www.pkisolutions.com/tools/pspki/Get-KeyRecoveryAgentFlag)
 * [Get-ObjectIdentifier](https://www.pkisolutions.com/tools/pspki/Get-ObjectIdentifier) (Alias: **oid**)
 * [Get-ObjectIdentifierEx](https://www.pkisolutions.com/tools/pspki/Get-ObjectIdentifierEx) (Alias: **oid2**)
 * [Get-OnlineResponderAcl](https://www.pkisolutions.com/tools/pspki/Get-OnlineResponderAcl) (Alias: **Get-OCSPACL**)
@@ -123,7 +120,6 @@ This module supports Online Certificate Status Protocol (OCSP) servers that are 
 * [Get-PolicyModuleFlag](https://www.pkisolutions.com/tools/pspki/Get-PolicyModuleFlag)
 * [Get-RevokedRequest](https://www.pkisolutions.com/tools/pspki/Get-RevokedRequest)
 * [Import-LostCertificate](https://www.pkisolutions.com/tools/pspki/Import-LostCertificate)
-* [Install-CertificationAuthority](https://www.pkisolutions.com/tools/pspki/Install-CertificationAuthority) (Alias: **Install-CA**)
 * [New-SelfSignedCertificateEx](https://www.pkisolutions.com/tools/pspki/New-SelfSignedCertificateEx)
 * [Ping-ICertInterface](https://www.pkisolutions.com/tools/pspki/Ping-ICertInterface)
 * [Publish-CRL](https://www.pkisolutions.com/tools/pspki/Publish-CRL)
@@ -131,15 +127,13 @@ This module supports Online Certificate Status Protocol (OCSP) servers that are 
 * [Register-ObjectIdentifier](https://www.pkisolutions.com/tools/pspki/Register-ObjectIdentifier)
 * [Remove-AdCertificate](https://www.pkisolutions.com/tools/pspki/Remove-AdCertificate)
 * [Remove-AdCertificateRevocationList](https://www.pkisolutions.com/tools/pspki/Remove-AdCertificateRevocationList)
-* [Remove-AdcsDatabaseRow](https://www.pkisolutions.com/tools/pspki/Remove-AdcsDatabaseRow)
+* [Remove-AdcsDatabaseRow](https://www.pkisolutions.com/tools/pspki/Remove-AdcsDatabaseRow) (Alias: **Remove-Request**)
 * [Remove-AuthorityInformationAccess](https://www.pkisolutions.com/tools/pspki/Remove-AuthorityInformationAccess) (Alias: **Remove-AIA**)
 * [Remove-CAKRACertificate](https://www.pkisolutions.com/tools/pspki/Remove-CAKRACertificate)
 * [Remove-CATemplate](https://www.pkisolutions.com/tools/pspki/Remove-CATemplate)
-* [Remove-CertificateEnrollmentPolicyService](https://www.pkisolutions.com/tools/pspki/Remove-CertificateEnrollmentPolicyService) (Alias: **Remove-CEP**)
-* [Remove-CertificateEnrollmentService](https://www.pkisolutions.com/tools/pspki/Remove-CertificateEnrollmentService) (Alias: **Remove-CES**)
 * [Remove-CertificateTemplate](https://www.pkisolutions.com/tools/pspki/Remove-CertificateTemplate)
 * [Remove-CertificateTemplateAcl](https://www.pkisolutions.com/tools/pspki/Remove-CertificateTemplateAcl)
-* [Remove-CertificationAuthorityAcl](https://www.pkisolutions.com/tools/pspki/Remove-CertificationAuthorityAcl) (Alias: **Remove-CAACL**)
+* [Remove-CertificationAuthorityAcl](https://www.pkisolutions.com/tools/pspki/Remove-CertificationAuthorityAcl) (Alias: **Remove-CAAccessControlEntry Remove-CAACL**)
 * [Remove-CRLDistributionPoint](https://www.pkisolutions.com/tools/pspki/Remove-CRLDistributionPoint) (Alias: **Remove-CDP**)
 * [Remove-ExtensionList](https://www.pkisolutions.com/tools/pspki/Remove-ExtensionList)
 * [Remove-OnlineResponderAcl](https://www.pkisolutions.com/tools/pspki/Remove-OnlineResponderAcl) (Alias: **Remove-OCSPACL**)
@@ -149,7 +143,7 @@ This module supports Online Certificate Status Protocol (OCSP) servers that are 
 * [Restart-CertificationAuthority](https://www.pkisolutions.com/tools/pspki/Restart-CertificationAuthority)
 * [Restart-OnlineResponder](https://www.pkisolutions.com/tools/pspki/Restart-OnlineResponder)
 * [Restore-CertificateRevocationListFlagDefault](https://www.pkisolutions.com/tools/pspki/Restore-CertificateRevocationListFlagDefault) (Alias: **Restore-CRLFlagDefault**)
-* [Restore-KeyRecoveryAgentFlagDefault](https://www.pkisolutions.com/tools/pspki/Restore-KeyRecoveryAgentFlagDefault) (Alias: **Restore-KRAFlagDefault**)
+* [Restore-KeyRecoveryAgentFlagDefault](https://www.pkisolutions.com/tools/pspki/Restore-KeyRecoveryAgentFlagDefault)
 * [Restore-PolicyModuleFlagDefault](https://www.pkisolutions.com/tools/pspki/Restore-PolicyModuleFlagDefault)
 * [Revoke-Certificate](https://www.pkisolutions.com/tools/pspki/Revoke-Certificate)
 * [Set-AuthorityInformationAccess](https://www.pkisolutions.com/tools/pspki/Set-AuthorityInformationAccess) (Alias: **Set-AIA**)
@@ -159,7 +153,7 @@ This module supports Online Certificate Status Protocol (OCSP) servers that are 
 * [Set-CertificateExtension](https://www.pkisolutions.com/tools/pspki/Set-CertificateExtension)
 * [Set-CertificateTemplateAcl](https://www.pkisolutions.com/tools/pspki/Set-CertificateTemplateAcl)
 * [Set-CertificateValidityPeriod](https://www.pkisolutions.com/tools/pspki/Set-CertificateValidityPeriod)
-* [Set-CertificationAuthorityAcl](https://www.pkisolutions.com/tools/pspki/Set-CertificationAuthorityAcl) (Alias: **Set-CAACL**)
+* [Set-CertificationAuthorityAcl](https://www.pkisolutions.com/tools/pspki/Set-CertificationAuthorityAcl) (Alias: **Set-CAACL Set-CASecurityDescriptor**)
 * [Set-CRLDistributionPoint](https://www.pkisolutions.com/tools/pspki/Set-CRLDistributionPoint) (Alias: **Set-CDP**)
 * [Set-CRLValidityPeriod](https://www.pkisolutions.com/tools/pspki/Set-CRLValidityPeriod)
 * [Set-ExtensionList](https://www.pkisolutions.com/tools/pspki/Set-ExtensionList)
@@ -171,10 +165,8 @@ This module supports Online Certificate Status Protocol (OCSP) servers that are 
 * [Show-CertificateTrustList](https://www.pkisolutions.com/tools/pspki/Show-CertificateTrustList) (Alias: **Show-CTL**)
 * [Start-CertificationAuthority](https://www.pkisolutions.com/tools/pspki/Start-CertificationAuthority)
 * [Start-OnlineResponder](https://www.pkisolutions.com/tools/pspki/Start-OnlineResponder)
-* [Start-PsFCIV](https://www.pkisolutions.com/tools/pspki/Start-PsFCIV)
 * [Stop-CertificationAuthority](https://www.pkisolutions.com/tools/pspki/Stop-CertificationAuthority)
 * [Stop-OnlineResponder](https://www.pkisolutions.com/tools/pspki/Stop-OnlineResponder)
 * [Submit-CertificateRequest](https://www.pkisolutions.com/tools/pspki/Submit-CertificateRequest)
 * [Test-WebServerSSL](https://www.pkisolutions.com/tools/pspki/Test-WebServerSSL)
-* [Uninstall-CertificationAuthority](https://www.pkisolutions.com/tools/pspki/Uninstall-CertificationAuthority) (Alias: **Uninstall-CA**)
 * [Unregister-ObjectIdentifier](https://www.pkisolutions.com/tools/pspki/Unregister-ObjectIdentifier)
