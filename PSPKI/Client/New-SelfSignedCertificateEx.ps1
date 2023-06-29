@@ -61,7 +61,7 @@
     }
     $builder.NotBefore = $NotBefore
     $builder.NotAfter = $NotAfter
-    $builder.HashingAlgorithm = New-Object Security.Cryptography.Oid2 $SignatureAlgorithm, $false
+    $builder.HashingAlgorithm = New-Object SysadminsLV.PKI.Cryptography.Oid2 $SignatureAlgorithm, $false
     $builder.AlternateSignatureFormat = $AlternateSignatureFormat
     $builder.FriendlyName = $FriendlyName
 #endregion
