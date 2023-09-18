@@ -76,6 +76,7 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Client\Get-ErrorMessage.ps1" />
     <Compile Include="Client\Get-ObjectIdentifier.ps1" />
     <Compile Include="Client\Get-ObjectIdentifierEx.ps1" />
+    <Compile Include="Client\Install-CertificateResponse.ps1" />
     <Compile Include="Client\New-SelfSignedCertificateEx.ps1" />
     <Compile Include="Client\Ping-ICertInterface.ps1" />
     <Compile Include="Client\Receive-Certificate.ps1" />
