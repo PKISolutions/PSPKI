@@ -140,6 +140,7 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Server\Get-OnlineResponderAcl.ps1" />
     <Compile Include="Server\Get-PendingRequest.ps1" />
     <Compile Include="Server\Get-PolicyModuleFlag.ps1" />
+    <Compile Include="Server\Get-RequestArchivedKey.ps1" />
     <Compile Include="Server\Get-RequestRow.ps1" />
     <Compile Include="Server\Get-RevokedRequest.ps1" />
     <Compile Include="Server\Import-LostCertificate.ps1" />

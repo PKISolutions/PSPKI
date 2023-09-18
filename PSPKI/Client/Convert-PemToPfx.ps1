@@ -166,11 +166,7 @@
                 $Password = Read-Host -Prompt "Enter PFX password" -AsSecureString
             }
             $pfxBytes = $Cert.Export("pfx", $Password)
-            if ($PsIsCore) {
-                Set-Content -Path $OutputPath -Value $pfxBytes -AsByteStream
-            } else {
-                Set-Content -Path $OutputPath -Value $pfxBytes -Encoding Byte
-            }
+            Export-Binary $OutputPath $pfxBytes
         }
         #endregion
         if ($Install) {
