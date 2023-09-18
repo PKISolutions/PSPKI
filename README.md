@@ -22,8 +22,8 @@ Install-Module -Name PSPKI
 
 ### Module Requirements
 
-* Windows PowerShell 3.0 or higher
-* .NET Framework 4.7.2 or higher
+* ![image](https://img.shields.io/badge/PowerShell-3.0-blue.svg)
+* ![image](https://img.shields.io/badge/.NET_Framework-4.7.2-blue.svg)
 
 This module can run on any of the specified operating system:
 * Windows Server 2008 R2/2012/2012 R2/2016/2019/2022
