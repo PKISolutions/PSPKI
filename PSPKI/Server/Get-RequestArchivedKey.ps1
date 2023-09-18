@@ -1,4 +1,7 @@
 function Get-RequestArchivedKey {
+<#
+.ExternalHelp PSPKI.Help.xml
+#>
 [OutputType('SysadminsLV.PKI.Cryptography.Pkcs.DefaultSignedPkcs7')]
 [CmdletBinding()]
     param(
