@@ -232,7 +232,7 @@ namespace PKI.EnterprisePKI {
                 $crlContext = [Runtime.InteropServices.Marshal]::PtrToStructure($ppvObject,[Type][PKI.EnterprisePKI.Crypt32+CRL_CONTEXT])
                 $rawData = New-Object byte[] -ArgumentList $crlContext.cbCrlEncoded
                 [Runtime.InteropServices.Marshal]::Copy($crlContext.pbCrlEncoded,$rawData,0,$rawData.Length)
-                $crl = New-Object Security.Cryptography.X509Certificates.X509CRL2 (,$rawData)
+                $crl = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CRL2 (,$rawData)
                 Write-Debug "CRL: $($crl.Issuer)"
                 $crl
                 [void][PKI.EnterprisePKI.Crypt32]::CertFreeCRLContext($ppvObject)
@@ -262,7 +262,7 @@ namespace PKI.EnterprisePKI {
                 $e = $cert.Extensions["2.5.29.31"]
                 if ($e) {
                     $asn = New-Object Security.Cryptography.AsnEncodedData (,$e.RawData)
-                    $cdp = New-Object Security.Cryptography.X509Certificates.X509CRLDistributionPointsExtension $asn, $false
+                    $cdp = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CRLDistributionPointsExtension $asn, $false
                     $URLs.CDP = $cdp.GetURLs()
                     Write-Debug "Found $(($URLs.CDP).Length) CDP URLs."
                     if ($URLs.CDP) {$URLs.CDP | ForEach-Object {Write-Debug "$_"}}
@@ -274,7 +274,7 @@ namespace PKI.EnterprisePKI {
                 $e = $cert.Extensions["1.3.6.1.5.5.7.1.1"]
                 if ($e) {
                     $asn = New-Object Security.Cryptography.AsnEncodedData (,$e.RawData)
-                    $aia = New-Object Security.Cryptography.X509Certificates.X509AuthorityInformationAccessExtension $asn, $false
+                    $aia = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509AuthorityInformationAccessExtension $asn, $false
                     $URLs.AIA = $aia.CertificationAuthorityIssuer
                     Write-Debug "Found $(($URLs.AIA).Length) Certification Authority Issuer URLs."
                     if ($URLs.AIA) {$URLs.AIA | ForEach-Object {Write-Debug $_}}
@@ -287,7 +287,7 @@ namespace PKI.EnterprisePKI {
                 $URLs
             } else {
                 Write-Debug "Fetching 'Freshest CRL' extension..."
-                $crl = New-Object Security.Cryptography.X509Certificates.X509CRL2 @(,$rawData)
+                $crl = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CRL2 @(,$rawData)
                 $e = $crl.Extensions["2.5.29.46"] # Freshest CRL
                 if ($e) {
                     $URLs.FreshestCRL = $e.GetURLs()
@@ -360,7 +360,7 @@ namespace PKI.EnterprisePKI {
             param(
                 [PKI.EnterprisePKI.UrlElement]$urlElement,
                 [Security.Cryptography.X509Certificates.X509ChainElement]$cert,
-                [Security.Cryptography.X509Certificates.X509CRL2]$BaseCRL,
+                [SysadminsLV.PKI.Cryptography.X509Certificates.X509CRL2]$BaseCRL,
                 [switch]$DeltaCRL
             )
             Write-Verbose "Entering CRL validation routine..."
@@ -572,7 +572,7 @@ namespace PKI.EnterprisePKI {
                         UrlType = [PKI.EnterprisePKI.UrlType]::Crl;
                     }
                     $obj = __downloadCrl $urlElement.Url
-                    if ($obj -is [Security.Cryptography.X509Certificates.X509CRL2]) {
+                    if ($obj -is [SysadminsLV.PKI.Cryptography.X509Certificates.X509CRL2]) {
                         $urlElement.SetObject($obj)
                         $urlElement = __verifyCDP $urlElement $projectedChain[$i + 1]
                         $urlPack2 = __getUrl ($urlElement.GetObject()).RawData $false
@@ -588,7 +588,7 @@ namespace PKI.EnterprisePKI {
                                 UrlType = [PKI.EnterprisePKI.UrlType]::Crl;
                             }
                             $obj2 = __downloadCrl $urlElement2.Url
-                            if ($obj2 -is [Security.Cryptography.X509Certificates.X509CRL2]) {
+                            if ($obj2 -is [SysadminsLV.PKI.Cryptography.X509Certificates.X509CRL2]) {
                                 $urlElement2.SetObject($obj2)
                                 $urlElement2 = __verifyCDP $urlElement2 $projectedChain[$i + 1] $obj -DeltaCRL
                             } else {
