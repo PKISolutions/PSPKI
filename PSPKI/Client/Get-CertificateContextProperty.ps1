@@ -19,13 +19,13 @@ function Get-CertificateContextProperty {
             switch ($PSCmdlet.ParameterSetName) {
                 "__name" {
                     if ($PropertyName -eq "None") {
-                        [SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::GetCertificateContextProperties($cert)
+                        [SysadminsLV.PKI.Cryptography.X509Certificates.X509Certificate2ExtensionsWin]::GetCertificateContextProperties($cert)
                     } else {
-                        [SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::GetCertificateContextProperty($cert, $PropertyName)
+                        [SysadminsLV.PKI.Cryptography.X509Certificates.X509Certificate2ExtensionsWin]::GetCertificateContextProperty($cert, $PropertyName)
                     }
                 }
                 "__list" {
-                    [SysadminsLV.PKI.Utils.CLRExtensions.X509Certificate2Extensions]::GetCertificateContextPropertyList($cert)
+                    [SysadminsLV.PKI.Cryptography.X509Certificates.X509Certificate2ExtensionsWin]::GetCertificateContextPropertyList($cert)
                 }
             }
         }
