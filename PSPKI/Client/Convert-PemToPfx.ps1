@@ -105,11 +105,31 @@
     function __associatePrivateKey($Cert, $AsymmetricKey) {
         Write-Verbose "Merging public certificate with private key..."
         switch ($AlgFamily) {
-            "RSA" {[System.Security.Cryptography.X509Certificates.RSACertificateExtensions]::CopyWithPrivateKey($Cert, $AsymmetricKey)}
+            "RSA" {
+                if ($csp.IsLegacy) {
+                    $NewCert = New-Object Security.Cryptography.X509Certificates.X509Certificate2 -ArgumentList (,$Cert.RawData)
+                    $cspParams = New-Object System.Security.Cryptography.CspParameters $csp.Type, $ProviderName, ("pspki-" + [guid]::NewGuid())
+                    if ($Install) {
+                        if ($StoreLocation -eq "LocalMachine") {
+                            $cspParams.Flags = 1
+                        }
+                    } else {
+                        #$cspParams.Flags = 128
+                    }
+                    $legacyRsa = New-Object System.Security.Cryptography.RSACryptoServiceProvider $cspParams
+                    $legacyRsa.ImportParameters($AsymmetricKey.ExportParameters($true))
+                    $NewCert.PrivateKey = $legacyRsa
+
+                    $NewCert
+                } else {
+                    [System.Security.Cryptography.X509Certificates.RSACertificateExtensions]::CopyWithPrivateKey($Cert, $AsymmetricKey)
+                }
+            }
             "ECC" {[System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions]::CopyWithPrivateKey($Cert, $AsymmetricKey)}
         }
         Write-Verbose "Public certificate and private key are successfully merged."
     }
+
     function __duplicateCertWithKey($CertWithKey) {
         $PfxBytes = $CertWithKey.Export("pfx")
         New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 -ArgumentList $PfxBytes, "", $KeyStorageFlags
@@ -147,6 +167,12 @@
         $pfxBytes = $CertWithKey.Export("pfx", $Password)
         Export-Binary $OutputPath $pfxBytes
         Write-Verbose "PFX is saved."
+    }
+
+    # Determine CSP
+    $csp = Get-CryptographicServiceProvider -Name $ProviderName
+    if (!$csp) {
+        throw "Specified provider name is invalid."
     }
 
     # parse content
