@@ -109,6 +109,7 @@
                 if ($csp.IsLegacy) {
                     $NewCert = New-Object Security.Cryptography.X509Certificates.X509Certificate2 -ArgumentList (,$Cert.RawData)
                     $cspParams = New-Object System.Security.Cryptography.CspParameters $csp.Type, $ProviderName, ("pspki-" + [guid]::NewGuid())
+                    $cspParams.KeyNumber = [int]$KeySpec
                     if ($Install) {
                         if ($StoreLocation -eq "LocalMachine") {
                             $cspParams.Flags = 1
