@@ -6,179 +6,190 @@
 [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true, Position = 0)]
+        [Alias('CertificatePath', 'CertPath')]
         [string]$InputPath,
         [string]$KeyPath,
         [string]$OutputPath,
         [SysadminsLV.PKI.Cryptography.X509Certificates.X509KeySpecFlags]$KeySpec = "AT_KEYEXCHANGE",
         [Security.SecureString]$Password,
-        [string]$ProviderName = "Microsoft Enhanced RSA and AES Cryptographic Provider",
+        [string]$ProviderName = "Microsoft Software Key Storage Provider",
         [Security.Cryptography.X509Certificates.StoreLocation]$StoreLocation = "CurrentUser",
         [switch]$Install
     )
-    if ($PSBoundParameters.Verbose) {$VerbosePreference = "continue"}
-    if ($PSBoundParameters.Debug) {
-        $DebugPreference = "continue"
+    if ($PSBoundParameters["Verbose"]) {$VerbosePreference = "continue"}
+    if ($PSBoundParameters["Debug"]) {$DebugPreference = "continue"}
+    $ErrorActionPreference = "Stop"
+
+    # PSCore needs extra assembly import
+    if ($PsIsCore) {
+        Add-Type -AssemblyName "System.Security.Cryptography.X509Certificates"
     }
-    
-    #region helper functions
-    function __normalizeAsnInteger ($array) {
-        $padding = $array.Length % 8
-        if ($padding) {
-            $array = $array[$padding..($array.Length - 1)]
+
+    # global variables
+    Write-Verbose "Determining key storage flags..."
+    $KeyStorageFlags = [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable
+    if ($Install) {
+        if ($StoreLocation -eq "CurrentUser") {
+            $KeyStorageFlags = $KeyStorageFlags -bor [Security.Cryptography.X509Certificates.X509KeyStorageFlags]::UserKeySet
+        } else {
+            $KeyStorageFlags = $KeyStorageFlags -bor [Security.Cryptography.X509Certificates.X509KeyStorageFlags]::MachineKeySet
         }
-        [array]::Reverse($array)
-        [Byte[]]$array
+    } else {
+        $KeyStorageFlags = $KeyStorageFlags -bor [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::EphemeralKeySet
     }
+    Write-Verbose "Resulting storage flags: $KeyStorageFlags"
+
+    $script:AlgFamily = ""
+    [System.Collections.Generic.List[object]]$Disposables = @()
+
+    # returns: X509Certificate2
     function __extractCert([string]$Text) {
+        Write-Verbose "Reading certificate.."
         if ($Text -match "(?msx).*-{5}BEGIN\sCERTIFICATE-{5}(.+)-{5}END\sCERTIFICATE-{5}") {
-        $keyFlags = [Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable
-        if ($Install) {
-            $keyFlags += if ($StoreLocation -eq "CurrentUser") {
-                [Security.Cryptography.X509Certificates.X509KeyStorageFlags]::UserKeySet
-            } else {
-                [Security.Cryptography.X509Certificates.X509KeyStorageFlags]::MachineKeySet
+            $CertRawData = [Convert]::FromBase64String($matches[1])
+            $Cert = New-Object Security.Cryptography.X509Certificates.X509Certificate2 -ArgumentList (,$CertRawData)
+            Write-Verbose "Public key algorithm: $($Cert.PublicKey.Oid.FriendlyName) ($($Cert.PublicKey.Oid.Value))"
+            switch ($Cert.PublicKey.Oid.Value) {
+                $([SysadminsLV.PKI.Cryptography.AlgorithmOid]::RSA) { $script:AlgFamily = "RSA" }
+                $([SysadminsLV.PKI.Cryptography.AlgorithmOid]::ECC) { $script:AlgFamily = "ECC" }
+            }
+
+            $Cert
+        } else {
+            throw "Missing certificate file."
+        }
+    }
+    # returns: AsymmetricKey (RSACng or ECDsaCng)
+    function __extractPrivateKey([string]$Text) {
+        Write-Verbose "Reading private key..."
+        $bin = if ($Text -match "(?msx).*-{5}BEGIN\sPRIVATE\sKEY-{5}(.+)-{5}END\sPRIVATE\sKEY-{5}") {
+            Write-Verbose "Found private key in PKCS#8 format."
+            [convert]::FromBase64String($matches[1])
+        } elseif ($Text -match "(?msx).*-{5}BEGIN\sRSA\sPRIVATE\sKEY-{5}(.+)-{5}END\sRSA\sPRIVATE\sKEY-{5}") {
+            Write-Verbose "Found RSA private key in PKCS#1 format."
+            [convert]::FromBase64String($matches[1])
+        }  else {
+            throw "The data is invalid."
+        }
+        if ($AlgFamily -eq "RSA") {
+            Write-Verbose "Converting RSA PKCS#1 to PKCS#8..."
+            # RSA can be in PKCS#1 format, which is not supported by CngKey.
+            $rsa = New-Object SysadminsLV.PKI.Cryptography.RsaPrivateKey (,$bin)
+            $bin = $rsa.Export("Pkcs8")
+            $rsa.Dispose()
+        }
+
+        Write-Verbose "Using provider: $ProviderName"
+        $prov = [System.Security.Cryptography.CngProvider]::new($ProviderName)
+        $blobType = [System.Security.Cryptography.CngKeyBlobFormat]::Pkcs8PrivateBlob
+        # make it exportable
+        $cngProp = New-Object System.Security.Cryptography.CngProperty("Export Policy", [BitConverter]::GetBytes(3), "None")
+        $cng = [System.Security.Cryptography.CngKey]::Import($bin, $blobType, $prov)
+        $Disposables.Add($cng)
+        $cng.SetProperty($cngProp)
+
+        switch ($AlgFamily) {
+            "RSA" {
+                New-Object System.Security.Cryptography.RSACng $cng
+            }
+            "ECC" {
+                New-Object System.Security.Cryptography.ECDsaCng $cng
+                
+            }
+            default {
+                throw "Specified algorithm is not supported"
             }
         }
-        $RawData = [Convert]::FromBase64String($matches[1])
-            try {
-                New-Object Security.Cryptography.X509Certificates.X509Certificate2 -ArgumentList $RawData, "", $keyFlags
-            } catch {throw "The data is not valid security certificate."}
-            Write-Debug "X.509 certificate is correct."
-        } else {throw "Missing certificate file."}
     }
-    # returns [byte[]]
-    function __composePRIVATEKEYBLOB($modulus, $PublicExponent, $PrivateExponent, $Prime1, $Prime2, $Exponent1, $Exponent2, $Coefficient) {
-        Write-Debug "Calculating key length."
-        $bitLen = "{0:X4}" -f $($modulus.Length * 8)
-        Write-Debug "Key length is $($modulus.Length * 8) bits."
-        [byte[]]$bitLen1 = Invoke-Expression 0x$([int]$bitLen.Substring(0,2))
-        [byte[]]$bitLen2 = Invoke-Expression 0x$([int]$bitLen.Substring(2,2))
-        [Byte[]]$PrivateKey = 0x07,0x02,0x00,0x00,0x00,0x24,0x00,0x00,0x52,0x53,0x41,0x32,0x00
-        [Byte[]]$PrivateKey = $PrivateKey + $bitLen1 + $bitLen2 + $PublicExponent + ,0x00 + `
-            $modulus + $Prime1 + $Prime2 + $Exponent1 + $Exponent2 + $Coefficient + $PrivateExponent
-        $PrivateKey
-    }
-    # returns RSACryptoServiceProvider for dispose purposes
-    function __attachPrivateKey([Byte[]]$PrivateKey) {
-        $cspParams = New-Object Security.Cryptography.CspParameters -Property @{
-            ProviderName = $ProviderName
-            KeyContainerName = "pspki-" + [Guid]::NewGuid().ToString()
-            KeyNumber = [int]$KeySpec
-        }
-        if ($Install -and $StoreLocation -eq "LocalMachine") {
-            $cspParams.Flags += [Security.Cryptography.CspProviderFlags]::UseMachineKeyStore
-        }
-        $rsa = New-Object Security.Cryptography.RSACryptoServiceProvider $cspParams
-        $rsa.ImportCspBlob($PrivateKey)
-        if ($PSVersionTable.PSEdition -eq "Core") {
-            Add-Type -AssemblyName "System.Security.Cryptography.X509Certificates"
-            $script:Cert = [Security.Cryptography.X509Certificates.RSACertificateExtensions]::CopyWithPrivateKey($_Cert.RawData, $rsa)
+    # returns: X509Certificate2 with associated private key
+    function __associatePrivateKey($Cert, $AsymmetricKey) {
+        Write-Verbose "Merging public certificate with private key..."
+        switch ($AlgFamily) {
+            "RSA" {
+                if ($csp.IsLegacy) {
+                    $NewCert = New-Object Security.Cryptography.X509Certificates.X509Certificate2 -ArgumentList (,$Cert.RawData)
+                    $cspParams = New-Object System.Security.Cryptography.CspParameters $csp.Type, $ProviderName, ("pspki-" + [guid]::NewGuid())
+                    if ($Install) {
+                        if ($StoreLocation -eq "LocalMachine") {
+                            $cspParams.Flags = 1
+                        }
+                    } else {
+                        #$cspParams.Flags = 128
+                    }
+                    $legacyRsa = New-Object System.Security.Cryptography.RSACryptoServiceProvider $cspParams
+                    $legacyRsa.ImportParameters($AsymmetricKey.ExportParameters($true))
+                    $NewCert.PrivateKey = $legacyRsa
 
-        } else {
-            $script:Cert.PrivateKey = $rsa
+                    $NewCert
+                } else {
+                    [System.Security.Cryptography.X509Certificates.RSACertificateExtensions]::CopyWithPrivateKey($Cert, $AsymmetricKey)
+                }
+            }
+            "ECC" {[System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions]::CopyWithPrivateKey($Cert, $AsymmetricKey)}
         }
-        $rsa
+        Write-Verbose "Public certificate and private key are successfully merged."
     }
-    # returns Asn1Reader
-    function __decodePkcs1($base64) {
-        Write-Debug "Processing PKCS#1 RSA KEY module."
-        $asn = New-Object SysadminsLV.Asn1Parser.Asn1Reader @(,[Convert]::FromBase64String($base64))
-        if ($asn.Tag -ne 48) {throw "The data is invalid."}
-        $asn
+
+    function __duplicateCertWithKey($CertWithKey) {
+        $PfxBytes = $CertWithKey.Export("pfx")
+        New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 -ArgumentList $PfxBytes, "", $KeyStorageFlags
     }
-    # returns Asn1Reader
-    function __decodePkcs8($base64) {
-        Write-Debug "Processing PKCS#8 Private Key module."
-        $asn = New-Object SysadminsLV.Asn1Parser.Asn1Reader @(,[Convert]::FromBase64String($base64))
-        if ($asn.Tag -ne 48) {throw "The data is invalid."}
-        # version
-        if (!$asn.MoveNext()) {throw "The data is invalid."}
-        # algorithm identifier
-        if (!$asn.MoveNext()) {throw "The data is invalid."}
-        # octet string
-        if (!$asn.MoveNextCurrentLevel()) {throw "The data is invalid."}
-        if ($asn.Tag -ne 4) {throw "The data is invalid."}
-        if (!$asn.MoveNext()) {throw "The data is invalid."}
-        $asn
+    function __installCert($CertWithKey) {
+        if (!$Install) {
+            $CertWithKey
+            return
+        }
+
+        Write-Verbose "Installing certificate to certificate store: $StoreLocation"
+        # $CertWithKey cert has ephemeral key which cannot be installed into cert store as is.
+        # so export it into PFX in memory and re-import back with storage flags
+        $NewCert = __duplicateCertWithKey $CertWithKey
+        # dispose ephemeral cert received from params, we have a persisted cert to return
+        $CertWithKey.Dispose()
+
+        $store = New-Object Security.Cryptography.X509Certificates.X509Store "my", $StoreLocation
+        $store.Open("ReadWrite")
+        $Disposables.Add($store)
+        $store.Add($NewCert)
+        $store.Close()
+        Write-Verbose "Certificate is installed."
+        # dispose this temporary cert
+        $NewCert
     }
-    #endregion
-    $ErrorActionPreference = "Stop"
-    
-    $File = Get-Item $InputPath -Force -ErrorAction Stop
-    if ($KeyPath) {$Key = Get-Item $KeyPath -Force -ErrorAction Stop}
-    
+    function __exportPfx($CertWithKey) {
+        if ([string]::IsNullOrWhiteSpace($OutputPath)) {
+            return
+        }
+        Write-Verbose "Saving PFX to a file: $OutputPath"
+        if (!$Password) {
+            $Password = Read-Host -Prompt "Enter PFX password" -AsSecureString
+        }
+        $pfxBytes = $CertWithKey.Export("pfx", $Password)
+        Export-Binary $OutputPath $pfxBytes
+        Write-Verbose "PFX is saved."
+    }
+
+    # Determine CSP
+    $csp = Get-CryptographicServiceProvider -Name $ProviderName
+    if (!$csp) {
+        throw "Specified provider name is invalid."
+    }
+
     # parse content
     $Text = Get-Content -Path $InputPath -Raw -ErrorAction Stop
     Write-Debug "Extracting certificate information..."
     $Cert = __extractCert $Text
-    if ($Key) {$Text = Get-Content -Path $KeyPath -Raw -ErrorAction Stop}
-    $asn = if ($Text -match "(?msx).*-{5}BEGIN\sPRIVATE\sKEY-{5}(.+)-{5}END\sPRIVATE\sKEY-{5}") {
-        __decodePkcs8 $matches[1]
-    } elseif ($Text -match "(?msx).*-{5}BEGIN\sRSA\sPRIVATE\sKEY-{5}(.+)-{5}END\sRSA\sPRIVATE\sKEY-{5}") {
-        __decodePkcs1 $matches[1]
-    }  else {throw "The data is invalid."}
-    # private key version
-    if (!$asn.MoveNext()) {throw "The data is invalid."}
-    # modulus n
-    if (!$asn.MoveNext()) {throw "The data is invalid."}
-    $modulus = __normalizeAsnInteger $asn.GetPayload()
-    Write-Debug "Modulus length: $($modulus.Length)"
-    # public exponent e
-    if (!$asn.MoveNext()) {throw "The data is invalid."}
-    # public exponent must be 4 bytes exactly.
-    $PublicExponent = if ($asn.GetPayload().Length -eq 3) {
-        ,0 + $asn.GetPayload()
-    } else {
-        $asn.GetPayload()
+    if ($KeyPath) {
+        $Text = Get-Content -Path $KeyPath -Raw -ErrorAction Stop
     }
-    Write-Debug "PublicExponent length: $($PublicExponent.Length)"
-    # private exponent d
-    if (!$asn.MoveNext()) {throw "The data is invalid."}
-    $PrivateExponent = __normalizeAsnInteger $asn.GetPayload()
-    Write-Debug "PrivateExponent length: $($PrivateExponent.Length)"
-    # prime1 p
-    if (!$asn.MoveNext()) {throw "The data is invalid."}
-    $Prime1 = __normalizeAsnInteger $asn.GetPayload()
-    Write-Debug "Prime1 length: $($Prime1.Length)"
-    # prime2 q
-    if (!$asn.MoveNext()) {throw "The data is invalid."}
-    $Prime2 = __normalizeAsnInteger $asn.GetPayload()
-    Write-Debug "Prime2 length: $($Prime2.Length)"
-    # exponent1 d mod (p-1)
-    if (!$asn.MoveNext()) {throw "The data is invalid."}
-    $Exponent1 = __normalizeAsnInteger $asn.GetPayload()
-    Write-Debug "Exponent1 length: $($Exponent1.Length)"
-    # exponent2 d mod (q-1)
-    if (!$asn.MoveNext()) {throw "The data is invalid."}
-    $Exponent2 = __normalizeAsnInteger $asn.GetPayload()
-    Write-Debug "Exponent2 length: $($Exponent2.Length)"
-    # coefficient (inverse of q) mod p
-    if (!$asn.MoveNext()) {throw "The data is invalid."}
-    $Coefficient = __normalizeAsnInteger $asn.GetPayload()
-    Write-Debug "Coefficient length: $($Coefficient.Length)"
-    # creating Private Key BLOB structure
-    $PrivateKey = __composePRIVATEKEYBLOB $modulus $PublicExponent $PrivateExponent $Prime1 $Prime2 $Exponent1 $Exponent2 $Coefficient
-    #region key attachment and export
-    try {
-        $rsaKey = __attachPrivateKey $PrivateKey
-        if (![string]::IsNullOrEmpty($OutputPath)) {
-            if (!$Password) {
-                $Password = Read-Host -Prompt "Enter PFX password" -AsSecureString
-            }
-            $pfxBytes = $Cert.Export("pfx", $Password)
-            Export-Binary $OutputPath $pfxBytes
-        }
-        #endregion
-        if ($Install) {
-            $store = New-Object Security.Cryptography.X509Certificates.X509Store "my", $StoreLocation
-            $store.Open("ReadWrite")
-            $store.Add($Cert)
-            $store.Close()
-        }
-    } finally {
-        if ($rsaKey -ne $null) {
-            $rsaKey.Dispose()
-            $Cert
-        }
-    }
+    $PrivateKey = __extractPrivateKey $Text
+    $Disposables.Add($PrivateKey)
+
+    $PfxCert = __associatePrivateKey $Cert $PrivateKey
+    __exportPfx $PfxCert
+    $PfxCert = __installCert $PfxCert
+    # release unmanaged resources
+    $Disposables | %{$_.Dispose()}
+
+    $PfxCert
 }
