@@ -13,15 +13,13 @@ function Install-CertificateResponse {
         [System.IO.FileInfo]$Path,
         [Parameter(Mandatory = $true, ParameterSetName = '__cert')]
         [System.Security.Cryptography.X509Certificates.X509Certificate2]$Certificate,
-        [string]$Password = [string]::Empty,
         [SysadminsLV.PKI.Enrollment.InstallResponseFlags]$InstallOptions,
         [switch]$MachineContext
     )
 
-    $b64Response
-    switch ($PsCmdlet.ParameterSetName) {
-        '__cert' {$b64Response = [convert]::ToBase64String($Certificate.RawData)}
-        '__file' {$b64Response = [convert]::ToBase64String([SysadminsLV.PKI.CryptBinaryConverter]::CryptFileToBinary($Path.FullName))}
+    $b64Response = switch ($PsCmdlet.ParameterSetName) {
+        '__cert' {[convert]::ToBase64String($Certificate.RawData)}
+        '__file' {[convert]::ToBase64String([SysadminsLV.PKI.CryptBinaryConverter]::CryptFileToBinary($Path.FullName))}
     }
 
     $enroll = New-Object -ComObject X509Enrollment.CX509Enrollment
@@ -31,7 +29,10 @@ function Install-CertificateResponse {
     } else {
         $enroll.Initialize(1)
     }
-    $enroll.InstallResponse($InstallOptions, $b64Response, 0x1, $Password)
 
-    Release-COM $enroll
+    try {
+        $enroll.InstallResponse($InstallOptions, $b64Response, 0x1, $null)
+    } finally {
+        Release-COM $enroll
+    }
 }
