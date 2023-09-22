@@ -771,5 +771,36 @@
         </TableRowEntries>
       </TableControl>
     </View>
+    <View>
+      <Name>X509CertificateContextProperty</Name>
+      <ViewSelectedBy>
+        <TypeName>SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateContextProperty</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>PropertyName</Label>
+            <Width>30</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PropertyValue</Label>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>PropertyName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PropertyValue</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
   </ViewDefinitions>
 </Configuration>
