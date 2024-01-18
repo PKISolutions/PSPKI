@@ -1,6 +1,6 @@
 PSPKI v4.2.0 Release Notes
 ==========================
-https://www.pkisolutions.com/tools/pspki/release-notes-for-pspki-v420
+https://github.com/PKISolutions/PSPKI/releases/tag/v4.2.0
 
 PSPKI v4.0.0 Release Notes
 ==========================
