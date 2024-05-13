@@ -352,7 +352,7 @@ namespace PKI.EnterprisePKI {
             $dt = try {
                     (New-Object SysadminsLV.Asn1Parser.Universal.Asn1UtcTime -ArgumentList @(,($e.RawData))).Value
                 } catch {
-                    [SysadminsLV.Asn1Parser.Asn1Utils]::DecodeGeneralizedTime($e.RawData)
+                    (New-Object SysadminsLV.Asn1Parser.Universal.Asn1GeneralizedTime -ArgumentList @(,($e.RawData))).Value
                 }
         }
         # returns UrlElement. $cert -- issuer candidate/X509ChainElement.
@@ -376,7 +376,7 @@ namespace PKI.EnterprisePKI {
                 Write-Debug "Referenced Base CRL number: $bcrlNumber"
                 $DeltaCrlIndicator = $crl.Extensions["2.5.29.27"]
                 if ($DeltaCrlIndicator -ne $null) {
-                    [UInt64]$indicator = [SysadminsLV.Asn1Parser.Asn1Utils]::DecodeInteger($DeltaCrlIndicator.RawData)
+                    [Numerics.BigInteger]$indicator = (New-Object SysadminsLV.Asn1Parser.Universal.Asn1Integer -ArgumentList @(,($e.RawData))).Value
                     Write-Debug "Required minimum Base CRL number: $indicator"
                     [bool]$indicatorIsCritical = $DeltaCrlIndicator.Critical
                 } else {
