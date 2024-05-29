@@ -448,12 +448,12 @@ namespace PKI.EnterprisePKI {
             Write-Verbose "Entering OCSP validation routine..."
             Write-Debug "Entering OCSP validation routine..."
             Write-Debug "URL: $($urlElement.Url.AbsoluteUri)"
-            $req = New-Object PKI.OCSP.OCSPRequest $cert.Certificate
+            $req = New-Object SysadminsLV.PKI.OcspClient.OCSPRequest $cert.Certificate
             $req.URL = $urlElement.Url
             try {
                 $resp = $req.SendRequest()
                 $urlElement.SetObject($resp)
-                $errorCode = if ($resp.ResponseStatus -ne [PKI.OCSP.OCSPResponseStatus]::Successful) {
+                $errorCode = if ($resp.ResponseStatus -ne [SysadminsLV.PKI.OcspClient.OCSPResponseStatus]::Successful) {
                     Write-Debug "OCSP server failed: $($resp.ResponseStatus)"
                     $s_error -bor (150 + $resp.ResponseStatus)
                 } elseif (!$resp.SignatureIsValid) {
