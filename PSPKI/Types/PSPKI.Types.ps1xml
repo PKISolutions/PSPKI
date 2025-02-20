@@ -48,9 +48,9 @@
           [System.Security.Cryptography.Oid[]]$Existing = $this
           foreach ($OID in $OIDs) {
             if ($OID.FriendlyName -ne $null) {
-              $Existing = $Existing | ?{$_.FriendlyName -ne $OID.FriendlyName}
+                $Existing = $Existing | ?{$_.FriendlyName -ne $OID.FriendlyName}
             } else {
-              $Existing = $Existing | ?{$_.Value -ne $OID.Value}
+                $Existing = $Existing | ?{$_.Value -ne $OID.Value}
             }
           }
           [System.Security.Cryptography.Oid[]]$Existing
@@ -76,10 +76,14 @@
         <Name>SigningTime</Name>
         <GetScriptBlock>
           $sTime = $null
-          if ($this.SignerCertificate -eq $null) {return}
+          if ($this.SignerCertificate -eq $null) {
+              return
+          }
 
           $SignedCms = [SysadminsLV.PKI.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
-          if ($SignedCms -eq $null) {return}
+          if ($SignedCms -eq $null) {
+              return
+          }
 
           # it appears there are two types of counter signing: PKCS#9 or RFC3161.
           # -- in PKCS#9, timestamp is stored in signed attribute with OID = 1.2.840.113549.1.9.6
@@ -116,7 +120,7 @@
         <Name>EncodedSignature</Name>
         <GetScriptBlock>
           if ($this.SignerCertificate -eq $null) {
-            return
+              return
           }
           [SysadminsLV.PKI.Utils.CLRExtensions.FileInfoExtensions]::GetSignatureObject($this.Path)
         </GetScriptBlock>
@@ -130,7 +134,7 @@
         <Name>ResolvedExtensions</Name>
         <GetScriptBlock>
             if ($this.Extensions -eq $null) {
-            return
+                return
             }
             [SysadminsLV.PKI.Cryptography.X509Certificates.X509Certificate2Extensions]::ResolveExtensions($this)
         </GetScriptBlock>
