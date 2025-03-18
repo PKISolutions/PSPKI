@@ -13,8 +13,17 @@
         [switch]$UseActiveDirectory,
         [switch]$Force
     )
+    $target = if ($UseActiveDirectory) {
+        try {
+            [System.DirectoryServices.ActiveDirectory.Domain]::GetComputerDomain().Forest.Name
+        } catch {
+            $Env:COMPUTERNAME
+        }
+    } else {
+        $Env:COMPUTERNAME
+    }
     if ($Force -or $PSCmdlet.ShouldProcess(
-        $Env:COMPUTERNAME,
+        $target,
         "Unregister object identifier with name: '$($Value.FriendlyName)' and value: '$($Value.Value)'"
     )) {
         $retValue = [SysadminsLV.PKI.Cryptography.Oid2]::Unregister($Value.Value,$OidGroup,$UseActiveDirectory)
