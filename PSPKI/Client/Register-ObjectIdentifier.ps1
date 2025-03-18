@@ -25,8 +25,18 @@ function Register-ObjectIdentifier {
         "ApplicationPolicy" {[Security.Cryptography.OidGroup]::EnhancedKeyUsage}
         "IssuancePolicy" {[Security.Cryptography.OidGroup]::Policy}
     }
+
+    $target = if ($UseActiveDirectory) {
+        try {
+            [System.DirectoryServices.ActiveDirectory.Domain]::GetComputerDomain().Forest.Name
+        } catch {
+            $Env:COMPUTERNAME
+        }
+    } else {
+        $Env:COMPUTERNAME
+    }
     if ($Force -or $PSCmdlet.ShouldProcess(
-        $Env:COMPUTERNAME,
+        $target,
         "Register object identifier with name: '$FriendlyName' and value: '$Value'"
     )) {
         [SysadminsLV.PKI.Cryptography.Oid2]::Register($Value,$FriendlyName,$Group,$UseActiveDirectory,$LocaleId,$CPSLocation)
