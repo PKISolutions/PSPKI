@@ -42,6 +42,7 @@ This module supports Enterprise or Standalone Certification Authority (CA) serve
 * Windows Server 2016 (including Server Core)
 * Windows Server 2019 (including Server Core)
 * Windows Server 2022 (including Server Core)
+* Windows Server 2025 (including Server Core)
 
 ### Online Responder support
 
@@ -53,6 +54,7 @@ This module supports Online Certificate Status Protocol (OCSP) servers that are 
 * Windows Server 2016 (including Server Core)
 * Windows Server 2019 (including Server Core)
 * Windows Server 2022 (including Server Core)
+* Windows Server 2025 (including Server Core)
 
 ### Full Command List ###
 * [Add-AdCertificate](https://www.pkisolutions.com/tools/pspki/Add-AdCertificate)
