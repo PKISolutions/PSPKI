@@ -13,7 +13,7 @@
     if ($Group -eq $null) {
         [SysadminsLV.PKI.Cryptography.Oid2]::GetAllOids($Value,$UseActiveDirectory)
     } else {
-        New-Object SysadminsLV.PKI.Cryptography.Oid2 -ArgumentList $Value, $Group, $UseActiveDirectory
+        @(New-Object SysadminsLV.PKI.Cryptography.Oid2 -ArgumentList $Value, $Group, $UseActiveDirectory)
     }
     
 }
