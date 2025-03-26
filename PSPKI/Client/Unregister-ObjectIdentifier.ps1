@@ -8,7 +8,7 @@
 )]
     param(
         [Parameter(Mandatory = $true, ValueFrompipeline = $true, ValueFromPipelineByPropertyName = $true)]
-        [SysadminsLV.PKI.Cryptography.Oid]$Value,
+        [System.Security.Cryptography.Oid]$Value,
         [System.Security.Cryptography.OidGroup]$OidGroup = [System.Security.Cryptography.OidGroup]::All,
         [switch]$UseActiveDirectory,
         [switch]$Force
