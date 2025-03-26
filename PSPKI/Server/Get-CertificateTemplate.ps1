@@ -64,5 +64,5 @@
             }
         }
     }
-    $vtemps | Where-Object {$_} | ForEach-Object {[PKI.CertificateTemplates.CertificateTemplate]::FromCommonName($_.Name)}
+    $vtemps | Where-Object {$_} | ForEach-Object {[SysadminsLV.PKI.CertificateTemplates.CertificateTemplateFactory]::CreateFromCommonNameDs($_.Name)}
 }

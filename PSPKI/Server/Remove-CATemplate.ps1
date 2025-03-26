@@ -25,7 +25,7 @@
                         if ($Name -contains "*") {
                             $CATemplate.Clear()
                         } else {
-                            $Templates = $Name | ForEach-Object {[PKI.CertificateTemplates.CertificateTemplate]::FromCommonName($_)}
+                            $Templates = $Name | ForEach-Object {[SysadminsLV.PKI.CertificateTemplates.CertificateTemplateFactory]::CreateFromCommonNameDs($_)}
                             $CATemplate.RemoveRange($Templates)
                         }
                     }
@@ -33,7 +33,7 @@
                         if ($DisplayName -contains "*") {
                             $CATemplate.Clear()
                         } else {
-                            $Templates = $DisplayName | ForEach-Object {[PKI.CertificateTemplates.CertificateTemplate]::FromDisplayName($_)}
+                            $Templates = $DisplayName | ForEach-Object {[SysadminsLV.PKI.CertificateTemplates.CertificateTemplateFactory]::CreateFromDisplayNameDs($_)}
                             $CATemplate.RemoveRange($Templates)
                         }
                     }
