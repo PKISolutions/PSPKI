@@ -12,7 +12,7 @@
     <CompanyName>Sysadmins LV</CompanyName>
     <Copyright>All rights reserved</Copyright>
     <Description />
-    <Version>3.2.5.0</Version>
+    <Version>4.3.0</Version>
     <Guid>08a70230-ae58-48af-ae73-e4276b6ef1eb</Guid>
     <PackageEntryPoint>Client\Add-AdCertificate.ps1</PackageEntryPoint>
     <DotNetVersion>v4.7.1</DotNetVersion>
@@ -24,6 +24,8 @@ del $target -Recurse -ea 0
 md $target -force
 $folders = dir -Path $source -directory | ?{$exclude -notcontains $_.Name} | %{copy $source\$_ -Destination $target\$_ -rec -Force}
 dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</PostBuildScript>
+    <ManifestPath>$(OutDir)\$(ProjectName).psd1</ManifestPath>
+    <ProcessorArchitecture />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,9 +52,11 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Content Include="Library\Interop.CERTCLILib.dll" />
     <Content Include="Library\Interop.CERTENROLLLib.dll" />
     <Content Include="Library\SysadminsLV.Asn1Parser.dll" />
+    <Content Include="Library\SysadminsLV.Asn1Parser.pdb" />
     <Content Include="Library\SysadminsLV.PKI.dll" />
     <Content Include="Library\SysadminsLV.PKI.OcspClient.dll" />
     <Content Include="Library\SysadminsLV.PKI.OcspClient.pdb" />
+    <Content Include="Library\SysadminsLV.PKI.pdb" />
     <Content Include="Library\SysadminsLV.PKI.Win.dll" />
     <Content Include="Library\SysadminsLV.PKI.Win.pdb" />
     <Content Include="Library\System.Security.Cryptography.Pkcs.dll" />
