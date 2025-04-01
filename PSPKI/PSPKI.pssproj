@@ -96,7 +96,6 @@ dir $source -file | copy-item -dest ($target + "\") -exclude $exclude -force</Po
     <Compile Include="Client\Unregister-ObjectIdentifier.ps1" />
     <Compile Include="PSPKI.psd1" />
     <Compile Include="PSPKI.psm1" />
-    <Compile Include="PSPKI.tests.ps1" />
     <Compile Include="Server\Add-AuthorityInformationAccess.ps1" />
     <Compile Include="Server\Add-CertificationAuthorityAcl.ps1" />
     <Compile Include="Server\Add-CAKRACertificate.ps1" />
