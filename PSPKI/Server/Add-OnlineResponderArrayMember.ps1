@@ -11,6 +11,7 @@ function Add-OnlineResponderArrayMember {
         [SysadminsLV.PKI.Management.CertificateServices.OcspResponder]$ArrayMember
 
     )
+    Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
 
     $ArrayController.AddArrayMember($ArrayMember)
     $ArrayController

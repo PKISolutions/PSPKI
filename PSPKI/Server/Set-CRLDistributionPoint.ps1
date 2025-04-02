@@ -9,6 +9,10 @@
         [PKI.CertificateServices.CRLDistributionPoint[]]$InputObject,
         [switch]$RestartCA
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($CDP in $InputObject) {
             try {

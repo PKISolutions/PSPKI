@@ -13,6 +13,9 @@
         [switch]$Standalone
     )
 
+    Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+
+
     $DSList = @{}
     if (!$NoDomain) {
         $DSList = [SysadminsLV.PKI.Management.ActiveDirectory.DsPkiContainer]::GetAdPkiContainer("Enroll").EnrollmentServers

@@ -10,6 +10,7 @@
         [switch]$RestartCA
     )
     begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
         $empty = @"
 There are no any assigned KRA certificates on '{0}'.
 All certificate requests that require key archival (by manually initiating key archival process or

@@ -9,6 +9,10 @@ function Set-OnlineResponderAcl {
         [Alias('AclObject','Acl')]
         [SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor[]]$InputObject
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach($ACL in $InputObject) {
             $ACL.SetObjectSecurity()

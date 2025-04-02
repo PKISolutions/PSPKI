@@ -18,6 +18,10 @@ function Get-FailedRequest {
         [String[]]$Property,
         [String[]]$Filter
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($CA in $CertificationAuthority) {
             Get-AdcsDatabaseRow `

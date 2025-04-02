@@ -11,6 +11,9 @@ function Remove-OnlineResponderRevocationConfiguration {
         [Parameter(Mandatory = $true, ParameterSetName = '__name')]
         [string[]]$Name
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
 
     process {
         switch ($PSCmdlet.ParameterSetName) {

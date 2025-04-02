@@ -22,6 +22,9 @@ function Set-OnlineResponderRevocationConfiguration {
         [int]$CrlUrlTimeout,
         [int]$RefreshTimeout
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
 
     process {
         foreach ($RevConfig in $RevocationConfiguration) {

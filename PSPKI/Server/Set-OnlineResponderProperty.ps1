@@ -17,6 +17,9 @@ function Set-OnlineResponderProperty {
         [switch]$TraceDebug,
         [switch]$MakeArrayController
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
 
     process {
         foreach ($Responder in $OnlineResponder) {

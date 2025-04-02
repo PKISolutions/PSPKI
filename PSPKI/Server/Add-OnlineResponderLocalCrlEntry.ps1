@@ -15,6 +15,9 @@ function Add-OnlineResponderLocalCrlEntry {
         [SysadminsLV.PKI.Cryptography.X509Certificates.X509RevocationReasons]$Reason = "Unspecified",
         [switch]$Force
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
 
     process {
         foreach ($RevConfig in $InputObject) {

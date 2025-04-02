@@ -10,6 +10,8 @@ function Remove-OnlineResponderArrayMember {
         [Parameter(Mandatory = $true)]
         [String[]]$ComputerName
     )
+    Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+
 
     foreach ($comp in $ComputerName) {
         $ArrayController.RemoveArrayMember($comp)

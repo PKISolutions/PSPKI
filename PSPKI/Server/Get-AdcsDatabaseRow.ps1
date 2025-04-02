@@ -19,6 +19,8 @@
         [String[]]$Filter
     )
     begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+
         $NativeTable = if ("Revoked", "Issued", "Pending", "Failed" -contains $Table) {
             "Request"
         } else {

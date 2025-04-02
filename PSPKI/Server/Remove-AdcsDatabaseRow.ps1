@@ -28,6 +28,8 @@ function Remove-AdcsDatabaseRow {
         [datetime]$RemoveBefore
     )
     begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+
         $dwFlags = switch ($Filter) {
             "ExpiredCerts" {1}
             "ExpiredFailedPending" {2}

@@ -9,7 +9,7 @@
         [PKI.CertificateServices.CATemplate[]]$InputObject
     )
     begin {
-        Assert-CommandRequirement $PREREQ_ADDS -ErrorAction Stop
+        Assert-CommandRequirement $PREREQ_ADDS, $PREREQ_RSAT -ErrorAction Stop
     }
 
     process {

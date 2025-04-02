@@ -12,6 +12,7 @@
         [switch]$InvalidOnly
     )
     begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
         $Chain = New-Object Security.Cryptography.X509Certificates.X509Chain
         [void]$Chain.ChainPolicy.ApplicationPolicy.Add("1.3.6.1.4.1.311.21.6")
     }

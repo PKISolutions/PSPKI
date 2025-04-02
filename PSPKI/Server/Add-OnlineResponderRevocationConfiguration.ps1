@@ -15,6 +15,9 @@ function Add-OnlineResponderRevocationConfiguration {
         [Alias('CA')]
         [PKI.CertificateServices.CertificateAuthority]$CertificationAuthority
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
 
     process {
         foreach ($Responder in $OnlineResponder) {

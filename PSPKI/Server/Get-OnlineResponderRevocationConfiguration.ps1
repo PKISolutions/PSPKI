@@ -9,6 +9,10 @@ function Get-OnlineResponderRevocationConfiguration {
         [SysadminsLV.PKI.Management.CertificateServices.OcspResponder[]]$OnlineResponder,
         [string]$Name
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
 
     process {
         foreach ($Responder in $OnlineResponder) {

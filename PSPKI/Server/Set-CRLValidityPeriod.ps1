@@ -21,7 +21,10 @@
         [string]$DeltaCRLOverlap,
         [switch]$RestartCA
     )
-    
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($CRLValidity in $InputObject) {
             try {
