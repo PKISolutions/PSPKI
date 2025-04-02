@@ -18,7 +18,7 @@ All documentation is available at PKI Solutions: [PowerShell PKI Module](https:/
 ```PowerShell
 Install-Module -Name PSPKI
 ```
-
+Latest stable version: ![image](https://img.shields.io/powershellgallery/v/PSPKI)
 
 ### Module Requirements
 
