@@ -12,6 +12,9 @@ function Remove-OnlineResponderLocalCrlEntry {
         [Parameter(ParameterSetName = '__purge')]
         [switch]$Force
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
 
     process {
         foreach ($RevConfig in $InputObject) {

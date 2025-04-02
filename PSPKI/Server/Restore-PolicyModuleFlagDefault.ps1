@@ -9,6 +9,10 @@
         [PKI.CertificateServices.PolicyModule.EditFlag[]]$InputObject,
         [switch]$RestartCA
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($EditFlag in $InputObject) {
             try {

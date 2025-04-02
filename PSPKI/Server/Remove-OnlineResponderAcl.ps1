@@ -15,6 +15,10 @@ function Remove-OnlineResponderAcl {
         [Parameter(Mandatory = $true, ParameterSetName = '__purge')]
         [switch]$Force
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach($ACL in $InputObject) {
             switch ($PSCmdlet.ParameterSetName) {

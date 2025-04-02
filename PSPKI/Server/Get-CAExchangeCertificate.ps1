@@ -15,6 +15,10 @@
         [SysadminsLV.Asn1Parser.EncodingType]$Encoding = "Base64Header",
         [switch]$X509
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($CA in $CertificationAuthority) {
             $xchg = $CA.GetCAExchangeCertificate()

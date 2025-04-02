@@ -13,6 +13,10 @@
         [Object[]]$Extension,
         [switch]$Remove
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($Req in $Request) {
             $CertAdmin = New-Object -ComObject CertificateAuthority.Admin

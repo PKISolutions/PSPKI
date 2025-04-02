@@ -9,6 +9,10 @@ function Get-CertificateValidityPeriod {
         [Alias('CA')]
         [PKI.CertificateServices.CertificateAuthority[]]$CertificationAuthority
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($CA in $CertificationAuthority) {
             New-Object PKI.CertificateServices.CertValiditySetting -ArgumentList $CA

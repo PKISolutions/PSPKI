@@ -9,6 +9,10 @@
         [PKI.CertificateServices.Flags.KRAFlag[]]$InputObject,
         [switch]$RestartCA
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($KRAFlag in $InputObject) {
             try {

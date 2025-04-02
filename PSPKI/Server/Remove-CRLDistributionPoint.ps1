@@ -9,6 +9,10 @@
         [PKI.CertificateServices.CRLDistributionPoint[]]$InputObject,
         [String[]]$URI
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($CDP in $InputObject) {
             if ($URI -contains "*") {

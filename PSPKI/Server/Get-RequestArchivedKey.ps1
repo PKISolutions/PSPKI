@@ -8,6 +8,9 @@ function Get-RequestArchivedKey {
         [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
         [SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow[]]$Request
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
 
     process {
         foreach ($req in $Request) {

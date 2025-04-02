@@ -15,6 +15,10 @@
         [Parameter(Mandatory = $true, ParameterSetName = 'RawData')]
         [Byte[]]$RawData
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     if ((Ping-ICertAdmin $CertificationAuthority.ConfigString)) {
         $CertAdmin = New-Object -ComObject CertificateAuthority.Admin
         try {

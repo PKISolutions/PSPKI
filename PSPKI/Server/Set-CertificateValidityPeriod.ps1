@@ -12,6 +12,10 @@
         [string]$ValidityPeriod,
         [switch]$RestartCA
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($CertValidity in $InputObject) {
             try {

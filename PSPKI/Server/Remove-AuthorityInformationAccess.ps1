@@ -9,6 +9,10 @@
         [PKI.CertificateServices.AuthorityInformationAccess[]]$InputObject,
         [String[]]$URI
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($AIA in $InputObject) {
             if ($URI -contains "*") {

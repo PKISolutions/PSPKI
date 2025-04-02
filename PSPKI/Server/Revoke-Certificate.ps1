@@ -15,6 +15,8 @@ function Revoke-Certificate {
         [datetime]$RevocationDate = [datetime]::Now
     )
     begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+
         $Reasons = @{
             "Unspecified"        = 0;
             "KeyCompromise"      = 1;

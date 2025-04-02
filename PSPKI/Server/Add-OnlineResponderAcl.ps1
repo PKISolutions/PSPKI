@@ -19,6 +19,7 @@ function Add-OnlineResponderAcl {
         [SysadminsLV.PKI.Security.AccessControl.OcspResponderRights]$AccessMask
     )
     begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
         if ($PSBoundParameters.Verbose) {$VerbosePreference = "Continue"}
         if ($PSBoundParameters.Debug) {$DebugPreference = "Continue"}
     }

@@ -12,6 +12,10 @@
         [Security.Cryptography.Oid[]]$OfflineExtension,
         [Security.Cryptography.Oid[]]$DisabledExtension
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($ExtensionList in $InputObject) {
             try {

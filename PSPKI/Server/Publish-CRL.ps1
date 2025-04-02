@@ -10,6 +10,10 @@
         [switch]$DeltaOnly,
         [switch]$UpdateFile
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+    }
+
     process {
         foreach ($CA in $CertificationAuthority) {
             $CA.PublishCRL($DeltaOnly, $UpdateFile)

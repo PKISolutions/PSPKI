@@ -9,5 +9,7 @@ function Connect-OnlineResponder {
         [String]$ComputerName = [environment]::MachineName
     )
 
+    Assert-CommandRequirement $PREREQ_RSAT -ErrorAction Stop
+
     [SysadminsLV.PKI.Management.CertificateServices.OcspResponder]::Connect($ComputerName)
 }
