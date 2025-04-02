@@ -16,6 +16,10 @@
         [switch]$Force
     )
 
+    begin {
+        Assert-CommandRequirement $PREREQ_ADDS -ErrorAction Stop
+    }
+
     process {
         foreach($ACL in $InputObject) {
             switch ($PSCmdlet.ParameterSetName) {

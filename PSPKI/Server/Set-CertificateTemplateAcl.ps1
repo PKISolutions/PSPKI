@@ -10,6 +10,10 @@
         [SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor[]]$InputObject
     )
 
+    begin {
+        Assert-CommandRequirement $PREREQ_ADDS -ErrorAction Stop
+    }
+
     process {
         foreach($ACL in $InputObject) {
             $ACL.SetObjectSecurity()

@@ -13,6 +13,8 @@ function Add-AdCertificateRevocationList {
         [string]$HostName,        
         [switch]$Dispose
     )
+    Assert-CommandRequirement $PREREQ_ADDS -ErrorAction Stop
+
     $CdpContainer.AddCrl($CertificateRevocationList, $HostName)
     $CdpContainer.SaveChanges($false)
     if ($Dispose) {
