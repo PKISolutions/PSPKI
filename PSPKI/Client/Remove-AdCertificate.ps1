@@ -14,6 +14,8 @@ function Remove-AdCertificate {
         [switch]$ForceDelete,
         [switch]$Dispose
     )
+    Assert-CommandRequirement $PREREQ_ADDS -ErrorAction Stop
+
     switch ($PSCmdlet.ParameterSetName) {
         '__thumbprint' {
             for ($i = 0; $i -lt $Thumbprint.Length; $i++) {

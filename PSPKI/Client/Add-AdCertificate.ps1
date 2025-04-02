@@ -12,6 +12,8 @@ function Add-AdCertificate {
         [switch]$CrossCA,
         [switch]$Dispose
     )
+    Assert-CommandRequirement $PREREQ_ADDS -ErrorAction Stop
+
     if ($Certificate.Length -gt 0) {
         $Certificate | ForEach-Object {
             if ($Adcontainer -is [SysadminsLV.PKI.Management.ActiveDirectory.DsAiaContainer]) {

@@ -12,6 +12,7 @@
         [Parameter(ParameterSetName = "OID")]
         [String[]]$OID = "*"
     )
+    Assert-CommandRequirement $PREREQ_ADDS -ErrorAction Stop
 
     $temps = @()
     $vtemps = @()

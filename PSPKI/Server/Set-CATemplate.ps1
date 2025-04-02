@@ -8,6 +8,10 @@
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelinebyPropertyName = $true)]
         [PKI.CertificateServices.CATemplate[]]$InputObject
     )
+    begin {
+        Assert-CommandRequirement $PREREQ_ADDS -ErrorAction Stop
+    }
+
     process {
         foreach ($CATemplate in $InputObject) {
             try {

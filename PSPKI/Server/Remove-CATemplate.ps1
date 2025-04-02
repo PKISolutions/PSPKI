@@ -15,8 +15,9 @@
         [PKI.CertificateTemplates.CertificateTemplate[]]$Template
     )
     begin {
-        
+        Assert-CommandRequirement $PREREQ_ADDS -ErrorAction Stop
     }
+
     process {
         foreach ($CATemplate in $InputObject) {
             try {
