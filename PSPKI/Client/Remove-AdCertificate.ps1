@@ -19,7 +19,7 @@ function Remove-AdCertificate {
             for ($i = 0; $i -lt $Thumbprint.Length; $i++) {
                 $Thumbprint[$i] = $Thumbprint[$i].Trim().Replace(" ", $null).ToUpper()
             }
-            $certsToRemove = $AdContainer.Certificates | ?{$_.Certificate.Thumprint -in $Thumbprint}
+            $certsToRemove = $AdContainer.Certificates | ?{$_.Certificate.Thumbprint -in $Thumbprint}
             $certsToRemove | ForEach-Object {
                 [void]$AdContainer.RemoveCertificate($_)
             }
