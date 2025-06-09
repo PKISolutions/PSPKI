@@ -67,14 +67,14 @@ ldap://&lt;hostname&gt;/&lt;path&gt;?&lt;query&gt;</maml:para><maml:para>Note: l
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.AuthorityInformationAccess</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.AuthorityInformationAccess</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -119,7 +119,7 @@ ldap://&lt;hostname&gt;/&lt;path&gt;?&lt;query&gt;</maml:para><maml:para>Note: l
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-AuthorityInformationAccess</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-AuthorityInformationAccess.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -160,14 +160,14 @@ This command doesn&#39;t change actual settings, but just prepares KRA object. T
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.KRA</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_KRA.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_KRA.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.KRA</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_KRA.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_KRA.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -214,7 +214,7 @@ C:\PS&gt;Get-CertificationAuthority | Get-CAKRACertificate | Add-CAKRACertificat
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-CAKRACertificate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-CAKRACertificate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -267,14 +267,14 @@ C:\PS&gt;Get-CertificationAuthority | Get-CAKRACertificate | Add-CAKRACertificat
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CATemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CATemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -338,7 +338,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Add-CATe
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-CATemplate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-CATemplate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -396,14 +396,14 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Add-CATe
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -450,7 +450,7 @@ PS C:\&gt; $DestinationACL | Add-CertificateTemplateAcl -AccessRule $SourceACL.A
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-CertificateTemplateAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-CertificateTemplateAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificateTemplate</maml:linkText>
   <maml:uri></maml:uri>
@@ -502,14 +502,14 @@ PS C:\&gt; $DestinationACL | Add-CertificateTemplateAcl -AccessRule $SourceACL.A
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertSrvSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertSrvSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -556,7 +556,7 @@ PS C:\&gt; $DestinationACL | Add-CertificationAuthorityAcl -AccessRule $SourceAC
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-CertificationAuthorityAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-CertificationAuthorityAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -649,14 +649,14 @@ ldap://&lt;hostname&gt;/path?query</maml:para><maml:para>In this case client wil
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLDistributionPoint</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLDistributionPoint</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -701,7 +701,7 @@ ldap://&lt;hostname&gt;/path?query</maml:para><maml:para>In this case client wil
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-CRLDistributionPoint</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-CRLDistributionPoint.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -753,14 +753,14 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.ExtensionList</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.ExtensionList</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -805,7 +805,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-ExtensionList</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-ExtensionList.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -860,14 +860,14 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -914,7 +914,7 @@ PS C:\&gt; $DestinationACL | Add-OnlineResponderAcl -AccessRule $SourceACL.Acces
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-OnlineResponderAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-OnlineResponderAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -954,14 +954,14 @@ PS C:\&gt; $DestinationACL | Add-OnlineResponderAcl -AccessRule $SourceACL.Acces
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -989,7 +989,7 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-ArrayMemb
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/add-onlineresponderarraymember</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/add-onlineresponderarraymember.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -1038,14 +1038,14 @@ False (default) -- appends seria numbers to the end of existing local CRL</maml:
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1091,7 +1091,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-OnlineResponderLocalCrlEntry</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-OnlineResponderLocalCrlEntry.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -1132,14 +1132,14 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1194,7 +1194,7 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-OnlineRes
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Add-OnlineResponderRevocationConfiguration</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Add-OnlineResponderRevocationConfiguration.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -1223,14 +1223,14 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-OnlineRes
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Utils.IServiceOperationResult</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1257,7 +1257,7 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-OnlineRes
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Approve-CertificateRequest</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Approve-CertificateRequest.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -1299,7 +1299,7 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-OnlineRes
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1344,7 +1344,7 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-OnlineRes
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Connect-CertificationAuthority</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Connect-CertificationAuthority.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -1374,7 +1374,7 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-OnlineRes
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1401,7 +1401,7 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-OnlineRes
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Connect-OnlineResponder</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Connect-OnlineResponder.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-OnlineResponderRevocationConfiguration</maml:linkText>
   <maml:uri></maml:uri>
@@ -1424,14 +1424,14 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-OnlineRes
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Utils.IServiceOperationResult</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1458,7 +1458,7 @@ PS C:\&gt; Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Add-OnlineRes
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Deny-CertificateRequest</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Deny-CertificateRequest.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -1545,14 +1545,14 @@ BuildRootCACRLEntriesBasedOnKey - N/A</maml:para></maml:description><command:par
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.CRLFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.CRLFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1579,7 +1579,7 @@ BuildRootCACRLEntriesBasedOnKey - N/A</maml:para></maml:description><command:par
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Disable-CertificateRevocationListFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Disable-CertificateRevocationListFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -1648,14 +1648,14 @@ EnableAdminAsAuditor - only CA administrators can update the CA audit filter set
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.InterfaceFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.InterfaceFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1700,7 +1700,7 @@ EnableAdminAsAuditor - only CA administrators can update the CA audit filter set
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Disable-InterfaceFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Disable-InterfaceFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -1751,14 +1751,14 @@ DisableUseDefaultProvider - disables default cryptographic service provider (CSP
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.KRAFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.KRAFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1785,7 +1785,7 @@ DisableUseDefaultProvider - disables default cryptographic service provider (CSP
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Disable-KeyRecoveryAgentFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Disable-KeyRecoveryAgentFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -1886,14 +1886,14 @@ EnableRenewOnBehalfOf -- Enables certificate renewel on behalf of other user or 
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.EditFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.EditFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -1938,7 +1938,7 @@ EnableRenewOnBehalfOf -- Enables certificate renewel on behalf of other user or 
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Disable-PolicyModuleFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Disable-PolicyModuleFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -2025,14 +2025,14 @@ BuildRootCACRLEntriesBasedOnKey - N/A</maml:para></maml:description><command:par
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.CRLFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.CRLFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -2059,7 +2059,7 @@ BuildRootCACRLEntriesBasedOnKey - N/A</maml:para></maml:description><command:par
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Enable-CertificateRevocationListFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Enable-CertificateRevocationListFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -2128,14 +2128,14 @@ EnableAdminAsAuditor - only CA administrators can update the CA audit filter set
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.InterfaceFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.InterfaceFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -2180,7 +2180,7 @@ EnableAdminAsAuditor - only CA administrators can update the CA audit filter set
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Enable-InterfaceFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Enable-InterfaceFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -2231,14 +2231,14 @@ DisableUseDefaultProvider - disables default cryptographic service provider (CSP
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.KRAFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.KRAFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -2265,7 +2265,7 @@ DisableUseDefaultProvider - disables default cryptographic service provider (CSP
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Enable-KeyRecoveryAgentFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Enable-KeyRecoveryAgentFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -2366,14 +2366,14 @@ EnableRenewOnBehalfOf -- Enables certificate renewel on behalf of other user or 
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.EditFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.EditFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -2418,7 +2418,7 @@ EnableRenewOnBehalfOf -- Enables certificate renewel on behalf of other user or 
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Enable-PolicyModuleFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Enable-PolicyModuleFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -2517,14 +2517,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -2587,7 +2587,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-DatabaseRow</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-DatabaseRow.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -2697,7 +2697,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-ADKRACertificate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-ADKRACertificate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CAKRACertificate</maml:linkText>
   <maml:uri></maml:uri>
@@ -2731,14 +2731,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.AuthorityInformationAccess</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -2819,7 +2819,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-AuthorityInformationAccess</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-AuthorityInformationAccess.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -2854,14 +2854,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CACryptography</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CACryptography.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CACryptography.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -2888,7 +2888,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CACryptographyConfig</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CACryptographyConfig.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -2930,7 +2930,7 @@ Base64 is a textually encoded DER-encoded byte array. Is commonly used for copy/
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -3020,7 +3020,7 @@ An X509Certificate2 object</maml:para></maml:description>
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CAExchangeCertificate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CAExchangeCertificate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -3046,14 +3046,14 @@ An X509Certificate2 object</maml:para></maml:description>
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.KRA</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_KRA.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_KRA.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -3154,7 +3154,7 @@ C:\PS&gt;Get-CertificationAuthority | Get-CAKRACertificate | Add-CAKRACertificat
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CAKRACertificate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CAKRACertificate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -3192,14 +3192,14 @@ C:\PS&gt;Get-CertificationAuthority | Get-CAKRACertificate | Add-CAKRACertificat
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CATemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -3318,7 +3318,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CATemplate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CATemplate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -3356,14 +3356,14 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.CRLFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -3390,7 +3390,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CertificateRevocationListFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CertificateRevocationListFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -3442,7 +3442,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateTemplates.CertificateTemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateTemplates_CertificateTemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateTemplates_CertificateTemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -3523,7 +3523,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CertificateTemplate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CertificateTemplate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Remove-CertificateTemplate</maml:linkText>
   <maml:uri></maml:uri>
@@ -3546,14 +3546,14 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateTemplates.CertificateTemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateTemplates_CertificateTemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateTemplates_CertificateTemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -3598,7 +3598,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CertificateTemplateAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CertificateTemplateAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificateTemplate</maml:linkText>
   <maml:uri></maml:uri>
@@ -3614,7 +3614,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </maml:navigationLink></maml:relatedLinks></command:command><command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp"><!--Generated by PS Cmdlet Help Editor-->
 <command:details>
   <command:name>Get-CertificateValidityPeriod</command:name>
-  <maml:description><maml:para>Retrives the maximum validity period value for issued certificates.</maml:para></maml:description>
+  <maml:description><maml:para>Retrieves the maximum validity period value for issued certificates.</maml:para></maml:description>
   <maml:copyright>
     <maml:para />
   </maml:copyright>
@@ -3635,14 +3635,14 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertValidityPeriod</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pkix/html/T_PKI_CertificateServices_CertValiditySetting.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pkix/html/T_PKI_CertificateServices_CertValiditySetting.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -3723,7 +3723,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CertificateValidityPeriod</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CertificateValidityPeriod.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -3782,7 +3782,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority[]</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -3863,7 +3863,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CertificationAuthority</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CertificationAuthority.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -3886,14 +3886,14 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertSrvSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -3981,7 +3981,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CertificationAuthorityAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CertificationAuthorityAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -4021,14 +4021,14 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbColumnSchema</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbColumnSchema.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbColumnSchema.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -4073,7 +4073,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CertificationAuthorityDbSchema</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CertificationAuthorityDbSchema.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -4100,14 +4100,14 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLDistributionPoint</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -4224,7 +4224,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CRLDistributionPoint</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CRLDistributionPoint.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -4259,14 +4259,14 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLValidityPeriod</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLValiditySetting.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLValiditySetting.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -4347,7 +4347,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-CRLValidityPeriod</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-CRLValidityPeriod.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -4424,7 +4424,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority[]</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para>This parameter set is used to validate existing Enterprise CA</maml:para></maml:description>
@@ -4487,7 +4487,7 @@ PS C:\&gt; Get-EnterprisePKIHealthStatus -Certificate $cert -CaCertExpirationThr
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-EnterprisePKIHealthStatus</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-EnterprisePKIHealthStatus.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -4512,14 +4512,14 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.ExtensionList</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -4600,7 +4600,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-ExtensionList</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-ExtensionList.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -4680,14 +4680,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para>You can pipe this object to Remove-AdcsDatabaseRow to delete specified objects from CA database.</maml:para></maml:description>
@@ -4750,7 +4750,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-FailedRequest</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-FailedRequest.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -4791,14 +4791,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.InterfaceFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_InterfaceFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -4915,7 +4915,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-InterfaceFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-InterfaceFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -4995,14 +4995,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para>You can pipe this object to Remove-AdcsDatabaseRow to delete specified objects from CA database.</maml:para></maml:description>
@@ -5083,7 +5083,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-IssuedRequest</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-IssuedRequest.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -5127,14 +5127,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.KRAFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -5215,7 +5215,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-KeyRecoveryAgentFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-KeyRecoveryAgentFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -5250,14 +5250,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -5284,7 +5284,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-OnlineResponderAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-OnlineResponderAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -5321,14 +5321,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -5373,7 +5373,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-OnlineResponderRevocationConfiguration</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-OnlineResponderRevocationConfiguration.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -5450,14 +5450,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para>You can pipe this object to Remove-AdcsDatabaseRow to delete specified objects from CA database.</maml:para></maml:description>
@@ -5520,7 +5520,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-PendingRequest</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-PendingRequest.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -5567,14 +5567,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.EditFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -5691,7 +5691,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-PolicyModuleFlag</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-PolicyModuleFlag.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -5733,7 +5733,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Cryptography.Pkcs.DefaultSignedPkcs7</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Cryptography_Pkcs_DefaultSignedPkcs7.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Cryptography_Pkcs_DefaultSignedPkcs7.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -5761,7 +5761,7 @@ PS C:\&gt; Set-Content -Path C:\encrypted-key.p7b -Value $blob.RawData -Encoding
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-RequestArchivedKey</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-RequestArchivedKey.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -5832,14 +5832,14 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para>You can pipe this object to Remove-AdcsDatabaseRow to delete specified objects from CA database.</maml:para></maml:description>
@@ -5902,7 +5902,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Get-RevokedRequest</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Get-RevokedRequest.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -5958,7 +5958,7 @@ this filter returnes requests that were requested by &#39;domain\username&#39; u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6032,7 +6032,7 @@ C:\PS&gt;Get-CertificationAuthority MyCA | Import-LostCertificate -RawData @(,$u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Import-LostCertificate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Import-LostCertificate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -6068,7 +6068,7 @@ C:\PS&gt;Get-CertificationAuthority MyCA | Import-LostCertificate -RawData @(,$u
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6138,7 +6138,7 @@ C:\PS&gt;Get-CertificationAuthority MyCA | Import-LostCertificate -RawData @(,$u
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Publish-CRL</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Publish-CRL.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -6187,7 +6187,7 @@ CRL -- removes published CRLs that expired (base on NextPublish field value) bef
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6196,14 +6196,14 @@ CRL -- removes published CRLs that expired (base on NextPublish field value) bef
     <maml:name>
 PKI.CertificateServices.CertificateAuthority</maml:name>
     <maml:uri>
-https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Utils.IServiceOperationResult</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6267,7 +6267,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Remove-Adcs
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-AdcsDatabaseRow</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-AdcsDatabaseRow.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -6315,14 +6315,14 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Remove-Adcs
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.AuthorityInformationAccess</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.AuthorityInformationAccess</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6367,7 +6367,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Remove-Adcs
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-AithorityInformationAccess</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-AithorityInformationAccess.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -6425,14 +6425,14 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Remove-Adcs
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.KRA</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.KRA</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6495,7 +6495,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Remove-Adcs
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-CAKRACertificate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-CAKRACertificate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -6545,14 +6545,14 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Remove-Adcs
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CATemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CATemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6616,7 +6616,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-CATemplate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-CATemplate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -6654,7 +6654,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateTemplates.CertificateTemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateTemplates_CertificateTemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateTemplates_CertificateTemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6688,7 +6688,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-CertificateTemplate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-CertificateTemplate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificateTemplate</maml:linkText>
   <maml:uri></maml:uri>
@@ -6726,14 +6726,14 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6760,7 +6760,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-CertificateTemplate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-CertificateTemplate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificateTemplate</maml:linkText>
   <maml:uri></maml:uri>
@@ -6807,14 +6807,14 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertSrvSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertSrvSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6842,7 +6842,7 @@ After command completion CA service will be restarted to immediately apply chang
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-CertificationAuthorityAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-CertificationAuthorityAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -6884,14 +6884,14 @@ After command completion CA service will be restarted to immediately apply chang
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLDistributionPoint</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLDistributionPoint</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -6936,7 +6936,7 @@ After command completion CA service will be restarted to immediately apply chang
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-CRLDistributionPoint</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-CRLDistributionPoint.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -6988,14 +6988,14 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.ExtensionList</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.ExtensionList</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7022,7 +7022,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-ExtensionList</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-ExtensionList.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -7072,14 +7072,14 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7106,7 +7106,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-OnlineResponderAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-OnlineResponderAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -7145,14 +7145,14 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7179,7 +7179,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-OnlineResponderArrayMember</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-OnlineResponderArrayMember.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -7215,14 +7215,14 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7267,7 +7267,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-OnlineResponderLocalCrlEntry</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-OnlineResponderLocalCrlEntry.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -7306,7 +7306,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7358,7 +7358,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Remove-OnlineResponderRevocationConfiguration</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Remove-OnlineResponderRevocationConfiguration.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -7387,7 +7387,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7439,7 +7439,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Restart-CertificationAuthority</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Restart-CertificationAuthority.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -7471,7 +7471,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7505,7 +7505,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Restart-OnlineResponder</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Restart-OnlineResponder.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -7540,14 +7540,14 @@ DeleteExpiredCRLs - deletes CRLs signed by the expired CA keys.</maml:para></mam
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.CRLFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.CRLFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_CRLFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7574,7 +7574,7 @@ DeleteExpiredCRLs - deletes CRLs signed by the expired CA keys.</maml:para></mam
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Restore-CertificateRevocationListFlagDefault</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Restore-CertificateRevocationListFlagDefault.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -7614,14 +7614,14 @@ DeleteExpiredCRLs - deletes CRLs signed by the expired CA keys.</maml:para></mam
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.KRAFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.Flags.KRAFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_Flags_KRAFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7648,7 +7648,7 @@ DeleteExpiredCRLs - deletes CRLs signed by the expired CA keys.</maml:para></mam
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Restore-KeyRecoveryAgentFlagDefault</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Restore-KeyRecoveryAgentFlagDefault.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -7706,14 +7706,14 @@ AttributeEKU</maml:para></maml:description><command:syntax><command:syntaxItem><
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.EditFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.EditFlag</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_EditFlag.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7758,7 +7758,7 @@ AttributeEKU</maml:para></maml:description><command:syntax><command:syntaxItem><
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Restore-PolicyModuleFlagDefault</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Restore-PolicyModuleFlagDefault.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -7833,14 +7833,14 @@ ss - seconds (2 digits)</maml:para><maml:para>For more details about datetime fo
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Utils.IServiceOperationResult</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -7903,7 +7903,7 @@ ss - seconds (2 digits)</maml:para><maml:para>For more details about datetime fo
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Revoke-Certificate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Revoke-Certificate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -7940,14 +7940,14 @@ ss - seconds (2 digits)</maml:para><maml:para>For more details about datetime fo
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.AuthorityInformationAccess</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.AuthorityInformationAccess</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -8028,7 +8028,7 @@ ss - seconds (2 digits)</maml:para><maml:para>For more details about datetime fo
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-AuthorityInformationAccess</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-AuthorityInformationAccess.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -8085,14 +8085,14 @@ Alternate Signature Algorithm -- instructs CA server to use PKCS#1 v2.1 signatur
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CACryptography</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CACryptography.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CACryptography.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CACryptography</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CACryptography.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CACryptography.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -8137,7 +8137,7 @@ Alternate Signature Algorithm -- instructs CA server to use PKCS#1 v2.1 signatur
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-CACryptographyConfig</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-CACryptographyConfig.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CACryptographyConfig</maml:linkText>
   <maml:uri></maml:uri>
@@ -8171,14 +8171,14 @@ Alternate Signature Algorithm -- instructs CA server to use PKCS#1 v2.1 signatur
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.KRA</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.KRA</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_AuthorityInformationAccess.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -8279,7 +8279,7 @@ C:\PS&gt;Get-CertificationAuthority | Get-CAKRACertificate | Add-CAKRACertificat
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-CAKRACertificate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-CAKRACertificate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -8318,14 +8318,14 @@ This command will rewrite all certificate templates assigned to a CA server with
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CATemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CATemplate</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CATemplate.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -8444,7 +8444,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-CATemplate</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-CATemplate.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -8474,7 +8474,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 <maml:description><maml:para>Adds or disables certificate extensions in a pending certificate request.</maml:para><maml:para>Note: for this command to succeed, the certificate request must be pending.</maml:para></maml:description><command:syntax><command:syntaxItem><maml:name>Set-CertificateExtension</maml:name><command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0"><maml:name>Request</maml:name><maml:description><maml:para>Specifies the particular request object. Request objects can be retrieved by running Get-PendingRequest command.</maml:para></maml:description><command:parameterValue required="true" variableLength="false">Object</command:parameterValue></command:parameter><command:parameter required="true" variableLength="true" globbing="false" pipelineInput="false" position="1"><maml:name>Extension</maml:name><maml:description><maml:para>Specifies the extension to add or remove. Depending on a &#39;Remove&#39; switch, the following object types are accepted:</maml:para><maml:para>-- if &#39;Remove&#39; switch is set to $false, this parameter must be an array of System.Security.Cryptography.X509Certificates.X509Extension or single System.Security.Cryptography.X509Certificates.X509ExtensionCollection object. In this case, the specified extension or extenssions will be added.
 -- if &#39;Remove&#39; switch is set to $true, this parameter must be an array of System.Security.Cryptography.Oid objects, where each object identifier denotes the extension to disable.</maml:para><maml:para>Certificate extension object are constructed out-of-band by using native .NET or extended extension classes. .NET extensions classes are defined in X509Certificates namespace:
 -- .NET native extensions: http://msdn.microsoft.com/en-us/library/System.Security.Cryptography.X509Certificates.aspx
--- extended extension classes: https://www.pkisolutions.com/apidocs/pkix.net/html/N_System_Security_Cryptography_X509Certificates.htm</maml:para></maml:description><command:parameterValue required="true" variableLength="true">Object[]</command:parameterValue></command:parameter><command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named"><maml:name>Remove</maml:name><maml:description><maml:para>Specifies whether to disable certificate extensions specified in the &#39;Extension&#39; parameter. See &#39;Extension&#39; parameter for this command behavior.</maml:para></maml:description><command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue></command:parameter></command:syntaxItem></command:syntax><command:parameters><command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
+-- extended extension classes: https://www.sysadmins.lv/apidocs/pki/html/N_System_Security_Cryptography_X509Certificates.htm</maml:para></maml:description><command:parameterValue required="true" variableLength="true">Object[]</command:parameterValue></command:parameter><command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named"><maml:name>Remove</maml:name><maml:description><maml:para>Specifies whether to disable certificate extensions specified in the &#39;Extension&#39; parameter. See &#39;Extension&#39; parameter for this command behavior.</maml:para></maml:description><command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue></command:parameter></command:syntaxItem></command:syntax><command:parameters><command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="0">
   <maml:name>Request</maml:name><maml:description><maml:para>Specifies the particular request object. Request objects can be retrieved by running Get-PendingRequest command.</maml:para></maml:description><command:parameterValue required="true" variableLength="false">Object</command:parameterValue><dev:type>
     <maml:name>Object</maml:name>
     <maml:uri/>
@@ -8483,7 +8483,7 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
   <maml:name>Extension</maml:name><maml:description><maml:para>Specifies the extension to add or remove. Depending on a &#39;Remove&#39; switch, the following object types are accepted:</maml:para><maml:para>-- if &#39;Remove&#39; switch is set to $false, this parameter must be an array of System.Security.Cryptography.X509Certificates.X509Extension or single System.Security.Cryptography.X509Certificates.X509ExtensionCollection object. In this case, the specified extension or extenssions will be added.
 -- if &#39;Remove&#39; switch is set to $true, this parameter must be an array of System.Security.Cryptography.Oid objects, where each object identifier denotes the extension to disable.</maml:para><maml:para>Certificate extension object are constructed out-of-band by using native .NET or extended extension classes. .NET extensions classes are defined in X509Certificates namespace:
 -- .NET native extensions: http://msdn.microsoft.com/en-us/library/System.Security.Cryptography.X509Certificates.aspx
--- extended extension classes: https://www.pkisolutions.com/apidocs/pkix.net/html/N_System_Security_Cryptography_X509Certificates.htm</maml:para></maml:description><command:parameterValue required="true" variableLength="true">Object[]</command:parameterValue><dev:type>
+-- extended extension classes: https://www.sysadmins.lv/apidocs/pki/html/N_System_Security_Cryptography_X509Certificates.htm</maml:para></maml:description><command:parameterValue required="true" variableLength="true">Object[]</command:parameterValue><dev:type>
     <maml:name>Object[]</maml:name>
     <maml:uri/>
   </dev:type><dev:defaultValue></dev:defaultValue>
@@ -8495,14 +8495,14 @@ C:\PS&gt;Get-CertificationAuthority ca01.company.com | Get-CATemplate | Remove-C
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.Database.AdcsDbRow</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_Database_AdcsDbRow.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Utils.IServiceOperationResult</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Utils_IServiceOperationResult.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -8552,7 +8552,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Pending
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-CertificateExtension</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-CertificateExtension.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -8584,14 +8584,14 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Pending
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertTemplateSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertTemplateSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -8636,7 +8636,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Pending
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-CertificateTemplateAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-CertificateTemplateAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificateTemplate</maml:linkText>
   <maml:uri></maml:uri>
@@ -8694,14 +8694,14 @@ for Standalone CA:
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertValidityPeriod</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertValiditySetting.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertValiditySetting.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertValidityPeriod</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertValiditySetting.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertValiditySetting.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -8746,7 +8746,7 @@ for Standalone CA:
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-CertificateValidityPeriod</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-CertificateValidityPeriod.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -8780,14 +8780,14 @@ for Standalone CA:
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertSrvSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.CertSrvSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_CertSrvSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -8857,7 +8857,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-CertificationAuthorityAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-CertificationAuthorityAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -8897,14 +8897,14 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLDistributionPoint</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLDistributionPoint</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLDistributionPoint.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -8985,7 +8985,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-CRLDistributionPoint</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-CRLDistributionPoint.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -9055,14 +9055,14 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLValidityPeriod</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLValiditySetting.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLValiditySetting.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.CRLValidityPeriod</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CRLValiditySetting.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CRLValiditySetting.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -9107,7 +9107,7 @@ PS C:\&gt; Get-CertificationAuthority &quot;ca01.company.com&quot; | Get-Certifi
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-CRLValidityPeriod</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-CRLValidityPeriod.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -9143,14 +9143,14 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.ExtensionList</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>PKI.CertificateServices.PolicyModule.ExtensionList</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_PolicyModule_ExtensionList.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -9195,7 +9195,7 @@ DisabledExtensionList - contains extensions that will not be published in certif
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-ExtensionList</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-ExtensionList.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -9230,14 +9230,14 @@ DisabledExtensionList - contains extensions that will not be published in certif
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Security.AccessControl.OcspResponderSecurityDescriptor</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Security_AccessControl_OcspResponderSecurityDescriptor.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -9302,7 +9302,7 @@ PS C:\&gt; $DestinationACL | Add-OnlineResponderAcl -AccessRule $SourceACL.Acces
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-OnlineResponderAcl</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-OnlineResponderAcl.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -9379,14 +9379,14 @@ PS C:\&gt; $DestinationACL | Add-OnlineResponderAcl -AccessRule $SourceACL.Acces
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -9449,7 +9449,7 @@ PS C:\&gt; $DestinationACL | Add-OnlineResponderAcl -AccessRule $SourceACL.Acces
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-OnlineResponderProperty</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-OnlineResponderProperty.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -9533,14 +9533,14 @@ PS C:\&gt; $DestinationACL | Add-OnlineResponderAcl -AccessRule $SourceACL.Acces
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
 </command:inputType>	</command:inputTypes><command:returnValues><command:returnValue>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponderRevocationConfiguration</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponderRevocationConfiguration.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -9595,7 +9595,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Set-OnlineResponderRevocationConfiguration</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Set-OnlineResponderRevocationConfiguration.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -9621,7 +9621,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -9673,7 +9673,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Start-CertificationAuthority</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Start-CertificationAuthority.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -9705,7 +9705,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -9739,7 +9739,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Start-OnlineResponder</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Start-OnlineResponder.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
@@ -9768,7 +9768,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>PKI.CertificateServices.CertificateAuthority</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_PKI_CertificateServices_CertificateAuthority.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -9820,7 +9820,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Stop-CertificationAuthority</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Stop-CertificationAuthority.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Get-CertificationAuthority</maml:linkText>
   <maml:uri></maml:uri>
@@ -9852,7 +9852,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
 </command:parameter></command:parameters><command:inputTypes><command:inputType>
   <dev:type>
     <maml:name>SysadminsLV.PKI.Management.CertificateServices.OcspResponder</maml:name>
-    <maml:uri>https://www.pkisolutions.com/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
+    <maml:uri>https://www.sysadmins.lv/apidocs/pki/html/T_SysadminsLV_PKI_Management_CertificateServices_OcspResponder.htm</maml:uri>
     <maml:description/>
   </dev:type>
   <maml:description><maml:para /></maml:description>
@@ -9886,7 +9886,7 @@ Connect-OnlineResponder &quot;ocsp1.example.com&quot; | Get-OnlineResponderRevoc
   </command:commandLines>
 </command:example></command:examples><maml:relatedLinks><maml:navigationLink>
   <maml:linkText>Online version:</maml:linkText>
-  <maml:uri>https://www.pkisolutions.com/tools/pspki/Stop-OnlineResponder</maml:uri>
+  <maml:uri>https://www.sysadmins.lv/projects/pspki/Stop-OnlineResponder.aspx</maml:uri>
 </maml:navigationLink><maml:navigationLink>
   <maml:linkText>Connect-OnlineResponder</maml:linkText>
   <maml:uri></maml:uri>
