@@ -59,7 +59,7 @@
             } else {
                 throw New-Object ArgumentException "The parameter is invalid."
             }
-            [SysadminsLV.PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
+            Clear-ComObject $CertAdmin
         }
     }
 }

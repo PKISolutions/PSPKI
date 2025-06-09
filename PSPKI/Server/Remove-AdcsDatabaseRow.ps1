@@ -56,7 +56,7 @@ function Remove-AdcsDatabaseRow {
                     # do the same if config string doesn't match cached one.
                     if (!$ConfigString -or ($ConfigString -ne $Request.ConfigString)) {
                         $ConfigString = $Request.ConfigString
-                        [SysadminsLV.PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
+                        Clear-ComObject $CertAdmin
                         $CertAdmin = New-Object -ComObject CertificateAuthority.Admin
                     }
                     $Return = $CertAdmin.DeleteRow($Req.ConfigString,$dwFlags,0,0,$Req.RowId)
@@ -91,6 +91,6 @@ function Remove-AdcsDatabaseRow {
         }
     }
     end {
-        [SysadminsLV.PKI.Utils.CryptographyUtils]::ReleaseCom($CertAdmin)
+        Clear-ComObject $CertAdmin
     }
 }
