@@ -22,7 +22,7 @@ function Get-RequestArchivedKey {
             } catch {
                 Write-Error -Exception $_.Exception
             } finally {
-                Release-COM $CertAdmin
+                Clear-ComObject $CertAdmin
             }
         }
     }
