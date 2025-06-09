@@ -16,7 +16,7 @@ LONG DESCRIPTION
     
     SysadminsLV.Asn1Parser.dll, SysadminsLV.PKI.dll, SysadminsLV.PKI.OcspClient.dll,
     and SysadminsLV.PKI.Win.dll class library documentation is located at
-    https://pkisolutions.com/apidocs/pki/
+    https://www.sysadmins.lv/apidocs/pki/index.html
 BUILT-IN COMMANDS
     The module splits commands depending on installation type. During module
     package installation you are prompted to select components to install:
@@ -33,9 +33,9 @@ BUILT-IN COMMANDS
     Server package requires ADCS RSAT installation.
 DOCUMENTATION
     Documentation for PSPKI module and its commands are available at project home
-    page: https://www.pkisolutions.com/tools/pspki/
+    page: https://www.sysadmins.lv/projects/pspki/default.aspx
 SUPPORT INFORMATION
-    The official support page for the module: https://github.com/PKISolutions/PSPKI
+    The official support page for the module: https://github.com/Crypt32/PSPKI
     Any comments and questions must be addressed under Issues tab.
 
 ACKNOWLEDGMENTS
