@@ -33,6 +33,6 @@ function Install-CertificateResponse {
     try {
         $enroll.InstallResponse($InstallOptions, $b64Response, 0x1, $null)
     } finally {
-        Release-COM $enroll
+        Clear-ComObject $enroll
     }
 }
